@@ -14,10 +14,9 @@
 </header>
 <nav class="clearfix" id="myNavbar">
     <?php $fileName=basename($_SERVER['PHP_SELF'])?>
-        <a href="home.php" <?php if($fileName=='index.php') echo "class=active"?>>Home</a>
-        <a href="users.php" <?php if($fileName=='users.php') echo "class=active"?>>Users</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>AAA</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>BBB</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>CCC</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>DDD</a>
+        <a href="index.php" <?php if($fileName=='index.php') echo "class=active"?>>Home</a>
+        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Projects</a>
+        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Reports</a>
+        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Contractors</a>
+        <a href="#" <?php if($fileName=='#') echo "class=active"?>>About Us</a>
 </nav>
