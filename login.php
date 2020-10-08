@@ -25,23 +25,30 @@
 </head>
 <body>
     <?php include 'includes/guestHeader.php';?>
-    <div class="loginBox">
-    <h2>Welcome</h2>
-        <?php echo $alert;?>
-    <form action="" method="post">
+    <div class="container">
         <div>
-            <label for="username"><i class="fa fa-user"></i></label>
-            <input type="text" name="username" placeholder="Enter the username">
+            <div class="loginBox">
+                <h2>Welcome</h2>
+                    <?php echo $alert;?>
+                <form action="" method="post">
+                    <div>
+                        <label for="username"><i class="fa fa-user"></i></label>
+                        <input type="text" name="username" placeholder="Enter the username">
+                    </div>
+                    <div>
+                        <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
+                        <input type="password" name="password" placeholder="Enter the password">
+                    </div>
+                    <div>
+                        <input type="submit" name="login" value="Login">
+                    </div>
+                    <div class="forgotLink"><a href="#">Forgot your password?</a></div>
+                </form>
+            </div>
         </div>
-        <div>
-            <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
-            <input type="password" name="password" placeholder="Enter the password">
+        <div class="mask">
+            <img src="images/mask.png" alt="This is a mask" class="mask">
         </div>
-        <div>
-            <input type="submit" name="login" value="Login">
-        </div>
-        <div class="forgotLink"><a href="#">Forgot your password?</a></div>
-    </form>
     </div>
     <?php include 'includes/footer.php';?>
 </body>

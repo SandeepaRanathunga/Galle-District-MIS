@@ -120,6 +120,7 @@ nav .active{
 nav a:hover{
     background:white;
     color:#2F4F4F;
+    transition: 0.5s;
 }
 
 footer h2{
