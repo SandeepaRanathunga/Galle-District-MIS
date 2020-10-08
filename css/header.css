@@ -1,31 +1,23 @@
-*{
-    padding:0px;
-    margin:0px;
-}
-.clearfix{
-    overflow: auto;
-}
-a{
-    text-decoration:none;
-}
 header,footer{
     width:100%;
-    padding:15px;
+    padding:5px;
     background:#f2f2f2;
     box-sizing: border-box;
+    clear:both;
 }
 header .branding{
     float:left;
     margin:20px 20px;
+    box-sizing: border-box;
 }
 .logo{
-    width:110px;
-    height:110px;
+    width:100px;
+    height:100px;
 }
 .districtTag{
     display:inline-block;
     margin-top:40px;
-    text-align: center;
+    /* text-align: center; */
 }
 .districtTag h2{
     font-size: 35px;
@@ -101,14 +93,14 @@ nav{
     position:sticky;
     top:0px;
     background:#f2f2f2;
-    padding:15px 25px;
+    padding:5px 25px;
     z-index: 1;
 }
 
 
 nav a{
-    float:left;
     display:block;
+    float:left;
     font-size:18px;
     color:white;
     font-weight:bold;
@@ -118,7 +110,7 @@ nav a{
     background:#2F4F4F;
     border-radius: 5px;
     text-align:center;
-    width:90px;
+    width:auto;
 
 }
 nav .active{
@@ -128,6 +120,7 @@ nav .active{
 nav a:hover{
     background:white;
     color:#2F4F4F;
+    transition: 0.5s;
 }
 
 footer h2{
