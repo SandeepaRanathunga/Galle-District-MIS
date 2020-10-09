@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/header.css" type="text/css">
     <link rel="stylesheet" href="css/loginstyle.css" type="text/css">
-    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
-    <title>Project Handelling and Evaluation MIS</title>
     <link rel="icon" href="images/logo.png">
+    <title>Project Handelling and Evaluation MIS</title>
+    
 </head>
 <body>
     <?php include 'includes/guestHeader.php';?>
@@ -42,7 +42,7 @@
                     <div>
                         <input type="submit" name="login" value="Login">
                     </div>
-                    <div class="forgotLink"><a href="#">Forgot your password?</a></div>
+                    <div class="forgotLink"><a href="email_verify.php">Forgot your password?</a></div>
                 </form>
             </div>
         </div>

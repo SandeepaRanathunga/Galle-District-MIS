@@ -6,9 +6,9 @@
             <h2>Galle District Secretariat</h2>
             <h3>Project Handling and Evaluation MIS</h3>
         </div>
-        <div class="dropdown">
+        <div class="user">
             <!-- <button class="dropbtn"><i class="fas fa-user"></i></button> -->
-            <a href="login.php" class="loginpage"><i class="fas fa-user"></i></a>
+            <a href="login.php"><i class="fas fa-user"></i></a>
             </div>
         </div>
 </header>

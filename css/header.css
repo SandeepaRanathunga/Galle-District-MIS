@@ -29,6 +29,23 @@ header .branding{
     font-weight: bold;
     color:#2F4F4F;
 }
+.user{
+    float:right;
+    margin:10px;
+    z-index: 1;
+    
+}
+.user a{
+    color:#2F4F4F;
+    padding:5px;
+    font-size: 35px;
+    background:white;
+    border-radius: 5px;
+}
+.user a:hover{
+    color:white;
+    background:#2F4F4F;
+}
 .user h2,footer h2{
     font-size: 30px;
     font-weight: bold;
@@ -39,54 +56,6 @@ header .branding{
     padding:5px;
     background:#2F4F4F;
     color:white;
-}
-header .dropdown{
-    float:right;
-    margin:10px;
-    width:200px;
-    box-sizing: border-box;
-}
-
-.dropdown .dropbtn,.dropdown .loginpage{
-    float:right;
-    display:block;
-    cursor: pointer;
-    color:white;
-    background:#2F4F4F;
-    padding:15px;
-    font-size: 20px;
-    border-radius: 5px;
-    border:none;
-}
-.dropdown:hover .dropbtn{
-    color:#2F4F4F;
-    background:white;
-}
-.loginpage:hover{
-    color:#2F4F4F;
-    background:white; 
-}
-.droplist{
-    display: none;
-    position: relative;
-    background-color: #2F4F4F;
-    min-width:100%;
-    z-index: 1;
-}
-.droplist a{
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size:20px;
-}
-
-.droplist a:hover{
-    background:white;
-    color:#2F4F4F;
-}
-.dropdown:hover .droplist{
-    display:inline-block;
 }
 
 nav{
