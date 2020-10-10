@@ -33,12 +33,13 @@
 
 label{
     width:70px;
-    text-align: center;
-    font-size:16px;
+    text-align: left;
+    font-size:15px;
     font-weight:bold;
     font-family:'Overpass', sans-serif;
     color:#2F4F4F;
     vertical-align: middle;
+    display: inline-block;
 }
 input[type=email],input[type=password]{
     display:inline-block;
@@ -46,7 +47,7 @@ input[type=email],input[type=password]{
     border:2px solid #2F4F4F;
     border-radius:5px;
     padding:5px;
-    width:80%;
+    width:70%;
     box-sizing: border-box;
     height:50px;
     font-size: 16px;
@@ -54,6 +55,9 @@ input[type=email],input[type=password]{
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+@media screen and (max-width:1110px){
+
 }
 input[type=submit]{
     width:auto;
