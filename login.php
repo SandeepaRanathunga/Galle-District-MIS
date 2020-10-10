@@ -20,7 +20,7 @@
     
 </head>
 <body>
-    <?php include 'includes/Header.php';?>
+    <?php include 'includes/header.php';?>
     <?php include 'includes/guestNav.php';?>
     <div class="container">
         <div>

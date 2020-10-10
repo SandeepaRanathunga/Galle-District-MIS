@@ -11,7 +11,7 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php include 'includes/Header.php';?>
+    <?php include 'includes/header.php';?>
     <?php include 'includes/guestNav.php';?>
     <div class="slideshow-container">
 

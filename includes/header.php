@@ -9,7 +9,6 @@
         <div class="user">
             <!-- <button class="dropbtn"><i class="fas fa-user"></i></button> -->
             <a href="login.php"><i class="fas fa-user"></i></a>
-            </div>
         </div>
 </header>
 
