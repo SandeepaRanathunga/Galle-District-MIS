@@ -50,7 +50,8 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php include 'includes/guestHeader.php';?>
+    <?php include 'includes/header.php';?>
+    <?php include 'includes/guestNav.php';?>
     <div class="container">
         <div class="formarea">
             <p class="message">Enter your registered email address so that we will <br>send you an email with the reset link to reset your password.</p>

@@ -39,7 +39,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/header.css" type="text/css">
     <link rel="stylesheet" href="css/verifystyle.css" type="text/css">
@@ -48,7 +48,8 @@
     <title>Project Handelling and Evaluation MIS</title>
 </head>
 <body>
-    <?php include 'includes/guestHeader.php';?>
+    <?php include 'includes/Header.php';?>
+    <?php include 'includes/guestNav.php';?>
     <div class="container">
         <div class="formarea">
             <?php echo $alert;?>
@@ -57,7 +58,7 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" placeholder="Enter the password" required>
                 </div>
-                <div style="text-align:center">
+                <div style="text-align:center;overflow:auto">
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" name="confirm_password" placeholder="Re-enter the password" required>
                 </div>

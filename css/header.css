@@ -1,4 +1,13 @@
-header,footer{
+header{
+    display:flex;
+    width:100%;
+    padding:5px;
+    background:#f2f2f2;
+    box-sizing: border-box;
+    clear:both;
+    align-items: center;
+}
+.footer{
     width:100%;
     padding:5px;
     background:#f2f2f2;
@@ -6,18 +15,17 @@ header,footer{
     clear:both;
 }
 header .branding{
-    float:left;
+    flex:0.2;
     margin:20px 20px;
     box-sizing: border-box;
+    text-align: center;
 }
 .logo{
     width:100px;
     height:100px;
 }
 .districtTag{
-    display:inline-block;
-    margin-top:40px;
-    /* text-align: center; */
+    flex:2;
 }
 .districtTag h2{
     font-size: 35px;
@@ -30,7 +38,6 @@ header .branding{
     color:#2F4F4F;
 }
 .user{
-    float:right;
     margin:10px;
     z-index: 1;
     
@@ -46,6 +53,23 @@ header .branding{
     color:white;
     background:#2F4F4F;
 }
+
+@media screen and (max-width:650px){
+    header .branding{
+        margin:10px;
+    }
+    .logo{
+        width:80px;
+        height:80px;
+    }
+    .districtTag h2{
+        font-size:25px;
+    }
+    .districtTag h3{
+        font-size:30px;
+        font-size: 20px;
+    }
+}
 .user h2,footer h2{
     font-size: 30px;
     font-weight: bold;
@@ -58,7 +82,7 @@ header .branding{
     color:white;
 }
 
-nav{
+.topnav{
     position:sticky;
     top:0px;
     background:#f2f2f2;
@@ -67,7 +91,7 @@ nav{
 }
 
 
-nav a{
+.topnav a{
     display:block;
     float:left;
     font-size:18px;
@@ -82,14 +106,44 @@ nav a{
     width:auto;
 
 }
-nav .active{
+.topnav .active{
     background:white;
     color:#2F4F4F;
 }
-nav a:hover{
+.topnav a:hover{
     background:white;
     color:#2F4F4F;
     transition: 0.5s;
+}
+
+.topnav .icon{
+    color:white;
+    display:none;
+    background:#2F4F4F;
+    padding:10px;
+    margin:5px;
+    clear: both;
+    float:left;
+    text-align: left;
+}
+
+@media screen and (max-width:650px){
+    .topnav a{
+        display:none;
+    }
+    .topnav .icon{
+        display:block;
+    }
+    .responsive .icon{
+        float:none;
+        text-align: center;
+    }
+    .responsive a{
+        display:block;
+        text-align: center;
+        float:none;
+        z-index: 1;
+    }
 }
 
 footer h2{

@@ -11,8 +11,8 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php require_once('includes/guestHeader.php');?>
-    
+    <?php include 'includes/Header.php';?>
+    <?php include 'includes/guestNav.php';?>
     <div class="slideshow-container">
 
         <div class="mySlides fade">
