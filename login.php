@@ -1,12 +1,8 @@
 <?php
     $alert='';
     if(isset($_POST['login'])){
-        //loging data correct
-        if($_POST['username']=='sandeepa' && $_POST['password']==1234){
-            session_start();
-            $_SESSION['username']=$_POST['username'];
-            header('Location:#');
-        }
+        //Login data confirmation must added after the databases created
+        
         
     }
 ?>
@@ -18,13 +14,14 @@
     <link rel="stylesheet" href="css/common.css" type="text/css">
     <link rel="stylesheet" href="css/header.css" type="text/css">
     <link rel="stylesheet" href="css/loginstyle.css" type="text/css">
-    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
-    <title>Project Handelling and Evaluation MIS</title>
     <link rel="icon" href="images/logo.png">
+    <title>Project Handelling and Evaluation MIS</title>
+    
 </head>
 <body>
-    <?php include 'includes/guestHeader.php';?>
+    <?php include 'includes/header.php';?>
+    <?php include 'includes/guestNav.php';?>
     <div class="container">
         <div>
             <div class="loginBox">
@@ -33,16 +30,16 @@
                 <form action="" method="post">
                     <div>
                         <label for="username"><i class="fa fa-user"></i></label>
-                        <input type="text" name="username" placeholder="Enter the username">
+                        <input type="text" name="username" placeholder="Enter the username" required>
                     </div>
                     <div>
                         <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
-                        <input type="password" name="password" placeholder="Enter the password">
+                        <input type="password" name="password" placeholder="Enter the password" required>
                     </div>
                     <div>
                         <input type="submit" name="login" value="Login">
                     </div>
-                    <div class="forgotLink"><a href="#">Forgot your password?</a></div>
+                    <div class="forgotLink"><a href="email_verify.php">Forgot your password?</a></div>
                 </form>
             </div>
         </div>
