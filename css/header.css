@@ -1,3 +1,4 @@
+/* for the header */
 header{
     display:flex;
     width:100%;
@@ -6,14 +7,6 @@ header{
     box-sizing: border-box;
     clear:both;
     align-items: center;
-}
-.footer{
-    width:100%;
-    padding:5px;
-    background:#f2f2f2;
-    box-sizing: border-box;
-    clear:both;
-    
 }
 header .branding{
     flex:0.2;
@@ -82,52 +75,75 @@ header .branding{
     background:#2F4F4F;
     color:white;
 }
+/******************************************/
 /* for the footer*/
-footer h2, footer a{
-    font-size: 20px;
-    font-weight: bold;
-    font-family:'Overpass', sans-serif;
-    padding:5px;
-    color:white;
-    
-}
 .footerbox{
     width:100% ;
-    height : 45px ;
-    background: black;
-    padding:15px;
-    
-    
-    
-    
 }
 /*UpperFooterPart*/
 .blue{
     background: #2BACD2;
-    height: 60px ;
-    margin: auto;
-    padding: 9px ;
+    padding:10px;
+    display:flex;
+    align-items: center;
+    box-sizing: border-box;
     
-
 }
-.flex-container {
+.blue h2{
+    font-size: 17px;
+    font-weight: bold;
+    font-family:'Overpass', sans-serif;
+    padding:5px;
+    color:white;   
+}
+.blue a{
+    font-size: 16px;
+    font-family:'Overpass', sans-serif;
+    padding:5px;
+    color:white;
+}
+.blue .flex-container {
     display: flex;
     background: #2BACD2;
     height: 50px;
     margin: auto ;
   }
-/*footer h3{
-    font-size: 20px; 
-    
-    float: right ;
-}*/
-.footertextalignright{
-    float: right ;
-    text-transform: uppercase;
+  .blue img{
+      width:50px;
+      height:50px;
+      display:block;
+      float:left;
+      margin:2px 5px;
+  }
+  .blue .link_container{
+      flex:1;
+      display:flex;
+      align-items: center;
+  }
+/* lower footer */
+.black{
+    background:black;
+    padding:10px 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    position:relative;
 }
-.footertextalignleft{
-    float: left ;
+.black h2{
+    color:white;
+    float:left;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-family: Arial, Helvetica, sans-serif;
 }
+.black h2 span{
+    color:yellow;
+}
+.black img{
+    display:block;
+    float:right;
+}
+/********************************************/
 header .dropdown{
     float:right;
     margin:10px;
@@ -168,7 +184,7 @@ header .dropdown{
     display: block;
     font-size:20px;
 }
-
+/*for the navigation bar*/
 .topnav{
     position:sticky;
     top:0px;
