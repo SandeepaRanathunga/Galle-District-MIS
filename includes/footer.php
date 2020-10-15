@@ -1,9 +1,4 @@
 <footer>
-<<<<<<< HEAD
-        <h2>Copyright © 2020 Galle District Secretariat. All Rights Reserved.</h2>
-</footer>
-<script src="assets/navigation.js"></script>
-=======
         <div class="footerbox blue"> 
         <div class="flex-container" >
                         <div style="width:25%"><h2><br>Related Links</h2></div>
@@ -40,4 +35,3 @@
          
           
 </footer>
->>>>>>> dxlshi-developer02
