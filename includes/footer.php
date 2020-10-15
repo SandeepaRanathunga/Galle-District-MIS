@@ -1,4 +1,5 @@
 <footer>
+
         <div class="footerbox blue"> 
         <div class="flex-container" >
                         <div style="width:25%"><h2><br>Related Links</h2></div>
@@ -35,3 +36,4 @@
          
           
 </footer>
+<script src="assets/navigation.js"></script>
