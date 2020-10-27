@@ -1,7 +1,7 @@
 <footer>
         <div class="footerbox blue"> 
-        <div class="flex-container" >
-                        <div style="width:25%"><h2><br>Related Links</h2></div>
+                <div class="flex-container" >
+                        <div style="width:25%"><h2 style="font-size:17px"><br>Related Links</h2></div>
                         <div style="width:4%"><img src="./images/logo.png" height="60px"></div>
                         <div style="width:30%">
                                 <h2>Galle District Secretariat
