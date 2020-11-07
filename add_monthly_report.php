@@ -19,7 +19,7 @@
     </div>
     <div class="container">
         <div class="formarea clearfix">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST">
                 <div>
                     <label for="project_id">Project ID</label>
                     <input type="text" name="project_id">
@@ -50,7 +50,7 @@
                     <label for="finished" style="width:70px;text-align:center">Finished</label>
                 </div>
                 <div>
-                    <input type="reset" value="Cancel" name="reset">
+                    <input type="button" value="Cancel">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>
