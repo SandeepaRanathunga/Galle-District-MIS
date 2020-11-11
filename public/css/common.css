@@ -1,0 +1,15 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+a{
+    text-decoration: none;
+}
+.clearfix{
+    overflow: auto;
+}
+
+body{
+    width:99%;
+    margin:auto;
+}
