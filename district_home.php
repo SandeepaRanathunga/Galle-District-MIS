@@ -9,17 +9,13 @@
     <link rel="stylesheet" href="css/guestHome.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
     <link rel="icon" href="./images/logo.png">
-    <style>
-        body{
-            background-color: #f2f2f2;
-        }
-    </style>
+
 </head>
 
 <body>
 
 
-    <?php require_once('includes/contractorHeader.php');?> <!--Change Header here-->
+    <?php require_once('includes/divHeader.php');?> <!--Change Header here-->
 
     <!-- The buttons-->
      

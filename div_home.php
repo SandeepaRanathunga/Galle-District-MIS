@@ -15,7 +15,7 @@
     </style>
 </head>
 
-<body>
+<body class="clearfix">
     <?php include 'includes/divHeader.php';?>
     <div class="button-flex-container" >                  
         <div> <a href="#">Notifications</a></div>
