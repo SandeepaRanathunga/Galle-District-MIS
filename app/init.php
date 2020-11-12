@@ -21,6 +21,8 @@
     $router->addRoute('div_home','DivHome','divHome');
     //division notifications
     $router->addRoute('div_notifications','DivNotifications','divNotifications');
+    //division respond contractors
+    $router->addRoute('respond_contractors','DivRespondContractors','divRespondContractors');
     $app=new App($router);
 
 ?>
