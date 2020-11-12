@@ -2,7 +2,12 @@
     display: flex;
     background: #f2f2f2;
     flex-wrap: wrap;
+<<<<<<< HEAD
     height: 500px;  
+=======
+    height: 500px;
+    
+>>>>>>> 56ce5c16bcf59a0bed31fc899e751c8ef6416263
     margin-left: 10px;
     float:left;
     
@@ -13,7 +18,12 @@
     width: 450px;
     margin: auto;
     text-align: center;
+<<<<<<< HEAD
     font-size: 30px;  
+=======
+    font-size: 30px;
+    
+>>>>>>> 56ce5c16bcf59a0bed31fc899e751c8ef6416263
 }
 
 .button-flex-container > div .active{
