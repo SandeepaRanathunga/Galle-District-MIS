@@ -19,6 +19,7 @@ header .branding{
 }
 .districtTag{
     flex:2;
+    font-family: 'Ubuntu';
 }
 .districtTag h2{
     font-size: 35px;

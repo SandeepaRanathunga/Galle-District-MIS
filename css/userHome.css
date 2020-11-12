@@ -13,6 +13,7 @@
     width: 450px;
     margin: auto;
     text-align: center;
+    font-family: 'Ubuntu';
     font-size: 30px;  
 }
 
@@ -26,7 +27,7 @@
     font-size:30px;
     color:white;
     font-weight:bold;
-    font-family:'Overpass', sans-serif;
+    font-family: 'Ubuntu';
     padding:40px;
     margin:5px;
     background:#2F4F4F;
