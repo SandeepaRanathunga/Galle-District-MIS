@@ -24,12 +24,12 @@ header .branding{
 .districtTag h2{
     font-size: 35px;
     font-weight: bold;
-    color:#2F4F4F;
+    color:black;
 }
 .districtTag h3{
     font-size: 25px;
     font-weight: bold;
-    color:#2F4F4F;
+    color:black;
 }
 .user{
     margin:10px;
@@ -89,8 +89,8 @@ header .branding{
     display:flex;
     align-items: center;
     box-sizing: border-box;
-    
 }
+
 .blue h2{
     font-size: 17px;
     font-weight: bold;
@@ -176,6 +176,11 @@ header .dropdown{
     width:200px;
     box-sizing: border-box;
 }
+header .greeting h3{
+    float: right ;
+    color: #2F4F4F;
+    font-size:18px;
+}
 
 .dropdown .dropbtn,.dropdown .loginpage{
     float:right;
@@ -233,6 +238,7 @@ header .dropdown{
     border-radius: 5px;
     text-align:center;
     text-decoration: none;
+    text-decoration:none;
     width:auto;
 
 }
