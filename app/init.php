@@ -19,6 +19,8 @@
     $router->addRoute('call_for_bids','DivCallForBids','callForBids');
     //division home
     $router->addRoute('div_home','DivHome','divHome');
+    //division notifications
+    $router->addRoute('div_notifications','DivNotifications','divNotifications');
     $app=new App($router);
 
 ?>
