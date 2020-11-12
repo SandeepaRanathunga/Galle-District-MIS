@@ -13,7 +13,8 @@
     $router->addRoute('email_verify','EmailVerify','verifyEmail');
     //division add montly report
     $router->addRoute('add_monthly_report','DivAddMonthlyReport','addMonthlyReport');
-
+    //division launch project
+    $router->addRoute('launch_project','DivLaunchProject','launchProject');
     $app=new App($router);
 
 ?>
