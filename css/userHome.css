@@ -2,12 +2,12 @@
     display: flex;
     background: #f2f2f2;
     flex-wrap: wrap;
-    height: 500px;
-    
+    margin-top: 40px;
+    margin-bottom: 50px;
+    overflow: auto;
     margin-left: 10px;
     float:left;
-    
-  }
+}
 
 .button-flex-container > div{
     background-color: #f1f1f1;
@@ -15,12 +15,15 @@
     margin: auto;
     text-align: center;
     font-size: 30px;
+    padding: 20px;
     
 }
 
 .button-flex-container > div .active{
     background:white;
     color:#2F4F4F;
+    
+
 }
 
 .button-flex-container > div a{
@@ -36,6 +39,7 @@
     text-align:center;
     text-decoration: none;
     width:auto;
+    
 
 }
 .button-flex-container > div a:hover{

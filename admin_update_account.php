@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create new account- Administrator</title> <!--Change name here-->
+    <title>Update User account- Administrator</title> <!--Change name here-->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/guestHome.css">
@@ -22,12 +22,26 @@
     <?php require_once('includes/adminHeader.php');?> <!--Change Header here-->
 
     <div class="tag">
-        <a href="./admin_create_account.php"><h2>Create new user accounts</h2></a>
+        <a href="./admin_update_account.php"><h2>Update user accounts</h2></a>
     </div>
 
+    <div class="container searchbox">
+        <div class="searcharea clearfix" >
+            <!--Form Box to Enter ID reqiured to update details-->
+
+            <form action="" method="POST" id="searchId">
+                <label for="user_id">Enter ID</label>
+                <input type="text"  name="search_user_id" placeholder="Enter ID to search...">
+            <!--Submit ID for search-->
+                <input type="submit" style="margin-top:4%; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold;" value="Search" name="submit">
+                
+            </form>
+        </div>                     
+    </div>
     <div class="container">
         <div class="formarea clearfix">
-            <form action="" method="POST" id="newUser">
+            <form action="" method="POST" id="updateUser">
+                <!--Here starts the generated form-->
                 <div>
                     <label for="user_id">User ID</label>
                     <input type="text" name="user_id">
@@ -42,7 +56,7 @@
                 </div>
                 <div>
                     <label for="office">Office</label>
-                    <select name="office" id="office" form="newUser">
+                    <select name="office" id="office" form="updateUser">
                         <option value="office_1"> Office 1 </option>
                         <option value="office_2"> Office 2 </option>
                         <option value="office_3"> Office 3 </option>
@@ -66,14 +80,14 @@
                     <label for="email">E-mail</label>
                     <input type="email" name="email">
                 </div>
-                <div>
+                <!--<div>
                     <label for="password">Password</label>
                     <input type="password" name="password">
                 </div>
                 <div>
                     <label for="confirmpassword">Re-enter Password</label>
                     <input type="password" name="confirmpassword">
-                </div>
+                </div>-->
                 
                 <div>
                     <input type="button" value="Cancel">
