@@ -1,13 +1,16 @@
 <div class="topnav clearfix" id="navbar">
-    <!-- <?php $fileName=basename($_SERVER['PHP_SELF'])?> -->
     <?php
-        // $fileName=$_GET['url'];
-        // echo $fileName;
+        if(!isset($_GET['url'])){
+            $currentPage="guest_home";
+        }
+        else{
+            $currentPage=$_GET['url'];
+        }
     ?>
-        <a href="/Galle-District-mis/" <?php if($fileName=='') echo "class=active"?>>Home</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Projects</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Reports</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Contractors</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>About Us</a>
+        <a href="/Galle-District-mis/" <?php if($currentPage=='guest_home') echo "class=active"?>>Home</a>
+        <a href="/Galle-District-mis/projects" <?php if($currentPage=='#') echo "class=active"?>>Projects</a>
+        <a href="/Galle-District-mis/reports" <?php if($currentPage=='#') echo "class=active"?>>Reports</a>
+        <a href="/Galle-District-mis/contractors" <?php if($currentPage=='#') echo "class=active"?>>Contractors</a>
+        <a href="/Galle-District-mis/aboutus" <?php if($currentPage=='#') echo "class=active"?>>About Us</a>
         <a href="javascript:void(0);" class="icon" onclick="addResponsiveness()"><i class="fa fa-bars"></i></a>
 </div>
