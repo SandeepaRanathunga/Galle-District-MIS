@@ -17,7 +17,7 @@
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
     $router->addRoute('email_verify','EmailVerify','verifyEmail');
-
+    
     /*--------------------division---------------------*/
     //division add montly report
     $router->addRoute('add_monthly_report','DivAddMonthlyReport','addMonthlyReport');

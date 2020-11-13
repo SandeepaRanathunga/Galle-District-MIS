@@ -16,7 +16,6 @@
     </div>
     <div class="container">
         <div class="formarea clearfix">
-
             <form action="" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="project_id">Project ID</label>

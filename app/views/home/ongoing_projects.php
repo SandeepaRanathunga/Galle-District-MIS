@@ -15,8 +15,7 @@
         <h2>Ongoing Projects</h2>
     </div>
     <div class="container">
- 
-        
+     
     </div>
     <?php require_once('includes/footer.php');?>
 </body>
