@@ -36,10 +36,10 @@ header .branding{
     
 }
 .user a{
-    color:#2F4F4F;
+    color:white;
     padding:5px;
     font-size: 35px;
-    background:white;
+    background:#2F4F4F;
     border-radius: 5px;
 }
 .user a:hover{
