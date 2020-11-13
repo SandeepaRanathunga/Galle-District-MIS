@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/guestHome.css">
-    <link rel="stylesheet" href="css/slideshow.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
+    <?php include 'includes/cssLinks.php';?>
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -52,9 +48,9 @@
         <span class="dot" onclick="currentSlide(4)"></span> 
     </div>
 <div class="info clearfix">
-    <a href="#">Ongoing Projects</a>
-    <a href="#">Finished Projects</a>
-    <a href="#">Annual Progress</a>
+    <a href="/Galle-District-mis/ongoing_projects">Ongoing Projects</a>
+    <a href="/Galle-District-mis/finished_projects">Finished Projects</a>
+    <a href="/Galle-District-mis/annual_reports">Annual Progress</a>
 </div>
     <?php require_once('includes/footer.php');?>
     <script src="js/slideshow.js"></script>
