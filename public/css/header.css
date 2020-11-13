@@ -67,7 +67,6 @@ header .branding{
 .user h2{
     font-size: 30px;
     font-weight: bold;
-    font-family:'Overpass', sans-serif;
     text-align:center;
     border:3px solid #2F4F4F;
     border-radius:10px;
@@ -93,13 +92,11 @@ header .branding{
 .blue h2{
     font-size: 17px;
     font-weight: bold;
-    font-family:'Overpass', sans-serif;
     padding:5px;
     color:white;   
 }
 .blue a{
     font-size: 16px;
-    font-family:'Overpass', sans-serif;
     padding:5px;
     color:white;
 }
@@ -133,7 +130,7 @@ header .branding{
     color:white;
     flex:1;
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 .black h2 span{
     color:yellow;
@@ -205,7 +202,8 @@ header .dropdown{
 .topnav{
     position:sticky;
     top:0px;
-    background:#f2f2f2;
+    background:rgba(47, 79, 79, 25);
+    opacity: 0.9;
     padding:5px 25px;
     z-index: 1;
 }
@@ -217,13 +215,12 @@ header .dropdown{
     font-size:18px;
     color:white;
     font-weight:bold;
-    font-family:'Overpass', sans-serif;
     padding:15px;
     margin:5px;
-    background:#2F4F4F;
+    background:none;
     border-radius: 5px;
     text-align:center;
-    width:auto;
+    width:95px;
 
 }
 .topnav .active{
@@ -247,12 +244,13 @@ header .dropdown{
     text-align: left;
 }
 
-@media screen and (max-width:650px){
+@media screen and (max-width:825px){
     .topnav a{
         display:none;
     }
     .topnav .icon{
         display:block;
+        width:auto;
     }
     .responsive .icon{
         float:none;
@@ -260,6 +258,7 @@ header .dropdown{
     }
     .responsive a{
         display:block;
+        width:auto;
         text-align: center;
         float:none;
         z-index: 1;
