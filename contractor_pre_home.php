@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>District - Home </title> <!--Change name here-->
+    <title>Contractors</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/userHome.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/guestHome.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
     <link rel="icon" href="./images/logo.png">
@@ -19,25 +20,22 @@
 <body>
 
 
-    <?php require_once('includes/districtHeader.php');?> <!--Change Header here-->
+    <?php require_once('includes/contractorPreHeader.php');?>
 
-    <!-- The buttons-->
+    <!-- COPOIED CODE-->
      
-        <div class="button-flex-container" >
+        <div class="button-flex-container" style="padding:110px; ">
                       
-                        <div> <a href="#"> Notifications </a></div>
-                        <div> <a href="#">View project proposals</a></div>
-                        <div> <a href="#">Manage funds record</a></div>
-                        <div> <a href="#">View monthly reports</a></div>
-                        <div> <a href="#">Generate annual report</a></div>
-
+                        <div> <a href="#"> Contractor Sign-up </a></div>
+                        <div> <a href="#">View bid callings</a></div>
+                      
 
                         
                         
 
          </div>     
     
-    <!-- The buttons - END-->
-    <?php require_once('includes/footer.php');?> 
+    <!-- COPOIED CODE-->
+    <?php require_once('includes/footer.php');?>
 </body>
 </html>

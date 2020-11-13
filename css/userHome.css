@@ -2,33 +2,29 @@
     display: flex;
     background: #f2f2f2;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    height: 500px;  
-=======
     height: 500px;
-    
->>>>>>> 56ce5c16bcf59a0bed31fc899e751c8ef6416263
+    margin-top: 40px;
+    margin-bottom: 50px;
+    overflow: auto;
     margin-left: 10px;
     float:left;
-    
-  }
+}
 
 .button-flex-container > div{
     background-color: #f1f1f1;
     width: 450px;
     margin: auto;
     text-align: center;
-<<<<<<< HEAD
-    font-size: 30px;  
-=======
     font-size: 30px;
+    padding: 20px;
     
->>>>>>> 56ce5c16bcf59a0bed31fc899e751c8ef6416263
 }
 
 .button-flex-container > div .active{
     background:white;
     color:#2F4F4F;
+    
+
 }
 
 .button-flex-container > div a{
@@ -44,6 +40,7 @@
     text-align:center;
     text-decoration: none;
     width:auto;
+    
 
 }
 .button-flex-container > div a:hover{
