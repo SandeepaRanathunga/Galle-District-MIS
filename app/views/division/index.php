@@ -4,16 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Division - Home </title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/userHome.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu">
+    <?php include 'includes/cssLinks.php';?>
     <link rel="icon" href="./images/logo.png">
-    <style>
-        body{
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
 
 <body class="clearfix">

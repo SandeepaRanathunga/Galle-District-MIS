@@ -4,13 +4,19 @@
     require_once __DIR__.'/core/Router.php';
 
     $router=new Router();
-    //Home
+    /*---------------------home-----------------------*/
     $router->addRoute('','Home','index');
     //Login
     $router->addRoute('login','Login','userLogin');
     //forgotPassword
+    //home ongoing projects
+    $router->addRoute('ongoing_projects','OngoingProjects','ongoingProjects');
+    //home finished projects
+    $router->addRoute('finished_projects','FinishedProjects','finishedProjects');
     //email_verify
     $router->addRoute('email_verify','EmailVerify','verifyEmail');
+
+    /*--------------------division---------------------*/
     //division add montly report
     $router->addRoute('add_monthly_report','DivAddMonthlyReport','addMonthlyReport');
     //division launch project
