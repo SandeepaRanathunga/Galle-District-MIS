@@ -13,6 +13,8 @@
     $router->addRoute('ongoing_projects','OngoingProjects','ongoingProjects');
     //home finished projects
     $router->addRoute('finished_projects','FinishedProjects','finishedProjects');
+    //home annual reports
+    $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
     $router->addRoute('email_verify','EmailVerify','verifyEmail');
 
