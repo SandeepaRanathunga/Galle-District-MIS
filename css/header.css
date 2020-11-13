@@ -23,12 +23,12 @@ header .branding{
 .districtTag h2{
     font-size: 35px;
     font-weight: bold;
-    color:black;
+    color:#2F4F4F;
 }
 .districtTag h3{
     font-size: 25px;
     font-weight: bold;
-    color:black;
+    color:#2F4F4F;
 }
 .user{
     margin:10px;

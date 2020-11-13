@@ -7,18 +7,6 @@
             <h3>Project Handling and Evaluation MIS</h3>
         </div>     
 </header>
+<?php include 'includes/guestNav.php';?>
 
-<nav class="clearfix" id="myNavbar">
-    <?php $fileName=basename($_SERVER['PHP_SELF'])?>
-
-    
-        <a href="contractor_home.php" <?php if($fileName=='contractor_home.php') echo "class=active"?>>Home</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Projects</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>Reports</a>
-        <a href="#" <?php if($fileName=='#') echo "class=active"?>>About us</a>
-        <br>
-        <p style="float:right; color:red;"> Hello Username!   (Logout) </p>
-        
-        
-</nav>
 
