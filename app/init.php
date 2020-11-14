@@ -32,17 +32,17 @@
     $router->addRoute('respond_contractors','DivRespondContractors','divRespondContractors');
     
     /*--------------------district---------------------*/
-    $router->addRouter('dis_home','DisHome','disHome');
+    $router->addRoute('dis_home','DisHome','disHome');
     //district manage funds record
-    $router->addRouter('dis_manage_funds','DistrictManageFunds','districtManageFunds');
+    $router->addRoute('dis_manage_funds','DisManageFunds','disManageFunds');
 
     /*---------------------admin----------------------*/
-    $router->addRouter('admin_home','AdminHome','adminHome');
+    $router->addRoute('admin_home','AdminHome','adminHome');
     //admin create account
-    $router->addRouter('admin_create_account','AdminCreateAccount','adminCreateAccount');
+    $router->addRoute('admin_create_account','AdminCreateAccount','adminCreateAccount');
 
     /*--------------------contractor-----------------*/
-    $router->addRouter('contractor_home','ContractorHome','contractorHome');
+    $router->addRoute('contractor_home','ContractorHome','contractorHome');
 
     $app=new App($router);
 

@@ -2,15 +2,8 @@
     display: flex;
     background: #f2f2f2;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    height: 500px;  
-=======
-    height: 500px;
-    
->>>>>>> 56ce5c16bcf59a0bed31fc899e751c8ef6416263
-    margin-left: 10px;
+    min-height: 500px;  
     float:left;
-    
   }
 
 .button-flex-container > div{
@@ -18,20 +11,7 @@
     width: 450px;
     margin: auto;
     text-align: center;
-<<<<<<< HEAD:css/userHome.css
-<<<<<<< HEAD
-    font-family: 'Ubuntu';
-=======
-<<<<<<< HEAD
->>>>>>> intermediate
-=======
-    font-family: 'Ubuntu';
->>>>>>> mvc:public/css/userHome.css
     font-size: 30px;  
-=======
-    font-size: 30px;
-    
->>>>>>> 56ce5c16bcf59a0bed31fc899e751c8ef6416263
 }
 .button-flex-container > div .active{
     background:white;
@@ -43,7 +23,6 @@
     font-size:30px;
     color:white;
     font-weight:bold;
-    font-family: 'Ubuntu';
     padding:40px;
     margin:5px;
     background:#2F4F4F;

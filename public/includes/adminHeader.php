@@ -1,4 +1,4 @@
-<header class=clearfix>
+<header>
         <div class="branding">
             <img src="./images/logo.png" alt="logo" class="logo">
         </div>
@@ -8,7 +8,7 @@
         </div>     
 </header>
 
-<nav class="clearfix" id="myNavbar">
+<nav id="myNavbar">
     <?php $fileName=basename($_SERVER['PHP_SELF'])?>
 
     
