@@ -9,13 +9,8 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php include_once('includes/header.php');?>
-    <?php include_once('includes/guestNav.php');?>
-    <div class="tag">
-        <h2>Ongoing Projects</h2>
-    </div>
-    <div class="container">
-     
+    <?php include_once('includes/divHeader.php');?>
+    <div class='container'>
     </div>
     <?php require_once('includes/footer.php');?>
 </body>
