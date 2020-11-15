@@ -25,11 +25,13 @@
     //division launch project
     $router->addRoute('launch_project','DivLaunchProject','launchProject');
     //division call for bids
-    $router->addRoute('call_for_bids','DivCallForBids','callForBids');
+    $router->addRoute('call_for_bids','DivCallForBids','divCallForBids');
     //division notifications
     $router->addRoute('div_notifications','DivNotifications','divNotifications');
     //division respond contractors
     $router->addRoute('respond_contractors','DivRespondContractors','divRespondContractors');
+    //division view bid reports
+    $router->addRoute('view_bid_reports','DivViewBidReports','divViewBidReports');
     
     /*--------------------district---------------------*/
     $router->addRoute('dis_home','DisHome','disHome');
