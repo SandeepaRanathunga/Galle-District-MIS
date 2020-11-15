@@ -9,25 +9,13 @@
 </head>
 
 <body>
-
-
     <?php require_once('includes/contractorHeader.php');?>
-
-    <!-- COPOIED CODE-->
-     
-        <div class="button-flex-container" >
-                      
-                        <div> <a href="#"> Notifications </a></div>
-                        <div> <a href="#">Submit bit report</a></div>
-                        <div> <a href="#">View bid callings</a></div>
-                        <div> <a href="#">Manage expenses</a></div>
-
-                        
-                        
-
-         </div>     
-    
-    <!-- COPOIED CODE-->
+        <div class="button-flex-container" >              
+            <div> <a href="#"> Notifications </a></div>
+            <div> <a href="#">Submit bit report</a></div>
+            <div> <a href="#">View bid callings</a></div>
+            <div> <a href="#">Manage expenses</a></div>
+        </div>     
     <?php require_once('includes/footer.php');?>
 </body>
 </html>
