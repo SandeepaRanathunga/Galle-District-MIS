@@ -19,7 +19,7 @@
     <div class="container">
         <div class="formarea clearfix">
             <form action="" method="POST" id="newUser">
-                <div>
+                <div> 
                     <label for="user_id">User ID</label>
                     <input type="text" name="user_id">
                 </div>
@@ -29,9 +29,9 @@
                 </div>
                 <div>
                     <label for="office">Office</label>
-                    <select name="office" id="">
-                        <option value="div00" disabled selected value>selcet</option>    
-                        <option value="div00">Distrcit secretariat</option>
+                    <select name="office_id" id="">
+                        <option disabled selected value>selcet</option>    
+                        <!-- <option value="div00">Distrcit secretariat</option>
                         <option value="div01">Akmeemana</option>
                         <option value="div02">Ambalangoda</option>
                         <option value="div03">Baddegama</option>
@@ -50,7 +50,16 @@
                         <option value="div16">Thawalama</option>
                         <option value="div17">Welivitiya-Divithura</option>
                         <option value="div18">Yakkalamulla</option>
-                        <option value="div19">Gonapinuwala</option>
+                        <option value="div19">Gonapinuwala</option> -->
+                        <?php
+                            
+                            foreach($this->divisions as $division):
+                                var_dump($this->divisions);
+                        ?>
+                        <option value=<?php echo $division['div_id'];?>><?php echo$division['div_name'];?></option>
+                        <?php
+                            endforeach;
+                        ?>
                     </select>
                 </div>
                 <div>
@@ -63,7 +72,7 @@
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
-                    <input type="text" name="contactno">
+                    <input type="text" name="contact_no">
                 </div>
                 <div>
                     <label for="email">E-mail</label>
@@ -75,7 +84,7 @@
                 </div>
                 <div>
                     <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirmpassword">
+                    <input type="password" name="confirm_password">
                 </div>
                 
                 <div>

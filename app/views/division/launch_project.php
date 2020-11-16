@@ -33,12 +33,20 @@
                     <input type="date" name="end_date">
                 </div>
                 <div>
-                    <label for="project_id">Contractor Name</label>
-                    <input type="text" name="contractor_name">
+                    <label for="grama_niladari">Grama Niladari Division</label>
+                    <select name="gramaniladari_id" id="">
+                        <option disabled selected value>selcet</option>    
+                        <option value="div01c01">Distrcit secretariat</option>
+                        <option value="div02c02">Akmeemana</option>
+                    </select>
                 </div>
                 <div>
-                    <label for="grama_niladari">Grama Niladari Division</label>
-                    <input type="text" name="grama_niladari">
+                    <label for="project_id">Contractor</label>
+                    <select name="contracotr_id" id="">
+                        <option disabled selected value>selcet</option>    
+                        <option value="div01c01">Distrcit secretariat</option>
+                        <option value="div02c02">Akmeemana</option>
+                    </select>
                 </div>
                 <div>
                     <input type="button" value="Cancel">
