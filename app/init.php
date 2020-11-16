@@ -17,7 +17,10 @@
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
     $router->addRoute('email_verify','EmailVerify','verifyEmail');
-    
+    //contractor_page
+    $router->addRoute('contractors','Contractor','contractor');
+
+
     /*--------------------division---------------------*/
     $router->addRoute('div_home','DivHome','divHome');
     //division add montly report
