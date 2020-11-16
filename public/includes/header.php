@@ -7,14 +7,14 @@
             <h3>Project Handling and Evaluation MIS</h3>
         </div>
         <?php
-            $username="MR.Sandeepa";
+            // $username="MR.Sandeepa";
             if(isset($username)):
         ?>
             <script>
                 document.getElementById("user").style.display="none";
             </script>
             <div class="user" id="user">
-                <span><?php echo $username;?>(<span style="color:red">Logout</span>)</span>
+                <span><?php echo $username;?>(<a href="" class="logout">Logout</a>)</span>
             </div>
         <?php
             else:
