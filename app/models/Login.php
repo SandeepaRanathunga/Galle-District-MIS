@@ -16,7 +16,6 @@
             $query="SELECT password FROM users WHERE username='{$this->username}'";
             $result=$database->query($query);
             $result_arr=$result->fetch_assoc();
-
             if($result && password_verify($this->password,$result_arr['password']))
                 return true;
             return false;
@@ -25,5 +24,6 @@
         public function getUsername(){
             return $this->username;
         }
+        
     }
 ?>

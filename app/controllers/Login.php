@@ -14,7 +14,11 @@
             if($user->checkLoginDetails()){
                 session_start();
                 $_SESSION['username']=$user->getUsername();
-                header('Location: add_monthly_report');
+                $agencyTag=substr($_SESSION['username'],0,3);
+                // for admin
+                if($agencyTag=='adm')
+                    header('Location:#');
+                //for divisions
                  
             }
         }
