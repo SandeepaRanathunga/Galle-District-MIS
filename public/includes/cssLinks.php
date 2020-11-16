@@ -1,4 +1,5 @@
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/update_about_us_info.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/userHome.css">
     <link rel="stylesheet" href="css/guestHome.css">

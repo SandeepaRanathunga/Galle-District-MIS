@@ -44,6 +44,7 @@
     $router->addRoute('admin_create_account','AdminCreateAccount','adminCreateAccount');
     //admin update account
     $router->addRoute('admin_update_account','AdminUpdateAccount','adminUpdateAccount');
+    $router->addRoute('update_about_us_info','UpdateAboutUsInfo','index');
 
     /*--------------------contractor-----------------*/
     $router->addRoute('contractor_home','ContractorHome','contractorHome');

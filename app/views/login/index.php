@@ -1,11 +1,3 @@
-<?php
-    $alert='';
-    if(isset($_POST['login'])){
-        //Login data confirmation must added after the databases created
-        
-        
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +18,7 @@
         <div>
             <div class="loginBox">
                 <h2>Welcome</h2>
-                    <?php echo $alert;?>
+                    <!-- <?php echo $alert;?> -->
                 <form action="" method="post">
                     <div>
                         <label for="username"><i class="fa fa-user"></i></label>
