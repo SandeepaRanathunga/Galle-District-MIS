@@ -40,10 +40,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/common.css" type="text/css">
-    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/verifystyle.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
     <link rel="icon" href="images/logo.png">
     <title>Project Handelling and Evaluation MIS</title>
 </head>
