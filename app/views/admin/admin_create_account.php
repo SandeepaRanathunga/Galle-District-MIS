@@ -23,21 +23,33 @@
                     <input type="text" name="user_id">
                 </div>
                 <div>
-                    <label for="office_id">Office ID</label>
-                    <input type="text" name="office_id">
-                </div>
-                <div>
                     <label for="name">Name</label>
                     <input type="text" name="name">
                 </div>
                 <div>
                     <label for="office">Office</label>
-                    <select name="office" id="office" form="newUser">
-                        <option value="office_1"> Office 1 </option>
-                        <option value="office_2"> Office 2 </option>
-                        <option value="office_3"> Office 3 </option>
-                        <option value="office_4"> Office 4 </option>
-                        <option value="office_5"> Office 5 </option>
+                    <select name="office" id="">
+                        <option value="div00" disabled selected value>selcet</option>    
+                        <option value="div00">Distrcit secretariat</option>
+                        <option value="div01">Akmeemana</option>
+                        <option value="div02">Ambalangoda</option>
+                        <option value="div03">Baddegama</option>
+                        <option value="div04">Balapitiya</option>
+                        <option value="div05">Benthota</option>
+                        <option value="div06">Bope-Poddala</option>
+                        <option value="div07">Elpitiya</option>
+                        <option value="div08">Galle Four Gravets</option>
+                        <option value="div09">Habaraduwa</option>
+                        <option value="div10">Hikkaduwa</option>
+                        <option value="div11">Imaduwa</option>
+                        <option value="div12">Karandeniya</option>
+                        <option value="div13">Nagoda</option>
+                        <option value="div14">Neluwa</option>
+                        <option value="div15">Niyagama</option>
+                        <option value="div16">Thawalama</option>
+                        <option value="div17">Welivitiya-Divithura</option>
+                        <option value="div18">Yakkalamulla</option>
+                        <option value="div19">Gonapinuwala</option>
                     </select>
                 </div>
                 <div>
@@ -66,7 +78,7 @@
                 </div>
                 
                 <div>
-                    <input type="button" value="Cancel">
+                    <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>
