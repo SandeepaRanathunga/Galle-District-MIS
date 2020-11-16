@@ -6,9 +6,25 @@
             <h2>Galle District Secretariat</h2>
             <h3>Project Handling and Evaluation MIS</h3>
         </div>
+        <?php
+            $username="MR.Sandeepa";
+            if(isset($username)):
+        ?>
+            <script>
+                document.getElementById("user").style.display="none";
+            </script>
+            <div class="user" id="user">
+                <span><?php echo $username;?>(<span style="color:red">Logout</span>)</span>
+            </div>
+        <?php
+            else:
+        ?>
+
         <div class="user" id="user">
-            <!-- <button class="dropbtn"><i class="fas fa-user"></i></button> -->
             <a href="login"><i class="fas fa-user"></i></a>
         </div>
+        <?php
+            endif;
+        ?>
 </header>
 
