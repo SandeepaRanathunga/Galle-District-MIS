@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create new account- Administrator</title> <!--Change name here-->
+    <title>Signup</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminCreateAccount.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php require_once('includes/contractorHeader.php');?> <!--Change Header here-->
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
 
     <div class="tag">
-        <a href="admin_create_account"><h2>Create new user accounts</h2></a>
+        <h2>Create new user accounts</h2>
     </div>
 
     <div class="container">
