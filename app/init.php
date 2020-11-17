@@ -16,7 +16,7 @@
     //home annual reports
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
-    $router->addRoute('email_verify','EmailVerify','verifyEmail');
+    $router->addRoute('email_verify','EmailVerify','index');
     
     /*--------------------division---------------------*/
     $router->addRoute('div_home','DivHome','divHome');
