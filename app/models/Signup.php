@@ -14,18 +14,23 @@
         private $confirm_password;
 
         public function setDetails(){
-            $this->user_id=$_POST['user_id'];
-            $this->name=$_POST['name'];
-            $this->office_id=$_POST['office_id'];
-            $this->designation=$_POST['designation'];
-            $this->nic=$_POST['nic'];
-            $this->contact_no=$_POST['contact_no'];
-            $this->email=$_POST['email'];
-            $this->password=$_POST['password'];
-            $this->confirm_password=$_POST['confirm_password'];
+            $this->user_id=$this->clearInputs($_POST['user_id']);
+            $this->name=$this->clearInputs($_POST['name']);
+            $this->office_id=$this->clearInputs($_POST['office_id']);
+            $this->designation=$this->clearInputs($_POST['designation']);
+            $this->nic=$this->clearInputs($_POST['nic']);
+            $this->contact_no=$this->clearInputs($_POST['contact_no']);
+            $this->email=$this->clearInputs($_POST['email']);
+            $this->password=$this->clearInputs($_POST['password']);
+            $this->confirm_password=$this->clearInputs($_POST['confirm_password']);
 
             $this->password=password_hash($this->password,PASSWORD_DEFAULT);
             
+        }
+        private function clearInputs($input){
+            $input=trim($input);
+            $input=htmlspecialchars($input);
+            return $input;
         }
         private function dbConnect(){
             $database=new \Database();

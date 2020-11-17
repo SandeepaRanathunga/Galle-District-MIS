@@ -24,18 +24,18 @@
 
     <div class="container">
         <div class="formarea clearfix">
-            <form action="" method="POST" id="newUser">
+            <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
                 <div> 
                     <label for="user_id">User ID</label>
-                    <input type="text" name="user_id">
+                    <input type="text" name="user_id" id="user_id" required>
                 </div>
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" id="name" required>
                 </div>
                 <div>
                     <label for="office">Office</label>
-                    <select name="office_id" id="">
+                    <select name="office_id" id="office_id" required>
                         <option disabled selected value>selcet</option>
                         <option value="dis00">District Secretariat</option>   
                         <?php
@@ -50,36 +50,37 @@
                 </div>
                 <div>
                     <label for="designation">Designation</label>
-                    <input type="text" name="designation">
+                    <input type="text" name="designation" id="designation" required>
                 </div>
                 <div>
                     <label for="nic">NIC</label>
-                    <input type="text" name="nic">
+                    <input type="text" name="nic" id="nic" required>
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
-                    <input type="text" name="contact_no">
+                    <input type="text" name="contact_no" id="contact_no" required>
                 </div>
                 <div>
                     <label for="email">E-mail</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password">
+                    <input type="password" name="password" id="password" required>
                 </div>
                 <div>
                     <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirm_password">
+                    <input type="password" name="confirm_password" id="confirm_password" required>
                 </div>
                 
                 <div>
                     <input type="reset" value="Cancel">
-                    <input type="submit" value="Submit" name="submit">
+                    <input type="submit" value="Submit" name="submit" id="submit">
                 </div>
             </form>
         </div>
     </div>
+    <script src="js/signup_validation.js"></script>
     <?php require_once('includes/footer.php');?>
 </body>
 </html>
