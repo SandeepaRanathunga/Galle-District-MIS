@@ -13,7 +13,7 @@
         private $password;
         private $confirm_password;
 
-        private function setDetails(){
+        public function setDetails(){
             $this->user_id=$_POST['user_id'];
             $this->name=$_POST['name'];
             $this->office_id=$_POST['office_id'];
@@ -23,6 +23,8 @@
             $this->email=$_POST['email'];
             $this->password=$_POST['password'];
             $this->confirm_password=$_POST['confirm_password'];
+
+            $this->password=password_hash($this->password,PASSWORD_DEFAULT);
             
         }
         private function dbConnect(){
@@ -38,6 +40,21 @@
                 array_push($result_arr,[$row['div_id'],$row['div_name']]);
             }
             return $result_arr;
+        }
+        public function insertUserDetails(){
+            $connection=$this->dbConnect();
+            if($this->office_id=='dis00'){
+                $query="INSERT INTO dis_user (user_id,user_name,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->designation','$this->nic','$this->contact_no','$this->email','$this->password')";
+                $result=$connection->query($query);
+                return $result;
+            }
+            else{
+                $query="INSERT INTO div_user (user_id,user_name,div_id,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->office_id','$this->designation','$this->nic','$this->contact_no','$this->email','$this->password')";
+                $result=$connection->query($query);
+                return $result;
+            }
+            
+            
         }
 
 

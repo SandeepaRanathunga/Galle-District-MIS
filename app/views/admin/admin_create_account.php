@@ -1,3 +1,9 @@
+<?php
+    $divisions=$this->divisions;
+    if(isset($_SESSION['submit'])){
+        var_dump($_SESSION);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,36 +36,16 @@
                 <div>
                     <label for="office">Office</label>
                     <select name="office_id" id="">
-                        <option disabled selected value>selcet</option>    
-                        <!-- <option value="div00">Distrcit secretariat</option>
-                        <option value="div01">Akmeemana</option>
-                        <option value="div02">Ambalangoda</option>
-                        <option value="div03">Baddegama</option>
-                        <option value="div04">Balapitiya</option>
-                        <option value="div05">Benthota</option>
-                        <option value="div06">Bope-Poddala</option>
-                        <option value="div07">Elpitiya</option>
-                        <option value="div08">Galle Four Gravets</option>
-                        <option value="div09">Habaraduwa</option>
-                        <option value="div10">Hikkaduwa</option>
-                        <option value="div11">Imaduwa</option>
-                        <option value="div12">Karandeniya</option>
-                        <option value="div13">Nagoda</option>
-                        <option value="div14">Neluwa</option>
-                        <option value="div15">Niyagama</option>
-                        <option value="div16">Thawalama</option>
-                        <option value="div17">Welivitiya-Divithura</option>
-                        <option value="div18">Yakkalamulla</option>
-                        <option value="div19">Gonapinuwala</option> -->
+                        <option disabled selected value>selcet</option>
+                        <option value="dis00">District Secretariat</option>   
                         <?php
-                            
-                            foreach($this->divisions as $division):
-                                var_dump($this->divisions);
+                            foreach($divisions as $division):
                         ?>
-                        <option value=<?php echo $division['div_id'];?>><?php echo$division['div_name'];?></option>
+                        <option value="<?php echo $division[0];?>"><?php echo $division[1];?></option>
                         <?php
-                            endforeach;
+                            endforeach; 
                         ?>
+                        
                     </select>
                 </div>
                 <div>

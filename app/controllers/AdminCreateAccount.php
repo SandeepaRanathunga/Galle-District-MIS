@@ -1,4 +1,5 @@
 <?php
+session_start();
     class AdminCreateAccount extends Controller{
         private $model;
         public $divisions=[];
@@ -11,11 +12,19 @@
         public function adminCreateAccount(){
             if(isset($_POST['submit']))
                 $this->proceedRegistration();
-            else
+            else{
                 $this->view('admin/admin_create_account');
+            }
         }
         private function proceedRegistration(){
-            var_dump($this->divisions);
+            $this->model->setDetails();
+            $result=$this->model->insertUserDetails();
+            if($result){
+                echo "<script>alert('Data inserted sucessfully!')</script>";
+            }
+            else{
+                echo "<script>alert('Something went wrong!')</script>";
+            }
         }
         public function getDivisionList(){
             return $this->model->getDivisions();
