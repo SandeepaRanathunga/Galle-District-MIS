@@ -20,7 +20,8 @@ session_start();
             $this->model->setDetails();
             $result=$this->model->insertUserDetails();
             if($result){
-                echo "<script>alert('Data inserted sucessfully!')</script>";
+                echo "<script>alert('Data inserted sucessfully!');</script>";
+                echo "<script>window.location.href='admin_create_account';</script>";   
             }
             else{
                 echo "<script>alert('Something went wrong!')</script>";

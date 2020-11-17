@@ -27,7 +27,7 @@
             <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
                 <div> 
                     <label for="user_id">User ID</label>
-                    <input type="text" name="user_id" id="user_id" required>
+                    <input type="text" name="user_id" id="user_id" minlength="7" maxlength="7" required>
                 </div>
                 <div>
                     <label for="name">Name</label>
@@ -37,11 +37,11 @@
                     <label for="office">Office</label>
                     <select name="office_id" id="office_id" required>
                         <option disabled selected value>selcet</option>
-                        <option value="dis00">District Secretariat</option>   
+                        <option value="dis00">District Secretariat - dis00</option>   
                         <?php
                             foreach($divisions as $division):
                         ?>
-                        <option value="<?php echo $division[0];?>"><?php echo $division[1];?></option>
+                        <option value="<?php echo $division[0];?>"><?php echo $division[1].' - '.$division[0];?></option>
                         <?php
                             endforeach; 
                         ?>
@@ -54,11 +54,11 @@
                 </div>
                 <div>
                     <label for="nic">NIC</label>
-                    <input type="text" name="nic" id="nic" required>
+                    <input type="text" name="nic" id="nic" minlength="10" maxlength="12"required>
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
-                    <input type="text" name="contact_no" id="contact_no" required>
+                    <input type="text" name="contact_no" id="contact_no" minlength="10" maxlength="10" required>
                 </div>
                 <div>
                     <label for="email">E-mail</label>
@@ -66,11 +66,11 @@
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" minlength="8" maxlength="12" required>
                 </div>
                 <div>
                     <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" required>
+                    <input type="password" name="confirm_password" id="confirm_password" minlength="8" maxlength="12" required>
                 </div>
                 
                 <div>
