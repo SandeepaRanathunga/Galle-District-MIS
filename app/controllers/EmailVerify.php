@@ -3,7 +3,7 @@
         private $model;
 
         public function __construct(){
-            $this->model=$this->model('EmailVerify');
+            $this->model=$this->model('passwordReset');
         }
         public function index(){
             if(isset($_POST['send'])){

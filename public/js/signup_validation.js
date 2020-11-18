@@ -15,3 +15,30 @@ function signupValidate(){
     return true;
         
 }
+function checkPasswordPattern(){
+    let password=document.getElementById('password').value;
+    if(password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/)){
+        document.getElementById("pattern").innerHTML="<i class='fas fa-check'></i>";
+        document.getElementById("pattern").style.color="green";
+
+    }
+    else{
+        document.getElementById("pattern").innerHTML="Invalid password pattern";
+        document.getElementById("pattern").style.color="red";
+    }
+
+}
+function confirmPassword(){
+    let password=document.getElementById('password').value;
+    let confirm_password=document.getElementById('confirm_password').value;
+    if(password==confirm_password){
+        document.getElementById("confirm_warning").innerHTML="<i class='fas fa-check'></i>";
+        document.getElementById("confirm_warning").style.color="green";
+    }
+    else{
+        document.getElementById( "confirm_warning").innerHTML="<i class='fas fa-times'></i>";
+        document.getElementById("confirm_warning").style.color="red";
+    }
+
+
+}

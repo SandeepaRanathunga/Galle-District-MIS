@@ -13,6 +13,12 @@
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminCreateAccount.css">
     <link rel="icon" href="images/logo.png">
+    <style>
+        .warning{
+            display:inline-block;
+            
+        }
+    </style>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
@@ -47,6 +53,7 @@
                         ?>
                         
                     </select>
+                    <p id="office_warning"></p>
                 </div>
                 <div>
                     <label for="designation">Designation</label>
@@ -54,11 +61,11 @@
                 </div>
                 <div>
                     <label for="nic">NIC</label>
-                    <input type="text" name="nic" id="nic" minlength="10" maxlength="12"required>
+                    <input type="text" name="nic" id="nic" minlength="10" maxlength="12" title="Enter 10 digit nic with v and 12 digit nic without v" required>
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
-                    <input type="text" name="contact_no" id="contact_no" minlength="10" maxlength="10" required>
+                    <input type="text" name="contact_no" id="contact_no" minlength="10" maxlength="10" pattern="[0-9]+" title="Enter 10 digit mobile number" required>
                 </div>
                 <div>
                     <label for="email">E-mail</label>
@@ -66,11 +73,13 @@
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" minlength="8" maxlength="12" required>
+                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password must contain atleast one number,lowecase,uppercase and 8 or more charactors" onkeyup="checkPasswordPattern()" required>
+                    <p id="pattern" class="warning"></p>
                 </div>
                 <div>
                     <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" minlength="8" maxlength="12" required>
+                    <input type="password" name="confirm_password" id="confirm_password" onkeyup="confirmPassword()" required>
+                    <p id="confirm_warning" class="warning"></p>
                 </div>
                 
                 <div>
