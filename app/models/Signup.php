@@ -11,6 +11,7 @@
         private $contact_no;
         private $email;
         private $password;
+        private $hashed_password;
         private $confirm_password;
 
         public function setDetails(){
@@ -24,7 +25,7 @@
             $this->password=$this->clearInputs($_POST['password']);
             $this->confirm_password=$this->clearInputs($_POST['confirm_password']);
 
-            $this->password=password_hash($this->password,PASSWORD_DEFAULT);
+            $this->hashed_password=password_hash($this->password,PASSWORD_DEFAULT);
             
         }
         private function clearInputs($input){
@@ -49,17 +50,30 @@
         public function insertUserDetails(){
             $connection=$this->dbConnect();
             if($this->office_id=='dis00'){
-                $query="INSERT INTO dis_user (user_id,user_name,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->designation','$this->nic','$this->contact_no','$this->email','$this->password')";
+                $query="INSERT INTO dis_user (user_id,user_name,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->designation','$this->nic','$this->contact_no','$this->email','$this->hashed_password')";
                 $result=$connection->query($query);
                 return $result;
             }
             else{
-                $query="INSERT INTO div_user (user_id,user_name,div_id,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->office_id','$this->designation','$this->nic','$this->contact_no','$this->email','$this->password')";
+                $query="INSERT INTO div_user (user_id,user_name,div_id,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->office_id','$this->designation','$this->nic','$this->contact_no','$this->email','$this->hashed_password')";
                 $result=$connection->query($query);
                 return $result;
             }
+        
             
             
+        }
+        public function getEmail(){
+            return $this->email;
+        }
+        public function getPassword(){
+            return $this->password;
+        }
+        public function getUserID(){
+            return $this->user_id;
+        }
+        public function getName(){
+            return $this->name;
         }
 
 

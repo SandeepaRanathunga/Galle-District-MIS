@@ -14,7 +14,11 @@
             $this->email=htmlspecialchars(trim($_POST['email']));
         }
         public function checkEmail(){
-            
+            $connection=$this->dbConnect();
+            $query="";
+            $result=$connection->query();
+            return $result;
+
         }
     } 
 ?>
