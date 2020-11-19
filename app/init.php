@@ -40,6 +40,14 @@
     $router->addRoute('dis_home','DisHome','disHome');
     //district manage funds record
     $router->addRoute('dis_manage_funds','DisManageFunds','disManageFunds');
+    //district generate report
+    $router->addRoute('dis_generate_report','DisGenerateReport','disGenerateReport');
+    //district notifications
+    $router->addRoute('dis_notifications','DisNotifications','disNotifications');
+    //district monthly report
+    $router->addRoute('dis_view_monthly_report','DisViewMonthlyReport','disViewMonthlyReport');
+    //district project proposal
+    $router->addRoute('dis_view_project_proposal','DisViewProjectProposals','disViewProjectProposals');
 
     /*---------------------admin----------------------*/
     $router->addRoute('admin_home','AdminHome','adminHome');
@@ -47,6 +55,7 @@
     $router->addRoute('admin_create_account','AdminCreateAccount','adminCreateAccount');
     //admin update account
     $router->addRoute('admin_update_account','AdminUpdateAccount','adminUpdateAccount');
+    //admin update about us
     $router->addRoute('update_about_us_info','UpdateAboutUsInfo','index');
 
     /*--------------------contractor-----------------*/
