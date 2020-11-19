@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>District - Home </title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
+    <link rel="stylesheet" href="css/userHome.css">
     <link rel="icon" href="./images/logo.png">
 
 </head>

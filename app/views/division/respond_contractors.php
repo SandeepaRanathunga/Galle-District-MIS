@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handeling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
+    <link rel="stylesheet" href="css/userPage.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>

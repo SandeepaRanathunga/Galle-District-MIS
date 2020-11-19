@@ -75,6 +75,11 @@ header .branding{
     background:#2F4F4F;
     color:white;
 }
+.user .logout{
+    color:red;
+    background:none;
+    font-size: 15px;
+}
 /******************************************/
 /* for the footer*/
 .footerbox{
