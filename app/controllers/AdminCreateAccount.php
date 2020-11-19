@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../mailer/MailSender.php';
 session_start();
+if(!isset($_SESSION['userName'])){
+    header('Location:login');
+}
+$username=$_SESSION['userName'];
     class AdminCreateAccount extends Controller{
         private $model;
         public $divisions=[];
