@@ -14,7 +14,8 @@
         <a href="div_home.php" <?php if($fileName=='#') echo "class=active"?>>Projects</a>
         <a href="div_home.php" <?php if($fileName=='#') echo "class=active"?>>Reports</a>
         <a href="div_home.php" <?php if($fileName=='#') echo "class=active"?>>Contractors</a>
-        <a href="div_home.php" <?php if($fileName=='#') echo "class=active"?>>About us</a>       
+        <a href="div_home.php" <?php if($fileName=='#') echo "class=active"?>>About us</a>
+        <a href="javascript:void(0);" class="icon" onclick="addResponsiveness()"><i class="fa fa-bars"></i></a>      
     </div>
 </nav>
 
