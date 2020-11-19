@@ -12,11 +12,11 @@
 <body>
     <?php include 'includes/header.php';?>
     <?php include 'includes/guestNav.php';?>
-    <div class="slideshow-container">
+    <div class="slideshow-container" >
 
         <div class="mySlides fade">
             <div class="numbertext">1 / 4</div>
-            <img src="images/welcome.jpg" style="width:100%;height:400px">
+            <img src="images/welcome.png" style="width:100%;height:400px">
             <div class="text">Welcome</div>
         </div>
 
@@ -43,7 +43,7 @@
 
     </div>
 
-    <div style="text-align:center">
+    <div style="text-align:center;" >
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span> 

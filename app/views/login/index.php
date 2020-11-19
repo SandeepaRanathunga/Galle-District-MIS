@@ -19,8 +19,8 @@
                     <!-- <?php echo $alert;?> -->
                 <form action="" method="post">
                     <div>
-                        <label for="username"><i class="fa fa-user"></i></label>
-                        <input type="text" name="username" placeholder="Enter the username" required>
+                        <label for="userID"><i class="fa fa-user"></i></label>
+                        <input type="text" name="userID" placeholder="Enter the user ID" required>
                     </div>
                     <div>
                         <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>

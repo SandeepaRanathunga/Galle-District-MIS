@@ -1,5 +1,6 @@
 <?php
     class Controller{
+        public $name="sandeepa";
         protected function view($view){
             require_once __DIR__.'/../views/'.$view.'.php';
         }
