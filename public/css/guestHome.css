@@ -18,7 +18,7 @@ body{
     background:#f2f2f2;
     width:100%;
     margin:10px 0px;
-    padding:25px 36px;
+    padding:0px 50px;
     box-sizing: border-box;
     display:flex;
     align-items: center;
@@ -29,14 +29,14 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    margin:2px 2.5px;
-    width:400px;
+    margin:40px 60px;
+    width:250px;
     height:200px;
-    color:white;
+    color: #f2f2f2;
+    text-shadow: #f2f2f2;
     font-weight: bold;
     
     font-size: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .info a:nth-child(1){
     flex:1;
