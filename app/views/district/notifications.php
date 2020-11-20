@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
+    <link rel="stylesheet" href="css/userNotifications.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -15,17 +16,17 @@
         <h2>Notifications</h2>
     </div>
     <div class="container">
-        <div class="combutton">
+        <div class="clearbutton">
             <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Notification 1</h2></div>
+                <div style="width:75%"><h2 style="font-size:17px"><br>Notification 001</h2></div>
                 <div style="width:15%"><button>Clear</button></div>
             </div>
             <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Notification 2</h2></div>
+                <div style="width:75%"><h2 style="font-size:17px"><br>Notification 002</h2></div>
                 <div style="width:15%"><button>Clear</button></div>
             </div>
             <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Notification 3</h2></div>
+                <div style="width:75%"><h2 style="font-size:17px"><br>Notification 003</h2></div>
                 <div style="width:15%"><button>Clear</button></div>
             </div>
         </div>
