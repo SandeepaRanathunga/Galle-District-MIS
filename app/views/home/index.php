@@ -49,7 +49,7 @@
         <span class="dot" onclick="currentSlide(3)"></span> 
         <span class="dot" onclick="currentSlide(4)"></span> 
     </div>
-<div class="info clearfix">
+<div class="button-container clearfix">
     <a href="/Galle-District-mis/ongoing_projects">Ongoing Projects</a>
     <a href="/Galle-District-mis/finished_projects">Finished Projects</a>
     <a href="/Galle-District-mis/annual_reports">Annual Progress</a>
