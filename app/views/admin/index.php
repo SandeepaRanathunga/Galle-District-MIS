@@ -12,22 +12,28 @@
 <body>
 
 
-<?php require_once('includes/header.php');?>
-<?php //require_once('#');?>
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
 
-    <!-- COPOIED CODE-->
-     
-        <div class="button-flex-container" >
-                      
-                        <div> <a href="#"> Create user accounts </a></div>
-                        <div> <a href="#">Update account details</a></div>
-                        <div> <a href="#">Delete user Accounts</a></div>
-                        <div> <a href="#">Update about us info</a></div>
-
-                        
-                        
-
-         </div>     
-    <?php require_once('includes/footer.php');?>
+        
+    <div class="button-flex-container" >
+        <a href="#">
+            <div><img src="svg/adduser.svg" alt=""></div>
+            <div>Create User Accounts</div>    
+        </a>
+        <a href="#">
+            <div><img src="svg/updateuser.svg" alt=""></div>
+            <div>Update User Accounts</div>
+        </a>
+        <a href="#">
+            <div><img src="svg/deleteuser.svg" alt=""></div>
+            <div>Delete User Accounts</div>
+        </a>
+        <a href="#">
+            <div><img src="svg/aboutus.svg" alt=""></div>
+            <div>Update About Us</div>    
+        </a>
+    </div>     
+        <?php require_once('includes/footer.php');?>
 </body>
 </html>
