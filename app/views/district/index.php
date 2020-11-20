@@ -11,15 +11,8 @@
 </head>
 
 <body>
-<<<<<<< HEAD
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
-
-    <!-- The buttons-->
-=======
-    <?php require_once('includes/divHeader.php');?> <!--Change Header here-->
->>>>>>> developer00
-     
+    <?php //require_once('#');?>   
         <div class="button-flex-container" >
             <a href="#">
                 <div><img src="svg/notifications.svg" alt=""></div>
