@@ -15,7 +15,8 @@
     </style>
 </head>
 <body>
-    <?php require_once('includes/adminHeader.php');?> <!--Change Header here-->
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
 
     <div class="tag">
         <a href="./admin_update_account.php"><h2>Update user accounts</h2></a>
