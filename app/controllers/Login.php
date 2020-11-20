@@ -37,7 +37,10 @@
             
         }
         private function adminHeader($model){
-
+                $_SESSION['userID']=$model->getuserID();
+                $_SESSION['userName']=$model->getUserName();
+                echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
+                echo "<script>window.location.href='create_account';</script>";
         }
         private function divisionHeader($model){
                 $_SESSION['userID']=$model->getuserID();

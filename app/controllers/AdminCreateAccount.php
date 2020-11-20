@@ -4,7 +4,6 @@ session_start();
 if(!isset($_SESSION['userName'])){
     header('Location:login');
 }
-$username=$_SESSION['userName'];
     class AdminCreateAccount extends Controller{
         private $model;
         public $divisions=[];
@@ -23,21 +22,26 @@ $username=$_SESSION['userName'];
         }
         private function proceedRegistration(){
             $this->model->setDetails();
-            $result=$this->model->insertUserDetails();
-            if($result){
-                if($this->sendCreditions()){
-                    echo "<script>alert('Data inserted sucessfully and login creditions sent to the user!');</script>";
-                    echo "<script>window.location.href='admin_create_account';</script>";   
+                if($this->model->validateData()){
+                    $result=$this->model->insertUserDetails();
+                    if($result){
+                        if($this->sendCreditions()){
+                            echo "<script>alert('Data inserted sucessfully and login creditions sent to the user!');</script>";
+                            echo "<script>window.location.href='admin_create_account';</script>";   
+                        }
+                        else{
+                            echo "<script>alert('Data inserted sucessfully but failed to send the login creditions to the user!');</script>";
+                            echo "<script>window.location.href='admin_create_account';</script>";   
+                        }
+                    }
+                    else{
+                        echo "<script>alert('Something went wrong!')</script>";
+                        echo "<script>window.location.href='admin_create_account';</script>";
+                    }
                 }
                 else{
-                    echo "<script>alert('Data inserted sucessfully but failed to send the login creditions to the user!');</script>";
-                    echo "<script>window.location.href='admin_create_account';</script>";   
+                     echo 'Data not validated';
                 }
-            }
-            else{
-                echo "<script>alert('Something went wrong!')</script>";
-                echo "<script>window.location.href='admin_create_account';</script>";
-            }
         }
         private function sendCreditions(){
             $name=$this->model->getName();
