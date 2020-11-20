@@ -19,7 +19,7 @@
 
     <?php require_once('includes/contractorPreHeader.php');?>
 
-    <!-- COPOIED CODE-->
+    <!-- COPIED CODE-->
      
         <div class="button-flex-container" style="padding:110px; ">
                       
