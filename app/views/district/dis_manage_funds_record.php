@@ -49,9 +49,9 @@
             </table>
         </div>
         </center>
-        <div>
-            <input type="submit" value="Edit" name="submit">
+        <div class="check">
             <input type="submit" value="Update" name="submit">
+            <input type="submit" value="Edit" name="submit">
         </div> 
         <?php require_once('includes/footer.php');?>   
     </div>

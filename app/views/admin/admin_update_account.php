@@ -7,12 +7,6 @@
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminAccountForms.css">
     <link rel="icon" href="images/logo.png">
-
-    <style>
-        body{
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
