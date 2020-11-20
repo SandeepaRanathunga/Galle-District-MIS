@@ -21,11 +21,11 @@
         </a>
         <a href="respond_contractors">
             <div><img src="svg/respond.svg" alt=""></div>
-            <div>Respond to contractor requests</div>
+            <div>Contractor Requests</div>
         </a>
         <a href="#">
             <div><img src="svg/proposal.svg" alt=""></div>
-            <div>Add project proposal</div>
+            <div>Add Project Proposal</div>
         </a>
         <a href="launch_project">
             <div><img src="svg/launch.svg" alt=""></div>
@@ -33,15 +33,15 @@
         </a>
         <a href="add_monthly_report">
             <div><img src="svg/report.svg" alt=""></div>
-            <div>Add monthly reports</div>    
+            <div>Add Monthly Report</div>    
         </a>
         <a href="call_for_bids">
             <div><img src="svg/bidding.svg" alt=""></div>
-            <div>Call for bids</div>
+            <div>Call For Bids</div>
         </a>
         <a href="#">
             <div><img src="svg/auction.svg" alt=""></div>
-            <div>View bid reports</div>
+            <div>View Bid Reports</div>
         </a>
         
     </div>     
