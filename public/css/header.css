@@ -90,7 +90,7 @@ header .branding{
 }
 /*UpperFooterPart*/
 .blue{
-    background: #2BACD2;
+    background: #57a9ca;
     padding:10px;
     display:flex;
     align-items: center;
@@ -108,9 +108,10 @@ header .branding{
     padding:5px;
     color:white;
 }
+/*#2BaCD2*/
 .blue .flex-container {
     display: flex;
-    background: #2BACD2;
+    background: #57a9ca;
     height: 50px;
     margin: auto ;
   }
