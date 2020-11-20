@@ -11,7 +11,8 @@
 </head>
 
 <body class="clearfix">
-    <?php include 'includes/divHeader.php';?>
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
     <div class="button-flex-container" >                  
         <div> <a href="div_notifications">Notifications</a></div>
         <div> <a href="respond_contractors">Respond to contractor requests</a></div>

@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <?php require_once('includes/contractorHeader.php');?>
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
         <div class="button-flex-container" >              
             <div> <a href="#"> Notifications </a></div>
             <div> <a href="#">Submit bit report</a></div>

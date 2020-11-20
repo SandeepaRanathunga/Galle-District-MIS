@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include_once('includes/header.php');?>
-    <?php include_once('includes/guestNav.php');?>
+    <!-- <?php include_once('includes/guestNav.php');?> -->
     <div class="tag">
         <h2>Launch Project</h2>
     </div>

@@ -10,8 +10,8 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php include_once('includes/divHeader.php');?>
-    <!--?php include_once('includes/guestNav.php');?-->
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
     <div class="tag">
         <h2>Call for bids</h2>
     </div>
