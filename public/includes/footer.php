@@ -21,7 +21,7 @@
         </div>     
         <div class="black" > 
                 <h2 >
-                Copyright © 2020 Galle District Secretariat. All Rights Reserved.<br>Developed in Association with <span> University of Colombo School of Computing</span>
+                Copyright © 2020 Galle District Secretariat. All Rights Reserved.<br>Developed in Association with <span> 4Coders</span>
                 </h2>
                 <img src="./images/footer_gif.gif">  
         </div>
