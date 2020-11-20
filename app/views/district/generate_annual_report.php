@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
+    <link rel="stylesheet" href="css/disManageFunds.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php include_once('includes/divHeader.php');?>
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
     <div class="tag">
         <h2>Generate funds</h2>
     </div>
