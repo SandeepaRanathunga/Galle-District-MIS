@@ -10,7 +10,8 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php include_once('includes/divHeader.php');?>
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
     <div class="tag">
         <h2>Respond to contractor requests</h2>
     </div>

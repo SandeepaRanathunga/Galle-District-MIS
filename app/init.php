@@ -52,7 +52,7 @@
     /*---------------------admin----------------------*/
     $router->addRoute('admin_home','AdminHome','adminHome');
     //admin create account
-    $router->addRoute('admin_create_account','AdminCreateAccount','adminCreateAccount');
+    $router->addRoute('create_account','AdminCreateAccount','adminCreateAccount');
     //admin update account
     $router->addRoute('admin_update_account','AdminUpdateAccount','adminUpdateAccount');
     //admin update about us
@@ -61,6 +61,8 @@
     /*--------------------contractor-----------------*/
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
 
+    /*--------------------Logout-----------------*/
+    $router->addRoute('logout','Logout','index');
     $app=new App($router);
 
 ?>

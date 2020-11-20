@@ -12,7 +12,8 @@
 <body>
 
 
-    <?php require_once('includes/adminHeader.php');?>
+<?php require_once('includes/header.php');?>
+<?php //require_once('#');?>
 
     <!-- COPOIED CODE-->
      

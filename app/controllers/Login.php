@@ -17,13 +17,13 @@
                 if($model->checkPassword($result)){
                     $userType=$model->getUserType();
                     if($userType=='adm')
-                        $this->adminHeader();
+                        $this->adminHeader($model);
                     else if($userType=='div')
-                        $this->divisionHeader();
+                        $this->divisionHeader($model);
                     else if($userType=='dis')
-                        $this->districtHeader();
+                        $this->districtHeader($model);
                     else
-                        $this->contractorHeader();
+                        $this->contractorHeader($model);
                 }
                 else{
                     echo "<script>alert('Incorrect Password!')</script>";
@@ -36,21 +36,26 @@
             }
             
         }
-        private function adminHeader(){
-
+        private function adminHeader($model){
+                $_SESSION['userID']=$model->getuserID();
+                $_SESSION['userName']=$model->getUserName();
+                echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
+                echo "<script>window.location.href='create_account';</script>";
         }
-        private function divisionHeader(){
-            
-                echo "<script>alert('Welcome division user!');</script>";
+        private function divisionHeader($model){
+                $_SESSION['userID']=$model->getuserID();
+                $_SESSION['userName']=$model->getUserName();
+                $_SESSION['office_id']=$model->getOfficeID();
+                echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
                 echo "<script>window.location.href='login';</script>";
         }
-        private function districtHeader(){
+        private function districtHeader($model){
 
         }
-        private function contractorHeader(){
+        private function contractorHeader($model){
 
         }
-        private function loginError(){
+        private function loginError($model){
 
         }
     }

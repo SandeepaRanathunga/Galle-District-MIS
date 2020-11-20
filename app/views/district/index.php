@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <?php require_once('includes/divHeader.php');?> <!--Change Header here-->
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
 
     <!-- The buttons-->
      

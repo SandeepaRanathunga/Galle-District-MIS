@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User account- Administrator</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
-
+    <link rel="stylesheet" href="css/adminAccountForms.css">
     <link rel="icon" href="images/logo.png">
 
     <style>
@@ -15,7 +15,8 @@
     </style>
 </head>
 <body>
-    <?php require_once('includes/adminHeader.php');?> <!--Change Header here-->
+    <?php require_once('includes/header.php');?>
+    <?php //require_once('#');?>
 
     <div class="tag">
         <a href="./admin_update_account.php"><h2>Update user accounts</h2></a>
