@@ -5,14 +5,14 @@
                     <h2>Related Links</h2>
             </div>
             <div class="link_container">
-                <img src="./images/logo.png">
+                <img src="./images/logo-footer.png">
                 <div style="">
                         <h2>Galle District Secretariat</h2>
                         <a href="http://www.galle.dist.gov.lk/">www.galle.dist.gov.lk</a>
                 </div>        
             </div>
             <div class="link_container">
-                <img src="./images/logo.png">
+                <img src="./images/logo-footer.png">
                 <div>
                         <h2>Ministry of Home Affairs</h2>
                         <a href="http://www.moha.gov.lk/">www.moha.gov.lk</a> 
