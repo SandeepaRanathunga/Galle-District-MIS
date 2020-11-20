@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User account- Administrator</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
-
+    <link rel="stylesheet" href="css/adminAccountForms.css">
     <link rel="icon" href="images/logo.png">
 
     <style>
