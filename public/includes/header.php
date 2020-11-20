@@ -7,14 +7,13 @@
             <h3>Project Handling and Evaluation MIS</h3>
         </div>
         <?php
-            // $username="MR.Sandeepa";
-            if(isset($username)):
+            if(isset($_SESSION['userName'])):
         ?>
             <script>
                 document.getElementById("user").style.display="none";
             </script>
             <div class="user" id="user">
-                <span><?php echo $username;?>(<a href="" class="logout">Logout</a>)</span>
+                <span><?php echo $_SESSION['userName'];?>(<a href="logout" class="logout">Logout</a>)</span>
             </div>
         <?php
             else:

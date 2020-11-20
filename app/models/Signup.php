@@ -28,6 +28,15 @@
             $this->hashed_password=password_hash($this->password,PASSWORD_DEFAULT);
             
         }
+        public function validateData(){
+            if(substr($this->user_id,0,5)!=$this->office_id){
+                return false;
+            }
+            if($this->password!=$this->confirm_password){
+                return false;
+            }
+            return true;
+        }
         private function clearInputs($input){
             $input=trim($input);
             $input=htmlspecialchars($input);

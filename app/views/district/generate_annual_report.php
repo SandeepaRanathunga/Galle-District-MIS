@@ -10,6 +10,9 @@
 </head>
 <body>
     <?php include_once('includes/divHeader.php');?>
+    <div class="tag">
+        <h2>Generate funds</h2>
+    </div>
     <div class='container'>
     </div>
     <?php require_once('includes/footer.php');?>

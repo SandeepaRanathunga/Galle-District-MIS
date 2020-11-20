@@ -19,4 +19,5 @@
         <a href="#" <?php if($fileName=='#') echo "class=active"?>>Reports</a>
         <a href="#" <?php if($fileName=='#') echo "class=active"?>>Contractors</a>
         <a href="#" <?php if($fileName=='#') echo "class=active"?>>About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="addResponsiveness()"><i class="fa fa-bars"></i></a>
 </nav>

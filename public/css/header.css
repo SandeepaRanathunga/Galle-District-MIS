@@ -77,9 +77,17 @@ header .branding{
 }
 .user .logout{
     color:red;
+    font-weight:bold;
     background:none;
     font-size: 15px;
+    display: inline-block;
 }
+.user .logout:hover{
+    color:red;
+    background:none;
+    transform: scale(1,1.2);
+}
+
 /******************************************/
 /* for the footer*/
 .footerbox{

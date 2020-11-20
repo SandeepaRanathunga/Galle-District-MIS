@@ -1,8 +1,5 @@
 <?php
     $divisions=$this->divisions;
-    if(isset($_SESSION['submit'])){
-        var_dump($_SESSION);
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

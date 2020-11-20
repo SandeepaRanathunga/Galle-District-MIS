@@ -71,3 +71,10 @@ input[type="button"],input[type="submit"],input[type="reset"]{
     float:right;
 
 }
+input:focus{
+    outline:none;
+}
+input[type=submit]:hover,input[type=reset]:hover{
+    cursor: pointer;
+    transform:scale(1,1.2);
+}

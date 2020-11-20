@@ -54,7 +54,7 @@
             $this->office_id=isset($user['div_id']) ? $user['div_id'] : '';
         }
         private function checkForAdmin($connection){
-            $query="SELECT `user_name`,`password` FROM admin WHERE user_id='div0309'";
+            $query="SELECT `user_name`,`password` FROM admin WHERE `user_id`='{$this->userID}'";
             $result=$connection->query($query);
             return $result;
             
