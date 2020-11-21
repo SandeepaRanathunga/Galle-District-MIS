@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/disNav.php');?>
     <div class="tag">
         <h2>Project proposals</h2>
     </div>

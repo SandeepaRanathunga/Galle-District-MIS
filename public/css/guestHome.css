@@ -9,11 +9,7 @@ a{
     text-decoration:none;
     color:#2F4F4F;
 }
-body{
-    width:99%;
-    margin:auto;
-    overflow-x: hidden;
-}
+
 .button-container{
     width:100%;
     padding:10px;
@@ -29,7 +25,7 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width:350px;
     height: 200px;
-    margin:10px 20px;
+    margin:10px 30px;
     align-items: center;
     justify-content: center;
     color:white;

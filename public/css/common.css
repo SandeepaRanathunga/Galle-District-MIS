@@ -12,9 +12,10 @@ a{
 }
 
 body{
-    width:99%;
-    margin:auto;
-    background:#f2f2f2;
+    width:100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
 }
 
 body .container{
