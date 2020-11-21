@@ -8,15 +8,19 @@
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/aboutUs.css">
+
 </head>
 <body>
-    <?php include 'includes/UpdateAboutus.php';?>
+    <?php include 'includes/guestHeader.php';?>
     <div class="container">
     <nav class="clearfix" id="myNavbar">
     <?php $fileName=basename($_SERVER['PHP_SELF'])?>
         <div class="button-container">
             
-            <a href="#" <?php if($fileName=='#') echo "class=active"?>>Update About Us Info</a>
+        <div class="tag">
+            <h2>Update About Us</h2>
+        </div>
         
             <form action="" method="post">
                     <div class="label-text">

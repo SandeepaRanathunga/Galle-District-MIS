@@ -56,10 +56,15 @@
     //admin update account
     $router->addRoute('admin_update_account','AdminUpdateAccount','adminUpdateAccount');
     //admin update about us
-    $router->addRoute('update_about_us_info','UpdateAboutUsInfo','index');
+    $router->addRoute('update_about_us','UpdateAboutUsInfo','updateAboutUsInfo');
+    //admin update about us
+    $router->addRoute('about_us','AdminAboutUs','aboutUs');
 
     /*--------------------contractor-----------------*/
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
+    //contractor notifications
+    $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
+
 
     /*--------------------Logout-----------------*/
     $router->addRoute('logout','Logout','index');
