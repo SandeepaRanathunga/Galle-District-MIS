@@ -19,7 +19,8 @@ body{
 }
 
 body .container{
-    min-height: 250px;
+    min-height: 100%;
+    position: relative;
 }
 
 .tag{

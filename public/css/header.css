@@ -16,6 +16,7 @@ header .branding{
 }
 .logo{
     height:100px;
+    width:80px;
 }
 .districtTag{
     flex:2;
@@ -53,8 +54,8 @@ header .branding{
         margin:10px;
     }
     .logo{
-        width:80px;
-        height:80px;
+        width:70px;
+        height:90px;
     }
     .districtTag h2{
         font-size:25px;

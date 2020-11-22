@@ -30,7 +30,7 @@
         <marquee behavior="" direction=""><h3><span style="font-size:17px;">ALERT! </span>Contractor registrations are now open for the year 2020/21. Please registra via the MIS.</h3></marquee><h3></h3>
     </div>
     <div class="button-flex-container" >     
-        <a href="div_notifications">
+        <a href="contractor_register">
                 <div><img src="svg/registration.svg" alt=""></div>
                 <div>Contractor Registration</div>
                 
