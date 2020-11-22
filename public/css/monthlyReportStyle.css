@@ -1,49 +1,33 @@
-.tag{
-    background:#f2f2f2;
-    overflow:auto;
-    padding:5px;
-    box-sizing: border-box;
-}
-.tag h2{
-    color:#2F4F4F;
-    background:white;
-    font-size: 16px;
-    font-weight: bold;
-    padding:10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    float:left;
-}
 .container{
     position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     padding:25px;
-    border:2px solid #2F4F4F;
 
 }
 .formarea{
-    position:relative;
-    left:50%;
-    transform: translateX(-50%);
-    /*border:3px solid black;*/
-    width:750px;
+    /* position:relative; */
     padding:10px;
     box-sizing: border-box;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .formarea label{
     color:#2F4F4F;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     display:inline-block;
-    width:150px;
+    width:200px;
 }
 input[type="text"],input[type="date"],select{
     border:2px solid #2F4F4F;
-    width:200px;
-    height:30px;
+    width:300px;
+    height:40px;
     margin:5px;
     margin-top: 20px;
     padding:5px;
     box-sizing: border-box;
+    outline:#2F4F4F;
 }
 input[type="file"]{
     border:none;
@@ -63,17 +47,16 @@ input[type="button"],input[type="submit"],input[type="reset"]{
     color:white;
     padding:10px;
     font-weight: bold;
+    font-size: 17px;
     border:none;
-    border-radius: 3px;
+    border-radius: 10px;
     width:100px;
     margin:20px;
     display:block;
     float:right;
 
 }
-input:focus{
-    outline:none;
-}
+
 input[type=submit]:hover,input[type=reset]:hover{
     cursor: pointer;
     transform:scale(1,1.2);
