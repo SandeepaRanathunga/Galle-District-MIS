@@ -12,7 +12,7 @@
 <body>
     <?php require_once('includes/header.php');?>
     <?php //require_once('#');?>
-    <div class='container'>
+    <div class="container">
         <div class="tag">
             <h2>Manage funds</h2>
         </div>
