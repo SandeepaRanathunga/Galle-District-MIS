@@ -62,7 +62,7 @@
             $_SESSION['userID']=$model->getuserID();
             $_SESSION['userName']=$model->getUserName();
             echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
-            echo "<script>window.location.href='admin_home';</script>";
+            echo "<script>window.location.href='contractor_home';</script>";
         }
         private function loginError($model){
 

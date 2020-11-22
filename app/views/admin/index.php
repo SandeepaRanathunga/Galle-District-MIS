@@ -1,3 +1,6 @@
+<?php
+    // require_once('includes/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
 
         
     <div class="button-flex-container" >
-        <a href="create_account">
+        <a href="create_accounts">
             <div><img src="svg/adduser.svg" alt=""></div>
             <div>Create User Accounts</div>    
         </a>
