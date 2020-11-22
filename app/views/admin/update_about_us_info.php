@@ -12,23 +12,21 @@
 
 </head>
 <body>
-    <?php include 'includes/guestHeader.php';?>
+    <?php include 'includes/header.php';?>
+    <?php include 'includes/adminNav.php';?>
     <div class="container">
-    <nav class="clearfix" id="myNavbar">
-    <?php $fileName=basename($_SERVER['PHP_SELF'])?>
         <div class="button-container">
             
-        <div class="tag">
-            <h2>Update About Us</h2>
-        </div>
-        
-            <form action="" method="post">
+            <div class="tag">
+                <h2>Update About Us</h2>
+            </div>
+            <div class="formarea">
+                <form action="" method="post">
                     <div class="label-text">
                             <textarea id="updateaboutus" name="updateaboutus" rows="15" cols="190">
-                            <!-- Link to what's entered already -->
                             </textarea>
                     </div>
-                     
+                        
                     <div class="update-cancel">
                     <div class="button">
                         <input type="submit" name="update" value="Update">
@@ -38,10 +36,11 @@
                     </div>
                     </div>
                 </form>
+            </div>
             
+        <?php include 'includes/footer.php';?>
         
         </div>
     </div>
-    </nav>
 </body>
 </html>

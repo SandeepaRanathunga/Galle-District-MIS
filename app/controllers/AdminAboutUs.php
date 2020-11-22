@@ -1,7 +1,7 @@
 <?php
     class AdminAboutUs extends Controller{
         public function aboutUs(){
-            $this->view('admin/about_us');
+            $this->view('home/about_us');
         }
     }
 ?>
