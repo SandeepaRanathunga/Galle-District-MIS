@@ -10,7 +10,7 @@ header{
 }
 header .branding{
     flex:0.2;
-    margin:10px 20px;
+    margin:10px 10px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -89,91 +89,7 @@ header .branding{
 }
 
 /******************************************/
-/* for the footer*/
-.footerbox{
-    width:100% ;
-    clear:both;
-    position: relative;
-    bottom: 0px;
-}
-/*UpperFooterPart*/
-.blue{
-    background:rgba(47, 79, 79, 25);
-    padding:5px;
-    display:flex;
-    align-items: center;
-    box-sizing: border-box;
-}
 
-.blue h2{
-    font-size: 17px;
-    font-weight: bold;
-    padding:5px;
-    color:white;   
-}
-.blue a{
-    font-size: 16px;
-    padding:5px;
-    color:white;
-}
-.blue .flex-container {
-    display: flex;
-    background: #2BACD2;
-    height: 50px;
-    margin: auto ;
-  }
-  .blue img{
-      width:50px;
-      height:50px;
-      display:block;
-      float:left;
-      margin:2px 5px;
-  }
-  .blue .link_container{
-      flex:1;
-      display:flex;
-      align-items: center;
-  }
-/* lower footer */
-.black{
-    background:black;
-    padding:5px 15px;
-    box-sizing: border-box;
-    display:flex;
-    align-items: center;
-}
-.black h2{
-    color:white;
-    flex:1;
-    font-size: 14px;
-    
-}
-.black h2 span{
-    color:yellow;
-    font-size: 15px;
-}
-.black img{
-    /* display:block;
-    float:right; */
-}
-@media screen and (max-width:850px){
-    .blue h2{
-        font-size: 14px;
-    }
-    .blue a{
-        font-size: 13px;
-    }
-    .black h2{
-        
-    }
-    .black img{
-       
-    }
-}
-@media screen and (max-width:450px){
-
-}
-/********************************************/
 header .dropdown{
     float:right;
     margin:10px;
@@ -185,7 +101,6 @@ header .greeting h3{
     color: #2F4F4F;
     font-size:18px;
 }
-
 .dropdown .dropbtn,.dropdown .loginpage{
     float:right;
     display:block;

@@ -11,12 +11,8 @@
 
 <body>
     <?php require_once('includes/header.php');?>
-    <?php require_once('includes/adminNav.php');?>
+    <?php require_once('includes/contractorNav.php');?>
         <div class="button-flex-container" >              
-            <!-- <div> <a href="#"> Notifications </a></div>
-            <div> <a href="#">Submit bit report</a></div>
-            <div> <a href="#">View bid callings</a></div>
-            <div> <a href="#">Manage expenses</a></div> -->
             <a href="#">
                 <div><img src="svg/notifications.svg" alt=""></div>
                 <div>Notifications</div>    
