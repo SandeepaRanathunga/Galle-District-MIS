@@ -42,3 +42,11 @@ function confirmPassword(){
 
 
 }
+function setUserID(){
+    let prefix=document.getElementById('office_id').value;
+    document.getElementById("user_id").value=prefix+getRandomDigits();
+    
+}
+function getRandomDigits(){
+    return Math.floor(Math.random() * (99-10))+10;
+}

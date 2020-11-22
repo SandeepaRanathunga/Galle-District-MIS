@@ -1,58 +1,47 @@
-.tag{
-    background:#f2f2f2;
-    overflow:auto;
-    padding:5px;
-    box-sizing: border-box;
-}
-.tag h2{
-    color:#2F4F4F;
-    background:white;
-    font-size: 16px;
-    font-weight: bold;
-    padding:10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    float:left;
-}
 .container{
     position: relative;
     padding:25px;
-    border:2px solid #2F4F4F;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .formarea{
     position:relative;
-    left:50%;
-    transform: translateX(-50%);
-    /* border:3px solid black; */
-    width:750px;
+    width:900px;
+    display:flex;
+    justify-content:flex-start;
     padding:10px;
     box-sizing: border-box;
 }
 .formarea label{
     color:#2F4F4F;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     display:inline-block;
-    width:150px;
+    width:200px;
 }
 input[type="text"],input[type="email"],input[type="password"]{
     border:2px solid #2F4F4F;
-    width:200px;
-    height:30px;
+    width:300px;
+    height:40px;
     margin:5px;
     margin-top: 20px;
     padding:5px;
     box-sizing: border-box;
+    outline:#2F4F4F;
+    font-size:17px;
 }
 select{
         border:2px solid #2F4F4F;
-        width:200px;
-        height:30px;
+        width:300px;
+        height:40px;
         margin:5px;
         margin-top: 20px;
         padding:5px;
         box-sizing: border-box;
+        font-size: 17px;
+        outline:#2F4F4F;
 }
 input[type="file"]{
     border:none;
@@ -70,15 +59,13 @@ input[type="reset"],input[type="submit"]{
     padding:10px;
     font-weight: bold;
     border:none;
+    font-size: 17px;
     border-radius: 10px;
     width:100px;
     margin:20px;
     display:block;
     float:right;
 
-}
-input:focus,select:focus{
-    outline:none;
 }
 input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.2);

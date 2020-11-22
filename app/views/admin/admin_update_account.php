@@ -16,7 +16,7 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/adminNav.php');?>
 
     <div class="tag">
         <a href="./admin_update_account.php"><h2>Update user accounts</h2></a>

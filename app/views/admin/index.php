@@ -13,23 +13,23 @@
 
 
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/adminNav.php');?>
 
         
     <div class="button-flex-container" >
-        <a href="#">
+        <a href="create_account">
             <div><img src="svg/adduser.svg" alt=""></div>
             <div>Create User Accounts</div>    
         </a>
-        <a href="#">
+        <a href="update_accounts">
             <div><img src="svg/updateuser.svg" alt=""></div>
             <div>Update User Accounts</div>
         </a>
-        <a href="#">
+        <a href="delete_accounts">
             <div><img src="svg/deleteuser.svg" alt=""></div>
             <div>Delete User Accounts</div>
         </a>
-        <a href="#">
+        <a href="update_about_us">
             <div><img src="svg/aboutus.svg" alt=""></div>
             <div>Update About Us</div>    
         </a>

@@ -1,0 +1,66 @@
+/*for the navigation bar*/
+.topnav{
+    position:sticky;
+    top:0px;
+    background:rgba(47, 79, 79, 25);
+    opacity: 0.9;
+    padding:1px 20px;
+    z-index: 1;
+}
+
+
+.topnav a{
+    display:block;
+    float:left;
+    font-size:18px;
+    color:white;
+    font-weight:bold;
+    padding:15px;
+    margin:5px;
+    background:none;
+    border-radius: 5px;
+    text-align:center;
+    width:95px;
+
+}
+.topnav .active{
+    background:white;
+    color:#2F4F4F;
+}
+.topnav a:hover{
+    background:white;
+    color:#2F4F4F;
+    transition: 0.5s;
+}
+
+.topnav .icon{
+    color:white;
+    display:none;
+    background:#2F4F4F;
+    padding:10px;
+    margin:5px;
+    clear: both;
+    float:left;
+    text-align: left;
+}
+
+@media screen and (max-width:825px){
+    .topnav a{
+        display:none;
+    }
+    .topnav .icon{
+        display:block;
+        width:auto;
+    }
+    .responsive .icon{
+        float:none;
+        text-align: center;
+    }
+    .responsive a{
+        display:block;
+        width:auto;
+        text-align: center;
+        float:none;
+        z-index: 1;
+    }
+}
