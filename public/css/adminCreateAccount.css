@@ -67,6 +67,9 @@ input[type="reset"],input[type="submit"]{
     float:right;
 
 }
+input[type="reset"],input[type="submit"]:focus{
+    outline:none;
+}
 input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.2);
 }

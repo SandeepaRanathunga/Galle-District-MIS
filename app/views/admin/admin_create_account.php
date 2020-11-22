@@ -1,5 +1,5 @@
 <?php
-    require_once('includes/session.php');
+    // require_once('includes/session.php');
 ?>
 <?php
     $divisions=$this->divisions;
@@ -35,11 +35,11 @@
                     <label for="office">Office</label>
                     <select name="office_id" id="office_id" onchange="setUserID()" required>
                         <option disabled selected value>selcet</option>
-                        <option value="dis00">District Secretariat - dis00</option>   
+                        <option value="dis00">District Secretariat</option>   
                         <?php
                             foreach($divisions as $division):
                         ?>
-                        <option value="<?php echo $division[0];?>"><?php echo $division[1].' - '.$division[0];?></option>
+                        <option value="<?php echo $division[0];?>"><?php echo $division[1];?></option>
                         <?php
                             endforeach; 
                         ?>
