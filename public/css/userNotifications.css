@@ -1,30 +1,7 @@
-<<<<<<< HEAD
-.tag{
-    background:#f2f2f2;
-    overflow:auto;
-    padding:15px;
-    box-sizing: border-box;
-}
-.tag h2{
-    color:#2F4F4F;
-    background:white;
-    font-size: 20px;
-    text-align: center;
-    width: auto;
-    font-weight: bold;
-    padding:15px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    float:left;
-    margin-left: 15px;
-}
-=======
->>>>>>> mvc
 .container{
     position: relative;
-    margin: auto;
-    background-color: #f2f2f2;
-    border: 2px solid #2F4F4F;
+    padding:25px;
+    color:#2F4F4F;
 }
 
 button{
@@ -40,7 +17,7 @@ button{
     display:block; 
 }
 
-.combutton button{
+.clearbutton button{
     display:block;
     float:left;
     font-size:15px;
@@ -63,15 +40,12 @@ button{
     margin-bottom: 10px;
 }
 
-.combutton button .active{
+.clearbutton button .active{
     background:white;
     color:#2F4F4F;
 }
-.combutton button:hover{
+.clearbutton button:hover{
     background:white;
     color:#2F4F4F;
     transition: 0.5s;
 }
-
-
-

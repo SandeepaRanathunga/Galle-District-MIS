@@ -1,6 +1,3 @@
-<?php
-    $divisions=$this->divisions;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +9,17 @@
     <link rel="icon" href="images/logo.png">
     <style>
         .warning{
-            display:inline-block;    
+            display:inline-block;
+            
         }
     </style>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php require_once('includes/adminNav.php');?>
+    <?php require_once('includes/guestNav.php');?>
 
     <div class="tag">
-        <h2>Create new user accounts</h2>
+        <h2>Contractor Register</h2>
     </div>
 
     <div class="container">
@@ -29,13 +27,8 @@
             <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
             <div>
                     <label for="office">Office</label>
-<<<<<<< HEAD
-                    <select name="office_id" id="office_id" required>
-                        <option disabled selected value>Select</option>
-=======
                     <select name="office_id" id="office_id" onchange="setUserID()" required>
                         <option disabled selected value>selcet</option>
->>>>>>> mvc
                         <option value="dis00">District Secretariat - dis00</option>   
                         <?php
                             foreach($divisions as $division):

@@ -10,10 +10,10 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/adminNav.php');?>
 
     <div class="tag">
-        <a href="./admin_update_account.php"><h2>Update user accounts</h2></a>
+        <h2>Update user accounts</h2>
     </div>
 
     <div class="container searchbox">
@@ -24,7 +24,7 @@
                 <label for="user_id">Enter ID</label>
                 <input type="text"  name="search_user_id" placeholder="Enter ID to search...">
             <!--Submit ID for search-->
-                <input type="submit" style="margin-top:4%; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold;" value="Search" name="submit">
+                <input type="submit" style="margin-top:4%; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold;" value="search" name="submit">
                 
             </form>
         </div>                     

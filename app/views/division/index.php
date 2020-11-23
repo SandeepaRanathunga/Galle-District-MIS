@@ -13,7 +13,7 @@
 
 <body class="clearfix">
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/divNav.php');?>
     <div class="button-flex-container" >                  
         <a href="div_notifications">
             <div><img src="svg/notifications.svg" alt=""></div>

@@ -26,7 +26,8 @@
     background-color: #2F4F4F;
     color: white;
 }
-.tag{
+/* moved to common.css */
+/* .tag{
     background:#f2f2f2;
     overflow:auto;
     padding:10px;
@@ -41,11 +42,16 @@
     box-sizing: border-box;
     border-radius: 5px;
     float:left;
-}
+} */
 
 .container{
+<<<<<<< HEAD
     background-color: #f2f2f2;
     height: 600px;
+=======
+    /* background-color: #f2f2f2; */
+    min-height: 500px;
+>>>>>>> mvc
 }
 
 input[type="button"],input[type="submit"],input[type="reset"]{

@@ -1,4 +1,5 @@
-.tag a{
+/* moved to common.css */
+/* .tag a{
     background:#f2f2f2;
     overflow:auto;
     padding:5px;
@@ -17,7 +18,7 @@
     float:left;
     margin-left: 30px;
    
-}
+} */
 .container{
     margin-top:2%;
     margin-left: 20%;
@@ -32,7 +33,7 @@
 }
 /*For the ID searching Area*/
 .searchbox{
-    background-color: #2F4F4F;
+    background-color: #434647;
     padding: 0px;
 }
 .searchbox label{

@@ -11,8 +11,13 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
+<<<<<<< HEAD
     <?php //require_once('#');?>
     <div class="container">
+=======
+    <?php require_once('includes/disNav.php');?>
+    <div class='container'>
+>>>>>>> mvc
         <div class="tag">
             <h2>Manage funds</h2>
         </div>

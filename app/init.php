@@ -19,6 +19,10 @@
     $router->addRoute('email_verify','EmailVerify','verifyEmail');
     //contractor_page
     $router->addRoute('contractors','Contractor','contractor');
+    //contractor register
+    $router->addRoute('contractor_register','ContractorRegister','index');
+    //aboutus
+    $router->addRoute('about_us','AdminAboutUs','aboutUs');
 
 
     /*--------------------division---------------------*/
@@ -52,13 +56,12 @@
     /*---------------------admin----------------------*/
     $router->addRoute('admin_home','AdminHome','adminHome');
     //admin create account
-    $router->addRoute('create_account','AdminCreateAccount','adminCreateAccount');
+    $router->addRoute('create_accounts','AdminCreateAccount','adminCreateAccount');
     //admin update account
-    $router->addRoute('admin_update_account','AdminUpdateAccount','adminUpdateAccount');
+    $router->addRoute('update_accounts','AdminUpdateAccount','adminUpdateAccount');
     //admin update about us
     $router->addRoute('update_about_us','UpdateAboutUsInfo','updateAboutUsInfo');
-    //admin update about us
-    $router->addRoute('about_us','AdminAboutUs','aboutUs');
+    
 
     /*--------------------contractor-----------------*/
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
