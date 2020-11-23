@@ -11,46 +11,48 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-<<<<<<< HEAD
-    <?php //require_once('#');?>
-    <div class="container">
-=======
     <?php require_once('includes/disNav.php');?>
     <div class='container'>
->>>>>>> mvc
         <div class="tag">
             <h2>Manage funds</h2>
         </div>
         <center>
         <div style="overflow-x:auto;">
             <table id="funds">
-                <tr>
-                    <th>Index number</th>
-                    <th>Funding source</th>
-                    <th>Received funds</th>
-                    <th>Received date</th>
-                    <th>Allocated number of projects</th>
-                    <th>Total expense</th>
-                    <th>Total balance</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Ministry of Urban Development</td>
-                    <td>13, 000, 000</td>
-                    <td>11-07-2020</td>
-                    <td>1</td>
-                    <td>450, 000</td>
-                    <td>850, 000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ministry of Housing and Construction</td>
-                    <td>10, 000, 000</td>
-                    <td>23-09-2020</td>
-                    <td>2</td>
-                    <td>950, 000</td>
-                    <td>350, 000</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Index number</th>
+                        <th>Funding source</th>
+                        <th>Received funds</th>
+                        <th>Received date</th>
+                        <th>Allocated number of projects</th>
+                        <th>Total expense</th>
+                        <th>Total balance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if(!empty($result)){
+                        //echo "<pre>";
+                        //print_r($result);
+                        foreach($result as $k => $v){
+                            //echo "<pre>";
+                            //print_r($v);
+                            ?>
+                            <tr>
+                                <td><?php echo $result[$k]["agency_id"]?></td>
+                                <td><?php echo $result[$k]["agency_name"]?></td>
+                                <td><?php echo $result[$k]["funds_received"]?></td>
+                                <td><?php echo $result[$k]["date"]?></td>
+                                <td><?php echo $result[$k]["num_of_projects"]?></td>
+                                <td><?php echo $result[$k]["total_expense"]?></td>
+                                <td><?php echo $result[$k]["total_balance"]?></td>
+                            </tr>
+                        }
+                    }
+                    
+                </tbody>
             </table>
         </div>
         </center>
