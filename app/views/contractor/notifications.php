@@ -9,7 +9,7 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <?php require_once('includes/guestHeader.php');?>
+    <?php require_once('includes/header.php');?>
     <?php //require_once('#');?>
     <div class="tag">
         <h2>Notifications</h2>
