@@ -67,6 +67,7 @@
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
     //contractor notifications
     $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
+    $router->addRoute('contractor_signup','ContractorSignUp','contractorSignUp');
 
 
     /*--------------------Logout-----------------*/
