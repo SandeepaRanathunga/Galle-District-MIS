@@ -15,6 +15,9 @@
     <div class="container">
         <div>
             <div class="loginBox">
+                <div class="icon">
+                    <img src="svg/user.svg" alt="">
+                </div>
                 <h2>Welcome</h2>
                     <!-- <?php echo $alert;?> -->
                 <form action="" method="post">

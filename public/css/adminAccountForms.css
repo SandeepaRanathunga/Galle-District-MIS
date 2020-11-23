@@ -7,7 +7,7 @@
     margin: 20px;
 }
 .tag h2{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -28,7 +28,7 @@
     position: relative;
     padding:10px;
     box-sizing: border-box;
-    border:2px solid #2F4F4F;
+    border:2px solid #434647;
     display:block;
 }
 /*For the ID searching Area*/
@@ -64,7 +64,7 @@
 }
 
 .formarea label{
-    color:#2F4F4F;
+    color:#434647;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -73,7 +73,7 @@
 }
 
 input[type="text"],input[type="email"],input[type="password"]{
-    border:2px solid #2F4F4F;
+    border:2px solid #434647;
     width:200px;
     height:30px;
     margin:5px;
@@ -83,7 +83,7 @@ input[type="text"],input[type="email"],input[type="password"]{
     box-sizing: border-box;
 }
 select{
-        border:2px solid #2F4F4F;
+        border:2px solid #434647;
         width:200px;
         height:30px;
         margin:5px;
@@ -103,7 +103,7 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="button"],input[type="submit"]{
-    background:#2F4F4F;
+    background:#434647;
     color:white;
     font-weight: bold;
     border:none;

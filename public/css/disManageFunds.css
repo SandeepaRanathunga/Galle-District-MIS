@@ -23,7 +23,7 @@
     margin-top: 12px;
     margin-bottom: 12px;
     text-align: left;
-    background-color: #2F4F4F;
+    background-color: #434647;
     color: white;
 }
 /* moved to common.css */
@@ -34,7 +34,7 @@
     box-sizing: border-box;
 }
 .tag h2{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
     font-size: 20px;
     font-weight: bold;
@@ -50,7 +50,7 @@
 }
 
 input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#2F4F4F;
+    background:#434647;
     color:white;
     padding:10px;
     font-weight: bold;
@@ -63,6 +63,6 @@ input[type="button"],input[type="submit"],input[type="reset"]{
 }
 
 input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
 }

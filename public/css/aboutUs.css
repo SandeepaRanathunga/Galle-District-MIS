@@ -94,7 +94,7 @@
 } */
 .loginBox{
     width:95%;
-    border:3px solid #2F4F4F;
+    border:3px solid #434647;
     padding:40px 10px;
     box-sizing: border-box;
     background:#f2f2f2;
@@ -118,11 +118,11 @@
     font-weight: bold;
     font-family:'Overpass', sans-serif;
     text-align:center;
-    border:3px solid #2F4F4F;
+    border:3px solid #434647;
     border-radius:10px;
     padding:5px;
     margin:45px 20px;
-    background:#2F4F4F;
+    background:#434647;
     color:white;
 }
 label{
@@ -131,13 +131,13 @@ label{
     font-size:25px;
     font-weight:bold;
     font-family:'Overpass', sans-serif;
-    color:#2F4F4F;
+    color:#434647;
     display: inline-block;
 }
 input[type=text],input[type=password]{
     display:inline-block;
     background:none;
-    border:2px solid #2F4F4F;
+    border:2px solid #434647;
     border-radius:5px;
     padding:5px;
     width:80%;
@@ -153,15 +153,15 @@ input[type=submit]{
     display: block;
     margin: 10px auto;
     padding:10px;
-    background:#2F4F4F;
-    border:2px solid #2F4F4F;
+    background:#434647;
+    border:2px solid #434647;
     border-radius: 5px;
     color:white;
     font-size: 20px;
     font-weight: bold;
 }
 input[type=submit]:hover{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
     cursor: pointer;
     transition: 0.5s;
@@ -175,7 +175,7 @@ input[type=submit]:hover{
 }
 
 .normText{
-    color:#2F4F4F;
+    color:#434647;
     font-size:15px;
     text-align: left;
 }
