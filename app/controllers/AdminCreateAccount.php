@@ -23,16 +23,16 @@ require_once __DIR__ . '/../mailer/MailSender.php';
                     if($result){
                         if($this->sendCreditions()){
                             echo "<script>alert('Data inserted sucessfully and login creditions sent to the user!');</script>";
-                            echo "<script>window.location.href='admin_create_account';</script>";   
+                            echo "<script>window.location.href='create_accounts';</script>";   
                         }
                         else{
                             echo "<script>alert('Data inserted sucessfully but failed to send the login creditions to the user!');</script>";
-                            echo "<script>window.location.href='admin_create_account';</script>";   
+                            echo "<script>window.location.href='create_accounts';</script>";   
                         }
                     }
                     else{
                         echo "<script>alert('Something went wrong!')</script>";
-                        echo "<script>window.location.href='admin_create_account';</script>";
+                        echo "<script>window.location.href='create_accounts';</script>";
                     }
                 }
                 else{

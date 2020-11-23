@@ -25,7 +25,7 @@
     <?php require_once('includes/adminNav.php');?>
 
     <div class="tag">
-        <h2>Create new user accounts</h2>
+        <h2>User Registration</h2>
     </div>
 
     <div class="container">
