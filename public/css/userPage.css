@@ -2,22 +2,36 @@
     position: relative;
     margin: auto;
     background-color: #f2f2f2;
+    border: 2px solid #2F4F4F;
+}
+
+button{
+    background:#2F4F4F;
+    color:white;
+    font-weight: bold;
+    border:none;
+    border-radius: 10px;
+    float:right;
+    width:100px;
+    margin:10px;
+    padding:10px;
+    display:block; 
 }
 
 .combutton button{
     display:block;
     float:left;
-    font-size:18px;
+    font-size:15px;
     color:white;
     font-weight:bold;
-    padding:auto;
+    padding:5px;
     margin-right: 10px;
-    background:#434647;
+    background:#2F4F4F;
     border-radius: 5px;
     text-align:center;
     text-decoration: none;
     width:100px;
-    height:50px;
+    height:30px;
 }
 
 .flex-container {
@@ -27,13 +41,13 @@
     margin-bottom: 10px;
 }
 
-.clearbutton button .active{
+.combutton button .active{
     background:white;
-    color:#434647;
+    color:#2F4F4F;
 }
-.clearbutton button:hover{
+.combutton button:hover{
     background:white;
-    color:#434647;
+    color:#2F4F4F;
     transition: 0.5s;
 }
 
