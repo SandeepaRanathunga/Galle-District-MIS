@@ -68,6 +68,7 @@
     //contractor notifications
     $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
     $router->addRoute('contractor_signup','ContractorSignUp','contractorSignUp');
+    $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
 
 
     /*--------------------Logout-----------------*/
