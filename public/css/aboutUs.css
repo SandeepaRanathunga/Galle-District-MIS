@@ -1,12 +1,10 @@
 .container{
     display:flex;
     flex-direction: column;
-    align-items: left;
 }
 .button-container{
     display:flex;
     flex-direction: column;
-    align-items: left;
 }
 .description{
     display:flex;

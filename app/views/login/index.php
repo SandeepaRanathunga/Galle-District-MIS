@@ -36,9 +36,9 @@
                 </form>
             </div>
         </div>
-        <div class="mask">
-            <!-- <img src="images/mask.png" alt="This is a mask" class="mask"> -->
-        </div>
+        <!-- <div class="mask">
+            <img src="images/mask.png" alt="This is a mask" class="mask">
+        </div> -->
     </div>
     <?php include 'includes/footer.php';?>
 </body>

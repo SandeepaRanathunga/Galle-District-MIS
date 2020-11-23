@@ -44,10 +44,6 @@
     float:left;
 } */
 
-.container{
-    /* background-color: #f2f2f2; */
-    min-height: 500px;
-}
 
 input[type="button"],input[type="submit"],input[type="reset"]{
     background:#434647;

@@ -8,7 +8,6 @@
 }
 .formarea{
     position:relative;
-    width:900px;
     display:flex;
     justify-content:flex-start;
     padding:10px;
@@ -25,8 +24,7 @@ input[type="text"],input[type="email"],input[type="password"]{
     border:2px solid #434647;
     width:300px;
     height:40px;
-    margin:5px;
-    margin-top: 20px;
+    margin:10px;
     padding:5px;
     box-sizing: border-box;
     outline:#434647;
@@ -36,8 +34,7 @@ select{
         border:2px solid #434647;
         width:300px;
         height:40px;
-        margin:5px;
-        margin-top: 20px;
+        margin:10px;
         padding:5px;
         box-sizing: border-box;
         font-size: 17px;
@@ -67,6 +64,7 @@ input[type="reset"],input[type="submit"]{
     float:right;
 
 }
+
 input[type="reset"],input[type="submit"]:focus{
     outline:none;
 }
