@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(isset($_SESSION['userName'])){
-        header('Location: div_home');
-    }
+    // if(isset($_SESSION['userName'])){
+    //     header('Location:#');
+    // }
     class Login extends Controller{
         public function userLogin(){
             if(isset($_POST['login'])){
@@ -16,7 +16,7 @@
             $model=$this->model('Login');
             $model->setLoginDetails();
             $result=$model->checkUserID();
-            if(mysqli_num_rows($result)>0){
+            if($result->num_rows>0){
                 if($model->checkPassword($result)){
                     $userType=$model->getUserType();
                     if($userType=='adm')

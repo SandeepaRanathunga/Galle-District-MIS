@@ -21,6 +21,8 @@
     $router->addRoute('contractors','Contractor','contractor');
     //contractor register
     $router->addRoute('contractor_register','ContractorRegister','index');
+    //projects
+    $router->addRoute('projects','Projects','index');
     //aboutus
     $router->addRoute('about_us','AdminAboutUs','aboutUs');
 
