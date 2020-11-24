@@ -13,7 +13,7 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/disNav.php');?>
     <div class="tag">
-        <h2>Generate funds</h2>
+        <h2>Generate annual report</h2>
     </div>
     <div class='container'>
     </div>

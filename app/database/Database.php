@@ -21,7 +21,18 @@
             return $this->connection;
         }
 
-        function runQuery($query, $param_type, $param_value_array){
+        public function runBaseQuery($query){
+            $resultset="";
+            $result=$this->connection->query();
+            if($result->num_of_rows > 0){
+                while($row->$result->fetch_assoc()){
+                    $resultset[]=$row;
+                }
+            }
+            return $resultset;
+        }
+
+        public function runQuery($query, $param_type, $param_value_array){
             $sql= $this->connection->prepare($query);
             $this->bindQueryParams($sql, $param_type, $param_value_array);
             $sql = execute();
@@ -38,15 +49,30 @@
             }
         }
 
-        public function runBaseQuery($query){
-            $resultset="";
-            $result=$this->connection->query();
-            if($result->num_of_rows > 0){
-                while($row->$result->fetch_assoc()){
-                    $resultset[]=$row;
-                }
-            }
-            return $resultset;
+        public function bindQueryParams($sql, $param_type, $param_value_array){
+            $param_value_referrence[] = & $param_type;
+            for($i=0; $i<count($param_value_array); $i++){
+                $param_value_referrence[] = & $param_value_array[$i];
+            } 
+            call_user_func_array(array(
+                $sql,
+                'bind_param'
+            ), $param_value_referrence);
         }
+
+        public function insert($query, $param_type, $param_value_array){
+            $sql = $this->connection->prepare($query);
+            $this->bindQueryParams($sql, $param_type, $param_value_array);
+            $sql->execute();
+            $insertId = $sql->$insert_id;
+            return $insertId;
+        }
+
+        public function update($query, $param_type, $param_value_array){
+            $sql = $this->connection->prepareQuery($query);
+            $this->bindQueryParams($sql, $param_type, $param_value_array);
+            $sql->execute();
+        }
+
     }
 ?>

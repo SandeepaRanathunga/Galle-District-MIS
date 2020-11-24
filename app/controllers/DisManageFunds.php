@@ -3,7 +3,9 @@ class DisManageFunds extends Controller{
     public function disManageFunds(){
         $this->view('district/dis_manage_funds_record');
     }
-    
+
+    switch():
+
     case "dis_manage_funds_edit":
         $agency_id = $_GET["agency_id"];
         $agency = new Agency();
@@ -17,11 +19,11 @@ class DisManageFunds extends Controller{
                 $date = date("Y-m-d", $date_timestamp);
             }
             $num_of_projects = $_POST['num_of_projects'];
-            $total_expenses = $_POST['total_expenses'];
+            $total_expense = $_POST['total_expense'];
             $total_balance = $_POST['total_balance'];
     
-            $agency->editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expenses, $total_balance);
-            header("Location: DisManageFunds");
+            $agency->editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expense, $total_balance);
+            header("Location: dis_manage_funds");
         }
         $result = $agency->getAgencybyID($agency_id);
         require_once "dis_manage_funds_edit";

@@ -13,10 +13,16 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/disNav.php');?>
     <div class='container'>
-        <form name="formEdit" method="post" action="" id="formEdit">
-        <div>            
-            <label for="agency_name">Agency Name</label>
-            <input type="text" name="agency_name" id="agency_name" required value="<?php echo $result[0]["agency_name"]; ?>">
+        <div class="formarea clearfix">
+            <form name="formEdit" method="post" action="" id="formEdit">
+                <div>            
+                    <label for="agency_name">Agency Name</label>
+                    <input type="text" name="agency_name" id="agency_name" required value="<?php echo $result[0]["agency_name"]; ?>">
+                </div>
+                <div>
+                    <label for="funds_received">Funds Received</label>
+                    <input type="text" name="funds_received" id="funds_received" required value="<?php echo $result[0]["funds_recived"]; ?>">
+                </div>
         </div>   
     </div>
     <?php require_once('includes/footer.php');?>

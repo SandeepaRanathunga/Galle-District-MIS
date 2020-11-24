@@ -29,13 +29,8 @@
             <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
             <div>
                     <label for="office">Office</label>
-<<<<<<< HEAD
-                    <select name="office_id" id="office_id" required>
-                        <option disabled selected value>Select</option>
-=======
                     <select name="office_id" id="office_id" onchange="setUserID()" required>
                         <option disabled selected value>selcet</option>
->>>>>>> mvc
                         <option value="dis00">District Secretariat - dis00</option>   
                         <?php
                             foreach($divisions as $division):
