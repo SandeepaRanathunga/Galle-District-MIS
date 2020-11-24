@@ -33,5 +33,11 @@
 
             $this->db_handle->update($query, $paramType, $paramValue);
         }
+
+        function getAllAgency(){
+            $sql = "SELECT * FROM funds ORDER BY agency_id";
+            $result = $this->db_handle->renBaseQuery($sql);
+            return $result;
+        }
     } 
 ?>

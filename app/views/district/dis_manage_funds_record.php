@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
+    <?php include '/../database/Database.php'?>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/disManageFunds.css">
     <link rel="icon" href="images/logo.png">
@@ -39,7 +39,7 @@
                         foreach($result as $k => $v){
                             //echo "<pre>";
                             //print_r($v);
-                            ?>
+                    ?>
                             <tr>
                                 <td><?php echo $result[$k]["agency_id"]?></td>
                                 <td><?php echo $result[$k]["agency_name"]?></td>
@@ -55,12 +55,12 @@
                 </tbody>
             </table>
         </div>
-        </center>
         <div class="check">
             <input type="submit" value="Update" name="submit">
             <input type="submit" value="Edit" name="submit">
-        </div> 
-        <?php require_once('includes/footer.php');?>   
+        </div>
+        </center>  
     </div>
+    <?php require_once('includes/footer.php');?> 
 </body>
 </html>

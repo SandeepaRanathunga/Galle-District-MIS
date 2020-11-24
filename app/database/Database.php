@@ -7,6 +7,7 @@
         private $connection=null;
         public function __construct(){
             $this->dbConnect();
+            $this->connection = $this->dbConnect();
         }
         
         private function dbConnect(){

@@ -29,6 +29,8 @@
     $router->addRoute('div_home','DivHome','divHome');
     //division add montly report
     $router->addRoute('add_monthly_report','DivAddMonthlyReport','addMonthlyReport');
+    //division add project proposal
+    $router->addRoute('add_proposal','DivAddProposal','divAddProposal');
     //division launch project
     $router->addRoute('launch_project','DivLaunchProject','launchProject');
     //division call for bids
