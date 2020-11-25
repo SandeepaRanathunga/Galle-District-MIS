@@ -8,40 +8,37 @@
 }
 .formarea{
     position:relative;
-    width:900px;
     display:flex;
     justify-content:flex-start;
     padding:10px;
     box-sizing: border-box;
 }
 .formarea label{
-    color:#2F4F4F;
+    color:#434647;
     font-size: 18px;
     font-weight: bold;
     display:inline-block;
     width:200px;
 }
 input[type="text"],input[type="email"],input[type="password"]{
-    border:2px solid #2F4F4F;
+    border:2px solid #434647;
     width:300px;
     height:40px;
-    margin:5px;
-    margin-top: 20px;
+    margin:10px;
     padding:5px;
     box-sizing: border-box;
-    outline:#2F4F4F;
+    outline:#434647;
     font-size:17px;
 }
 select{
-        border:2px solid #2F4F4F;
+        border:2px solid #434647;
         width:300px;
         height:40px;
-        margin:5px;
-        margin-top: 20px;
+        margin:10px;
         padding:5px;
         box-sizing: border-box;
         font-size: 17px;
-        outline:#2F4F4F;
+        outline:#434647;
 }
 input[type="file"]{
     border:none;
@@ -54,7 +51,7 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="reset"],input[type="submit"]{
-    background:#2F4F4F;
+    background:#D2691E;
     color:white;
     padding:10px;
     font-weight: bold;
@@ -66,6 +63,10 @@ input[type="reset"],input[type="submit"]{
     display:block;
     float:right;
 
+}
+
+input[type="reset"],input[type="submit"]:focus{
+    outline:none;
 }
 input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.2);
