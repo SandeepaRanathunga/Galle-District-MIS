@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contractors</title>
+    <title>Projects</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/userHome.css">
     <link rel="icon" href="./images/logo.png">
@@ -25,19 +25,18 @@
 
 <?php require_once('includes/header.php');?>
 <?php require_once('includes/guestNav.php');?>
-
-    <div class="notice">
-        <marquee behavior="" direction=""><h3><span style="font-size:17px;">ALERT! </span>Contractor registrations are now open for the year 2020/21. Please registra via the MIS.</h3></marquee><h3></h3>
+    <div class="tag">
+        <h2>Projects</h2>
     </div>
     <div class="button-flex-container" >     
-        <a href="contractor_register">
-                <div><img src="svg/registration.svg" alt=""></div>
-                <div>Contractor Registration</div>
+        <a href="ongoing_projects">
+                <div><img src="svg/ongoing.svg" alt=""></div>
+                <div>Ongoing Projects</div>
                 
         </a>
-        <a href="respond_contractors">
-            <div><img src="svg/viewBids.svg" alt=""></div>
-            <div>View Bid Callings</div>
+        <a href="finished_projects">
+            <div><img src="svg/finished.svg" alt=""></div>
+            <div>Finished Projects</div>
         </a>
     </div>
     <!-- COPOIED CODE-->

@@ -1,9 +1,3 @@
-<?php
-    // require_once('includes/session.php');
-?>
-<?php
-    $divisions=$this->divisions;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +16,10 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php require_once('includes/adminNav.php');?>
+    <?php require_once('includes/guestNav.php');?>
 
     <div class="tag">
-        <h2>User Registration</h2>
+        <h2>Contractor Register</h2>
     </div>
 
     <div class="container">
@@ -35,11 +29,11 @@
                     <label for="office">Office</label>
                     <select name="office_id" id="office_id" onchange="setUserID()" required>
                         <option disabled selected value>selcet</option>
-                        <option value="dis00">District Secretariat</option>   
+                        <option value="dis00">District Secretariat - dis00</option>   
                         <?php
                             foreach($divisions as $division):
                         ?>
-                        <option value="<?php echo $division[0];?>"><?php echo $division[1];?></option>
+                        <option value="<?php echo $division[0];?>"><?php echo $division[1].' - '.$division[0];?></option>
                         <?php
                             endforeach; 
                         ?>

@@ -23,17 +23,18 @@
     margin-top: 12px;
     margin-bottom: 12px;
     text-align: left;
-    background-color: #2F4F4F;
+    background-color: #434647;
     color: white;
 }
-.tag{
+/* moved to common.css */
+/* .tag{
     background:#f2f2f2;
     overflow:auto;
     padding:10px;
     box-sizing: border-box;
 }
 .tag h2{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
     font-size: 20px;
     font-weight: bold;
@@ -41,15 +42,11 @@
     box-sizing: border-box;
     border-radius: 5px;
     float:left;
-}
+} */
 
-.container{
-    background-color: #f2f2f2;
-    min-height: 500px;
-}
 
 input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#2F4F4F;
+    background:#434647;
     color:white;
     padding:10px;
     font-weight: bold;
@@ -62,6 +59,6 @@ input[type="button"],input[type="submit"],input[type="reset"]{
 }
 
 input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
 }

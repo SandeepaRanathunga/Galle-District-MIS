@@ -3,7 +3,7 @@ header{
     display:flex;
     width:100%;
     padding:5px;
-    background:#f2f2f2;
+    background:#F5F5F5;
     box-sizing: border-box;
     clear:both;
     align-items: center;
@@ -16,6 +16,7 @@ header .branding{
 }
 .logo{
     height:100px;
+    width:80px;
 }
 .districtTag{
     flex:2;
@@ -24,12 +25,12 @@ header .branding{
 .districtTag h2{
     font-size: 35px;
     font-weight: bold;
-    color:#2F4F4F;
+    color:#434647;
 }
 .districtTag h3{
     font-size: 25px;
     font-weight: bold;
-    color:#2F4F4F;
+    color:#434647;
 }
 .user{
     margin:10px;
@@ -40,12 +41,12 @@ header .branding{
     color:white;
     padding:5px;
     font-size: 35px;
-    background:#2F4F4F;
+    background:#434647;
     border-radius: 5px;
 }
 .user a:hover{
     color:white;
-    background:#2F4F4F;
+    background:#434647;
 }
 
 @media screen and (max-width:650px){
@@ -53,8 +54,8 @@ header .branding{
         margin:10px;
     }
     .logo{
-        width:80px;
-        height:80px;
+        width:70px;
+        height:90px;
     }
     .districtTag h2{
         font-size:25px;
@@ -69,10 +70,10 @@ header .branding{
     font-size: 30px;
     font-weight: bold;
     text-align:center;
-    border:3px solid #2F4F4F;
+    border:3px solid #434647;
     border-radius:10px;
     padding:5px;
-    background:#2F4F4F;
+    background:#434647;
     color:white;
 }
 .user .logout{
@@ -98,7 +99,7 @@ header .dropdown{
 }
 header .greeting h3{
     float: right ;
-    color: #2F4F4F;
+    color: #434647;
     font-size:18px;
 }
 .dropdown .dropbtn,.dropdown .loginpage{
@@ -106,24 +107,24 @@ header .greeting h3{
     display:block;
     cursor: pointer;
     color:white;
-    background:#2F4F4F;
+    background:#434647;
     padding:15px;
     font-size: 20px;
     border-radius: 5px;
     border:none;
 }
 .dropdown:hover .dropbtn{
-    color:#2F4F4F;
+    color:#434647;
     background:white;
 }
 .loginpage:hover{
-    color:#2F4F4F;
+    color:#434647;
     background:white; 
 }
 .droplist{
     display: none;
     position: relative;
-    background-color: #2F4F4F;
+    background-color: #434647;
     min-width:100%;
     z-index: 1;
 }
