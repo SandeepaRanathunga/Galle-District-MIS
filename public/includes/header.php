@@ -1,6 +1,6 @@
 <header class=clearfix>
         <div class="branding">
-            <img src="images/logo.png" alt="logo" class="logo">
+            <img src="images/logo-header.png" alt="logo" class="logo">
         </div>
         <div class="districtTag">
             <h2>Galle District Secretariat</h2>

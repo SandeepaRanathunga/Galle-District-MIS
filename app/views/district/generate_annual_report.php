@@ -1,4 +1,6 @@
-
+<?php
+    // require_once('includes/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/disNav.php');?>
     <div class="tag">
         <h2>Generate funds</h2>
     </div>

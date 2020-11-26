@@ -1,22 +1,15 @@
 .container{
     display:flex;
-    margin:2% 4%;
     align-items: center;
-}
-
-.container :nth-of-type(1){
-    flex:1.25;    
-}
-.container :nth-of-type(2){
-    flex:2;
+    padding:15px;
+    justify-content: center;
 }
 .loginBox{
-    width:95%;
-    border:3px solid #2F4F4F;
+    width:400px;
     padding:40px 10px;
     box-sizing: border-box;
-    background:#f2f2f2;
-    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background:#ffffff;
     min-width: 350px;
     
 } 
@@ -36,12 +29,18 @@
     font-size: 25px;
     font-weight: bold;
     text-align:center;
-    border:3px solid #2F4F4F;
-    border-radius:10px;
-    padding:5px;
-    margin:45px 20px;
-    background:#2F4F4F;
-    color:white;
+    /* border:3px solid #434647; */
+    color:#434647;
+    margin-bottom:20px;
+}
+.loginBox .icon{
+    display:flex;
+    justify-content: center;
+    margin-bottom:5px;
+}
+.icon img{
+    width:100px;
+    height:100px;
 }
 label{
     display:inline-block;
@@ -49,7 +48,7 @@ label{
     text-align: center;
     font-size:25px;
     font-weight:bold;
-    color:#2F4F4F;
+    color:#434647;
 }
 input:focus{
     outline:none;
@@ -57,7 +56,7 @@ input:focus{
 input[type=text],input[type=password]{
     display:inline-block;
     background:none;
-    border:2px solid #2F4F4F;
+    border:2px solid #434647;
     border-radius:5px;
     padding:5px;
     width:80%;
@@ -68,15 +67,15 @@ input[type=text],input[type=password]{
     margin-bottom: 30px;
 }
 input[type=submit]{
-    width:auto;
     display: block;
-    margin: 10px auto;
-    padding:5px 20px;
-    background:#2F4F4F;
-    border:2px solid #2F4F4F;
+    margin: auto;
+    width:80%;
+    padding:10px 20px;
+    background:#D2691E;
     border-radius: 5px;
     color:white;
     font-size: 18px;
+    outline:none;
     font-weight: bold;
 }
 input[type=submit]:hover{
@@ -89,8 +88,9 @@ input[type=submit]:hover{
 }
 
 .forgotLink a{
-    color:#2F4F4F;
+    color:#434647;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .mask{

@@ -1,3 +1,6 @@
+<?php
+    // require_once('includes/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +9,46 @@
     <title>Division - Home </title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/userHome.css">
+    <link rel="stylesheet" href="css/divHome.css">
 
-    <link rel="icon" href="./images/logo.png">
+    <link rel="icon" href="./svg/logo.png">
 </head>
 
 <body class="clearfix">
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/divNav.php');?>
     <div class="button-flex-container" >                  
-        <div> <a href="div_notifications">Notifications</a></div>
-        <div> <a href="respond_contractors">Respond to contractor requests</a></div>
-        <div> <a href="#">Add project proposal</a></div>
-        <div> <a href="call_for_bids">Call for bids</a></div>
-        <div> <a href="add_monthly_report">Add monthly reports</a></div>
-        <div> <a href="#">View bid reports</a></div>
-        <div> <a href="launch_project">Launch Project</a></div>
+        <a href="div_notifications">
+            <div><img src="svg/notifications.svg" alt=""></div>
+            <div>Notifications</div>
+            
+        </a>
+        <a href="respond_contractors">
+            <div><img src="svg/respond.svg" alt=""></div>
+            <div>Contractor Requests</div>
+        </a>
+        <a href="#">
+            <div><img src="svg/proposal.svg" alt=""></div>
+            <div>Add Project Proposal</div>
+        </a>
+        <a href="launch_project">
+            <div><img src="svg/launch.svg" alt=""></div>
+            <div>Launch Project</div>
+        </a>
+        <a href="add_monthly_report">
+            <div><img src="svg/report.svg" alt=""></div>
+            <div>Add Monthly Report</div>    
+        </a>
+        <a href="call_for_bids">
+            <div><img src="svg/bidding.svg" alt=""></div>
+            <div>Call For Bids</div>
+        </a>
+        <a href="#">
+            <div><img src="svg/auction.svg" alt=""></div>
+            <div>View Bid Reports</div>
+        </a>
+        
     </div>     
-    <!-- COPOIED CODE-->
     <?php require_once('includes/footer.php');?>
 </body>
 </html>

@@ -7,47 +7,42 @@
 }
 a{
     text-decoration:none;
-    color:#2F4F4F;
-}
-body{
-    width:99%;
-    margin:auto;
-    overflow-x: hidden;
-}
-.info{
-    background:#f2f2f2;
-    width:100%;
-    margin:10px 0px;
-    padding:0px 50px;
-    box-sizing: border-box;
-    display:flex;
-    align-items: center;
-    justify-items: center;    
+    color:#434647;
 }
 
-.info a{
+.button-container{
+    width:100%;
+    padding:10px;
+    background: white;
+    box-sizing:border-box;
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.button-container > a{
+    display:flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width:350px;
+    height: 200px;
+    margin:10px 30px;
     align-items: center;
     justify-content: center;
-    margin:40px 60px;
-    width:250px;
-    height:200px;
-    color: #f2f2f2;
-    text-shadow: #f2f2f2;
-    font-weight: bold;
+    color:white;
     font-size: 20px;
-    
+    font-weight: bold;
+
 }
-.info a:nth-child(1){
-    flex:1;
-    background:url("../images/ongoing.jpg");
+
+.button-container a:hover{
+    transform:scale(1,1.05);
 }
-.info a:nth-child(2){
-    flex:1;
-    background:url("../images/finished.jpg");
+.button-container a:nth-child(1){
+    background-image:url("../images/ongoing.jpg");
 }
-.info a:nth-child(3){
-    flex:1;
-    background:url("../images/progress.jpg");
+.button-container a:nth-child(2){
+    background-image:url("../images/finished.jpg");
+}
+.button-container a:nth-child(3){
+    background-image:url("../images/progress.jpg");
 }

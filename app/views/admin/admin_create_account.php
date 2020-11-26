@@ -1,4 +1,7 @@
 <?php
+    // require_once('includes/session.php');
+?>
+<?php
     $divisions=$this->divisions;
 ?>
 <!DOCTYPE html>
@@ -6,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title> <!--Change name here-->
+    <title>Create Account</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminCreateAccount.css">
     <link rel="icon" href="images/logo.png">
@@ -19,32 +22,24 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php //require_once('#');?>
+    <?php require_once('includes/adminNav.php');?>
 
     <div class="tag">
-        <h2>Create new user accounts</h2>
+        <h2>User Registration</h2>
     </div>
 
     <div class="container">
         <div class="formarea clearfix">
             <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
-                <div> 
-                    <label for="user_id">User ID</label>
-                    <input type="text" name="user_id" id="user_id" minlength="7" maxlength="7" required>
-                </div>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
-                <div>
+            <div>
                     <label for="office">Office</label>
-                    <select name="office_id" id="office_id" required>
+                    <select name="office_id" id="office_id" onchange="setUserID()" required>
                         <option disabled selected value>selcet</option>
-                        <option value="dis00">District Secretariat - dis00</option>   
+                        <option value="dis00">District Secretariat</option>   
                         <?php
                             foreach($divisions as $division):
                         ?>
-                        <option value="<?php echo $division[0];?>"><?php echo $division[1].' - '.$division[0];?></option>
+                        <option value="<?php echo $division[0];?>"><?php echo $division[1];?></option>
                         <?php
                             endforeach; 
                         ?>
@@ -52,6 +47,15 @@
                     </select>
                     <p id="office_warning"></p>
                 </div>
+                <div> 
+                    <label for="user_id">User ID</label>
+                    <input type="text" name="user_id" id="user_id" minlength="7" maxlength="7" readonly>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                
                 <div>
                     <label for="designation">Designation</label>
                     <input type="text" name="designation" id="designation" required>
@@ -79,7 +83,7 @@
                     <p id="confirm_warning" class="warning"></p>
                 </div>
                 
-                <div>
+                <div class="clearfix">
                     <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit" id="submit">
                 </div>

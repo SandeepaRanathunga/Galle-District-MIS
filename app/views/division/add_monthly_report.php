@@ -1,4 +1,6 @@
-
+<?php
+    // require_once('includes/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 </head>
 <body>
     <?php include_once('includes/header.php');?>
-    <?php //include_once('includes/guestNav.php');?>
+    <?php include_once('includes/divNav.php');?>
     <div class="tag">
         <h2>Add Monthly Report</h2>
     </div>

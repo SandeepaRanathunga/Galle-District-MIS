@@ -15,6 +15,9 @@
     <div class="container">
         <div>
             <div class="loginBox">
+                <div class="icon">
+                    <img src="svg/user.svg" alt="">
+                </div>
                 <h2>Welcome</h2>
                     <!-- <?php echo $alert;?> -->
                 <form action="" method="post">
@@ -33,9 +36,9 @@
                 </form>
             </div>
         </div>
-        <div class="mask">
+        <!-- <div class="mask">
             <img src="images/mask.png" alt="This is a mask" class="mask">
-        </div>
+        </div> -->
     </div>
     <?php include 'includes/footer.php';?>
 </body>

@@ -1,5 +1,8 @@
 <?php
     session_start();
+    // if(isset($_SESSION['userName'])){
+    //     header('Location:#');
+    // }
     class Login extends Controller{
         public function userLogin(){
             if(isset($_POST['login'])){
@@ -13,7 +16,7 @@
             $model=$this->model('Login');
             $model->setLoginDetails();
             $result=$model->checkUserID();
-            if(mysqli_num_rows($result)>0){
+            if($result->num_rows>0){
                 if($model->checkPassword($result)){
                     $userType=$model->getUserType();
                     if($userType=='adm')
@@ -37,23 +40,29 @@
             
         }
         private function adminHeader($model){
-                $_SESSION['userID']=$model->getuserID();
-                $_SESSION['userName']=$model->getUserName();
-                echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
-                echo "<script>window.location.href='create_account';</script>";
+            $_SESSION['userID']=$model->getuserID();
+            $_SESSION['userName']=$model->getUserName();
+            echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
+            echo "<script>window.location.href='admin_home';</script>";
         }
         private function divisionHeader($model){
-                $_SESSION['userID']=$model->getuserID();
-                $_SESSION['userName']=$model->getUserName();
-                $_SESSION['office_id']=$model->getOfficeID();
-                echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
-                echo "<script>window.location.href='login';</script>";
+            $_SESSION['userID']=$model->getuserID();
+            $_SESSION['userName']=$model->getUserName();
+            $_SESSION['office_id']=$model->getOfficeID();
+            echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
+            echo "<script>window.location.href='div_home';</script>";
         }
         private function districtHeader($model){
-
+            $_SESSION['userID']=$model->getuserID();
+            $_SESSION['userName']=$model->getUserName();
+            echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
+            echo "<script>window.location.href='dis_home';</script>";
         }
         private function contractorHeader($model){
-
+            $_SESSION['userID']=$model->getuserID();
+            $_SESSION['userName']=$model->getUserName();
+            echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
+            echo "<script>window.location.href='contractor_home';</script>";
         }
         private function loginError($model){
 
