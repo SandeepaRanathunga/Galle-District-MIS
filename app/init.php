@@ -46,6 +46,8 @@
     $router->addRoute('dis_home','DisHome','disHome');
     //district manage funds record
     $router->addRoute('dis_manage_funds','DisManageFunds','disManageFunds');
+    //district edit funds record
+    $router->addRoute('dis_edit_funds','DisEditFundsRecord','disEditFundsRecord');
     //district generate report
     $router->addRoute('dis_generate_report','DisGenerateReport','disGenerateReport');
     //district notifications

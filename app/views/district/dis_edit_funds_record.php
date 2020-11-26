@@ -7,6 +7,7 @@
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/disManageFunds.css">
+    <link rel="stylesheet" href="css/monthlyReportStyle.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>

@@ -41,7 +41,7 @@ switch($action){
     
     default:
         $agency= new DisManageFunds();
-        $result=$agency->getAllAgency();
+        $result= $this->$agency->getAllAgency();
         require_once "dis_manage_funds";
     break;
 }

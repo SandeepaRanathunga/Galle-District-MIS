@@ -37,7 +37,7 @@
         public function getAllAgency(){
             $sql = "SELECT * FROM funds ORDER BY agency_id";
             $result = $this->db_handle->runBaseQuery($sql);
-            return $result;
+            return var_dump($result);
         }
     } 
 ?>
