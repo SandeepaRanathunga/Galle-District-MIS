@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
-    <?php include '/../database/Database.php'?>
+    <?php
+    require_once $_SERVER['DOCUMENT_ROOT']."/../../database/Database.php";
+    require_once ("/../database/Database.php");
+    require_once ("/../models/DisManageFunds.php");
+    ?>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/disManageFunds.css">
     <link rel="icon" href="images/logo.png">
@@ -18,7 +22,7 @@
         </div>
         <center>
         <div style="overflow-x:auto;">
-            <table id="funds">
+            <table id="funds">               
                 <thead>
                     <tr>
                         <th>Index number</th>
@@ -34,11 +38,7 @@
                 <tbody>
                     <?php
                     if(!empty($result)){
-                        //echo "<pre>";
-                        //print_r($result);
                         foreach($result as $k => $v){
-                            //echo "<pre>";
-                            //print_r($v);
                     ?>
                             <tr>
                                 <td><?php echo $result[$k]["agency_id"]?></td>
@@ -49,9 +49,10 @@
                                 <td><?php echo $result[$k]["total_expense"]?></td>
                                 <td><?php echo $result[$k]["total_balance"]?></td>
                             </tr>
+                    <?php
                         }
                     }
-                    
+                    ?>
                 </tbody>
             </table>
         </div>

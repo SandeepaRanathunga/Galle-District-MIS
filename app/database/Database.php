@@ -5,6 +5,7 @@
         private $password='';
         private $dbname='mis_db';
         private $connection=null;
+        
         public function __construct(){
             $this->dbConnect();
             $this->connection = $this->dbConnect();

@@ -5,11 +5,11 @@
     class DisManageFunds{
         private $db_handle;
 
-        function __construct(){
+        public function __construct(){
             $this->db_handle = new Database();
         }
 
-        function getAgencyByID($agency_id){
+        public function getAgencyByID($agency_id){
             $query = "SELECT * FROM funds WHERE agency_id = ?";
             $paramType = "i";
             $paramValue = array($agency_id);
@@ -18,7 +18,7 @@
             return $result;
         }
 
-        function editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expense, $total_balance, $agency_id){
+        public function editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expense, $total_balance, $agency_id){
             $query = "UPDATE funds SET agency_name = ?, funds_received = ?, date = ?, num_of_projects = ?, total_expense = ?, total_balance = ? WHERE agency_id = ?";
             $paramType = "sisiiii";
             $paramValue = array(
@@ -34,9 +34,9 @@
             $this->db_handle->update($query, $paramType, $paramValue);
         }
 
-        function getAllAgency(){
+        public function getAllAgency(){
             $sql = "SELECT * FROM funds ORDER BY agency_id";
-            $result = $this->db_handle->renBaseQuery($sql);
+            $result = $this->db_handle->runBaseQuery($sql);
             return $result;
         }
     } 

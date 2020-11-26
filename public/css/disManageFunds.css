@@ -45,13 +45,8 @@
 } */
 
 .container{
-<<<<<<< HEAD
-    background-color: #f2f2f2;
-    height: 600px;
-=======
     /* background-color: #f2f2f2; */
     min-height: 500px;
->>>>>>> mvc
 }
 
 input[type="button"],input[type="submit"],input[type="reset"]{

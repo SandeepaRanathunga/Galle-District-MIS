@@ -18,7 +18,7 @@ if(! empty($_GET["action"])){
 switch($action){
     case "dis_manage_funds_edit":
         $agency_id = $_GET["agency_id"];
-        $agency = new Agency();
+        $agency = new DisManageFunds();
     
         if(isset($_POST['add'])){
             $agency_name = $_POST['agency_name'];
