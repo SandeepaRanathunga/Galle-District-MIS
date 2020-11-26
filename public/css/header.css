@@ -41,12 +41,12 @@ header .branding{
     color:white;
     padding:5px;
     font-size: 35px;
-    background:#000000    ;
+    background:#141414    ;
     border-radius: 5px;
 }
 .user a:hover{
     color:white;
-    background:#000000    ; 
+    background:#141414    ; 
 }
 
 @media screen and (max-width:650px){
