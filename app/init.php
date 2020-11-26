@@ -73,6 +73,7 @@
 
     /*--------------------Logout-----------------*/
     $router->addRoute('logout','Logout','index');
+    
     $app=new App($router);
 
 ?>
