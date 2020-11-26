@@ -5,7 +5,7 @@
 }
 /*UpperFooterPart*/
 .blue{
-    background:#434647;
+    background:#225d85   ;
     padding:5px;
     display:flex;
     align-items: center;
@@ -42,7 +42,7 @@
   }
 /* lower footer */
 .black{
-    background:black;
+    background:#141414;
     padding:5px 15px;
     box-sizing: border-box;
     display:flex;
@@ -55,7 +55,7 @@
     
 }
 .black h2 span{
-    color:yellow;
+    color:#D2691E   ;
     font-size: 15px;
 }
 @media screen and (max-width:850px){
