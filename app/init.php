@@ -33,6 +33,8 @@
     $router->addRoute('div_home','DivHome','divHome');
     //division add montly report
     $router->addRoute('add_monthly_report','DivAddMonthlyReport','addMonthlyReport');
+    //division add project proposal
+    $router->addRoute('add_proposal','DivAddProposal','divAddProposal');
     //division launch project
     $router->addRoute('launch_project','DivLaunchProject','launchProject');
     //division call for bids
@@ -48,6 +50,8 @@
     $router->addRoute('dis_home','DisHome','disHome');
     //district manage funds record
     $router->addRoute('dis_manage_funds','DisManageFunds','disManageFunds');
+    //district edit funds record
+    $router->addRoute('dis_edit_funds','DisEditFundsRecord','disEditFundsRecord');
     //district generate report
     $router->addRoute('dis_generate_report','DisGenerateReport','disGenerateReport');
     //district notifications
@@ -71,10 +75,15 @@
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
     //contractor notifications
     $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
+    $router->addRoute('contractor_signup','ContractorSignUp','contractorSignUp');
+    $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
+    $router->addRoute('manage_expenses','ContractorManageExpenses','contractorManageExpenses');
+    $router->addRoute('view_bid_callings','ContractorViewBidCallings','contractorViewBidCallings');
 
 
     /*--------------------Logout-----------------*/
     $router->addRoute('logout','Logout','index');
+    
     $app=new App($router);
 
 ?>

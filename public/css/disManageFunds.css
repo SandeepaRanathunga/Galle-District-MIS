@@ -58,6 +58,10 @@ input[type="button"],input[type="submit"],input[type="reset"]{
     float:right;
 }
 
+input[type="submit"]{
+    margin-right: 70px;
+}
+
 input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover{
     color:#434647;
     background:white;

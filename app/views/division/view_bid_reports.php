@@ -15,7 +15,7 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/divNav.php');?>
     <div class="tag">
-        <h2>View bid callings</h2>
+        <h2>View bid reports</h2>
     </div>
     <div class="container">
         <div class="combutton">
