@@ -12,11 +12,11 @@
 <body>
     <?php include 'includes/Header.php';?>
     <?php include 'includes/guestNav.php';?>
+    <div class="tag">
+        <h2>About Us</h2>
+    </div>
     <div class="container">
         <div class="button-container">
-            <div class="tag">
-                <h2>About Us</h2>
-            </div>
             <div class="overview">
                 <div>
                     <img src="svg/vision.svg" alt="">

@@ -8,7 +8,7 @@
         }
     ?>
         <a href="/Galle-District-mis/" <?php if($currentPage=='guest_home') echo "class=active"?>>Home</a>
-        <a href="projects" <?php if($currentPage=='') echo "class=active"?>>Projects</a>
+        <a href="projects" <?php if($currentPage=='projects') echo "class=active"?>>Projects</a>
         <a href="annual_reports" <?php if($currentPage=='annual_reports') echo "class=active"?>>Reports</a>
         <a href="contractors" <?php if($currentPage=='contractors') echo "class=active"?>>Contractors</a>
         <a href="about_us" <?php if($currentPage=='about_us') echo "class=active"?>>About Us</a>

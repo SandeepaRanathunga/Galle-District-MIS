@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<?php
+    // require_once('includes/session.php');
+?>
+>>>>>>> mvc
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +17,10 @@
 <body>
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/disNav.php');?>
+    <div class="tag">
+        <h2>Manage funds</h2>
+    </div>
     <div class='container'>
-        <div class="tag">
-            <h2>Manage funds</h2>
-        </div>
         <center>
         <div style="overflow-x:auto;">
             <table id="funds">               
