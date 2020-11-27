@@ -15,8 +15,7 @@
     <link rel="icon" href="images/logo.png">
     <style>
         .warning{
-            display:inline-block;
-            
+            display:inline-block;    
         }
     </style>
 </head>

@@ -31,6 +31,8 @@
     $router->addRoute('div_home','DivHome','divHome');
     //division add montly report
     $router->addRoute('add_monthly_report','DivAddMonthlyReport','addMonthlyReport');
+    //division add project proposal
+    $router->addRoute('add_proposal','DivAddProposal','divAddProposal');
     //division launch project
     $router->addRoute('launch_project','DivLaunchProject','launchProject');
     //division call for bids
@@ -46,6 +48,8 @@
     $router->addRoute('dis_home','DisHome','disHome');
     //district manage funds record
     $router->addRoute('dis_manage_funds','DisManageFunds','disManageFunds');
+    //district edit funds record
+    $router->addRoute('dis_edit_funds','DisEditFundsRecord','disEditFundsRecord');
     //district generate report
     $router->addRoute('dis_generate_report','DisGenerateReport','disGenerateReport');
     //district notifications
@@ -77,6 +81,7 @@
 
     /*--------------------Logout-----------------*/
     $router->addRoute('logout','Logout','index');
+    
     $app=new App($router);
 
 ?>
