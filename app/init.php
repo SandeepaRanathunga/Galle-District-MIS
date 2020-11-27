@@ -73,9 +73,13 @@
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
     //contractor notifications
     $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
+    //contractor sign up
     $router->addRoute('contractor_signup','ContractorSignUp','contractorSignUp');
+    //contractor submit bid report
     $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
+    //contractor manage expenses
     $router->addRoute('manage_expenses','ContractorManageExpenses','contractorManageExpenses');
+    //contractor view bid callings
     $router->addRoute('view_bid_callings','ContractorViewBidCallings','contractorViewBidCallings');
 
 
