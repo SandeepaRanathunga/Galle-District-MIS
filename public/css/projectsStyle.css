@@ -1,9 +1,5 @@
 .container{
     width:100%;
-    display: flex;
-    justify-content: center;
-    padding:30px;
-    box-sizing: border-box;
 }
 .links-container{
     /* width:90%; */
@@ -12,10 +8,10 @@
     align-items: center;
     flex-wrap: wrap;
 }
-/* .links-container::after{
+.links-container::after{
     content:'';
     flex:auto;
-} */
+}
 .container a{
     display:flex;
     justify-content: center;
