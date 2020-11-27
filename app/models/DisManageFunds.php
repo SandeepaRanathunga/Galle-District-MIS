@@ -14,17 +14,17 @@
             $paramType = "i";
             $paramValue = array($agency_id);
 
-            $result = $this->db_handle->run_Query($query, $paramType, $paramValue);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
             return $result;
         }
 
-        public function editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expense, $total_balance, $agency_id){
-            $query = "UPDATE funds SET agency_name = ?, funds_received = ?, date = ?, num_of_projects = ?, total_expense = ?, total_balance = ? WHERE agency_id = ?";
+        public function editAgency($agency_name, $funds_received, $date_received, $num_of_projects, $total_expense, $total_balance, $agency_id){
+            $query = "UPDATE funds SET agency_name = ?, funds_received = ?, date_received = ?, num_of_projects = ?, total_expense = ?, total_balance = ? WHERE agency_id = ?";
             $paramType = "sisiiii";
             $paramValue = array(
                 $agency_name,
                 $funds_received,
-                $date,
+                $date_received,
                 $num_of_projects,
                 $total_expense,
                 $total_balance,

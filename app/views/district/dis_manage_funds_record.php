@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 <?php
     // require_once('includes/session.php');
 ?>
->>>>>>> mvc
 <!DOCTYPE html>
 <html lang="en">
 <head>

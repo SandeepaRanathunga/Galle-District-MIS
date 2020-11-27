@@ -23,16 +23,16 @@ switch($action){
         if(isset($_POST['add'])){
             $agency_name = $_POST['agency_name'];
             $funds_received = $_POST['funds_received'];
-            $date="";
-            if($_POST["date"]){
+            $date_received="";
+            if($_POST["date_received"]){
                 $date_timestamp = strtotime($_POST["date"]);
-                $date = date("Y-m-d", $date_timestamp);
+                $date_received = date("Y-m-d", $date_timestamp);
             }
             $num_of_projects = $_POST['num_of_projects'];
             $total_expense = $_POST['total_expense'];
             $total_balance = $_POST['total_balance'];
     
-            $agency->editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expense, $total_balance);
+            $agency->editAgency($agency_name, $funds_received, $date_received, $num_of_projects, $total_expense, $total_balance);
             header("Location: dis_manage_funds");
         }
         $result = $agency->getAgencyByID($agency_id);
