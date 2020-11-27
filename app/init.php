@@ -73,6 +73,10 @@
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
     //contractor notifications
     $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
+    $router->addRoute('contractor_signup','ContractorSignUp','contractorSignUp');
+    $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
+    $router->addRoute('manage_expenses','ContractorManageExpenses','contractorManageExpenses');
+    $router->addRoute('view_bid_callings','ContractorViewBidCallings','contractorViewBidCallings');
 
 
     /*--------------------Logout-----------------*/
