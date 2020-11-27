@@ -22,16 +22,17 @@ body{
 .container,.button-flex-container{
     min-height: calc(100vh - 133.33px - 58.33px - 61.98px - 133.99px);
     position: relative;
+    clear:both;
 }
 
 .tag{
     background:white;
-    width:300px;
     overflow:auto;
     margin:10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding:5px;
+    padding:2px;
     border-radius: 5px;
+    float:left;
 
 }
 .tag h2{

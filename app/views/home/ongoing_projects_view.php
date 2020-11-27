@@ -2,7 +2,7 @@
     // require_once('includes/session.php');
 ?>
 <?php
-    $divisions=$this->divisions;
+    $div_id=$this->div_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,18 +18,10 @@
     <?php include_once('includes/header.php');?>
     <?php include_once('includes/guestNav.php');?>
     <div class="tag">
-        <h2>Ongoing Projects</h2>
+        <h2><?php echo $div_id.' - ';?>Ongoing Projects Timeline</h2>
     </div>
     <div class="container">
-        <div class="links-container">
-            <?php
-            foreach($divisions as $division):
-            ?>
-            <a href="ongoing_projects_view?div_id=<?php echo $division[0]?>"><?php echo $division[1]?></a>
-            <?php
-                endforeach;
-            ?>
-        </div>
+
     </div>
     <?php require_once('includes/footer.php');?>
 </body>
