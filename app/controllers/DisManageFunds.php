@@ -3,12 +3,20 @@ require_once __DIR__ . '/../database/Database.php';
 require_once __DIR__ . '/../models/DisManageFunds.php';
 
 class DisManageFunds extends Controller{
+    private $model;
+    public $funds=[];
+
+    public function __construct(){
+        $this->model=$this->model('DisManageFunds');
+        $this->funds=$this->model->getAllAgency();
+    }
+
     public function disManageFunds(){
         $this->view('district/dis_manage_funds_record');
     }
 }
-
-$db_handle = new Database();
+/*
+$this-> = new Database();
 
 $action = "";
 if(! empty($_GET["action"])){
@@ -44,5 +52,5 @@ switch($action){
         $result= $this->$agency->getAllAgency();
         require_once "dis_manage_funds";
     break;
-}
+}*/
 ?>

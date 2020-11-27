@@ -39,13 +39,14 @@
                         foreach($result as $k => $v){
                     ?>
                             <tr>
-                                <td><?php echo $result[$k]["agency_id"]?></td>
-                                <td><?php echo $result[$k]["agency_name"]?></td>
-                                <td><?php echo $result[$k]["funds_received"]?></td>
-                                <td><?php echo $result[$k]["date"]?></td>
-                                <td><?php echo $result[$k]["num_of_projects"]?></td>
-                                <td><?php echo $result[$k]["total_expense"]?></td>
-                                <td><?php echo $result[$k]["total_balance"]?></td>
+                                <td><?php echo $result[$k]["agency_id"]; ?></td>
+                                <td><?php echo $result[$k]["agency_name"]; ?></td>
+                                <td><?php echo $result[$k]["funds_received"]; ?></td>
+                                <td><?php echo $result[$k]["date_received"]; ?></td>
+                                <td><?php echo $result[$k]["num_of_projects"]; ?></td>
+                                <td><?php echo $result[$k]["total_expense"]; ?></td>
+                                <td><?php echo $result[$k]["total_balance"]; ?></td>
+                                <td><a class="editButton" href="dis_edit_funds?agency_id=<?php echo $result[$k]["agency_id"]; ?>"></a></td>
                             </tr>
                     <?php
                         }
