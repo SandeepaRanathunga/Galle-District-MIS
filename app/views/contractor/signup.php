@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title> <!--Change name here-->
-    <link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/navStyle.css">
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/footer.css">
+    <?php include 'includes/cssLinks.php';?>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" type="text/css">
 
     <link rel="stylesheet" href="css/adminCreateAccount.css">
+    <link rel="stylesheet" href="css/monthlyReportStyle.css">
     <link rel="icon" href="images/logo.png">
     <style>
         .warning{
@@ -96,7 +94,7 @@
                 </div>
 
                 <div class="agreement">
-                        <input type="checkbox" id="agreement" name="agreement">
+                        <input type="checkbox" id="agreement" name="agreement" required>
                         <label for="agreement" class="normText" style="width:auto;">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this proves to be false or incorrect, I shall be responsible for the consequences of request being rejected permanently.</label>
                     </div>
                 

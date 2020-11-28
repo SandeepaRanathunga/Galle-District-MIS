@@ -26,8 +26,8 @@
                      value="<?php echo $result[0]["funds_recived"]; ?>">
                 </div>
                 <div>
-                    <label for="date">Date</label>
-                    <input type="text" name="date" id="date" required value="<?php echo $result[0]["date"]; ?>">
+                    <label for="date">Date Received</label>
+                    <input type="text" name="date" id="date" required value="<?php echo $result[0]["date_received"]; ?>">
                 </div>
                 <div>
                     <label for="num_of_projects">Number of projects</label>
@@ -44,6 +44,7 @@
                 <div>
                     <input type="submit" name="save" value="Save">
                 </div>
+                <script src="https://code.jquery.com3./jquery-2.1.1.min.js" type="text/javascript"></script>
             </form>
         </div>   
     </div>

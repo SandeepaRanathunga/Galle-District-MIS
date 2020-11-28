@@ -22,16 +22,17 @@
             return $this->connection;
         }
 
-        public function runBaseQuery($query) {
-            $resultset="";
-            $result = $this->connection->query($query);   
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    $resultset[] = $row;
-                }
+/*
+    public function runBaseQuery($query) {
+		$resultset="";
+        $result = $this->connection->query($query);   
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $resultset[] = $row;
             }
-            return $resultset;
         }
+        return $resultset;
+    }
 
         public function runQuery($query, $param_type, $param_value_array){
             $sql= $this->connection->prepare($query);
@@ -51,14 +52,14 @@
         }
 
         public function bindQueryParams($sql, $param_type, $param_value_array){
-            $param_value_reference[] = & $param_type;
+            $param_value_referrence[] = & $param_type;
             for($i=0; $i<count($param_value_array); $i++){
-                $param_value_reference[] = & $param_value_array[$i];
+                $param_value_referrence[] = & $param_value_array[$i];
             } 
             call_user_func_array(array(
                 $sql,
                 'bind_param'
-            ), $param_value_reference);
+            ), $param_value_referrence);
         }
 
         public function insert($query, $param_type, $param_value_array){
@@ -74,6 +75,6 @@
             $this->bindQueryParams($sql, $param_type, $param_value_array);
             $sql->execute();
         }
-
+*/
     }
 ?>

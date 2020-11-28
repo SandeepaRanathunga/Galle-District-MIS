@@ -3,12 +3,20 @@ require_once __DIR__ . '/../database/Database.php';
 require_once __DIR__ . '/../models/DisManageFunds.php';
 
 class DisManageFunds extends Controller{
+    private $model;
+    public $funds=[];
+
+    public function __construct(){
+        $this->model=$this->model('DisManageFunds');
+        $this->funds=$this->model->getAllAgency();
+    }
+
     public function disManageFunds(){
         $this->view('district/dis_manage_funds_record');
     }
 }
-
-$db_handle = new Database();
+/*
+$this-> = new Database();
 
 $action = "";
 if(! empty($_GET["action"])){
@@ -23,16 +31,16 @@ switch($action){
         if(isset($_POST['add'])){
             $agency_name = $_POST['agency_name'];
             $funds_received = $_POST['funds_received'];
-            $date="";
-            if($_POST["date"]){
+            $date_received="";
+            if($_POST["date_received"]){
                 $date_timestamp = strtotime($_POST["date"]);
-                $date = date("Y-m-d", $date_timestamp);
+                $date_received = date("Y-m-d", $date_timestamp);
             }
             $num_of_projects = $_POST['num_of_projects'];
             $total_expense = $_POST['total_expense'];
             $total_balance = $_POST['total_balance'];
     
-            $agency->editAgency($agency_name, $funds_received, $date, $num_of_projects, $total_expense, $total_balance);
+            $agency->editAgency($agency_name, $funds_received, $date_received, $num_of_projects, $total_expense, $total_balance);
             header("Location: dis_manage_funds");
         }
         $result = $agency->getAgencyByID($agency_id);
@@ -44,5 +52,5 @@ switch($action){
         $result= $this->$agency->getAllAgency();
         require_once "dis_manage_funds";
     break;
-}
+}*/
 ?>
