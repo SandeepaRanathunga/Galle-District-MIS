@@ -49,7 +49,7 @@
             if(!empty($resultset)){
                 return $resultset;
             }
-        }*/
+        }
 
         public function bindQueryParams($sql, $param_type, $param_value_array){
             $param_value_referrence[] = & $param_type;
@@ -61,7 +61,7 @@
                 'bind_param'
             ), $param_value_referrence);
         }
-/*
+
         public function insert($query, $param_type, $param_value_array){
             $sql = $this->connection->prepare($query);
             $this->bindQueryParams($sql, $param_type, $param_value_array);
@@ -71,10 +71,10 @@
         }
 
         public function update($query, $param_type, $param_value_array){
-            $sql = $this->connection->prepareQuery($query);
+            $sql = $this->connection->prepare($query);
             $this->bindQueryParams($sql, $param_type, $param_value_array);
             $sql->execute();
-        }
-*/
+        }*/
+
     }
 ?>
