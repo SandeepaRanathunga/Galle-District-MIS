@@ -34,7 +34,7 @@
 
         <div class="mySlides fade">
             <div class="numbertext">4 / 4</div>
-            <img src="images/fishing.jpg" style="width:100%;height:400px">
+            <img src="images/fishing.png" style="width:100%;height:400px">
             <div class="text">Traditional Fishing</div>
         </div>
         <!-- Manual slides changers -->
