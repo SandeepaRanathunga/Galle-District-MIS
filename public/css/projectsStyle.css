@@ -8,13 +8,13 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.links-container::after{
+/* .links-container::after{
     content:'';
     flex:auto;
-}
+} */
 .container a{
     display:flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     width:250px;
     height:50px;
