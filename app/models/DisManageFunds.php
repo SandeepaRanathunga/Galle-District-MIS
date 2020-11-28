@@ -43,7 +43,7 @@
             $query = "SELECT * FROM funds ORDER BY agency_id";
             $result = $this->connection->query($query);
             if($result->num_rows > 0){
-                while($row=$result->fetch_assoc()){
+                while($row = $result->fetch_assoc()){
                     $resultset[]=$row;
                 }
             }

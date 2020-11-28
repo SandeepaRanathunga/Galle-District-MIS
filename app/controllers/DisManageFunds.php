@@ -4,7 +4,6 @@ require_once __DIR__ . '/../models/DisManageFunds.php';
 
 class DisManageFunds extends Controller{
     private $model;
-    public $funds=[];
 
     public function __construct(){
         $this->model=$this->model('DisManageFunds');
