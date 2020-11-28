@@ -1,6 +1,17 @@
 <?php
+require_once __DIR__ . '/../mailer/MailSender.php';
+
     Class ContractorRegister extends Controller{
-        public function index(){
+        private $model;
+        //public $contractors=[];
+
+        public function __construct(){
+            $this->model=$this->model('ContractorRegister');
+
+        }
+
+        public function contractorRegister(){
+
             $this->view('home/contractor_register');
         }
     }

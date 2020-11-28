@@ -25,11 +25,12 @@
     <div class="container">
         <div class="formarea clearfix">
             <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
+            <center>
             <div>
-                    <label for="office">Office</label>
+                    <label for="office">Division</label>
                     <select name="office_id" id="office_id" onchange="setUserID()" required>
-                        <option disabled selected value>selcet</option>
-                        <option value="dis00">District Secretariat - dis00</option>   
+                        <option disabled selected value>Select</option>
+                        <option value="dis00">District Secretariat</option>   
                         <?php
                             foreach($divisions as $division):
                         ?>
@@ -51,12 +52,20 @@
                 </div>
                 
                 <div>
-                    <label for="designation">Designation</label>
-                    <input type="text" name="designation" id="designation" required>
+                    <label for="reg_no">Registration Number</label>
+                    <input type="text" name="reg_no" id="reg_no" required>
+                </div>
+                <div>
+                    <label for="specialized_field">Specialized Field</label>
+                    <input type="text" name="specialized_field" id="specialized_field" required>
                 </div>
                 <div>
                     <label for="nic">NIC</label>
                     <input type="text" name="nic" id="nic" minlength="10" maxlength="12" title="Enter 10 digit nic with v and 12 digit nic without v" required>
+                </div>
+                <div>
+                    <label for="office_address">Office Address</label>
+                    <input type="text" name="office_address" id="office_address" required>
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
@@ -76,7 +85,14 @@
                     <input type="password" name="confirm_password" id="confirm_password" onkeyup="confirmPassword()" required>
                     <p id="confirm_warning" class="warning"></p>
                 </div>
-                
+                </center>
+                <div>
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <center>
+                        <label for="agreement" class="normText" style="width:auto;">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this proves to be false or incorrect, I shall be responsible for the consequences of request being rejected permanently.</label>
+                        </center>
+                </div>
+                        
                 <div class="clearfix">
                     <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit" id="submit">
