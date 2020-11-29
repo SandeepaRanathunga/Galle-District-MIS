@@ -2,7 +2,7 @@
 .topnav{
     position:sticky;
     top:0px;
-    background:#434647;
+    background:#0E2433    ;
     /* background:rgba(47, 79, 79, 25); */
     opacity: 0.9;
     padding:1px 20px;
@@ -26,18 +26,18 @@
 }
 .topnav .active{
     background:white;
-    color:#434647;
+    color:#0E2433    ;
 }
 .topnav a:hover{
     background:white;
-    color:#434647;
+    color:#0E2433    ;
     transition: 0.5s;
 }
 
 .topnav .icon{
     color:white;
     display:none;
-    background:#434647;
+    background:#0E2433    ;
     padding:10px;
     margin:5px;
     clear: both;
