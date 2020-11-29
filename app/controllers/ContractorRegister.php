@@ -11,8 +11,11 @@ require_once __DIR__ . '/../mailer/MailSender.php';
         }
 
         public function contractorRegister(){
-
-            $this->view('home/contractor_register');
+            if(isset($_POST['submit'])){
+                $this->proceedRegistration();
+            }else{
+                $this->view('home/contractor_register');
+            }
         }
     }
 ?>
