@@ -28,7 +28,7 @@
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 4</div>
-            <img src="images/fort.jpg" style="width:100%;height:400px">
+            <img src="images/fort.png" style="width:100%;height:400px">
             <div class="text">Galle Fort</div>
         </div>
 
