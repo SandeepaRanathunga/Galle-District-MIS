@@ -18,7 +18,7 @@
         private $connection;
         
         public function __construct(){
-            $this->connection=$this->dbConnect();
+            $this->connection=$this->dbConnect(); 
         }
 
         //set the data received from input fields

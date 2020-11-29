@@ -43,12 +43,12 @@
                 <div>Contractor Registration</div>
                 
         </a>
-        <a href="respond_contractors">
+        <a href="view_bid_callings">
             <div><img src="svg/viewBids.svg" alt=""></div>
             <div>View Bid Callings</div>
         </a>
     </div>
-    <!-- COPOIED CODE-->
+    <!-- COPIED CODE-->
     <?php require_once('includes/footer.php');?>
 </body>
 </html>

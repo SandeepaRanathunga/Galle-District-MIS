@@ -17,5 +17,8 @@ require_once __DIR__ . '/../mailer/MailSender.php';
                 $this->view('home/contractor_register');
             }
         }
+
+        
+
     }
 ?>
