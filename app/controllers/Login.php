@@ -15,29 +15,38 @@
         private function proceedLogin(){
             $model=$this->model('Login');
             $model->setLoginDetails();
-            $result=$model->checkUserID();
-            if($result->num_rows>0){
-                if($model->checkPassword($result)){
-                    $userType=$model->getUserType();
-                    if($userType=='adm')
-                        $this->adminHeader($model);
-                    else if($userType=='div')
-                        $this->divisionHeader($model);
-                    else if($userType=='dis')
-                        $this->districtHeader($model);
-                    else
-                        $this->contractorHeader($model);
+            $model->setUserType();
+            $userType=$model->getUserType();
+
+            if($userType=='adm' || $userType=='div' || $userType=='dis' || $userType=='con'){
+
+                $result=$model->checkUserID();
+                if($result->num_rows>0){
+                    if($model->checkPassword($result)){
+                        if($userType=='adm')
+                            $this->adminHeader($model);
+                        else if($userType=='div')
+                            $this->divisionHeader($model);
+                        else if($userType=='dis')
+                            $this->districtHeader($model);
+                        else
+                            $this->contractorHeader($model);
+                    }
+                    else{
+                        echo "<script>alert('Incorrect Password!')</script>";
+                        echo "<script>window.location.href='login';</script>";
+                    }
                 }
                 else{
-                    echo "<script>alert('Incorrect Password!')</script>";
+                    echo "<script>alert('User not found!')</script>";
                     echo "<script>window.location.href='login';</script>";
                 }
             }
             else{
-                echo "<script>alert('User not found!')</script>";
+                echo "<script>alert('Invalid login creditions!')</script>";
                 echo "<script>window.location.href='login';</script>";
             }
-            
+                
         }
         private function adminHeader($model){
             $_SESSION['userID']=$model->getuserID();
