@@ -1,4 +1,6 @@
-
+<?php
+    //$result=$this->agency;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +24,11 @@
                 </div>
                 <div>
                     <label for="funds_received">Funds Received</label>
-                    <input type="text" name="funds_received" id="funds_received" required
-                     value="<?php echo $result[0]["funds_recived"]; ?>">
+                    <input type="text" name="funds_received" id="funds_received" required value="<?php echo $result[0]["funds_received"]; ?>">
                 </div>
                 <div>
-                    <label for="date">Date Received</label>
-                    <input type="text" name="date" id="date" required value="<?php echo $result[0]["date_received"]; ?>">
+                    <label for="date_received">Date Received</label>
+                    <input type="text" name="date_received" id="date_received" required value="<?php echo $result[0]["date_received"]; ?>">
                 </div>
                 <div>
                     <label for="num_of_projects">Number of projects</label>

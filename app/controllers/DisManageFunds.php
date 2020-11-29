@@ -16,7 +16,7 @@ class DisManageFunds extends Controller{
     }
 }
 /*
-$this-> = new Database();
+$this->connection = new Database();
 
 $action = "";
 if(! empty($_GET["action"])){
@@ -28,7 +28,7 @@ switch($action){
         $agency_id = $_GET["agency_id"];
         $agency = new DisManageFunds();
     
-        if(isset($_POST['add'])){
+        if(isset($_POST['edit'])){
             $agency_name = $_POST['agency_name'];
             $funds_received = $_POST['funds_received'];
             $date_received="";

@@ -22,7 +22,7 @@
     //contractor_page
     $router->addRoute('contractors','Contractor','contractor');
     //contractor register
-    $router->addRoute('contractor_register','ContractorRegister','index');
+    $router->addRoute('contractor_register','ContractorRegister','contractorRegister');
     //projects
     $router->addRoute('projects','Projects','index');
     //aboutus
