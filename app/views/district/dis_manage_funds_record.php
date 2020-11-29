@@ -1,5 +1,6 @@
 <?php
     // require_once('includes/session.php');
+    $result=$this->funds;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,7 @@
                                 <td><?php echo $result[$k]["num_of_projects"]; ?></td>
                                 <td><?php echo $result[$k]["total_expense"]; ?></td>
                                 <td><?php echo $result[$k]["total_balance"]; ?></td>
-                                <td><a class="editButton" href="dis_edit_funds?agency_id=<?php echo $result[$k]["agency_id"]; ?>"></a></td>
+                                <td><a class="editButton" href="dis_edit_funds?agency_id=<?php echo $result[$k]["agency_id"]; ?>">Edit</a></td>
                             </tr>
                     <?php
                         }
@@ -55,10 +56,12 @@
                 </tbody>
             </table>
         </div>
-        <div class="check">
+        
+        <!--div class="check">
             <input type="submit" value="Update" name="submit">
             <input type="submit" value="Edit" name="submit">
-        </div>
+        </div-->
+        
         </center>  
     </div>
     <?php require_once('includes/footer.php');?> 

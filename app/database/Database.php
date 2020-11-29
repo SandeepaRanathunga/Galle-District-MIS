@@ -71,10 +71,10 @@
         }
 
         public function update($query, $param_type, $param_value_array){
-            $sql = $this->connection->prepareQuery($query);
+            $sql = $this->connection->prepare($query);
             $this->bindQueryParams($sql, $param_type, $param_value_array);
             $sql->execute();
-        }
-*/
+        }*/
+
     }
 ?>
