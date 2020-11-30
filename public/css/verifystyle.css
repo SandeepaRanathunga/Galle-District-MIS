@@ -55,19 +55,25 @@ input[type=email],input[type=password]{
 @media screen and (max-width:1110px){
 
 }
-input[type=submit]{
-    width:auto;
-    display: block;
+input[type=submit],input[type=reset]{
+    width:120px;
     margin: 10px auto;
     padding:10px;
     background:#434647;
-    border:2px solid #434647;
+    /*border:2px solid #434647;*/
     border-radius: 5px;
     color:white;
     font-size: 20px;
     font-weight: bold;
 }
-input[type=submit]:hover{
+/*
+input[type=submit]{
+    float: right;
+}
+input[type=reset]{
+    float: left;
+}*/
+input[type=submit]:hover,input[type=reset]:hover{
     color:#434647;
     background:white;
     cursor: pointer;

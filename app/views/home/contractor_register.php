@@ -86,15 +86,13 @@
                     <p id="confirm_warning" class="warning"></p>
                 </div>
                 </center>
-                <div>
+                <div style="display:flex; justify-content:center;">
                         <input type="checkbox" id="agreement" name="agreement" required>
-                        <center>
                         <label for="agreement" class="normText" style="width:auto;">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this proves to be false or incorrect, I shall be responsible for the consequences of request being rejected permanently.</label>
-                        </center>
                 </div>
                 
-                <div class="clearfix">
-                    <input type="reset" value="Cancel">
+                <div class="clearfix" style="display:flex; justify-content:center;">
+                    <input type="reset" value="Cancel" onclick="window.location='contractors';">
                     <input type="submit" value="Submit" name="submit" id="submit">
                 </div>
                         
