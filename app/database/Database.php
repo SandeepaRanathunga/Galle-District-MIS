@@ -3,7 +3,7 @@
         private $dbhost='localhost';
         private $username='root';
         private $password='';
-        private $dbname='mis_db';
+        private $dbname='galle_district_mis';
         private $connection=null;
 
         public function __construct(){
@@ -15,7 +15,8 @@
             if($this->connection->connect_error){
                 die("Connection to the database failed ".$this->connection->connect_error);
             }
-             //echo "Database connected sucessfully!";
+            //echo "Database connected sucessfully!";
+            //echo password_hash('1234',PASSWORD_DEFAULT);
         }
 
         public function getConnection(){

@@ -60,6 +60,8 @@
     $router->addRoute('dis_view_monthly_report','DisViewMonthlyReport','disViewMonthlyReport');
     //district project proposal
     $router->addRoute('dis_view_project_proposal','DisViewProjectProposals','disViewProjectProposals');
+    //district funding agencies
+    $router->addRoute('dis_funding_agencies','DisFundingAgencies','disFundingAgencies');
 
     /*---------------------admin----------------------*/
     $router->addRoute('admin_home','AdminHome','adminHome');
