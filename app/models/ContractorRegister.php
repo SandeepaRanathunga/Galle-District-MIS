@@ -5,7 +5,6 @@
     class ContractorRegister{
         private $user_id;
         private $name;
-        private $office_id;
         private $reg_no;
         private $specialized_field;
         private $nic;
@@ -15,6 +14,9 @@
         private $password;
         private $hashed_password;
         private $confirm_password;
+        private $approval_status;
+        private $view_status;
+        private $user_type;
         private $connection;
         
         public function __construct(){
@@ -23,9 +25,8 @@
 
         //set the data received from input fields
         public function setDetails(){
-            $this->user_id=$this->clearInputs($_POST['user_id']);
+            $this->user_id="con".rand(1000,10000);
             $this->name=$this->clearInputs($_POST['name']);
-            $this->office_id=$this->clearInputs($_POST['office_id']);
             $this->reg_no=$this->clearInputs($_POST['reg_no']);
             $this->specialized_field=$this->clearInputs($_POST['specialized_field']);
             $this->nic=$this->clearInputs($_POST['nic']);
@@ -34,6 +35,9 @@
             $this->email=$this->clearInputs($_POST['email']);
             $this->password=$this->clearInputs($_POST['password']);
             $this->confirm_password=$this->clearInputs($_POST['confirm_password']);
+            $this->approval_status=0;
+            $this->view_status=0;
+            $this->user_type='con';
 
             $this->hashed_password=password_hash($this->password,PASSWORD_DEFAULT);
             
@@ -41,14 +45,12 @@
 
         //to validate input data
         public function validateData(){
-            if(substr($this->user_id,0,5)!=$this->office_id){
-                return false;
-            }
             if($this->password!=$this->confirm_password){
                 return false;
             }
             return true;   
         }
+
         //to clear input data
         private function clearInputs($input){
             $input=trim($input);
@@ -56,33 +58,26 @@
             $input=mysqli_real_escape_string($this->connection,$input);
             return $input;
         }
+
         //connect to the database
         private function dbConnect(){
             $database=new \Database();
             return $database->getConnection();
         }
-        //get divisons list to the form
-        public function getDivisions(){
-            $result_arr=[];
-            $query="SELECT * FROM division";
-            $result=$this->connection->query($query);
-            while($row=$result->fetch_assoc()){
-                array_push($result_arr,[$row['div_id'],$row['div_name']]);
-            }
-            return $result_arr;
-        }
+
         //finally insert the data to the database
         public function insertUserDetails(){
-            if($this->office_id=='dis00'){
-                $query="INSERT INTO dis_user (user_id,user_name,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->designation','$this->nic','$this->contact_no','$this->email','$this->hashed_password')";
+            $query="INSERT INTO account (user_id, email, password, user_type) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type')";
+            $result=$this->connection->query($query);
+            //return $result;
+            if($result){
+                $query="INSERT INTO contractor (user_id, name, reg_no, specialized_field, nic, office_address, contact_no, approval_status, view_status) VALUES 
+                ('$this->user_id','$this->name','$this->reg_no','$this->specialized_field','$this->nic','$this->office_address','$this->contact_no','$this->approval_status','$this->view_status')";
                 $result=$this->connection->query($query);
+                return $result;
+            }else{
                 return $result;
             }
-            else{
-                $query="INSERT INTO div_user (user_id,user_name,div_id,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->office_id','$this->designation','$this->nic','$this->contact_no','$this->email','$this->hashed_password')";
-                $result=$this->connection->query($query);
-                return $result;
-            }   
         }
         public function getEmail(){
             return $this->email;
