@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
-    
+    <link rel="stylesheet" href="css/annualReport.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -15,7 +15,19 @@
         <h2>Annual Reports</h2>
     </div>
     <div class="container">
-     
+        <div class="report-intro">
+            <p>In here you can download the annual report for a particular year by clicking on the links given below. The report contains of 
+            how funds have been allocated and how they were managed to the projects carried out during the year.</p>
+            <br>
+            <br>
+            <a href='#'>Click here to download the Annual Report of 2018</a>
+            <br>
+            <br>
+            <a href='#'>Click here to download the Annual Report of 2019</a>
+            <br>
+            <br>
+            <a href='#'>Click here to download the Annual Report of 2020</a>
+        </div>
     </div>
     <?php require_once('includes/footer.php');?>
 </body>
