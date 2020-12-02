@@ -60,7 +60,6 @@
                     <input type="email" name="email" placeholder="Enter the email" required>
                 </div>
                 <div style="display:flex; justify-content:center;">
-                    <input type="reset" name="back" value="Back"  onclick="window.location='login';">
                     <input type="submit" name="send" value="Send">
                 </div>
             </form>
