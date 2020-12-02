@@ -37,7 +37,7 @@
                 <div>
                     <label for="grama_niladari">Grama Niladari Division</label>
                     <select name="gramaniladari_id" id="">
-                        <option disabled selected value>selcet</option>    
+                        <option disabled selected value>Select</option>    
                         <option value="div01c01">Distrcit secretariat</option>
                         <option value="div02c02">Akmeemana</option>
                     </select>
@@ -45,13 +45,13 @@
                 <div>
                     <label for="project_id">Contractor</label>
                     <select name="contracotr_id" id="">
-                        <option disabled selected value>selcet</option>    
+                        <option disabled selected value>Select</option>    
                         <option value="div01c01">Distrcit secretariat</option>
                         <option value="div02c02">Akmeemana</option>
                     </select>
                 </div>
                 <div>
-                    <input type="button" value="Cancel">
+                    <input type="reset" value="Cancel" onclick="window.location='div_home';">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>

@@ -51,5 +51,13 @@ button{
     transition: 0.5s;
 }
 
-
+.clearbutton button .active{
+    background:white;
+    color:#434647;
+}
+.clearbutton button:hover{
+    background:white;
+    color:#434647;
+    transition: 0.5s;
+}
 

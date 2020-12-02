@@ -96,6 +96,15 @@ input[type="text"],input[type="email"],input[type="password"]{
     padding:5px;
     box-sizing: border-box;
 }
+
+.submit-cancel{
+    display:flex;
+    flex-direction: row;
+    margin:2% 4%;
+    align-items: left;
+    justify-content: center;
+}
+
 select{
         border:1px solid #434647;
         width:200px;
