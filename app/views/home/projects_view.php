@@ -40,12 +40,24 @@
             <div class="column">
                 <img src="public/images/progress.jpg"  >
             </div>
-            <!-- <div class="column">
+            <div class="column">
                 <img src="public/images/progress.jpg" >
             </div> 
             <div class="column">
                 <img src="public/images/progress.jpg" >
-            </div>   -->
+            </div>  
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
         </div>
     </div>
     <?php require_once('includes/footer.php');?>
