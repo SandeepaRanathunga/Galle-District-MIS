@@ -34,9 +34,8 @@
                 <td><?php echo $row[6];?></td>
                 <td><?php echo $row[0];?></td>
                 <td><?php echo $row[3];?></td>
-                <td><?php echo $row[4];?></td>
-                <td></td>
-                <td></td>
+                <td><a href="<?php echo 'view_proposal?id='.$row[1];?>">View</a></td>
+                <td><a href="<?php echo 'delete?id='.$row[1];?>">Clear</a></td>
             </tr>
             <?php
                 endforeach;
