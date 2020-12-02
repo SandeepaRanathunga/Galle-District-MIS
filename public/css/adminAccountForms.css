@@ -82,6 +82,15 @@ input[type="text"],input[type="email"],input[type="password"]{
     padding:5px;
     box-sizing: border-box;
 }
+
+.submit-cancel{
+    display:flex;
+    flex-direction: row;
+    margin:2% 4%;
+    align-items: left;
+    justify-content: center;
+}
+
 select{
         border:2px solid #434647;
         width:200px;
@@ -102,7 +111,7 @@ input[type="radio"]{
     margin:5px;
     margin-top: 20px;
 }
-input[type="button"],input[type="submit"]{
+input[type="reset"],input[type="submit"]{
     background:#434647;
     color:white;
     font-weight: bold;

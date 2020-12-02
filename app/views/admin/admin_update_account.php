@@ -84,8 +84,8 @@
                     <input type="password" name="confirmpassword">
                 </div>-->
                 
-                <div>
-                    <input type="button" value="Cancel">
+                <div class="submit-cancel">
+                    <input type="reset" value="Cancel" name="cancel">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>
