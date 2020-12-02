@@ -55,15 +55,22 @@
                             </div>
                             <div>
                                 <label for="project_id">Project ID</label>
-                                <input type="text" name="project_id">
+                                <select name="year" id="year" required>
+                                    <option disabled selected value>Select</option>
+                                    <option value="year">ProjectID001</option>
+                                    <option value="year">ProjectID002</option>
+                                    <option value="year">ProjectID003</option>   
+                                </select>
                             </div>
                             <div>
                                 <label for="daily_expenses">Allocated amount</label>
                                 <input type="number" name="daily_expenses">
                             </div>
-                            <div class="submit-cancel">
-                                <input type="reset" value="Cancel" name="reset" onclick="window.location='dis_funding_agencies';">
-                                <input type="submit" value="Submit" name="submit">
+                            <div style="width:100%; text-align:center;">
+                                <div style="display:inline-block">
+                                    <input type="reset" value="Cancel" name="reset" onclick="window.location='dis_funding_agencies';">
+                                    <input type="submit" value="Submit" name="submit">
+                                </div>
                             </div>
                         </form>
                     </div>
