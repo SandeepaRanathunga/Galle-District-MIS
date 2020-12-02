@@ -116,17 +116,25 @@ input[type="radio"]{
     margin:5px;
     margin-top: 20px;
 }
-input[type="button"],input[type="submit"]{
+input[type="reset"],input[type="submit"]{
     background:#1c9c95;
     color:white;
     font-weight: normal;
     border:none;
     border-radius: 10px;
+
     float:right;
     width:100px;
-    margin:05px;
+    margin:20px;
     padding:10px;
     display:block;
    
+}
+input[type="reset"],input[type="submit"]:focus{
+    outline:none;
+}
+input[type="reset"]:hover,input[type="submit"]:hover{
+    transform: scale(1,1.1);
+    cursor: pointer;
 }
 
