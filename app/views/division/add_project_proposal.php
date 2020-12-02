@@ -24,7 +24,7 @@
                 </div>
                 <center>
                     <div class="formbuttons">
-                        <input type="reset" value="Cancel" name="reset">
+                        <input type="reset" value="Cancel" name="reset" onclick="window.location='div_home';">
                         <input type="submit" value="Submit" name="submit">
                     </div>
                 </center>

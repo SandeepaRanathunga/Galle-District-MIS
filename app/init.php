@@ -27,6 +27,8 @@
     $router->addRoute('contractors','Contractor','contractor');
     //contractor register
     $router->addRoute('contractor_register','ContractorRegister','contractorRegister');
+    //contractor view bid callings
+    $router->addRoute('home_view_bid_callings','ViewBidCalings','viewBidCallings');
     //projects
     $router->addRoute('projects','Projects','index');
     //aboutus

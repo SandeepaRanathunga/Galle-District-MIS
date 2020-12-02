@@ -12,7 +12,7 @@
 <body>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php require_once('includes/contractorNav.php');?>
+    <?php require_once('includes/guestNav.php');?>
     <div class="tag">
         <h2>View bid callings</h2>
     </div>
