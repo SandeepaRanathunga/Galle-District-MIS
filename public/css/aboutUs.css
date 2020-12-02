@@ -14,13 +14,14 @@
     margin:10px;
     box-sizing: border-box;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    
+    text-align: justify;
 }
 .overview{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+    
 }
 .overview img{
     width:100px;
@@ -40,6 +41,7 @@
     /* height:240px; */
     background-color: #434647;
     color:white;
+    font-weight: normal ;
 }
 .overview > div >h2{
     margin:10px;
