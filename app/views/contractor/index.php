@@ -16,19 +16,19 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/contractorNav.php');?>
         <div class="button-flex-container" >              
-            <a href="#">
+            <a href="con_notifications">
                 <div><img src="svg/notifications.svg" alt=""></div>
                 <div>Notifications</div>    
             </a>
-            <a href="#">
+            <a href="submit_bid_report">
                 <div><img src="svg/submitBid.svg" alt=""></div>
                 <div>Submit Bid Report</div>
             </a>
-            <a href="#">
+            <a href="view_bid_callings">
                 <div><img src="svg/viewBids.svg" alt=""></div>
                 <div>View Bid Callings</div>
             </a>
-            <a href="#">
+            <a href="manage_expenses">
                 <div><img src="svg/fundmanage.svg" alt=""></div>
                 <div>Manage Expenses</div>
             </a>

@@ -15,6 +15,10 @@
     $router->addRoute('finished_projects','FinishedProjects','finishedProjects');
     //home ongoing projects view division vice
     $router->addRoute('ongoing_projects_view','OngoingProjectsView','index');
+    //home finished projects view division vice
+    $router->addRoute('finished_projects_view','FinishedProjectsView','finishedProjectsView');
+    //home projects gallery view
+    $router->addRoute('projects_view','ProjectsView','projectsView');
     //home annual reports
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
@@ -60,6 +64,8 @@
     $router->addRoute('dis_view_monthly_report','DisViewMonthlyReport','disViewMonthlyReport');
     //district project proposal
     $router->addRoute('dis_view_project_proposal','DisViewProjectProposals','disViewProjectProposals');
+    //district funding agencies
+    $router->addRoute('dis_funding_agencies','DisFundingAgencies','disFundingAgencies');
 
     /*---------------------admin----------------------*/
     $router->addRoute('admin_home','AdminHome','adminHome');

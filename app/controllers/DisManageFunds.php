@@ -1,19 +1,26 @@
+
 <?php
-require_once __DIR__ . '/../database/Database.php';
-require_once __DIR__ . '/../models/DisManageFunds.php';
 
 class DisManageFunds extends Controller{
+    public $agency_id;
+    public $agency_name;
     private $model;
-    public $funds;
+
+    public function disManageFunds(){
+        $this->view('district/manage_funds_record');
+    }
 
     public function __construct(){
         $this->model=$this->model('DisManageFunds');
-        $this->funds=$this->model->getAllAgency();
+        $this->setAgencyID();
+        $this->agency_name=$this->model->getAgencyName($this->agency_id);
+        // $this->agency_id=$this->setAgencyID();
     }
 
-    public function disManageFunds(){
-        $this->view('district/dis_manage_funds_record');
+    private function setAgencyID(){
+        $this->agency_id=filter_var(rtrim($_GET['agency_id'],'/'),FILTER_SANITIZE_URL);
     }
+
 }
 /*
 $this->connection = new Database();

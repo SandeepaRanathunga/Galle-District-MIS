@@ -27,7 +27,7 @@
             <div><img src="svg/respond.svg" alt=""></div>
             <div>Contractor Requests</div>
         </a>
-        <a href="#">
+        <a href="add_proposal">
             <div><img src="svg/proposal.svg" alt=""></div>
             <div>Add Project Proposal</div>
         </a>
@@ -43,7 +43,7 @@
             <div><img src="svg/bidding.svg" alt=""></div>
             <div>Call For Bids</div>
         </a>
-        <a href="#">
+        <a href="view_bid_reports">
             <div><img src="svg/auction.svg" alt=""></div>
             <div>View Bid Reports</div>
         </a>

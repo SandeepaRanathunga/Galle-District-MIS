@@ -33,9 +33,9 @@
                 <div><img src="svg/annualReport.svg" alt=""></div>
                 <div>Generate Annual Report</div>    
             </a>
-            <a href="dis_manage_funds">
+            <a href="dis_funding_agencies">
                 <div><img src="svg/fundmanage.svg" alt=""></div>
-                <div>Manage Funds Records</div>
+                <div>Funding Agencies</div>
             </a>
             
         </div>     

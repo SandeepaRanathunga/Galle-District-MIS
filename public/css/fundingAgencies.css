@@ -8,20 +8,24 @@
     align-items: center;
     flex-wrap: wrap;
 }
-/* .links-container::after{
+.links-container::after{
     content:'';
     flex:auto;
-} */
+}
 .container a{
+    text-align: center;
+    flex-wrap: wrap;
     display:flex;
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
     width:250px;
     height:50px;
+    padding: 10px;
+    border-radius: 4px;
     /* background:green; */
-    background-image: linear-gradient(to left, transparent, #1B4D65);
+    background-color: #699fb8;
     margin:15px;
-    color:black;
+    color:#0E2433;
     font-size: 17px;
     font-weight: bold;
 }

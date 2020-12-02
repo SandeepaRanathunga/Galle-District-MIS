@@ -12,10 +12,11 @@
 <body>
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/disNav.php');?>
-    <div class='container'>
-        <div class="tag">
+    <div class="tag">
             <h2>Manage Expenses</h2>
         </div>
+    <div class='container'>
+
         <center>
         <div style="overflow-x:auto;">
             <table id="funds">
@@ -44,7 +45,8 @@
             <input type="submit" value="Edit" name="submit">
             <input type="submit" value="Update" name="submit">
         </div> 
-        <?php require_once('includes/footer.php');?>   
+          
     </div>
+    <?php require_once('includes/footer.php');?> 
 </body>
 </html>

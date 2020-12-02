@@ -29,7 +29,7 @@
         }
 
         public function disEditFundsRecord(){
-            $this->view('district/dis_edit_funds_record');
+            $this->view('district/edit_funds_record');
         }
     }
 ?>

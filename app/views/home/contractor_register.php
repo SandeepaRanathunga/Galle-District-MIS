@@ -26,26 +26,6 @@
         <div class="formarea clearfix">
             <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
             <center>
-            <div>
-                    <label for="office">Division</label>
-                    <select name="office_id" id="office_id" onchange="setUserID()" required>
-                        <option disabled selected value>Select</option>
-                        <option value="dis00">District Secretariat</option>   
-                        <?php
-                            foreach($divisions as $division):
-                        ?>
-                        <option value="<?php echo $division[0];?>"><?php echo $division[1].' - '.$division[0];?></option>
-                        <?php
-                            endforeach; 
-                        ?>
-                        
-                    </select>
-                    <p id="office_warning"></p>
-                </div>
-                <div> 
-                    <label for="user_id">User ID</label>
-                    <input type="text" name="user_id" id="user_id" minlength="7" maxlength="7" readonly>
-                </div>
                 <div>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" required>
