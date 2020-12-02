@@ -17,6 +17,8 @@
     $router->addRoute('ongoing_projects_view','OngoingProjectsView','index');
     //home finished projects view division vice
     $router->addRoute('finished_projects_view','FinishedProjectsView','finishedProjectsView');
+    //home projects gallery view
+    $router->addRoute('projects_view','ProjectsView','projectsView');
     //home annual reports
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
