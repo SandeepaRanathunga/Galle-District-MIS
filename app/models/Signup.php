@@ -78,7 +78,7 @@
                     return $result;
                 }
                 else{
-                    $query="INSERT INTO dis_user (user_id,name,contact_no,designation,nic) VALUES ('$this->user_id','$this->office_id','$this->name','$this->contact_no','$this->designation','$this->nic')";
+                    $query="INSERT INTO dis_user (user_id,name,contact_no,designation,nic) VALUES ('$this->user_id','$this->name','$this->contact_no','$this->designation','$this->nic')";
                     $result=$this->connection->query($query);
                     return $result;
                 }
