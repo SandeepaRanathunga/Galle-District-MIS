@@ -1,5 +1,5 @@
 <?php
-    class ViewBidsCallings extends Controller{
+    class ViewBidCallings extends Controller{
         public function viewBidCallings(){
             $this->view('home/view_bid_callings');
         }
