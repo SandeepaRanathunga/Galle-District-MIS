@@ -19,9 +19,9 @@ body{
     min-width:350px;
     min-height:200px;
     margin:15px 25px;
-    background: #d66e2365  no-repeat center;
+    background: #1c306960  no-repeat center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    opacity:0.5;
+    opacity:0.6;
     justify-content:center;
     align-items: center;
     color:#434647;
