@@ -13,32 +13,28 @@
             $this->userID=htmlspecialchars(trim($_POST['userID']));
             $this->password=htmlspecialchars(trim($_POST['password']));
         }
-
+        public function setUserType(){
+            $this->userType=substr($this->userID,0,3);
+        }
         public function checkUserID(){
             $database=new \Database();
             $connection=$database->getConnection();
-            $userType=substr($this->userID,0,3);
-            $this->userType=$userType;
 
-            if($userType=='adm'){
+            if($this->userType=='adm'){
                 $result=$this->checkForAdmin($connection);
             }
-            else if($userType=='div'){
+            else if($this->userType=='div'){
                 $result=$this->checkForDivUsers($connection);
                 
             }
-            else if($userType=='dis'){
+            else if($this->userType=='dis'){
                 $result=$this->checkForDisUsers($connection);
             }
-            else if($userType=='con'){
+            else{
                 $result=$this->checkForContractors($connection);
             }
-            else{
-                $result;
-            }
 
-            return $result;
-            
+                return $result;
         }
         public function checkPassword($result){
             $user=$result->fetch_assoc();

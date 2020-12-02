@@ -46,6 +46,13 @@
     margin:2px 5px;
     color: #2F4F4F;
 }
+textarea{
+     display:inline-block;
+     padding:5px;
+}
+.form-field *{
+    vertical-align: middle;;
+}
 
 input[type="text"],input[type="date"],select{
     border:2px solid #434647;
@@ -71,7 +78,7 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#434647;
+    background:#D2691E;
     color:white;
     padding:10px;
     font-weight: bold;

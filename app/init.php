@@ -73,6 +73,8 @@
     $router->addRoute('create_accounts','AdminCreateAccount','adminCreateAccount');
     //admin update account
     $router->addRoute('update_accounts','AdminUpdateAccount','adminUpdateAccount');
+    //admin delete account
+    $router->addRoute('delete_accounts','AdminDeleteAccount','adminDeleteAccount');
     //admin update about us
     $router->addRoute('update_about_us','UpdateAboutUsInfo','updateAboutUsInfo');
     

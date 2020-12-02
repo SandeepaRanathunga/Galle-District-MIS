@@ -10,7 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
-    <link rel="stylesheet" href="css/projectsStyle.css">
     <link rel="stylesheet" href="css/contentView.css">
     <?php include 'includes/cssLinks.php';?>
     <link rel="icon" href="images/logo.png">
@@ -40,12 +39,24 @@
             <div class="column">
                 <img src="public/images/progress.jpg"  >
             </div>
-            <!-- <div class="column">
+            <div class="column">
                 <img src="public/images/progress.jpg" >
             </div> 
             <div class="column">
                 <img src="public/images/progress.jpg" >
-            </div>   -->
+            </div>  
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
+            <div class="column">
+                <img src="public/images/progress.jpg" >
+            </div> 
         </div>
     </div>
     <?php require_once('includes/footer.php');?>
