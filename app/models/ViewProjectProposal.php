@@ -20,7 +20,7 @@
             $result=$this->connection->query($query);
             if($result->num_rows>0){
                 while($row=$result->fetch_assoc()){
-                    array_push($result_arr,[$row['div_name'],$row['proposal_id'],$row['div_id'],$row['description'],$row['file_name'],$row['view_status'],$row['approval_status']]);
+                    array_push($result_arr,[$row['div_name'],$row['proposal_id'],$row['div_id'],$row['description'],$row['file_name'],$row['view_status'],$row['approval_status'],$row['submited_date']]);
                 }
                 return $result_arr;
             }

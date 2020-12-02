@@ -10,6 +10,12 @@
     <title>Project Handeling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="icon" href="images/logo.png">
+    <style>
+        table,td,tr,th{
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+    </style>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
@@ -19,13 +25,14 @@
     </div>
     <div class="container">
         <table>
-            <th>
-                <td>View Status</td>
-                <td>Approval Status</td>
-                <td>Division Name</td>
-                <td>Proposal Description</td>
-                <td>Action</td>
-            </th>
+            <tr>
+                <th>View Status</th>
+                <th>Approval Status</th>
+                <th>Division Name</th>
+                <th>Proposal Description</th>
+                <th>Submited Date</th>
+                <th colspan=2>Action</th>
+            </tr>
             <?php
                 foreach($result as $row):
             ?>
@@ -34,6 +41,8 @@
                 <td><?php echo $row[6];?></td>
                 <td><?php echo $row[0];?></td>
                 <td><?php echo $row[3];?></td>
+                <td><?php echo $row[7];?></td>
+
                 <td><a href="<?php echo 'view_proposal?id='.$row[1];?>">View</a></td>
                 <td><a href="<?php echo 'delete?id='.$row[1];?>">Clear</a></td>
             </tr>
