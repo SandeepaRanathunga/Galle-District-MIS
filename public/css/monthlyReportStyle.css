@@ -19,6 +19,41 @@
     display:inline-block;
     width:200px;
 }
+.drag{
+    width: 800px;
+    min-height: 250px;
+    color:#2F4F4F;
+    text-align: center;
+    background-color: rgba(0, 225, 255, 0.226);
+    border: solid #2F4F4F 5px;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+    margin:10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.drag img{
+    width:50px;
+    height:50px;
+    display:block;
+    float:left;
+    margin:2px 5px;
+    color: #2F4F4F;
+}
+textarea{
+     display:inline-block;
+     padding:5px;
+}
+.form-field *{
+    vertical-align: middle;;
+}
+
 input[type="text"],input[type="date"],select{
     border:2px solid #434647;
     width:300px;
@@ -43,7 +78,7 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#434647;
+    background:#D2691E;
     color:white;
     padding:10px;
     font-weight: bold;
@@ -54,7 +89,6 @@ input[type="button"],input[type="submit"],input[type="reset"]{
     margin:20px;
     display:block;
     float:right;
-
 }
 
 input[type=submit]:hover,input[type=reset]:hover{

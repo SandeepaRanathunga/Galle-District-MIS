@@ -25,7 +25,7 @@
             <?php
             foreach($divisions as $division):
             ?>
-            <a href="finished_project_veiw?div_id=<?php echo $division[0]?>"><?php echo $division[1]?></a>
+            <a href="finished_projects_view?div_id=<?php echo $division[0]?>"><?php echo $division[1]?></a>
             <?php
                 endforeach;
             ?>

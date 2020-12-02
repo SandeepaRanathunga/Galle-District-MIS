@@ -1,5 +1,5 @@
 body{
-    background:white;
+    background:#f2f2f2;
 }
 .button-flex-container{
     width:100%;
@@ -9,6 +9,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: #f2f2f2;
 }
 .button-flex-container > a{
     display:flex;
@@ -18,14 +19,16 @@ body{
     min-width:350px;
     min-height:200px;
     margin:15px 25px;
-    background: #f2f2f2  no-repeat center;
+    background: #1c306960  no-repeat center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    opacity:0.5;
+    opacity:0.6;
     justify-content:center;
     align-items: center;
     color:#434647;
     font-size: 20px;
     font-weight: bold;
+    /*newly editted*/
+    border-radius: 8px;
 }
 .button-flex-container > a:hover{
     opacity: 1;

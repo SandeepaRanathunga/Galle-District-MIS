@@ -22,19 +22,19 @@
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 4</div>
-            <img src="images/district.jpg" style="width:100%;height:400px">
-            <div class="text">Galle District Secretariat</div>
+            <img src="images/district.png" style="width:100%;height:400px">
+            <div class="text">Railway Station - Galle</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 4</div>
-            <img src="images/fort.jpg" style="width:100%;height:400px">
+            <img src="images/fort.png" style="width:100%;height:400px">
             <div class="text">Galle Fort</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">4 / 4</div>
-            <img src="images/fishing.jpg" style="width:100%;height:400px">
+            <img src="images/fishing.png" style="width:100%;height:400px">
             <div class="text">Traditional Fishing</div>
         </div>
         <!-- Manual slides changers -->

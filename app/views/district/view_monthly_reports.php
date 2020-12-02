@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handeling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
+    <link rel="stylesheet" href="css/userPage.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -21,20 +22,17 @@
             <div class="flex-container" >
                 <div style="width:75%"><h2 style="font-size:17px"><br>Monthly report 001</h2></div>
                 <div style="width:15%"><button>View</button></div>
-                <div style="width:15%"><button>Accept</button></div>
-                <div style="width:15%"><button>Delete</button></div>
+
             </div>
             <div class="flex-container" >
                 <div style="width:75%"><h2 style="font-size:17px"><br>Monthly report 002</h2></div>
                 <div style="width:15%"><button>View</button></div>
-                <div style="width:15%"><button>Accept</button></div>
-                <div style="width:15%"><button>Delete</button></div>
+
             </div>
             <div class="flex-container" >
                 <div style="width:75%"><h2 style="font-size:17px"><br>Monthly report 003</h2></div>
                 <div style="width:15%"><button>View</button></div>
-                <div style="width:15%"><button>Accept</button></div>
-                <div style="width:15%"><button>Delete</button></div>
+
             </div>        
         </div>
     </div>

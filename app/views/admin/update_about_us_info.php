@@ -17,12 +17,11 @@
 <body>
     <?php include 'includes/header.php';?>
     <?php include 'includes/adminNav.php';?>
-    <div class="container">
+    <div class="tag">
+        <h2>Update About Us</h2>
+    </div>
+    <div class="container">   
         <div class="button-container">
-            
-            <div class="tag">
-                <h2>Update About Us</h2>
-            </div>
             <div class="formarea">
                 <form action="" method="post">
                     <div class="label-text">
@@ -35,7 +34,7 @@
                         <input type="submit" name="update" value="Update">
                     </div>   
                     <div class="button"> 
-                        <input type="submit" name="cancel" value="Cancel">
+                        <input type="submit" name="cancel" value="Cancel" onclick="window.location='admin_home';">
                     </div>
                     </div>
                 </form>

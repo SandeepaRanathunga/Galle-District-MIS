@@ -10,12 +10,6 @@
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminAccountForms.css">
     <link rel="icon" href="images/logo.png">
-
-    <style>
-        body{
-            background-color: #f2f2f2;
-        }
-    </style>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
@@ -25,20 +19,21 @@
         <h2>Update user accounts</h2>
     </div>
 
-    <div class="container searchbox">
-        <div class="searcharea clearfix" >
+
+    <div class="container">
+    <div class="searchbox">
+        <div class="searcharea" >
             <!--Form Box to Enter ID reqiured to update details-->
 
             <form action="" method="POST" id="searchId">
                 <label for="user_id">Enter ID</label>
                 <input type="text"  name="search_user_id" placeholder="Enter ID to search...">
             <!--Submit ID for search-->
-                <input type="submit" style="margin-top:4%; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold;" value="search" name="submit">
+                <input type="submit" style="margin-top:4%; font-size: 15px; font-weight: bold;" value="Search" name="submit">
                 
             </form>
         </div>                     
     </div>
-    <div class="container">
         <div class="formarea clearfix">
             <form action="" method="POST" id="updateUser">
                 <!--Here starts the generated form-->

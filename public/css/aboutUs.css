@@ -14,13 +14,14 @@
     margin:10px;
     box-sizing: border-box;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    
+    text-align: justify;
 }
 .overview{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+    
 }
 .overview img{
     width:100px;
@@ -40,6 +41,7 @@
     /* height:240px; */
     background-color: #434647;
     color:white;
+    font-weight: normal ;
 }
 .overview > div >h2{
     margin:10px;
@@ -128,7 +130,6 @@ label{
     text-align: center;
     font-size:25px;
     font-weight:bold;
-    font-family:'Overpass', sans-serif;
     color:#434647;
     display: inline-block;
 }
@@ -142,7 +143,6 @@ input[type=text],input[type=password]{
     box-sizing: border-box;
     height:30px;
     font-size: 16px;
-    font-family:'Overpass', sans-serif;
     margin-bottom: 30px;
 
 }
@@ -152,7 +152,7 @@ input[type=submit]{
     margin: 10px auto;
     padding:10px;
     background:#434647;
-    border:2px solid #434647;
+    /*border:2px solid #434647;*/
     border-radius: 5px;
     color:white;
     font-size: 20px;
@@ -180,5 +180,15 @@ input[type=submit]:hover{
 
 .label-text{
     display: flex;
+}
+.label-text textarea{
+    margin-top: 10px;
+    font-size: 24px;
+    color: #434647;
+    width: 80%;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.5;
 }
 

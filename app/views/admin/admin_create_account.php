@@ -15,8 +15,7 @@
     <link rel="icon" href="images/logo.png">
     <style>
         .warning{
-            display:inline-block;
-            
+            display:inline-block;    
         }
     </style>
 </head>
@@ -34,7 +33,7 @@
             <div>
                     <label for="office">Office</label>
                     <select name="office_id" id="office_id" onchange="setUserID()" required>
-                        <option disabled selected value>selcet</option>
+                        <option disabled selected value>Select</option>
                         <option value="dis00">District Secretariat</option>   
                         <?php
                             foreach($divisions as $division):
