@@ -93,6 +93,8 @@
     $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
     //contractor manage expenses
     $router->addRoute('manage_expenses','ContractorManageExpenses','contractorManageExpenses');
+    //contractor add expenses
+    $router->addRoute('add_expenses','ContractorAddExpenses','contractorAddExpenses');
     //contractor view bid callings
     $router->addRoute('view_bid_callings','ContractorViewBidCallings','contractorViewBidCallings');
 

@@ -1,0 +1,42 @@
+/* .container{
+    display:flex;
+    flex-direction: column;
+} */
+
+.button-container{
+    display:flex;
+    /* flex-direction: column; */
+}
+
+.overview{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;    
+}
+
+.overview > div{
+    flex:1;
+    display:flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items:center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:20px;
+    padding:10px 15px;
+    box-sizing: border-box;
+    /* height:240px; */
+    background-color:#ddd;
+    color:black;
+    
+    
+}
+
+.submit-cancel{
+    display:flex;
+    flex-direction: row;
+    /* margin:2% 4%; */
+    /* align-items: left; */
+
+    justify-content: center;
+}
