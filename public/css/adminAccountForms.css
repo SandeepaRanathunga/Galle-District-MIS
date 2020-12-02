@@ -20,20 +20,25 @@
    
 } */
 .container{
-    /* margin-top:2%;
+    margin-top:5%;
     margin-left: 20%;
     margin-right:20%;
     margin-bottom:3%;
-    width: 60%; */
+    width: 60%;
+    min-width: 300px;
     position: relative;
     padding:10px;
     box-sizing: border-box;
-    border:2px solid #434647;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: white ;
+    /*border:2px solid #434647;*/
     display:block;
+    
 }
 /*For the ID searching Area*/
 .searchbox{
-    background-color: #434647;
+    background-color: #0e2433;
+    opacity: 0.9 ;
     padding: 0px;
     /* max-width: 800px; */
     max-height: 300px;
@@ -41,10 +46,11 @@
 .searchbox label{
     color:white;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
     display:inline-block;
-    margin: 5px;
+    /*margin: 5px;*/
 }
+
 .searcharea{
     display: block;
     width:450px;
@@ -53,6 +59,14 @@
     transform: translateX(-50%);
     padding:5px;
 }
+.searcharea input[type="text"]{
+    margin: 15px;
+}
+.searcharea input[type="submit"]{
+    margin:12px;
+    font-size: 15px;
+}
+
 .formarea{
     position:relative;
     left:50%;
@@ -67,13 +81,13 @@
 .formarea label{
     color:#434647;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal ;
     display:inline-block;
     width:150px;
 }
 
 input[type="text"],input[type="email"],input[type="password"]{
-    border:2px solid #434647;
+    border:1px solid #434647;
     width:200px;
     height:30px;
     margin:5px;
@@ -92,7 +106,7 @@ input[type="text"],input[type="email"],input[type="password"]{
 }
 
 select{
-        border:2px solid #434647;
+        border:1px solid #434647;
         width:200px;
         height:30px;
         margin:5px;
@@ -112,16 +126,24 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="reset"],input[type="submit"]{
-    background:#434647;
+    background:#1c9c95;
     color:white;
-    font-weight: bold;
+    font-weight: normal;
     border:none;
     border-radius: 10px;
+
     float:right;
     width:100px;
-    margin:10px;
+    margin:20px;
     padding:10px;
     display:block;
    
+}
+input[type="reset"],input[type="submit"]:focus{
+    outline:none;
+}
+input[type="reset"]:hover,input[type="submit"]:hover{
+    transform: scale(1,1.1);
+    cursor: pointer;
 }
 

@@ -39,8 +39,8 @@
     margin-bottom:5px;
 }
 .icon img{
-    width:100px;
-    height:100px;
+    /*width:100px;*/
+    height:100px ; 
 }
 label{
     display:inline-block;
@@ -71,7 +71,7 @@ input[type=submit]{
     margin: auto;
     width:80%;
     padding:10px 20px;
-    background:#D2691E;
+    background: #1c9c95;
     border-radius: 5px;
     color:white;
     font-size: 18px;

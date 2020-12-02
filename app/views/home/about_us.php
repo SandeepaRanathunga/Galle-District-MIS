@@ -26,7 +26,7 @@
                 <div>
                     <img src="svg/vision.svg" alt="">
                     <h2>Our Vision</h2>
-                    <div>Providing an excellent Public Service to the people of Galle District.</div>
+                    <div> Providing an excellent Public Service to the people of Galle District.</div>
                 </div>
                 <div>
                     <img src="svg/mission.svg" alt="">

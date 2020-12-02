@@ -1,23 +1,24 @@
+
 .container{
-    width:100%;
+    display:flex;
+    box-sizing: border-box;
 }
 .links-container{
-    /* width:90%; */
     display:flex;
-    justify-content:space-between;
-    align-items: center;
     flex-wrap: wrap;
+    width:85%;
+    justify-content: flex-start;
+    margin:0px auto;
 }
-/* .links-container::after{
-    content:'';
-    flex:auto;
-} */
 
 .break{
     background-color: #f2f2f2; 
 }
 
 .container a{
+}
+.links-container a{
+
     display:flex;
     justify-content:center;
     align-items: center;
@@ -30,6 +31,6 @@
     font-size: 17px;
     font-weight: bold;
 }
-.container a:hover{
+.links-container a:hover{
     transform: scale(1,1.1);
 }

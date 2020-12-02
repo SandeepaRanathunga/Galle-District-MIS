@@ -29,7 +29,7 @@
                 <label for="user_id">Enter ID</label>
                 <input type="text"  name="search_user_id" placeholder="Enter ID to search...">
             <!--Submit ID for search-->
-                <input type="submit" style="margin-top:4%; font-size: 15px; font-weight: bold;" value="Search" name="submit">
+                <input type="submit"  value="Search" name="submit">
                 
             </form>
         </div>                     
