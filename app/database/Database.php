@@ -3,7 +3,7 @@
         private $dbhost='localhost';
         private $username='root';
         private $password='';
-        private $dbname='mis_db';
+        private $dbname='galle_district_mis';
         private $connection=null;
 
         public function __construct(){

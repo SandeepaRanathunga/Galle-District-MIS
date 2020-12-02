@@ -1,5 +1,6 @@
 <?php
     // require_once('includes/session.php');
+    $result=$this->result;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,26 +18,31 @@
         <h2>Project proposals</h2>
     </div>
     <div class="container">
-        <div class="combutton">
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Project proposal 001</h2></div>
-                <div style="width:15%"><button>View</button></div>
-                <div style="width:15%"><button>Accept</button></div>
-                <div style="width:15%"><button>Delete</button></div>
-            </div>
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Project proposal 002</h2></div>
-                <div style="width:15%"><button>View</button></div>
-                <div style="width:15%"><button>Accept</button></div>
-                <div style="width:15%"><button>Delete</button></div>
-            </div>
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Project proposal 003</h2></div>
-                <div style="width:15%"><button>View</button></div>
-                <div style="width:15%"><button>Accept</button></div>
-                <div style="width:15%"><button>Delete</button></div>
-            </div>        
-        </div>
+        <table>
+            <th>
+                <td>View Status</td>
+                <td>Approval Status</td>
+                <td>Division Name</td>
+                <td>Proposal Description</td>
+                <td>Action</td>
+            </th>
+            <?php
+                foreach($result as $row):
+            ?>
+            <tr>
+                <td><?php echo $row[5];?></td>
+                <td><?php echo $row[6];?></td>
+                <td><?php echo $row[0];?></td>
+                <td><?php echo $row[3];?></td>
+                <td><?php echo $row[4];?></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <?php
+                endforeach;
+            ?>
+            
+        </table>
     </div>
     <?php require_once('includes/footer.php');?>
 </body>
