@@ -18,16 +18,19 @@
     <div class="container">
         <div class="formarea clearfix">
             <form action="" method="POST" enctype="multipart/form-data">
-                <div class="drag">
-                    <img src="./images/upload-document.png">
-                    <b>Drag and drop your proposal.</b>
+                <div class="form-field">
+                    <label for="description">Proposal Description</label>
+                    <textarea name="description" id="" cols="40" rows="5" placeholder="Enter a brief descrioption about the project"></textarea>
                 </div>
-                <center>
-                    <div class="formbuttons">
-                        <input type="reset" value="Cancel" name="reset">
-                        <input type="submit" value="Submit" name="submit">
-                    </div>
-                </center>
+                <div>
+                    <label for="file">Attach Document</label>
+                    <input type="file" name="file" id="file">
+                </div>
+                <div>
+                    <input type="reset" name="cancel">
+                    <input type="submit" name="submit" value="Submit">
+
+                </div>
             </form>
         </div>
     </div>
