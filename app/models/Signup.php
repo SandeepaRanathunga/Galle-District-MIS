@@ -4,6 +4,7 @@
     
     class Signup{
         private $user_id;
+        private $user_type;
         private $name;
         private $office_id;
         private $designation;
@@ -21,6 +22,7 @@
         //set the data received from input fields
         public function setDetails(){
             $this->user_id=$this->clearInputs($_POST['user_id']);
+            $this->user_type=$this->clearInputs(substr($_POST['user_id'],0,3));
             $this->name=$this->clearInputs($_POST['name']);
             $this->office_id=$this->clearInputs($_POST['office_id']);
             $this->designation=$this->clearInputs($_POST['designation']);
@@ -67,16 +69,22 @@
         }
         //finally insert the data to the database
         public function insertUserDetails(){
-            if($this->office_id=='dis00'){
-                $query="INSERT INTO dis_user (user_id,user_name,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->designation','$this->nic','$this->contact_no','$this->email','$this->hashed_password')";
-                $result=$this->connection->query($query);
-                return $result;
+            $query="INSERT INTO account (user_id,email,password,user_type) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type')";
+            $result=$this->connection->query($query);
+            if($result){
+                if($this->user_type=='div'){
+                    $query="INSERT INTO div_user (user_id,div_id,name,contact_no,designation,nic) VALUES ('$this->user_id','$this->office_id','$this->name','$this->contact_no','$this->designation','$this->nic')";
+                    $result=$this->connection->query($query);
+                    return $result;
+                }
+                else{
+                    $query="INSERT INTO dis_user (user_id,name,contact_no,designation,nic) VALUES ('$this->user_id','$this->office_id','$this->name','$this->contact_no','$this->designation','$this->nic')";
+                    $result=$this->connection->query($query);
+                    return $result;
+                }
             }
-            else{
-                $query="INSERT INTO div_user (user_id,user_name,div_id,designation,nic,contact_no,email,password) VALUES ('$this->user_id','$this->name','$this->office_id','$this->designation','$this->nic','$this->contact_no','$this->email','$this->hashed_password')";
-                $result=$this->connection->query($query);
+            else
                 return $result;
-            }   
         }
         public function getEmail(){
             return $this->email;
