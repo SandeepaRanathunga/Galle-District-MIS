@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
-    <link rel="stylesheet" href="css/disManageFunds.css">
+    <link rel="stylesheet" href="css/manageFunds.css">
+    <link rel="stylesheet" href="css/monthlyReportstyle.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -18,15 +19,64 @@
     <div class="tag">
         <h2><?php echo $agency_name.' - ';?>Manage funds</h2>
     </div>
-    <div class='container'>
-        <center>
+    <div class="container">
+        <div class="button-container">
+            <div class="overview">
+                <div>
+                    <div class="tag">
+                        <h2>Funds Received</h2>
+                    </div>
+                    <div class="formarea clearfix">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <div>
+                                <label for="report_duration">Date Received</label>
+                                <input type="date" name="date">
+                            </div>
+                            <div>
+                                <label for="daily_expenses">Received Amount</label>
+                                <input type="number" name="daily_expenses">
+                            </div>
+                            <div class="submit-cancel">
+                                <input type="reset" value="Cancel" name="reset" onclick="window.location='dis_funding_agencies';">
+                                <input type="submit" value="Submit" name="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="tag">
+                        <h2>Allocate Funds</h2>
+                    </div>
+                    <div class="formarea clearfix">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <div>
+                                <label for="report_duration">Date</label>
+                                <input type="date" name="date">
+                            </div>
+                            <div>
+                                <label for="project_id">Project ID</label>
+                                <input type="text" name="project_id">
+                            </div>
+                            <div>
+                                <label for="daily_expenses">Allocated amount</label>
+                                <input type="number" name="daily_expenses">
+                            </div>
+                            <div class="submit-cancel">
+                                <input type="reset" value="Cancel" name="reset" onclick="window.location='dis_funding_agencies';">
+                                <input type="submit" value="Submit" name="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!--div class="check">
             <input type="submit" value="Update" name="submit">
             <input type="submit" value="Edit" name="submit">
         </div-->
         
-        </center>  
+ 
     </div>
     <?php require_once('includes/footer.php');?> 
 </body>
