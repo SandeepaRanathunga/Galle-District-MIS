@@ -6,7 +6,7 @@
 .album{
     margin: 20px auto;
     
-  }
+}
   
   a{
     text-decoration: none;
@@ -46,11 +46,6 @@
         font-weight: bold;
         padding: 10px 5px 0px 5px;     
   }
-  
-  #date {
-    color: #4a4e4e;
-    font-size: 12px;
-  } 
     
   .photo_album p {
         font-size: 15px;
@@ -94,22 +89,12 @@
       border: 1px solid black;
      }
     
-     
-    /* Style the video: 50% width and height 
-    #gallery_video {
-        right: 0;
-        bottom: 0;
-        min-width: 50%;
-        min-height: 50%;
-      }
-    */
     
-    
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-      }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
       
       /* Create two equal columns that sits next to each other */
       .column {
