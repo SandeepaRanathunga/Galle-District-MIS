@@ -56,14 +56,14 @@ input:focus{
 input[type=text],input[type=password]{
     display:inline-block;
     background:none;
-    border:2px solid #434647;
+    border:1px solid #434647;
     border-radius:5px;
     padding:5px;
     width:80%;
     box-sizing: border-box;
     height:50px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 30px;
 }
 input[type=submit]{
@@ -92,6 +92,7 @@ input[type=submit]:hover{
     color: #8b0000  ;
     text-decoration: underline;
     font-size: 16px;
+    
     
 }
 
