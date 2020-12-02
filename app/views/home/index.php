@@ -22,8 +22,8 @@
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 4</div>
-            <img src="images/district.jpg" style="width:100%;height:400px">
-            <div class="text">Galle District Secretariat</div>
+            <img src="images/district.png" style="width:100%;height:400px">
+            <div class="text">Railway Station - Galle</div>
         </div>
 
         <div class="mySlides fade">

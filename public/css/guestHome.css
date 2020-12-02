@@ -19,6 +19,7 @@ a{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+   
 }
 .button-container > a{
     display:flex;
@@ -31,18 +32,21 @@ a{
     color:white;
     font-size: 20px;
     font-weight: bold;
+    opacity: 0.8 ;
+    
 
 }
 
 .button-container a:hover{
     transform:scale(1,1.05);
+    opacity: 1 ;
 }
 .button-container a:nth-child(1){
-    background-image:url("../images/ongoing.jpg");
+    background-image:url("../images/ongoing.png");
 }
 .button-container a:nth-child(2){
-    background-image:url("../images/finished.jpg");
+    background-image:url("../images/finished.png");
 }
 .button-container a:nth-child(3){
-    background-image:url("../images/progress.jpg");
+    background-image:url("../images/progress.png");
 }
