@@ -85,12 +85,14 @@ input[type=submit]:hover{
 
 .forgotLink{
     margin:10px 10px;
+    
 }
 
 .forgotLink a{
-    color:#434647;
+    color: #8b0000  ;
+    text-decoration: underline;
     font-size: 16px;
-    font-weight: bold;
+    
 }
 
 .mask{
