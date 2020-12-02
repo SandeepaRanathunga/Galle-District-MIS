@@ -10,13 +10,8 @@
     <title>Project Handeling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/userPage.css">
+    <link rel="stylesheet" href="css/tableStyles.css">
     <link rel="icon" href="images/logo.png">
-    <style>
-        table,td,tr,th{
-            border:1px solid black;
-            border-collapse:collapse;
-        }
-    </style>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
@@ -25,13 +20,14 @@
         <h2>Project proposals</h2>
     </div>
     <div class="container">
-        <table>
+        <center>
+        <table id="table-style">
             <tr>
                 <th>View Status</th>
                 <th>Approval Status</th>
                 <th>Division Name</th>
                 <th>Proposal Description</th>
-                <th>Submited Date</th>
+                <th>Submitted Date</th>
                 <th colspan=2>Action</th>
             </tr>
             <?php
@@ -49,9 +45,9 @@
             </tr>
             <?php
                 endforeach;
-            ?>
-            
+            ?>     
         </table>
+        </center>
     </div>
     <?php require_once('includes/footer.php');?>
 </body>

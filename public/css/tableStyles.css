@@ -1,4 +1,6 @@
-#funds {
+#table-style {
+    overflow-x: auto;
+    overflow-y: auto;
     align-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -6,24 +8,28 @@
     width: 90%;
 }
 
-#funds td, #funds th{
+#table-style td, #table-style th{
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#funds tr:nth-child(){
-    background-color: #f2f2f2;
+#table-style td{
+    background-color: white;
 }
 
-#funds tr:hover{
+#table-style tr:nth-child(){
+    background-color: white;
+}
+
+/* #table-style tr:hover{
     background-color: #ddd;
-}
+} */
 
-#funds th{
+#table-style th{
     margin-top: 12px;
     margin-bottom: 12px;
     text-align: left;
-    background-color: #434647;
+    background-color: #0e2433ee;
     color: white;
 }
 /* moved to common.css */
@@ -45,7 +51,7 @@
 } */
 
 
-input[type="button"],input[type="submit"],input[type="reset"]{
+/* input[type="button"],input[type="submit"],input[type="reset"]{
     background:#434647;
     color:white;
     padding:10px;
@@ -78,9 +84,40 @@ input[type="button"],input[type="submit"],input[type="reset"]{
 
 input[type="submit"]{
     margin-right: 70px;
-}
+} */
 
-input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover{
+/* input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover{
     color:#434647;
     background:white;
+} */
+
+input[type="button"],input[type="submit"],input[type="reset"]{
+    background:#D2691E;
+    color:white;
+    padding:10px;
+    font-weight: bold;
+    font-size: 17px;
+    border:none;
+    border-radius: 10px;
+    width:100px;
+    margin:20px;
+    display:block;
+    float:right;
+}
+
+input[type=submit]:hover,input[type=reset]:hover{
+    cursor: pointer;
+    transform:scale(1,1.2);
+}
+.submit-cancel input[type=submit]{
+    width: 130px;
+}
+
+.submit-cancel{
+    display:flex;
+    flex-direction: row;
+    margin:2% 4%;
+    margin-top: 10px;
+    align-items: left;
+    justify-content: center;
 }
