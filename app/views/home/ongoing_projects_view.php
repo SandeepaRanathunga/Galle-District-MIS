@@ -21,7 +21,9 @@
     <div class="tag">
         <h2><?php echo $div_name.' - ';?>Ongoing Projects Timeline</h2>
     </div>
-  
+    <div class="break">
+        <br><br><br>
+    </div>
     <div>
         <div class="album">
             <a  href="projects_view">

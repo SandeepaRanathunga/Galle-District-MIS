@@ -10,7 +10,15 @@
     justify-content: flex-start;
     margin:0px auto;
 }
+
+.break{
+    background-color: #f2f2f2; 
+}
+
+.container a{
+}
 .links-container a{
+
     display:flex;
     justify-content:center;
     align-items: center;

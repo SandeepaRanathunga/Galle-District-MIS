@@ -43,7 +43,7 @@
                 <div>Contractor Registration</div>
                 
         </a>
-        <a href="view_bid_callings">
+        <a href="home_view_bid_callings">
             <div><img src="svg/viewBids.svg" alt=""></div>
             <div>View Bid Callings</div>
         </a>

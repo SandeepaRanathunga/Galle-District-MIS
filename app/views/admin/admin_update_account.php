@@ -78,9 +78,11 @@
                     <input type="password" name="confirmpassword">
                 </div>-->
                 
-                <div>
-                    <input type="reset" value="Cancel">
+
+                <div class="submit-cancel">
+                    <input type="reset" value="Cancel" name="cancel">
                     <input type="submit" value="Update" name="submit">
+
                 </div>
             </form>
         </div>
