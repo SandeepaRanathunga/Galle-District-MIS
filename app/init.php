@@ -23,6 +23,8 @@
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
     $router->addRoute('email_verify','EmailVerify','index');
+    //password_reset
+    $router->addRoute('password_reset','PasswordReset','index');
     //contractor_page
     $router->addRoute('contractors','Contractor','contractor');
     //contractor register

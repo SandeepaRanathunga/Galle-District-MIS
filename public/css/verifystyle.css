@@ -7,7 +7,8 @@
     /*border:3px solid #434647;*/
     padding:20px 10px;
     box-sizing: border-box;
-    background:#f2f2f2;
+    background:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     margin:auto;
     min-width: 350px;
@@ -16,11 +17,11 @@
     font-size: 18px;
     font-weight: bold;
     text-align:center;
-    border:3px solid #434647;
+    border:3px solid #1c9c95;
     border-radius:10px;
     padding:5px;
     margin:20px auto;
-    background:#434647;
+    background:#1c9c95;
     color:white;
 }
 @media screen and (max-width:650px){
@@ -59,7 +60,7 @@ input[type=submit],input[type=reset]{
     width:120px;
     margin: 10px auto;
     padding:10px;
-    background:#434647;
+    background:#1c9c95;
     /*border:2px solid #434647;*/
     border-radius: 5px;
     color:white;
@@ -74,7 +75,7 @@ input[type=reset]{
     float: left;
 }*/
 input[type=submit]:hover,input[type=reset]:hover{
-    color:#434647;
+    color:#1c9c95;
     background:white;
     cursor: pointer;
     transition: 0.5s;

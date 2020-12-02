@@ -6,16 +6,16 @@ require_once __DIR__ . '/../mailer/MailSender.php';
         private $token;
 
         public function __construct(){
-            $this->model=$this->model('passwordReset');
+            $this->model=$this->model('EmailVerify');
         }
         public function index(){
             if(isset($_POST['send'])){
-                $this->proceedReset();
+                $this->proceedVerification();
             }
             else
                 $this->view('password_reset/email_verify');
         }
-        private function proceedReset(){
+        private function proceedVerification(){
             $this->model->setEmail();
             $result=$this->model->checkEmail();
             if($result->num_rows>0){

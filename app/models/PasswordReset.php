@@ -6,6 +6,8 @@
         private $email;
         private $connection;
         private $token;
+        private $password;
+        private $confirm_password;
 
         public function __construct(){
             $this->connection=$this->dbConnect();
@@ -14,32 +16,29 @@
             $database=new \Database();
             return $database->getConnection();
         }
-        public function setEmail(){
-            $this->email=htmlspecialchars(trim($_POST['email']));
-        }
-        public function checkEmail(){
-            $query="SELECT user_id FROM account WHERE email='$this->email'";
+        public function tokenExist($token){
+            $query="SELECT email FROM reset WHERE token='$token'";
             $result=$this->connection->query($query);
             return $result;
-
         }
-        public function insertToken(){
-            $this->token=uniqid(md5(time()));
-            $query="SELECT email FROM reset WHERE email='$this->email'";
+        public function setPassword(){
+            $this->password=$_POST['password'];
+            $this->confirm_password=$_POST['confirm_password'];
+        }
+        public function matchPassword(){
+            if($this->password===$this->confirm_password)
+                return true;
+            return false;
+        }
+        public function resetPassword($email){
+            $password=password_hash($this->password,PASSWORD_DEFAULT);
+            $query="UPDATE account SET password='$password' WHERE email='$email'";
             $result=$this->connection->query($query);
-            if($result->num_rows>0){
-                $query="UPDATE reset SET token='$this->token' WHERE email='$this->email'";
-                $result=$this->connection->query($query);
-            }
-            else{
-                $query="INSERT INTO reset (email,token) VALUES ('$this->email','$this->token')";
-                $result=$this->connection->query($query);
-            }
-            
             return $result;
         }
-        public function getToken(){
-            return $this->token;
+        
+        public function getConnection(){
+            return $this->connection;
         }
         public function getEmail(){
             return $this->email;
