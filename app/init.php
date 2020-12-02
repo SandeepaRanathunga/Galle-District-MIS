@@ -15,14 +15,18 @@
     $router->addRoute('finished_projects','FinishedProjects','finishedProjects');
     //home ongoing projects view division vice
     $router->addRoute('ongoing_projects_view','OngoingProjectsView','index');
+    //home finished projects view division vice
+    $router->addRoute('finished_projects_view','FinishedProjectsView','finishedProjectsView');
+    //home projects gallery view
+    $router->addRoute('projects_view','ProjectsView','projectsView');
     //home annual reports
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
-    $router->addRoute('email_verify','EmailVerify','verifyEmail');
+    $router->addRoute('email_verify','EmailVerify','index');
     //contractor_page
     $router->addRoute('contractors','Contractor','contractor');
     //contractor register
-    $router->addRoute('contractor_register','ContractorRegister','index');
+    $router->addRoute('contractor_register','ContractorRegister','contractorRegister');
     //projects
     $router->addRoute('projects','Projects','index');
     //aboutus
@@ -60,6 +64,8 @@
     $router->addRoute('dis_view_monthly_report','DisViewMonthlyReport','disViewMonthlyReport');
     //district project proposal
     $router->addRoute('dis_view_project_proposal','DisViewProjectProposals','disViewProjectProposals');
+    //district funding agencies
+    $router->addRoute('dis_funding_agencies','DisFundingAgencies','disFundingAgencies');
 
     /*---------------------admin----------------------*/
     $router->addRoute('admin_home','AdminHome','adminHome');
@@ -67,6 +73,8 @@
     $router->addRoute('create_accounts','AdminCreateAccount','adminCreateAccount');
     //admin update account
     $router->addRoute('update_accounts','AdminUpdateAccount','adminUpdateAccount');
+    //admin delete account
+    $router->addRoute('delete_accounts','AdminDeleteAccount','adminDeleteAccount');
     //admin update about us
     $router->addRoute('update_about_us','UpdateAboutUsInfo','updateAboutUsInfo');
     
@@ -75,9 +83,13 @@
     $router->addRoute('contractor_home','ContractorHome','contractorHome');
     //contractor notifications
     $router->addRoute('con_notifications','ContractorNotifications','contractorNotifications');
+    //contractor sign up
     $router->addRoute('contractor_signup','ContractorSignUp','contractorSignUp');
+    //contractor submit bid report
     $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
+    //contractor manage expenses
     $router->addRoute('manage_expenses','ContractorManageExpenses','contractorManageExpenses');
+    //contractor view bid callings
     $router->addRoute('view_bid_callings','ContractorViewBidCallings','contractorViewBidCallings');
 
 

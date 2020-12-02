@@ -16,7 +16,7 @@ body{
     height:100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    
+    background-color: #f2f2f2;
 }
 
 .container,.button-flex-container{
@@ -36,7 +36,7 @@ body{
 
 }
 .tag h2{
-    color:#434647;
+    color:#0E2433    ;
     font-size: 20px;
     font-weight: bold;
     margin:10px;

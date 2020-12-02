@@ -9,6 +9,7 @@ require_once __DIR__ . '/../mailer/MailSender.php';
             $this->model=$this->model('Signup');
             $this->divisions=$this->getdivisionList();
         }
+
         public function adminCreateAccount(){
             if(isset($_POST['submit']))
                 $this->proceedRegistration();
@@ -16,6 +17,7 @@ require_once __DIR__ . '/../mailer/MailSender.php';
                 $this->view('admin/admin_create_account');
             }
         }
+        
         private function proceedRegistration(){
             $this->model->setDetails();
                 if($this->model->validateData()){

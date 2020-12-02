@@ -1,0 +1,34 @@
+.container{
+    width:100%;
+}
+.links-container{
+    /* width:90%; */
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.links-container::after{
+    content:'';
+    flex:auto;
+}
+.container a{
+    text-align: center;
+    flex-wrap: wrap;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    height:50px;
+    padding: 10px;
+    border-radius: 4px;
+    /* background:green; */
+    background-color: #699fb8;
+    margin:15px;
+    color:#0E2433;
+    font-size: 17px;
+    font-weight: bold;
+}
+.container a:hover{
+    transform: scale(1,1.1);
+}

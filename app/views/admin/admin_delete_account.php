@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update User account- Administrator</title> <!--Change name here-->
+    <title>Delete User account- Administrator</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminAccountForms.css">
     <link rel="icon" href="images/logo.png">
@@ -16,7 +16,7 @@
     <?php require_once('includes/adminNav.php');?>
 
     <div class="tag">
-        <h2>Update user accounts</h2>
+        <h2>Delete user accounts</h2>
     </div>
 
 

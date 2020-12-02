@@ -2,7 +2,7 @@
     $db_server='localhost';
     $user_name='root';
     $password='';
-    $db_name='Galle-MIS';
+    $db_name='mis_db';
 
     $connection=mysqli_connect($db_server,$user_name,$password,$db_name);
 
