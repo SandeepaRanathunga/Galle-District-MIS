@@ -85,7 +85,7 @@
                 </div>-->
                 
                 <div>
-                    <input type="button" value="Cancel">
+                    <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>

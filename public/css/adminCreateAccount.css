@@ -1,9 +1,18 @@
 .container{
+    margin-top:5%;
+    margin-left: 20%;
+    margin-right:20%;
+    margin-bottom:3%;
+    width: 60%;
+    min-width: 300px;
     position: relative;
-    padding:25px;
+    padding:10px;
     display:flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: white ;
 
 }
 .formarea{
@@ -15,30 +24,31 @@
 }
 .formarea label{
     color:#434647;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: normal;
     display:inline-block;
-    width:200px;
+    width:150px;
 }
 input[type="text"],input[type="email"],input[type="password"]{
-    border:2px solid #434647;
-    width:300px;
-    height:40px;
-    margin:10px;
+    border:1px solid #434647;
+    width:200px;
+    height:30px;
+    margin:5px;
+    border-radius: 4px;
+    margin-top: 20px;
     padding:5px;
     box-sizing: border-box;
-    outline:#434647;
-    font-size:17px;
+    
+    
 }
 select{
-        border:2px solid #434647;
-        width:300px;
-        height:40px;
-        margin:10px;
+        border:1px solid #434647;
+        width:200px;
+        height:30px;
+        margin:5px;
         padding:5px;
         box-sizing: border-box;
-        font-size: 17px;
-        outline:#434647;
+        border-radius: 4px;
 }
 input[type="file"]{
     border:none;
@@ -51,15 +61,16 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="reset"],input[type="submit"]{
-    background:#D2691E;
+    background:#1c9c95;
     color:white;
-    padding:10px;
-    font-weight: bold;
+    font-weight: normal;
     border:none;
-    font-size: 17px;
     border-radius: 10px;
+
+    
     width:100px;
     margin:20px;
+    padding:10px;
     display:block;
     float:right;
 
@@ -69,6 +80,6 @@ input[type="reset"],input[type="submit"]:focus{
     outline:none;
 }
 input[type="reset"]:hover,input[type="submit"]:hover{
-    transform: scale(1,1.2);
+    transform: scale(1,1.1);
     cursor: pointer;
 }
