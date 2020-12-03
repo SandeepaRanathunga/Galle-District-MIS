@@ -5,7 +5,8 @@
 }
 /*UpperFooterPart*/
 .blue{
-    background:#163f5a   ;
+    background:#0e2433ee   ;
+    
     padding:5px;
     display:flex;
     align-items: center;
@@ -55,7 +56,7 @@
     
 }
 .black h2 span{
-    color:#D2691E   ;
+    color: #1c9c95 ;
     font-size: 15px;
 }
 @media screen and (max-width:850px){

@@ -29,11 +29,11 @@
                     <input type="text" name="project_des">
                 </div>
                 <div>
-                    <label for="bid_report">Attach bid report</label>
+                    <label for="bid_report">Attach bid notice</label>
                     <input type="file" name="bid_report" id="">
                 </div>
                 <div>
-                    <input type="button" value="Cancel">
+                    <input type="reset" value="Cancel" onclick="window.location='div_home';">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>

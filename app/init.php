@@ -23,10 +23,14 @@
     $router->addRoute('annual_reports','AnnualReports','annualReports');
     //email_verify
     $router->addRoute('email_verify','EmailVerify','index');
+    //password_reset
+    $router->addRoute('password_reset','PasswordReset','index');
     //contractor_page
     $router->addRoute('contractors','Contractor','contractor');
     //contractor register
     $router->addRoute('contractor_register','ContractorRegister','contractorRegister');
+    //contractor view bid callings
+    $router->addRoute('home_view_bid_callings','ViewBidCallings','viewBidCallings');
     //projects
     $router->addRoute('projects','Projects','index');
     //aboutus
@@ -89,6 +93,8 @@
     $router->addRoute('submit_bid_report','ContractorSubmitBidReport','contractorSubmitBidReport');
     //contractor manage expenses
     $router->addRoute('manage_expenses','ContractorManageExpenses','contractorManageExpenses');
+    //contractor add expenses
+    $router->addRoute('add_expenses','ContractorAddExpenses','contractorAddExpenses');
     //contractor view bid callings
     $router->addRoute('view_bid_callings','ContractorViewBidCallings','contractorViewBidCallings');
 

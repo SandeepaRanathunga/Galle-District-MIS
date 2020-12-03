@@ -8,75 +8,47 @@
         private $office_id;
         private $username;
         private $userType;
+        private $connection;
+
+        public function __construct(){
+            $database=new \Database();
+            $this->connection=$database->getConnection();
+        }
 
         public function setLoginDetails(){
             $this->userID=htmlspecialchars(trim($_POST['userID']));
             $this->password=htmlspecialchars(trim($_POST['password']));
         }
-        public function setUserType(){
-            $this->userType=substr($this->userID,0,3);
-        }
-        public function checkUserID(){
-            $database=new \Database();
-            $connection=$database->getConnection();
-
-            if($this->userType=='adm'){
-                $result=$this->checkForAdmin($connection);
-            }
-            else if($this->userType=='div'){
-                $result=$this->checkForDivUsers($connection);
-                
-            }
-            else if($this->userType=='dis'){
-                $result=$this->checkForDisUsers($connection);
-            }
-            else{
-                $result=$this->checkForContractors($connection);
-            }
-
-                return $result;
+        public function checkUser(){
+            $query="SELECT * FROM account WHERE user_id='$this->userID'";
+            $result=$this->connection->query($query);
+            return $result;   
         }
         public function checkPassword($result){
             $user=$result->fetch_assoc();
             if(password_verify($this->password,$user['password'])){
-                $this->setUserAttributes($user);
+                $this->userType=$user['user_type'];
+                $this->office_id=substr('div0123',0,5);
+                
                 return true;
             }
             else
                 return false;
         }
-        public function setUserAttributes($user){
-            $this->username=$user['user_name'];
-            $this->office_id=isset($user['div_id']) ? $user['div_id'] : '';
-        }
-        private function checkForAdmin($connection){
-            $query="SELECT `user_name`,`password` FROM admin WHERE `user_id`='{$this->userID}'";
-            $result=$connection->query($query);
-            return $result;
-            
-        }
-        private function checkForDivUsers($connection){
-            $query="SELECT `user_name`,`div_id`,`password` FROM div_user WHERE `user_id`='{$this->userID}'";
-            $result=$connection->query($query);
-            return $result;
-            
-        }
-        private function checkForDisUsers($connection){
-            $query="SELECT `user_name`,`password` FROM dis_user WHERE `user_id`='{$this->userID}'";
-            $result=$connection->query($query);
-            return $result;
-        }
-        private function checkForContractors($conncetion){
-            $query="SELECT `user_name`,`password` FROM contractor WHERE `user_id`='{$this->userID}'";
-            $result=$connection->query($query);
-            return $result;
-        }
+        
 
         public function getuserID(){
             return $this->userID;
         }
-        public function getUserName(){
-            return $this->username;
+        public function getUserName($type){
+            $query="SELECT name FROM $type WHERE user_id='$this->userID'";
+            $result=$this->connection->query($query);
+            if($result->num_rows>0){
+                $name_arr=$result->fetch_assoc();
+                return $name_arr['name'];
+            }
+            else
+                return "User";
         }
         public function getOfficeID(){
             return $this->office_id;

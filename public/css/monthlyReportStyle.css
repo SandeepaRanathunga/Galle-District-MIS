@@ -54,7 +54,7 @@ textarea{
     vertical-align: middle;;
 }
 
-input[type="text"],input[type="date"],select{
+input[type="text"],input[type="date"],input[type="number"],select{
     border:2px solid #434647;
     width:300px;
     height:40px;
@@ -78,7 +78,7 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#D2691E;
+    background:#1c9c95;
     color:white;
     padding:10px;
     font-weight: bold;

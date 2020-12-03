@@ -1,4 +1,5 @@
-
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +21,11 @@
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-field">
                     <label for="description">Proposal Description</label>
-                    <textarea name="description" id="" cols="40" rows="5" placeholder="Enter a brief descrioption about the project"></textarea>
+                    <textarea name="description" id="" cols="40" rows="5" placeholder="Enter a brief descrioption about the project" requierd></textarea>
                 </div>
                 <div>
                     <label for="file">Attach Document</label>
-                    <input type="file" name="file" id="file">
+                    <input type="file" name="file" id="file" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.pdf" required>
                 </div>
                 <div>
                     <input type="reset" name="cancel">

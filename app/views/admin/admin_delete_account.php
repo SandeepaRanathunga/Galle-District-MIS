@@ -51,13 +51,7 @@
                 </div>
                 <div>
                     <label for="office">Office</label>
-                    <select name="office" id="office" form="updateUser">
-                        <option value="office_1"> Office 1 </option>
-                        <option value="office_2"> Office 2 </option>
-                        <option value="office_3"> Office 3 </option>
-                        <option value="office_4"> Office 4 </option>
-                        <option value="office_5"> Office 5 </option>
-                    </select>
+                    <input type="text" name="office">
                 </div>
                 <div>
                     <label for="designation">Designation</label>
@@ -85,8 +79,8 @@
                 </div>-->
                 
                 <div>
-                    <input type="button" value="Cancel">
-                    <input type="submit" value="Submit" name="submit">
+                    <input type="reset" value="Cancel">
+                    <input type="submit" value="Delete" name="submit">
                 </div>
             </form>
         </div>

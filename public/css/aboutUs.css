@@ -22,6 +22,7 @@
     justify-content:center;
     align-items:center;
     
+    
 }
 .overview img{
     width:100px;
@@ -39,18 +40,21 @@
     padding:10px 15px;
     box-sizing: border-box;
     /* height:240px; */
-    background-color: #434647;
+    background-color: #c0b68871;
     color:white;
-    font-weight: normal ;
+    
+    
 }
 .overview > div >h2{
     margin:10px;
     text-align: center;
+    font-weight: 600;
 }
 .overview > div >div{
     margin:10px;
     font-weight: bold;
     font-size: 17px;
+    color: #434647 ;
 }
 .formarea{
     display:flex;

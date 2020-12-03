@@ -39,8 +39,8 @@
     margin-bottom:5px;
 }
 .icon img{
-    width:100px;
-    height:100px;
+    /*width:100px;*/
+    height:100px ; 
 }
 label{
     display:inline-block;
@@ -56,14 +56,14 @@ input:focus{
 input[type=text],input[type=password]{
     display:inline-block;
     background:none;
-    border:2px solid #434647;
+    border:1px solid #434647;
     border-radius:5px;
     padding:5px;
     width:80%;
     box-sizing: border-box;
     height:50px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 30px;
 }
 input[type=submit]{
@@ -71,7 +71,7 @@ input[type=submit]{
     margin: auto;
     width:80%;
     padding:10px 20px;
-    background:#D2691E;
+    background: #1c9c95;
     border-radius: 5px;
     color:white;
     font-size: 18px;
@@ -85,12 +85,15 @@ input[type=submit]:hover{
 
 .forgotLink{
     margin:10px 10px;
+    
 }
 
 .forgotLink a{
-    color:#434647;
+    color: #8b0000  ;
+    text-decoration: underline;
     font-size: 16px;
-    font-weight: bold;
+    
+    
 }
 
 .mask{

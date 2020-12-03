@@ -18,15 +18,23 @@
         <div class="report-intro">
             <p>In here you can download the annual report for a particular year by clicking on the links given below. The report contains of 
             how funds have been allocated and how they were managed to the projects carried out during the year.</p>
-            <br>
-            <br>
-            <a href='#'>Click here to download the Annual Report of 2018</a>
-            <br>
-            <br>
-            <a href='#'>Click here to download the Annual Report of 2019</a>
-            <br>
-            <br>
-            <a href='#'>Click here to download the Annual Report of 2020</a>
+            <div class="formarea">
+            <form action="" method="POST" id="newYear" onsubmit="">
+                <div>
+                    <label for="year">Year</label>
+                    <select name="year" id="year" required>
+                        <option disabled selected value>Select</option>
+                        <option value="year">2018</option>
+                        <option value="year">2019</option>
+                        <option value="year">2020</option>   
+                    </select>
+                </div>
+                <div class="clearfix" style="font-weight:bold; float:left">
+                    <input type="reset" value="Cancel" onclick="window.location='/Galle-District-mis/'";>
+                    <input type="submit" value="Download" name="submit" id="submit">
+                </div>
+            </form>
+        </div>
         </div>
     </div>
     <?php require_once('includes/footer.php');?>
