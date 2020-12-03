@@ -3,11 +3,13 @@ require_once __DIR__ . '/../mailer/MailSender.php';
     class AdminCreateAccount extends Controller{
         private $model;
         public $divisions=[];
+        public $emails=[];
         
 
         public function __construct(){
             $this->model=$this->model('Signup');
             $this->divisions=$this->getdivisionList();
+            $this->emails=$this->getEmails();
         }
 
         public function adminCreateAccount(){
@@ -65,6 +67,9 @@ require_once __DIR__ . '/../mailer/MailSender.php';
         }
         public function getDivisionList(){
             return $this->model->getDivisions();
+        }
+        public function getEmails(){
+            return $this->model->getEmails();
         }
     } 
 ?>

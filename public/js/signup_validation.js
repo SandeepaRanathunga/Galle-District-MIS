@@ -12,6 +12,10 @@ function signupValidate(){
         alert("Email format is not valid!");
         return false;
     }
+    if(emailExist(email)){
+        alert("Email already exist!");
+        return false;
+    }
     return true;
 }
 function checkPasswordPattern(){
@@ -55,6 +59,9 @@ function setUserID(){
     let prefix=document.getElementById('office_id').value;
     document.getElementById("user_id").value=prefix+getRandomDigits();
     
+}
+function emailExist($email){
+    console.log($emails);
 }
 function getRandomDigits(){
     return Math.floor(Math.random() * (99-10))+10;

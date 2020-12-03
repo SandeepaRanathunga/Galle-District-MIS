@@ -43,6 +43,9 @@
             if($this->password!=$this->confirm_password){
                 return false;
             }
+            if(in_array($this->email,$this->getEmails())){
+                return false;
+            }
             return true;   
         }
         //to clear input data
@@ -66,6 +69,15 @@
                 array_push($result_arr,[$row['div_id'],$row['div_name']]);
             }
             return $result_arr;
+        }
+        public function getEmails(){
+            $emails=[];
+            $query="SELECT email from account";
+            $result=$this->connection->query($query);
+            while($row=$result->fetch_assoc()){
+                array_push($emails,$row['email']);
+            }
+            return $emails;
         }
         //finally insert the data to the database
         public function insertUserDetails(){
