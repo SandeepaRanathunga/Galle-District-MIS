@@ -50,7 +50,7 @@
         private function divisionHeader($model){
             $_SESSION['userID']=$model->getuserID();
             $_SESSION['userName']=$model->getUserName('div_user');
-            $_SESSION['office_id']=$model->getOfficeID();
+            $_SESSION['office_id']=substr($_SESSION['userID'],0,5);
             echo "<script>alert('Welcome {$_SESSION['userName']}!');</script>";
             echo "<script>window.location.href='div_home';</script>";
         }

@@ -28,6 +28,8 @@
             $user=$result->fetch_assoc();
             if(password_verify($this->password,$user['password'])){
                 $this->userType=$user['user_type'];
+                $this->office_id=substr('div0123',0,5);
+                
                 return true;
             }
             else

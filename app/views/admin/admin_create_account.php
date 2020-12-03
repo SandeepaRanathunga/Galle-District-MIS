@@ -3,7 +3,9 @@
 ?>
 <?php
     $divisions=$this->divisions;
+    $emails=$this->emails;
 ?>
+<script></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,6 +91,9 @@
             </form>
         </div>
     </div>
+    <script>
+        let emails=<?php echo json_encode($emails);?>;
+    </script>
     <script src="js/signup_validation.js"></script>
     <?php require_once('includes/footer.php');?>
 </body>
