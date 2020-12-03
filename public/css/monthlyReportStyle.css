@@ -78,7 +78,7 @@ input[type="radio"]{
     margin-top: 20px;
 }
 input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#D2691E;
+    background:#1c9c95;
     color:white;
     padding:10px;
     font-weight: bold;
@@ -91,7 +91,8 @@ input[type="button"],input[type="submit"],input[type="reset"]{
     float:right;
 }
 
-input[type=submit]:hover,input[type=reset]:hover{
+input[type="reset"]:hover,input[type="submit"]:hover{
+    transform: scale(1,1.1);
     cursor: pointer;
-    transform:scale(1,1.2);
+}
 }
