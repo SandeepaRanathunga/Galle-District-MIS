@@ -15,6 +15,7 @@
         private $hashed_password;
         private $confirm_password;
         private $connection;
+        private $login_permission=1;
 
         public function __construct(){
             $this->connection=$this->dbConnect();
@@ -81,7 +82,7 @@
         }
         //finally insert the data to the database
         public function insertUserDetails(){
-            $query="INSERT INTO account (user_id,email,password,user_type) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type')";
+            $query="INSERT INTO account (user_id,email,password,user_type,login_permission) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type','$this->login_permission')";
             $result=$this->connection->query($query);
             if($result){
                 if($this->user_type=='div'){

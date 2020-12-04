@@ -89,8 +89,8 @@ input[type=submit]:hover{
 }
 
 .forgotLink a{
-    color: #8b0000  ;
-    text-decoration: underline;
+    color:blue;
+    font-weight:bold;
     font-size: 16px;
     
     

@@ -12,12 +12,11 @@
         private $contact_no;
         private $email;
         private $password;
-        private $hashed_password;
-        private $confirm_password;
         private $approval_status;
         private $view_status;
         private $user_type;
         private $connection;
+        private $login_permission=0;
         
         public function __construct(){
             $this->connection=$this->dbConnect(); 
@@ -33,13 +32,11 @@
             $this->office_address=$this->clearInputs($_POST['office_address']);
             $this->contact_no=$this->clearInputs($_POST['contact_no']);
             $this->email=$this->clearInputs($_POST['email']);
-            $this->password=$this->clearInputs($_POST['password']);
-            $this->confirm_password=$this->clearInputs($_POST['confirm_password']);
+            $this->password=$this->generate_password();
+            $this->hashed_password=password_hash($this->password,PASSWORD_DEFAULT);
             $this->approval_status=0;
             $this->view_status=0;
             $this->user_type='con';
-
-            $this->hashed_password=password_hash($this->password,PASSWORD_DEFAULT);
             
         }
 
@@ -58,6 +55,48 @@
             $input=mysqli_real_escape_string($this->connection,$input);
             return $input;
         }
+        //to auto generate password
+        private function generate_password(){
+            $length=9;
+            $add_dashes=false;
+            $available_sets='luds';
+            $sets = array();
+            if(strpos($available_sets, 'l') !== false)
+                $sets[] = 'abcdefghjkmnpqrstuvwxyz';
+            if(strpos($available_sets, 'u') !== false)
+                $sets[] = 'ABCDEFGHJKMNPQRSTUVWXYZ';
+            if(strpos($available_sets, 'd') !== false)
+                $sets[] = '23456789';
+            if(strpos($available_sets, 's') !== false)
+                $sets[] = '!@#$%&*?';
+        
+            $all = '';
+            $password = '';
+            foreach($sets as $set){
+                $password .= $set[array_rand(str_split($set))];
+                $all .= $set;
+            }
+        
+            $all = str_split($all);
+
+            for($i = 0; $i < $length - count($sets); $i++)
+                $password .= $all[array_rand($all)];
+        
+            $password = str_shuffle($password);
+        
+            if(!$add_dashes)
+                return $password;
+        
+            $dash_len = floor(sqrt($length));
+            $dash_str = '';
+            while(strlen($password) > $dash_len){
+                $dash_str .= substr($password, 0, $dash_len) . '-';
+                $password = substr($password, $dash_len);
+            }
+            $dash_str .= $password;
+            return $dash_str;
+        }
+        
 
         //connect to the database
         private function dbConnect(){
@@ -67,7 +106,7 @@
 
         //finally insert the data to the database
         public function insertUserDetails(){
-            $query="INSERT INTO account (user_id, email, password, user_type) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type')";
+            $query="INSERT INTO account (user_id, email, password, user_type,login_permission) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type','$this->login_permission')";
             $result=$this->connection->query($query);
             //return $result;
             if($result){

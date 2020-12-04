@@ -21,7 +21,7 @@
                 $result=$this->model->insertData();
                 if($result){
                      echo "<script>alert('Data uploaded sucessfully!');</script>";
-                     echo "<script>window.location.href='login';</script>";
+                     echo "<script>window.location.href='add_proposal';</script>";
                 }
                 else{
                     echo "<script>alert('Something went wrong.Please try again!');</script>";
@@ -50,8 +50,9 @@
                     $file_name=uniqid('',true).'.'.$file_extension;
                     $this->file_name=$file_name;
                     $upload_path='uploads/proposal/'.$file_name;
-                    move_uploaded_file($temp_file_name,$upload_path);
-                    return true;
+                    $result=move_uploaded_file($temp_file_name,$upload_path);
+                    return $result;
+                    
                 }
                 else
                     return false;
