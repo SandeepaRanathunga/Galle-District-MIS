@@ -24,7 +24,7 @@
 
     <div class="container">
         <div class="formarea clearfix">
-            <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
+            <form action="" method="POST" id="newUser" enctype="multipart/form-data">
             <center>
                 <div>
                     <label for="name">Name</label>
@@ -34,6 +34,10 @@
                 <div>
                     <label for="reg_no">Registration Number</label>
                     <input type="text" name="reg_no" id="reg_no" required>
+                </div>
+                <div>
+                    <label for="documents">Attach Document</label>
+                    <input type="file" name="file" id="" accept=".doc,.docx,.pdf,.png,.jpeg">
                 </div>
                 <div>
                     <label for="specialized_field">Specialized Field</label>
@@ -61,9 +65,10 @@
                         <label for="agreement" class="normText" style="width:auto; font-size:13px;">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this proves to be false or incorrect, I shall be responsible for the consequences of request being rejected permanently.</label>
                 </div>
                 
-                <div class="clearfix" style="display:flex; justify-content:center;">
-                    <input type="reset" value="Cancel" onclick="window.location='contractors';">
+                <div class="clearfix" style="display:flex; justify-content:center;margin:5px;">
                     <input type="submit" value="Submit" name="submit" id="submit">
+                    <input type="reset" value="Cancel">
+                    
                 </div>
                         
             </form>
