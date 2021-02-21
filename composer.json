@@ -1,0 +1,13 @@
+{
+    "name": "sandeepa/galle-mis",
+    "description": "this is a group project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sandeepa Ranathunga",
+            "email": "sandeeparanatungavcg@gmail.com"
+        }
+    ],
+    "require": {}
+}
