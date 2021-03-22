@@ -45,6 +45,7 @@ require_once __DIR__ . '/../mailer/MailSender.php';
             if($this->model->matchPassword()){
                 $result=$this->model->resetPassword($this->email);
                 if($this->model->getConnection()->affected_rows>0){
+                    $this->model->deleteToken($this->email);
                     echo "<script>alert('Password reseted sucessfully!');</script>";
                     echo "<script>window.location.href='login';</script>";
                 }
