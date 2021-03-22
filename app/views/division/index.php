@@ -18,11 +18,11 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/divNav.php');?>
     <div class="button-flex-container" >                  
-        <a href="div_notifications">
+        <!-- <a href="div_notifications">
             <div><img src="svg/notifications.svg" alt=""></div>
             <div>Notifications</div>
             
-        </a>
+        </a> -->
         <a href="respond_contractors">
             <div><img src="svg/respond.svg" alt=""></div>
             <div>Contractor Requests</div>
