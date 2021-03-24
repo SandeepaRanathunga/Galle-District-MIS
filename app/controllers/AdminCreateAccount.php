@@ -3,11 +3,13 @@ require_once __DIR__ . '/../mailer/MailSender.php';
     class AdminCreateAccount extends Controller{
         private $model;
         public $divisions=[];
+        public $emails=[];
         
 
         public function __construct(){
             $this->model=$this->model('Signup');
             $this->divisions=$this->getdivisionList();
+            $this->emails=$this->getEmails();
         }
 
         public function adminCreateAccount(){
@@ -45,17 +47,15 @@ require_once __DIR__ . '/../mailer/MailSender.php';
             $name=$this->model->getName();
             $email=$this->model->getEmail();
             $userID=$this->model->getUserID();
-            $password=$this->model->getPassword();
             $to=$email;
             $from='sandeepaucsc@gmail.com';
             $subject='Login creditions to the Galle District Project Handeling and Evaluation MIS.';
             $message="Dear {$name},<br>";
             $message.='You have been given access to the Galle District Project Handeling and Evaluation MIS. <br>';
-            $message.='Please use this userID and password to log into the system and these creditions are highly confidential. <br>';
+            $message.='Please note that you sholud use the provided User ID whenever you log into the system. <br>';
             $message.=" userID : {$userID}<br>";
-            $message.=" password : {$password}<br>";
-            $message.="Use the following link to visit the MIS.<br>";
-            $message.="http://localhost/Galle-District-mis";
+            $message.="Use the following link to reset your automatically generated password and activate your account. You should use your registered email address to verify it is you.<br>";
+            $message.="http://localhost/Galle-District-mis/email_verify";
             $message.="<br>Greetings! - Admin";
 
 
@@ -65,6 +65,9 @@ require_once __DIR__ . '/../mailer/MailSender.php';
         }
         public function getDivisionList(){
             return $this->model->getDivisions();
+        }
+        public function getEmails(){
+            return $this->model->getEmails();
         }
     } 
 ?>

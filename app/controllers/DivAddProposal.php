@@ -2,7 +2,6 @@
     session_start();
     class DivAddProposal extends Controller{
         private $model;
-        // private $div_id=$_SESSION['div_id'];
         private $file_name;
 
         public function divAddProposal(){
@@ -16,17 +15,22 @@
 
         private function uploadData(){
             $this->model=$this->model('AddProjectProposal');
-            if($this->fileUploadServer()){
-                $this->model->setDetails('div05',$this->file_name);
-                if($this->model->insertData()){
+            $result=$this->fileUploadServer();
+            if($result){
+                $this->model->setDetails($_SESSION['office_id'],$this->file_name);
+                $result=$this->model->insertData();
+                if($result){
                      echo "<script>alert('Data uploaded sucessfully!');</script>";
+                     echo "<script>window.location.href='add_proposal';</script>";
                 }
                 else{
                     echo "<script>alert('Something went wrong.Please try again!');</script>";
+                    echo "<script>window.location.href='add_proposal';</script>";
                 }
-            }
+             }
             else{
                 echo "<script>alert('File upload process failed.Please try again!')</script>";
+                echo "<script>window.location.href='add_proposal';</script>";
             }
             
         }
@@ -46,15 +50,16 @@
                     $file_name=uniqid('',true).'.'.$file_extension;
                     $this->file_name=$file_name;
                     $upload_path='uploads/proposal/'.$file_name;
-                    move_uploaded_file($temp_file_name,$upload_path);
-                    return true;
+                    $result=move_uploaded_file($temp_file_name,$upload_path);
+                    return $result;
+                    
                 }
                 else
                     return false;
               }
-              else{
-                  return false;
-              }
+            else{
+                return false;
+            }
         }
 
 

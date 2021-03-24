@@ -3,6 +3,7 @@ require_once __DIR__ . '/../mailer/MailSender.php';
 
     Class ContractorRegister extends Controller{
         private $model;
+        private $file_name;
         //public $contractors=[];
 
         public function __construct(){
@@ -19,55 +20,56 @@ require_once __DIR__ . '/../mailer/MailSender.php';
         }
 
         private function proceedRegistration(){
-            $this->model->setDetails();
-                if($this->model->validateData()){
-                    $result=$this->model->insertUserDetails();
-                    if($result){
-                        echo "<script>alert('User registration succesfull and admin will evaluate your request and send credentials!');</script>";
-                    }else{
-                        echo "<script>alert('Something went wrong!');</script>";
-                        echo "<script>window.location.href='contractor_register';</script>";
-                    }
-                        /*if($this->sendCreditions()){
-                            echo "<script>alert('Data inserted sucessfully and login creditions sent to the user!');</script>";
-                            echo "<script>window.location.href='create_accounts';</script>";   
-                        }
-                        else{
-                            echo "<script>alert('Data inserted sucessfully but failed to send the login creditions to the user!');</script>";
-                            echo "<script>window.location.href='contractors';</script>";   
-                        }
-                    }
-                    else{
-                        echo "<script>alert('Something went wrong!')</script>";
-                        echo "<script>window.location.href='create_accounts';</script>";
-                    }*/
-                }
-                else{
-                     echo 'Data not validated';
-                }
+            $result=$this->uploadFile();
+            if($result){
+                $this->model->setDetails($this->file_name);
+                $result=$this->model->insertData();
+                if($result){
+                    echo "<script>alert('Your registration request sent sucessfully.The administration will let you know once they finished your request review.');</script>";
+                    // echo "<script>window.location.href='contractors';</script>";
+               }
+               else{
+                   echo "<script>alert('Something went wrong.Please try again!');</script>";
+                   echo "<script>window.location.href='contractors';</script>";
+               }
+            }
+           else{
+               echo "<script>alert('File upload process failed.Please try again!')</script>";
+               print_r($_POST);
+               print_r($_FILES);
+            //    echo "<script>window.location.href='contractors';</script>";
+            }
+            
+
         }
-        // private function sendCreditions(){
-        //     $name=$this->model->getName();
-        //     $email=$this->model->getEmail();
-        //     $userID=$this->model->getUserID();
-        //     $password=$this->model->getPassword();
-        //     $to=$email;
-        //     $from='sandeepaucsc@gmail.com';
-        //     $subject='Login creditions to the Galle District Project Handeling and Evaluation MIS.';
-        //     $message="Dear {$name},<br>";
-        //     $message.='You have been given access to the Galle District Project Handeling and Evaluation MIS. <br>';
-        //     $message.='Please use this userID and password to log into the system and these creditions are highly confidential. <br>';
-        //     $message.=" userID : {$userID}<br>";
-        //     $message.=" password : {$password}<br>";
-        //     $message.="Use the following link to visit the MIS.<br>";
-        //     $message.="http://localhost/Galle-District-mis";
-        //     $message.="<br>Greetings! - Admin";
+        private function uploadFile(){
+            $file_name=$_FILES['file']['name'];
+            $temp_file_name=$_FILES['file']['tmp_name'];
+            $error=$_FILES['file']['error'];
 
+            $temp=explode('.',$file_name);
+            $file_extension=end($temp);
+            $file_extension=strtolower($file_extension);
+            $allowed_types=array('pdf','docx','jpeg','png');
 
-        //     $mailSender=new MailSender($to,$from,$subject,$message);
-        //     $result=$mailSender->sendMail();
-        //     return $result;
-        // }
+            if(in_array($file_extension,$allowed_types)){
+                if($error==0){
+                    $file_name=uniqid('',true).'.'.$file_extension;
+                    $this->file_name=$file_name;
+                    $upload_path='uploads/con_reg_copy/'.$file_name;
+                    $result=move_uploaded_file($temp_file_name,$upload_path);
+                    return $result;
+                    
+                }
+                else
+                    return false;
+              }
+            else{
+                return false;
+            }
+        }
+
+        
         
 
     }
