@@ -36,6 +36,11 @@
             $result=$this->connection->query($query);
             return $result;
         }
+        public function deleteToken($email){
+            $query="DELETE from reset WHERE email='$email'";
+            $result=$this->connection->query($query);
+            return $result;
+        }
         
         public function getConnection(){
             return $this->connection;

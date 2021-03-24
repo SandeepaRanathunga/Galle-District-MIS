@@ -20,7 +20,7 @@
             $this->password=htmlspecialchars(trim($_POST['password']));
         }
         public function checkUser(){
-            $query="SELECT * FROM account WHERE user_id='$this->userID'";
+            $query="SELECT * FROM account WHERE user_id='$this->userID' AND login_permission=1";
             $result=$this->connection->query($query);
             return $result;   
         }
@@ -28,6 +28,8 @@
             $user=$result->fetch_assoc();
             if(password_verify($this->password,$user['password'])){
                 $this->userType=$user['user_type'];
+                $this->office_id=substr('div0123',0,5);
+                
                 return true;
             }
             else

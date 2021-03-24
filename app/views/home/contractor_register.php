@@ -24,7 +24,7 @@
 
     <div class="container">
         <div class="formarea clearfix">
-            <form action="" method="POST" id="newUser" onsubmit="return signupValidate()">
+            <form action="" method="POST" id="newUser" enctype="multipart/form-data">
             <center>
                 <div>
                     <label for="name">Name</label>
@@ -34,6 +34,10 @@
                 <div>
                     <label for="reg_no">Registration Number</label>
                     <input type="text" name="reg_no" id="reg_no" required>
+                </div>
+                <div>
+                    <label for="documents">Attach Document</label>
+                    <input type="file" name="file" id="" accept=".doc,.docx,.pdf,.png,.jpeg">
                 </div>
                 <div>
                     <label for="specialized_field">Specialized Field</label>
@@ -55,25 +59,16 @@
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password must contain atleast one number,lowecase,uppercase and 8 or more charactors" onkeyup="checkPasswordPattern()" required>
-                    <p id="pattern" class="warning"></p>
-                </div>
-                <div>
-                    <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" onkeyup="confirmPassword()" required>
-                    <p id="confirm_warning" class="warning"></p>
-                </div>
                 </center>
                 <div style="display:flex; justify-content:center;">
                         <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement" class="normText" style="width:auto;">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this proves to be false or incorrect, I shall be responsible for the consequences of request being rejected permanently.</label>
+                        <label for="agreement" class="normText" style="width:auto; font-size:13px;">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this proves to be false or incorrect, I shall be responsible for the consequences of request being rejected permanently.</label>
                 </div>
                 
-                <div class="clearfix" style="display:flex; justify-content:center;">
-                    <input type="reset" value="Cancel" onclick="window.location='contractors';">
+                <div class="clearfix" style="display:flex; justify-content:center;margin:5px;">
                     <input type="submit" value="Submit" name="submit" id="submit">
+                    <input type="reset" value="Cancel">
+                    
                 </div>
                         
             </form>

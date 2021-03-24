@@ -1,42 +1,71 @@
-body{
-    background:#f2f2f2;
+body {
+  background: #f2f2f2;
 }
-.button-flex-container{
-    width:100%;
-    padding:10px;
-    box-sizing:border-box;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
+.button-flex-container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
 }
-.button-flex-container > a{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    min-width:350px;
-    min-height:200px;
-    margin:15px 25px;
-    background: #1c306960  no-repeat center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    opacity:0.6;
-    justify-content:center;
-    align-items: center;
-    color:#434647;
-    font-size: 20px;
-    font-weight: bold;
-    /*newly editted*/
-    border-radius: 8px;
+.button-flex-container > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  min-height: 200px;
+  margin: 15px 25px;
+  background: #1c306960 no-repeat center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+  color: #434647;
+  font-size: 20px;
+  font-weight: bold;
+  /*newly editted*/
+  border-radius: 8px;
+  position: relative;
 }
-.button-flex-container > a:hover{
+.button-flex-container > a:hover {
+  opacity: 1;
+  transform: scale(1, 1.1);
+}
+
+.button-flex-container > a > div > img {
+  width: 100px;
+  height: 100px;
+}
+
+.bubble {
+  color: white;
+  background: #ff0016;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  animation: blink 3s linear infinite;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
     opacity: 1;
-    transform: scale(1,1.1);
+  }
 }
-
-.button-flex-container > a > div >img{
-    width:100px;
-    height:100px;
-}
-
