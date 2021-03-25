@@ -5,7 +5,7 @@
 }
 
 button{
-    background:#434647;
+    background:#1c9c95;
     color:white;
     font-weight: bold;
     border:none;
@@ -21,11 +21,11 @@ button{
     display:block;
     float:left;
     font-size:15px;
-    color:white;
     font-weight:bold;
     padding:5px;
     margin-right: 10px;
-    background:#434647;
+    background:#1c9c95;
+    color:white;
     border-radius: 5px;
     text-align:center;
     text-decoration: none;
@@ -42,10 +42,13 @@ button{
 
 .clearbutton button .active{
     background:white;
-    color:#434647;
+    color:#1c9c95;
 }
 .clearbutton button:hover{
-    background:white;
-    color:#434647;
-    transition: 0.5s;
+    transform: scale(1,1.1);
+    cursor: pointer;
+}
+input[type="reset"]:hover,input[type="submit"]:hover{
+    transform: scale(1,1.1);
+    cursor: pointer;
 }
