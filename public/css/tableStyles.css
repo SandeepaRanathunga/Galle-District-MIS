@@ -96,7 +96,7 @@ input[type="submit"]{
 input[type='button'],
 input[type='submit'],
 input[type='reset'] {
-  background: #d2691e;
+  background: #1c9c95;
   color: white;
   padding: 10px;
   font-weight: bold;
@@ -109,10 +109,10 @@ input[type='reset'] {
   float: right;
 }
 
-input[type='submit']:hover,
-input[type='reset']:hover {
+input[type='reset']:hover,
+input[type='submit']:hover {
+  transform: scale(1, 1.1);
   cursor: pointer;
-  transform: scale(1, 1.2);
 }
 .submit-cancel input[type='submit'] {
   width: 130px;

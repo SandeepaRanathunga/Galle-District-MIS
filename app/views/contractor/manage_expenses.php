@@ -19,7 +19,7 @@
 
         <center>
         <div>
-            <table id="table-style">
+            <table id="table-style" style="width:70%">
                 <tr>
                     <th>Date</th>
                     <th>Project ID</th>
