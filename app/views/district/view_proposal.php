@@ -46,7 +46,6 @@
         </div>
         <div class="evaluation_box" style="<?php echo ($data[6]=='pending') ? 'display:flex' : 'display:none' ?>">
             <form action="" method="post">
-                <input type="text" name="proposal_id" id="" value="<?php ?>">
                 <button name="approve" class="approve" type="submit">Approve</button>
                 <button name="reject" class="reject" type="submit">Reject</button>
             </form>
