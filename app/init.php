@@ -66,8 +66,10 @@
     $router->addRoute('dis_notifications','DisNotifications','disNotifications');
     //district monthly report
     $router->addRoute('dis_view_monthly_report','DisViewMonthlyReport','disViewMonthlyReport');
-    //district project proposal
+    //district project proposals list
     $router->addRoute('dis_view_project_proposal','DisViewProjectProposals','disViewProjectProposals');
+    //distirct view single project proposal
+    $router->addRoute('dis_view_proposal','DisViewProposal','disViewProposal');
     //district funding agencies
     $router->addRoute('dis_funding_agencies','DisFundingAgencies','disFundingAgencies');
 

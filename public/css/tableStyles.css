@@ -1,37 +1,39 @@
 #table-style {
-    overflow-x: auto;
-    overflow-y: auto;
-    align-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-collapse: collapse;
-    /* width: 90%;
+  overflow-x: auto;
+  overflow-y: auto;
+  align-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  /* width: 90%;
     max-height: 700px; */
 }
 
-#table-style td, #table-style th{
-    border: 1px solid #ddd;
-    padding: 8px;
+#table-style td,
+#table-style th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-#table-style td{
-    background-color: white;
+#table-style td {
+  background-color: white;
+  text-align: center;
 }
 
-#table-style tr:nth-child(){
-    background-color: white;
+#table-style tr:nth-child() {
+  background-color: white;
 }
 
 /* #table-style tr:hover{
     background-color: #ddd;
 } */
 
-#table-style th{
-    margin-top: 12px;
-    margin-bottom: 12px;
-    text-align: left;
-    background-color: #0e2433ee;
-    color: white;
+#table-style th {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  background-color: #0e2433ee;
+  color: white;
 }
 /* moved to common.css */
 /* .tag{
@@ -50,7 +52,6 @@
     border-radius: 5px;
     float:left;
 } */
-
 
 /* input[type="button"],input[type="submit"],input[type="reset"]{
     background:#434647;
@@ -92,33 +93,36 @@ input[type="submit"]{
     background:white;
 } */
 
-input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#1c9c95;
-    color:white;
-    padding:10px;
-    font-weight: bold;
-    font-size: 17px;
-    border:none;
-    border-radius: 10px;
-    width:100px;
-    margin:20px;
-    display:block;
-    float:right;
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  background: #1c9c95;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  margin: 20px;
+  display: block;
+  float: right;
 }
 
-input[type="reset"]:hover,input[type="submit"]:hover{
-    transform: scale(1,1.1);
-    cursor: pointer;
+input[type='reset']:hover,
+input[type='submit']:hover {
+  transform: scale(1, 1.1);
+  cursor: pointer;
 }
-.submit-cancel input[type=submit]{
-    width: 130px;
+.submit-cancel input[type='submit'] {
+  width: 130px;
 }
 
-.submit-cancel{
-    display:flex;
-    flex-direction: row;
-    margin:2% 4%;
-    margin-top: 10px;
-    align-items: left;
-    justify-content: center;
+.submit-cancel {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 4%;
+  margin-top: 10px;
+  align-items: left;
+  justify-content: center;
 }
