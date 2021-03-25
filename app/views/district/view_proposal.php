@@ -1,6 +1,5 @@
 <?php
     $data=$this->getProposalData();
-    print_r($data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +45,11 @@
             <h4>Click the icon to download the proposal</h4>    
         </div>
         <div class="evaluation_box" style="<?php echo ($data[6]=='pending') ? 'display:flex' : 'display:none' ?>">
-            <button name="approve" class="approve">Approve</button>
-            <button name="reject" class="reject">Reject</button>
+            <form action="" method="post">
+                <input type="text" name="proposal_id" id="" value="<?php ?>">
+                <button name="approve" class="approve" type="submit">Approve</button>
+                <button name="reject" class="reject" type="submit">Reject</button>
+            </form>
         </div>
         <div class="status_box" style="<?php echo ($data[6]=='pending') ? 'display:none' : 'display:flex' ?>">
             <div class="state" style="<?php echo ($data[6]=='approved') ? 'display:flex' : 'display:none' ?>">

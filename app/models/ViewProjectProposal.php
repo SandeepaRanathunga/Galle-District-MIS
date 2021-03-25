@@ -28,5 +28,24 @@
 
         }
 
+        public function approveProposal($proposal_id){
+            $query="UPDATE project_proposal SET approval_status='approved' WHERE proposal_id='$proposal_id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+
+        }
+
+        public function rejectProposal($proposal_id){
+            $query="UPDATE project_proposal SET approval_status='rejected' WHERE proposal_id='$proposal_id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
     }
 ?>
