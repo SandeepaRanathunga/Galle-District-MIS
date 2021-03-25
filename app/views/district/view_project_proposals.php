@@ -40,7 +40,7 @@
                 <td><?php echo $row[3];?></td>
                 <td><?php echo $row[7];?></td>
 
-                <td><a href="<?php echo 'view_proposal?id='.$row[1];?>">View</a></td>
+                <td><a href="<?php echo 'dis_view_proposal?id='.$row[1];?>">View</a></td>
                 <td><a href="<?php echo 'delete?id='.$row[1];?>">Clear</a></td>
             </tr>
             <?php

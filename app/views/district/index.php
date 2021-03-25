@@ -18,18 +18,14 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/disNav.php');?>   
         <div class="button-flex-container" >
-            <!-- <a href="dis_notifications">
-                <div class="bubble" style="<?php if($this->proposal_count==0 ) echo 'display:none'?>"><?php echo $this->proposal_count;?></div>
-                <div><img src="svg/notifications.svg" alt=""></div>
-                <div>Notifications</div>    
-            </a> -->
+           
             <a href="dis_view_project_proposal">
             <div class="bubble" style="<?php if($this->proposal_count==0 ) echo 'display:none'?>"><?php echo $this->proposal_count;?></div>
                 <div><img src="svg/viewProposal.svg" alt=""></div>
                 <div>View Project Proposals</div>
             </a>
             <a href="dis_view_monthly_report">
-            <div class="bubble" style="<?php if($this->proposal_count==2 ) echo 'display:none'?>"><?php echo $this->proposal_count;?></div>
+            <div class="bubble" style="<?php if($this->report_count==0 ) echo 'display:none'?>"><?php echo $this->report_count;?></div>
                 <div><img src="svg/viewReport.svg" alt=""></div>
                 <div>View Monthly Reports</div>
             </a>
