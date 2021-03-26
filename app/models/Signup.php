@@ -11,10 +11,9 @@
         private $nic;
         private $contact_no;
         private $email;
-        private $password;
         private $hashed_password;
-        private $confirm_password;
         private $connection;
+        private $login_permission=1;
 
         public function __construct(){
             $this->connection=$this->dbConnect();
@@ -29,10 +28,7 @@
             $this->nic=$this->clearInputs($_POST['nic']);
             $this->contact_no=$this->clearInputs($_POST['contact_no']);
             $this->email=$this->clearInputs($_POST['email']);
-            $this->password=$this->clearInputs($_POST['password']);
-            $this->confirm_password=$this->clearInputs($_POST['confirm_password']);
-
-            $this->hashed_password=password_hash($this->password,PASSWORD_DEFAULT);
+            $this->hashed_password=password_hash($this->generateRandomPassword(8),PASSWORD_DEFAULT);
             
         }
         //to validate input data
@@ -40,13 +36,19 @@
             if(substr($this->user_id,0,5)!=$this->office_id){
                 return false;
             }
-            if($this->password!=$this->confirm_password){
-                return false;
-            }
             if(in_array($this->email,$this->getEmails())){
                 return false;
             }
             return true;   
+        }
+        private function generateRandomPassword($length) {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
         }
         //to clear input data
         private function clearInputs($input){
@@ -81,7 +83,7 @@
         }
         //finally insert the data to the database
         public function insertUserDetails(){
-            $query="INSERT INTO account (user_id,email,password,user_type) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type')";
+            $query="INSERT INTO account (user_id,email,password,user_type,login_permission) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type','$this->login_permission')";
             $result=$this->connection->query($query);
             if($result){
                 if($this->user_type=='div'){

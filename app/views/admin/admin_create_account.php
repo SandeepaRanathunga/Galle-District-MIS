@@ -73,17 +73,6 @@
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password must contain atleast one number,lowecase,uppercase and 8 or more charactors" onkeyup="checkPasswordPattern()" required>
-                    <p id="pattern" class="warning"></p>
-                </div>
-                <div>
-                    <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" onkeyup="confirmPassword()" required>
-                    <p id="confirm_warning" class="warning"></p>
-                </div>
-                
                 <div class="clearfix">
                     <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit" id="submit">

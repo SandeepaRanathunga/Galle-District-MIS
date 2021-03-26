@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php require_once('includes/header.php');?>
-    <?php require_once('includes/disNav.php');?>
+    <?php require_once('includes/contractorNav.php');?>
     <div class="tag">
             <h2>Manage Expenses</h2>
         </div>
@@ -19,7 +19,7 @@
 
         <center>
         <div>
-            <table id="table-style">
+            <table id="table-style" style="width:70%">
                 <tr>
                     <th>Date</th>
                     <th>Project ID</th>

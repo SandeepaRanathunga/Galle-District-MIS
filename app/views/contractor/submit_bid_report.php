@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php include_once('includes/header.php');?>
-    <?php include_once('includes/divNav.php');?>
+    <?php include_once('includes/contractorNav.php');?>
     <div class="tag">
         <h2>Submit Bit Report</h2>
     </div>

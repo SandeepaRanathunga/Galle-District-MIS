@@ -20,7 +20,7 @@
             $this->password=htmlspecialchars(trim($_POST['password']));
         }
         public function checkUser(){
-            $query="SELECT * FROM account WHERE user_id='$this->userID'";
+            $query="SELECT * FROM account WHERE user_id='$this->userID' AND login_permission=1";
             $result=$this->connection->query($query);
             return $result;   
         }

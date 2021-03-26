@@ -1,7 +1,73 @@
 <?php
     class ContractorSubmitBidReport extends Controller{
+        private $model;
+        private $bid_report_name;
+
         public function contractorSubmitBidReport(){
-            $this->view('contractor/submit_bid_report');
+            if(isset($_POST['submit'])){
+                $this->uploadData();
+            }
+            else
+                $this->view('contractor/submit_bid_report');
+        }
+
+        private function uploadData(){
+<<<<<<< HEAD
+            $this->model=$this->('AddBidReport');
+            $result=$this->fileUploadServer();
+            if($result){
+                $this->model->setDetails($_SESSION['contractor_id'],$this->file_name);
+                $result=$this->model->insertData();
+                if($result){
+                     echo "<script>alert('Data uploaded sucessfully!');</script>";
+                     echo "<script>window.location.href='submit_bid_report';</script>";
+                }
+                else{
+                    echo "<script>alert('Something went wrong.Please try again!');</script>";
+                    echo "<script>window.location.href='submit_bid_report';</script>";
+                }
+            }
+            else{
+                echo "<script>alert('File upload process failed.Please try again!')</script>";
+                echo "<script>window.location.href='submit_bid_report';</script>";
+=======
+            $this->model=$this->model('AddBidReport');
+            $result=$this->fileUploadServer();
+            if($result){
+
+>>>>>>> mvc
+            }
+        }
+        
+        public function fileUploadServer(){
+            $file_name=$_FILES['file']['name'];
+            $temp_file_name=$_FILES['file']['tmp_name'];
+            $error=$_FILES['file']['error'];
+
+            $temp=explode('.',$file_name);
+            $file_extension=end($temp);
+            $file_extension=strtolower($file_extension);
+            $allowed_types=array('pdf','docx');
+
+            if(in_array($file_extension,$allowed_types)){
+                if($error==0){
+                    $file_name=uniqid('',true).'.'.$file_extension;
+                    $this->file_name=$file_name;
+                    $upload_path='uploads/bid_report/'.$file_name;
+                    $result=move_uploaded_file($temp_file_name,$upload_path);
+                    return $result;
+                    
+                }
+                else
+                    return false;
+<<<<<<< HEAD
+                }
+=======
+              }
+>>>>>>> mvc
+            else{
+                return false;
+            }
         }
     }
 ?>
