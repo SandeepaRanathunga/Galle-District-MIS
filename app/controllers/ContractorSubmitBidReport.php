@@ -12,30 +12,23 @@
         }
 
         private function uploadData(){
-<<<<<<< HEAD
-            $this->model=$this->('AddBidReport');
+            $this->model=$this->model('AddBidReport');
             $result=$this->fileUploadServer();
             if($result){
-                $this->model->setDetails($_SESSION['contractor_id'],$this->file_name);
+                $this->model->setDetails($_SESSION['user_id'],$this->file_name);
                 $result=$this->model->insertData();
                 if($result){
                      echo "<script>alert('Data uploaded sucessfully!');</script>";
-                     echo "<script>window.location.href='submit_bid_report';</script>";
+                     echo "<script>window.location.href='submit_bid';</script>";
                 }
                 else{
                     echo "<script>alert('Something went wrong.Please try again!');</script>";
-                    echo "<script>window.location.href='submit_bid_report';</script>";
+                    echo "<script>window.location.href='add_proposal';</script>";
                 }
             }
             else{
                 echo "<script>alert('File upload process failed.Please try again!')</script>";
-                echo "<script>window.location.href='submit_bid_report';</script>";
-=======
-            $this->model=$this->model('AddBidReport');
-            $result=$this->fileUploadServer();
-            if($result){
-
->>>>>>> mvc
+                echo "<script>window.location.href='add_proposal';</script>";
             }
         }
         
@@ -60,11 +53,7 @@
                 }
                 else
                     return false;
-<<<<<<< HEAD
-                }
-=======
               }
->>>>>>> mvc
             else{
                 return false;
             }
