@@ -8,6 +8,7 @@
             $this->model=$this->model('ViewProjectProposal');
             $this->setProposalId();
             $this->setProposalData();
+            $this->setViewStatus();
         }
         public function disViewProposal(){
             if(isset($_POST['approve'])){
@@ -24,7 +25,9 @@
             else
                 $this->view('district/view_proposal');
         }
-
+        private function setViewStatus(){
+            $this->model->updateViewStatus($this->proposal_id);
+        }
         private function setProposalId(){
             $this->proposal_id=filter_var(rtrim($_GET['id'],'/'),FILTER_SANITIZE_URL);
         }
