@@ -11,13 +11,13 @@
         }
         public function disViewProposal(){
             if(isset($_POST['approve'])){
-                echo "<script>alert('Are you sure you want to approve the proposal? Once you approved you are unable to revise it.');</script>";
+                // echo "<script>alert('Are you sure you want to approve the proposal? Once you approved you are unable to revise it.');</script>";
                 $this->model->approveProposal($this->proposal_id);
                 // echo "<script>alert('{$this->proposal_id}');</script>";
-                echo "<script>window.location.href='dis_view_proposal?id={$this->proposal_id}',true;</script>";   
+                 echo "<script>window.location.href='dis_view_proposal?id={$this->proposal_id}',true;</script>";   
             }
             else if(isset($_POST['reject'])){
-                echo "<script>alert('Are you sure you want to reject the proposal? Once you approved you are unable to revise it.');</script>";
+                // echo "<script>alert('Are you sure you want to reject the proposal? Once you approved you are unable to revise it.');</script>";
                 $this->model->rejectProposal($this->proposal_id);
                 echo "<script>window.location.href='dis_view_proposal?id={$this->proposal_id}',true;</script>";
             }
