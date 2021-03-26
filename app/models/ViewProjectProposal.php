@@ -47,5 +47,14 @@
             return false;
         }
 
+        public function updateViewStatus($proposal_id){
+            $query="UPDATE project_proposal SET view_status='viewed' WHERE proposal_id='$proposal_id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
     }
 ?>
