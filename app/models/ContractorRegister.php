@@ -9,7 +9,7 @@
         private $office_address;
         private $contact_no;
         private $email;
-        private $file_name;
+        private $file_name; 
         private $connection;
         
         public function __construct(){
@@ -21,12 +21,11 @@
             $this->name=$this->clearInputs($_POST['name']);
             $this->reg_no=$this->clearInputs($_POST['reg_no']);
             $this->specialized_field=$this->clearInputs($_POST['specialized_field']);
+            $this->nic=$this->clearInputs($_POST['nic']);
             $this->office_address=$this->clearInputs($_POST['office_address']);
             $this->contact_no=$this->clearInputs($_POST['contact_no']);
             $this->email=$this->clearInputs($_POST['email']);
-            $this->file_name=$file_name;
-
-            
+            $this->file_name=$file_name;   
         }
 
         //to validate input data
@@ -52,7 +51,7 @@
 
         //finally insert the data to the database
         public function insertData(){
-            $query="INSERT INTO `contractor_request`(`name`, `reg_no`, `specialized_field`, `office_address`, `contact_no`, `email`, `document`) VALUES ('$this->name','$this->reg_no','$this->specialized_field','$this->office_address','$this->contact_no','$this->email','$this->file_name')";
+            $query="INSERT INTO `contractor_request`(`name`, `reg_no`, `specialized_field`,`nic`,  `office_address`, `contact_no`, `email`, `document`) VALUES ('$this->name','$this->reg_no','$this->specialized_field', '$this->nic', '$this->office_address','$this->contact_no','$this->email','$this->file_name')";
             $result=$this->connection->query($query);
             return $result;
         }
