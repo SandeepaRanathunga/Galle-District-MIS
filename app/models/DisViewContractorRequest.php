@@ -41,6 +41,15 @@
             return false;
         }
 
+        public function rejectRequest($id){
+            $query="DELETE FROM contractor_request WHERE id='$id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
     }
 
 ?>
