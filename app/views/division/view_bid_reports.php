@@ -19,19 +19,7 @@
     </div>
     <div class="container">
         <div class="combutton">
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Bid report 01 by Contractor001</h2></div>
-                <div style="width:15%"><button>View</button></div>
-            </div>
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Bid report 02 by Contractor002</h2></div>
-                <div style="width:15%"><button>View</button></div>
-            </div>
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Bid report 03 by Contractor003</h2></div>
-                <div style="width:15%"><button>View</button></div>
-            </div>
-        </div>
+
     </div>
     <?php require_once('includes/footer.php');?>
 </body>

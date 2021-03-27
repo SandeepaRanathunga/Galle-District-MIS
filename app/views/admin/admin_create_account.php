@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
-    <link rel="stylesheet" href="css/adminCreateAccount.css">
+    <link rel="stylesheet" href="css/adminAccountForms.css">
     <link rel="icon" href="images/logo.png">
     <style>
         .warning{
@@ -73,7 +73,7 @@
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div class="clearfix">
+                <div class="submit-cancel">
                     <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit" id="submit">
                 </div>
