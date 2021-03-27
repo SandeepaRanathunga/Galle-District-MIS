@@ -29,11 +29,11 @@
   display: none;
 }
 
-button {
+.evaluation_box button {
   width: 90%;
   outline: none;
 }
-button:hover {
+.evaluation_box button:hover {
   transform: scale(1, 1.2);
 }
 .approve {

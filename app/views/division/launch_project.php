@@ -1,5 +1,7 @@
 <?php
     // require_once('includes/session.php');
+    $proposal_list=$this->getProposalList();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +11,7 @@
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/monthlyReportstyle.css">
+    <link rel="stylesheet" href="css/alertBox.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -19,44 +22,55 @@
     </div>
     <div class="container">
         <div class="formarea clearfix">
-            <form action="" method="POST">
+            <form action="" method="POST" id="launch_form">
                 <div>
-                    <label for="project_id">Project ID</label>
-                    <input type="text" name="project_id">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="">
                 </div>
                 <div>
-                    <label for="project_id">Project Name</label>
-                    <input type="text" name="project_name">
+                    <label for="proposal_id">Proposal</label>
+                    <select name="proposal_id" id="">
+                    <option disabled selected value>Select</option>
+                        <?php
+                            foreach($proposal_list as $proposal):
+                        ?>
+                        <option value="<?php echo $proposal['proposal_id'];?>"><?php echo $proposal['description'];?></option>
+                        <?php
+                            endforeach; 
+                        ?>
+                    </select>
                 </div>
                 <div>
                     <label for="estimated_duration">Estimated Duration</label>
-                    <input type="date" name="start_date">
+                    <input type="date" name="start_date" >
                     <label for="to" style="width:20px;text-align:center">to</label>
                     <input type="date" name="end_date">
                 </div>
                 <div>
-                    <label for="grama_niladari">Grama Niladari Division</label>
-                    <select name="gramaniladari_id" id="">
-                        <option disabled selected value>Select</option>    
-                        <option value="div01c01">Distrcit secretariat</option>
-                        <option value="div02c02">Akmeemana</option>
-                    </select>
-                </div>
-                <div>
                     <label for="project_id">Contractor</label>
-                    <select name="contracotr_id" id="">
+                    <select name="contractor_id" id=""> 
                         <option disabled selected value>Select</option>    
                         <option value="div01c01">Distrcit secretariat</option>
                         <option value="div02c02">Akmeemana</option>
                     </select>
                 </div>
                 <div>
-                    <input type="reset" value="Cancel" onclick="window.location='div_home';">
-                    <input type="submit" value="Submit" name="submit">
+                    <input type="reset" value="Cancel">
+                    <input type="submit" value="Submit" name="submit" id="submit"> 
                 </div>
             </form>
         </div>
     </div>
+    <div class="popup_box">
+        <i class="fas fa-exclamation"></i>
+        <h1>Are you sure you want to proceed!</h1>
+        <div class="btns">
+            <button class="btn1" id="proceed">Proceed</button>
+            <button class="btn2" id="cancel">Cancel</button>
+        </div>
+    </div>
+    
     <?php require_once('includes/footer.php');?>
+    <script src="js/launch.js"></script>
 </body>
 </html>
