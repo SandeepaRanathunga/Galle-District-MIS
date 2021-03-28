@@ -34,7 +34,7 @@
     //projects
     $router->addRoute('projects','Projects','index');
     //aboutus
-    $router->addRoute('about_us','AdminAboutUs','aboutUs');
+    $router->addRoute('about_us','AdminAboutUs','AdminAboutUs'); //aboutUsPageShownToThePublic
 
 
     /*--------------------division---------------------*/

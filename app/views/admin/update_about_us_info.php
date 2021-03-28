@@ -1,4 +1,6 @@
 <?php
+    //VIEW
+    
     // require_once('includes/session.php');
 ?>
 <!DOCTYPE html>
@@ -39,7 +41,18 @@
                     </div>
                 </form>
             </div>
-            
+
+            <!-- Naushika's Code -->
+            <!-- Naushika's Code -->
+            <!-- Naushika's Code -->
+            <?php foreach ($data as $name): ?>
+            <h1><?=$name?></h1>
+            <?php endforeach ?>
+            <!-- Naushika's Code -->
+            <!-- Naushika's Code -->
+            <!-- Naushika's Code -->
+
+
         <?php include 'includes/footer.php';?>
         
         </div>
