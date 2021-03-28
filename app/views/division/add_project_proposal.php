@@ -27,7 +27,7 @@
                     <label for="file">Attach Document</label>
                     <input type="file" name="file" id="file" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.pdf" required>
                 </div>
-                <div>
+                <div class="submit-cancel">
                     <input type="reset" name="cancel">
                     <input type="submit" name="submit" value="Submit">
 

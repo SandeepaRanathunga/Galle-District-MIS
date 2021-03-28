@@ -7,6 +7,7 @@
         private $reg_no;
         private $specialized_field;
         private $office_address;
+        private $div_id;
         private $contact_no;
         private $email;
         private $file_name;
@@ -16,12 +17,23 @@
             $this->connection=$this->dbConnect(); 
         }
 
+        public function getDivisions(){
+            $result_arr=[];
+            $query="SELECT * FROM division ORDER BY div_name ASC";
+            $result=$this->connection->query($query);
+            while($row=$result->fetch_assoc()){
+                array_push($result_arr,[$row['div_id'],$row['div_name']]);
+            }
+            return $result_arr;
+        }
+
         //set the data received from input fields
         public function setDetails($file_name){
             $this->name=$this->clearInputs($_POST['name']);
             $this->reg_no=$this->clearInputs($_POST['reg_no']);
             $this->specialized_field=$this->clearInputs($_POST['specialized_field']);
             $this->office_address=$this->clearInputs($_POST['office_address']);
+            $this->div_id=$this->clearInputs($_POST['div_id']);
             $this->contact_no=$this->clearInputs($_POST['contact_no']);
             $this->email=$this->clearInputs($_POST['email']);
             $this->file_name=$file_name;

@@ -1,9 +1,12 @@
+<?php
+    $divisions=$this->divisions;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account</title> <!--Change name here-->
+    <title>Contractor Register</title> <!--Change name here-->
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/adminCreateAccount.css">
     <link rel="icon" href="images/logo.png">
@@ -50,6 +53,19 @@
                 <div>
                     <label for="office_address">Office Address</label>
                     <input type="text" name="office_address" id="office_address" required>
+                </div>
+                <div>
+                    <label for="div_id">Preferred Division</label>
+                    <select name="div_id" id="div_id" required>
+                        <option disabled selected value>Select</option>
+                        <?php
+                            foreach($divisions as $division):
+                        ?>
+                        <option value="<?php echo $division[0];?>"><?php echo $division[1];?></option>
+                        <?php
+                            endforeach; 
+                        ?>
+                    </select>
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
