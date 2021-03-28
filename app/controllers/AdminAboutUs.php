@@ -1,26 +1,21 @@
 <?php
     class AdminAboutUs extends Controller{
         private $model ;
-        public $content ; //to store the content in the info cell
+        private $content ; //to store the content in the info cell
 
         public function __construct(){
             $this->model=$this->model('AdminAboutUs');
-            $this->content=$this->getNewContent();
+            $this->content=$this->model->getNewContent();
             
         }
         public function adminAboutUs(){
-            $this->view('/home/about_us', $content);
+            $this->view('/home/about_us');
         }
-        
-        
+        //getting content from the content variable
+        public function getContent(){
+            return $this->content ;
+        }
             
-            
-            // load model
-            // $aboutUsModel = new aboutUsModel();
-            // $data = $aboutUsModel->getdataaboutus();
-            
-            
-            // $this->view('home/about_us', $data);
         }
     
 ?>

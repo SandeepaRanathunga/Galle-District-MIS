@@ -5,7 +5,6 @@
     //About Us Page Shown To The Public
     class AdminAboutUS{
 
-        
         private $connection;
 
         public function __construct(){
@@ -18,9 +17,14 @@
         }
         //Get the Content from the database
         public function getNewContent(){
-            $query="SELECT * FROM `about_us`";
-            $result=$this->connection->query($query);   
-            return $result;
+            $result_array = [] ;
+            $query="SELECT * FROM `about_us`" ;
+            $result=$this->connection->query($query) ;
+            if ($result->num_rows>0){
+                $result_array = $result->fetch_assoc() ;
+                return $result_array ;
+            }
+            return $result_array ;
         }
 
     }
