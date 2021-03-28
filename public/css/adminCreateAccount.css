@@ -7,21 +7,22 @@
     min-width: 300px;
     position: relative;
     padding:10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-    background-color: white;
-    display: block;
+    background-color: white ;
 }
+
 .formarea{
     position:relative;
-    /* left: 50%; */
-    /* display:flex; */
+    display:flex;
     justify-content:flex-start;
-    width:450px;
     padding:10px;
     box-sizing: border-box;
-    display:block;
 }
+
 .formarea label{
     color:#434647;
     font-size: 15px;
@@ -29,6 +30,7 @@
     display:inline-block;
     width:150px;
 }
+
 input[type="text"],input[type="email"],input[type="password"],input[type="file"]{
     border:1px solid #434647;
     width:200px;
@@ -37,7 +39,9 @@ input[type="text"],input[type="email"],input[type="password"],input[type="file"]
     border-radius: 4px;
     margin-top: 20px;
     padding:5px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    
+    
 }
 
 select{
@@ -78,16 +82,9 @@ input[type="reset"],input[type="submit"]{
 input[type="reset"],input[type="submit"]:focus{
     outline:none;
 }
+
 input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.005);
     cursor: pointer;
     margin-top: 10px;
-}
-
-.submit-cancel{
-    display:flex;
-    flex-direction: row;
-    margin:2% 4%;
-    align-items: left;
-    justify-content: center;
 }

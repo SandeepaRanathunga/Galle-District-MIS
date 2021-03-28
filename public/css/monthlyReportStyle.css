@@ -1,17 +1,32 @@
 .container{
-    position: relative;
+    /* position: relative;
     display:flex;
     align-items: center;
     justify-content: center;
-    padding:25px;
-
+    padding:25px; */
+    margin-top:5%;
+    margin-left: 20%;
+    margin-right:20%;
+    margin-bottom:3%;
+    width: 60%;
+    min-width: 300px;
+    position: relative;
+    padding:10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: white ;
 }
+
 .formarea{
     /* position:relative; */
     padding:10px;
     box-sizing: border-box;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
+
 .formarea label{
     color:#434647;
     font-size: 18px;
@@ -95,4 +110,11 @@ input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.1);
     cursor: pointer;
 }
+
+.submit-cancel{
+    display:flex;
+    flex-direction: row;
+    margin:2% 4%;
+    align-items: left;
+    justify-content: center;
 }

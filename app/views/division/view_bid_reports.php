@@ -18,8 +18,7 @@
         <h2>View bid reports</h2>
     </div>
     <div class="container">
-        <div class="combutton">
-
+        
     </div>
     <?php require_once('includes/footer.php');?>
 </body>

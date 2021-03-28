@@ -32,7 +32,7 @@
                     <label for="bid_report">Attach bid notice</label>
                     <input type="file" name="bid_report" id="">
                 </div>
-                <div>
+                <div class="submit-cancel">
                     <input type="reset" value="Cancel" onclick="window.location='div_home';">
                     <input type="submit" value="Submit" name="submit">
                 </div>

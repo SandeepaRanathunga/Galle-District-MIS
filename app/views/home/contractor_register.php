@@ -9,8 +9,7 @@
     <link rel="icon" href="images/logo.png">
     <style>
         .warning{
-            display:inline-block;
-            
+            display:inline-block;    
         }
     </style>
 </head>
@@ -66,9 +65,8 @@
                 </div>
                 
                 <div class="clearfix" style="display:flex; justify-content:center;margin:5px;">
-                    <input type="submit" value="Submit" name="submit" id="submit">
                     <input type="reset" value="Cancel">
-                    
+                    <input type="submit" value="Submit" name="submit" id="submit">
                 </div>
                         
             </form>

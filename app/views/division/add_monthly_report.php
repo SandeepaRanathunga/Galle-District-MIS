@@ -49,10 +49,10 @@
                     <input type="radio" name="status" id="finished" value="finished">
                     <label for="finished" style="width:70px;text-align:center">Finished</label>
                 </div>
-                <div>
-
-                    <input type="reset" value="Cancel" name="reset" onclick="window.location='div_home';">
+                <div class="submit-cancel
+                ">
                     <input type="submit" value="Submit" name="submit">
+                    <input type="reset" value="Cancel" name="reset" onclick="window.location='div_home';">
                 </div>
             </form>
         </div>

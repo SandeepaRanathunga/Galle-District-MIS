@@ -50,7 +50,7 @@
                         <option value="div02c02">Akmeemana</option>
                     </select>
                 </div>
-                <div>
+                <div class="submit-cancel">
                     <input type="reset" value="Cancel" onclick="window.location='div_home';">
                     <input type="submit" value="Submit" name="submit">
                 </div>
