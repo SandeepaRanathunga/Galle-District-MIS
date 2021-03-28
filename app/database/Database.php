@@ -16,7 +16,7 @@
                 die("Connection to the database failed ".$this->connection->connect_error);
             }
             //echo "Database connected sucessfully!";
-            //echo password_hash('1234',PASSWORD_DEFAULT);
+            //echo password_hash('Qwerty@123',PASSWORD_DEFAULT);
         }
 
         public function getConnection(){
