@@ -2,7 +2,7 @@
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
 
-    class ViewProposal{
+    class ViewProposalList{
 
         private $connection;
 
