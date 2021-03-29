@@ -13,8 +13,8 @@
     box-sizing: border-box;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
     background-color: white ;
-
 }
+
 .formarea{
     position:relative;
     display:flex;
@@ -22,6 +22,7 @@
     padding:10px;
     box-sizing: border-box;
 }
+
 .formarea label{
     color:#434647;
     font-size: 15px;
@@ -29,6 +30,7 @@
     display:inline-block;
     width:150px;
 }
+
 input[type="text"],input[type="email"],input[type="password"],input[type="file"]{
     border:1px solid #434647;
     width:200px;
@@ -41,6 +43,7 @@ input[type="text"],input[type="email"],input[type="password"],input[type="file"]
     
     
 }
+
 select{
         border:1px solid #434647;
         width:200px;
@@ -50,15 +53,18 @@ select{
         box-sizing: border-box;
         border-radius: 4px;
 }
+
 input[type="file"]{
     border:none;
     margin:5px;
     margin-top: 20px;
     height:30px;
 }
+
 input[type="checkbox"]{
     margin-right:5px;
 }
+
 input[type="reset"],input[type="submit"]{
     background:#1c9c95;
     color:white;
@@ -76,6 +82,7 @@ input[type="reset"],input[type="submit"]{
 input[type="reset"],input[type="submit"]:focus{
     outline:none;
 }
+
 input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.005);
     cursor: pointer;

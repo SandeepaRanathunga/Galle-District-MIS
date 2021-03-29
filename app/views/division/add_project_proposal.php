@@ -8,6 +8,7 @@
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/monthlyReportstyle.css">
+    <link rel="stylesheet" href="css/background.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -30,9 +31,9 @@
                 <div class="submit-cancel">
                     <input type="reset" name="cancel">
                     <input type="submit" name="submit" value="Submit">
-
                 </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <?php require_once('includes/footer.php');?>

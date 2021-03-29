@@ -11,6 +11,8 @@
         private $contact_no;
         private $email;
         private $file_name;
+        private $view_status;
+        private $approval_status; 
         private $connection;
         
         public function __construct(){
@@ -32,13 +34,14 @@
             $this->name=$this->clearInputs($_POST['name']);
             $this->reg_no=$this->clearInputs($_POST['reg_no']);
             $this->specialized_field=$this->clearInputs($_POST['specialized_field']);
+            $this->nic=$this->clearInputs($_POST['nic']);
             $this->office_address=$this->clearInputs($_POST['office_address']);
             $this->div_id=$this->clearInputs($_POST['div_id']);
             $this->contact_no=$this->clearInputs($_POST['contact_no']);
             $this->email=$this->clearInputs($_POST['email']);
-            $this->file_name=$file_name;
-
-            
+            $this->file_name=$file_name;   
+            $this->view_status='not-viewd';
+            $this->approval_status='pending';
         }
 
         //to validate input data

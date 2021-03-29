@@ -40,6 +40,7 @@
                 <?php echo $data[7]?>
             </div>
         </div>
+        
         <div class="task_box">
             <div>
                 <a href="uploads/proposal/<?php echo $data[4];?>" download ><img src="svg/download.svg" alt="" class="download_btn"></a>
