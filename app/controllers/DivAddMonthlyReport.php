@@ -13,7 +13,12 @@
             if(isset($_POST['submit'])){
                 $this->setData();
                 if($this->insertData()){
+                   if( $this->uploadImages() && $this->uploadFiles()){
                     echo "<script>alert('Data inserted sucessfully!')</script>";
+                   }
+                   else{
+                    "<script>alert('Files not updated to the db!')</script>";
+                   }
                 }
                 else{
                     echo "<script>alert('Data inserted failed!')</script>";
@@ -32,62 +37,64 @@
         }
         private function uploadImages(){
             $approved_types=array('jpeg','jpg','png','gif');
-            foreach ($_FILES['image']['tmp_name'] as $key => $value) {
-                $filename=$_FILES['image']['name'][$key];
-                $filename_tmp=$_FILES['image']['tmp_name'][$key];
-                echo '<br>';
+            $file_count=count($_FILES['image']['tmp_name']);
+            for ($i=0 ; $i<$file_count ; $i++) {
+                $filename=$_FILES['image']['name'][$i];
+                $filename_tmp=$_FILES['image']['tmp_name'][$i];
                 $extension=pathinfo($filename,PATHINFO_EXTENSION);
                 $final_name='';
-                if(in_array($extension,$approved_types)){
-                    $upload_path='uploads/monthly_report/'.$_SESSION['office_id'].'/images/'.$filename;
-                    if(!file_exists($upload_path)){
-                        move_uploaded_file($filename_tmp, $upload_path);
-                        $final_name=$filename;
-                    }
-                    else{
-                        $filename=str_replace('.','-',basename($filename,$ext));
-                        $newfilename=$filename.time().".".$extension;
-                        $upload_path='uploads/monthly_report/'.$_SESSION['office_id'].'/images/'.$newfilename;
-                        move_uploaded_file($filename_tmp, $upload_path);
-                        $final_name=$newfilename;
-                    }
-
-                    return true;
+                if(in_array(strtolower($extension),$approved_types)){
+                    $final_name=uniqid('',true).'.'.$extension;
+                    $upload_path='uploads/monthly_report/'.$_SESSION['office_id'].'/images/'.$final_name;
+                        $sucess=move_uploaded_file($filename_tmp, $upload_path);
+                        if(!$sucess){
+                            return false;
+                        }
+                        else{
+                            if($this->uploadToDatabase($final_name,1)){
+                                return true;
+                            }
+                            return false;
+                        }
                 }
                 else{
-                    return false;
+                    continue;
                 }
             }
+            return true;
         }
         public function uploadFiles(){
             $approved_types=array('pdf','docx');
-            foreach ($_FILES['file']['tmp_name'] as $key => $value) {
-                $filename=$_FILES['file']['name'][$key];
-                $filename_tmp=$_FILES['file']['tmp_name'][$key];
-                echo '<br>';
+            $file_count=count($_FILES['file']['tmp_name']);
+            for ($i=0 ; $i<$file_count ; $i++) {
+                $filename=$_FILES['file']['name'][$i];
+                $filename_tmp=$_FILES['file']['tmp_name'][$i];
                 $extension=pathinfo($filename,PATHINFO_EXTENSION);
                 $final_name='';
-                if(in_array($extension,$approved_types)){
-                    $upload_path='uploads/monthly_report/'.$_SESSION['office_id'].'/files/'.$filename;
-                    if(!file_exists($upload_path)){
-                        move_uploaded_file($filename_tmp, $upload_path);
-                        $final_name=$filename;
-                    }
-                    else{
-                        $filename=str_replace('.','-',basename($filename,$ext));
-                        $newfilename=$filename.time().".".$extension;
-                        $upload_path='uploads/monthly_report/'.$_SESSION['office_id'].'/files/'.$newfilename;
-                        move_uploaded_file($filename_tmp, $upload_path);
-                        $final_name=$newfilename;
-                    }
+                if(in_array(strtolower($extension),$approved_types)){
+                    $final_name=uniqid('',true).'.'.$extension;
+                    $upload_path='uploads/monthly_report/'.$_SESSION['office_id'].'/documents/'.$final_name;
+                        $sucess=move_uploaded_file($filename_tmp, $upload_path);
+                        if(!$sucess){
+                            return false;
+                        }
+                        else{
+                            if($this->uploadToDatabase($final_name,1)){
+                                return true;
+                            }
+                            return false;
+                        }
                 }
                 else{
-                    return false;
-                }
-
-            }
+                    continue;
+                } 
         }
-        
+        return true;
+    }
+        public function uploadToDatabase($final_name,$type){
+            $this->model->insertFileNames($final_name,$type);
+        }    
+
         public function getProjectlList(){
             return $this->project_list;
         }

@@ -9,7 +9,7 @@
             $this->getDetails();
         }
         private function getDetails(){
-            $model=$this->model('ViewProposal');
+            $model=$this->model('ViewProposalList');
             $this->result=$model->getData();
 
 
