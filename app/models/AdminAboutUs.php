@@ -3,8 +3,8 @@
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
     //About Us Page Shown To The Public
-    class AdminAboutUS{
 
+    class AdminAboutUS{
         private $connection;
 
         public function __construct(){

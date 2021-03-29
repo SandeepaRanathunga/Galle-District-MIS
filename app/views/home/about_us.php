@@ -1,9 +1,5 @@
 <?php
     //VIEW
-    if(isset($_GET['name'])){
-        echo $_GET['name'];
-    }
-
     $content_arr = $this->getContent() ;
         $content = $content_arr['about_us_info'] ;
 ?>

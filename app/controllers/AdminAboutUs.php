@@ -1,7 +1,7 @@
 <?php
     class AdminAboutUs extends Controller{
         private $model ;
-        private $content ; //to store the content in the info cell
+        private $content ; //variable to store the content in the info cell
 
         public function __construct(){
             $this->model=$this->model('AdminAboutUs');

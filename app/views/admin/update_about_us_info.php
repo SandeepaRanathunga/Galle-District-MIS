@@ -1,5 +1,8 @@
 <?php
     //VIEW
+    $content_arr = $this->getContent() ;
+    $content = $content_arr['about_us_info'] ;
+    //echo $content ;
     
     // require_once('includes/session.php');
 ?>
@@ -27,30 +30,23 @@
             <div class="formarea">
                 <form action="" method="post">
                     <div class="label-text">
+                            <!-- showing the cell's content in the textarea -->
                             <textarea id="updateaboutus" name="updateaboutus" rows="15" cols="190">
+                            <?php echo $content ?>
                             </textarea>
                     </div>
                         
                     <div class="update-cancel">
                     <div class="button">
-                        <input type="submit" name="update" value="Update">
+                        <input type="submit" name="update" value="Update" >
                     </div>   
                     <div class="button"> 
-                        <input type="submit" name="cancel" value="Cancel" onclick="window.location='admin_home';">
+                        <input type="reset" name="cancel" value="Cancel" onclick="window.location='admin_home';">
                     </div>
                     </div>
                 </form>
             </div>
-
-            <!-- Naushika's Code -->
-            <!-- Naushika's Code -->
-            <!-- Naushika's Code -->
-            <?php foreach ($data as $name): ?>
-            <h1><?=$name?></h1>
-            <?php endforeach ?>
-            <!-- Naushika's Code -->
-            <!-- Naushika's Code -->
-            <!-- Naushika's Code -->
+            
 
 
         <?php include 'includes/footer.php';?>

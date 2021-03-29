@@ -18,6 +18,18 @@
             $this->content=$this->clearInputs($_POST['updateaboutus']);
             
         }
+        //to display the content in the textarea 
+        public function getExistingContent(){
+            $result_array = [] ;
+            $query="SELECT * FROM `about_us`" ;
+            $result=$this->connection->query($query) ;
+            if ($result->num_rows>0){
+                $result_array = $result->fetch_assoc() ;
+                return $result_array ;
+            }
+            return $result_array ;
+        }
+
         private function clearInputs($input){
             $input=trim($input);
             $input=htmlspecialchars($input);
@@ -26,9 +38,14 @@
         }
         
         public function updateInfo(){
-            $query="INSERT INTO about_us(about_us_info) VALUES('$this->content')";
+            $query="UPDATE `about_us` SET `about_us_info`='$this->content' WHERE 1";
             $result=$this->connection->query($query);
-            return $result;
+            if($conenction->affected_rows > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
             
         }
         
