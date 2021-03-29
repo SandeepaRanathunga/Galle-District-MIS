@@ -67,7 +67,7 @@
 
         //finally insert the data to the database
         public function insertData(){
-            $query="INSERT INTO `contractor_request`(`name`, `reg_no`, `specialized_field`, `office_address`, `div_id`, `contact_no`, `email`, `document`) VALUES ('$this->name','$this->reg_no','$this->specialized_field','$this->office_address', '$this->div_id','$this->contact_no','$this->email','$this->file_name')";
+            $query="INSERT INTO `contractor_request`(`name`, `reg_no`, `specialized_field`, `office_address`, `div_id`, `contact_no`, `email`, `document`, `view_status`, `approval_status`) VALUES ('$this->name','$this->reg_no','$this->specialized_field','$this->office_address', '$this->div_id','$this->contact_no','$this->email','$this->file_name', '$this->view_status', '$this->approval_status')";
             $result=$this->connection->query($query);
             return $result;
         }

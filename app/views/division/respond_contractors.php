@@ -1,7 +1,7 @@
 <?php
-    // require_once('includes/session.php');
+    require_once('includes/session.php');
     $result = $this->getResult();
-    print_r($result);
+    //print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@
                 <th>Contact Number</th>
                 <th>e-mail</th>
                 <th>Requested Date</th>
-                <th colspan=2>Action</th>
+                <th>Action</th>
             </tr>
             <?php
                 foreach($result as $row):
@@ -48,8 +48,7 @@
                 <td><?php echo $row[7];?></td>
                 <td><?php echo $row[8];?></td>
                 <td><?php echo $row[9];?></td>
-                <td><a href="<?php echo 'respond_contractors?id='.$row[0];?>" class="view_button">View</a></td>
-                <td><a href="<?php echo 'delete?id='.$row[0];?>" class="view_button">Clear</a></td>
+                <td><a href="<?php echo 'respond_contractor_request?id='.$row[0];?>" class="view_button">View</a></td>
             </tr>
             <?php
                 endforeach;

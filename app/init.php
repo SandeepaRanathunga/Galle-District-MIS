@@ -51,8 +51,11 @@
     $router->addRoute('div_notifications','DivNotifications','divNotifications');
     //division respond contractors
     $router->addRoute('respond_contractors','DivRespondContractors','divRespondContractors');
+    //division respond contractor request
+    $router->addRoute('respond_contractor_request','DivRespondContractorRequest','divRespondContractorRequest');
     //division view bid reports
     $router->addRoute('view_bid_reports','DivViewBidReports','divViewBidReports');
+ 
     
     /*--------------------district---------------------*/
     $router->addRoute('dis_home','DisHome','disHome');
