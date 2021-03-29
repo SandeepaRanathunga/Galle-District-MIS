@@ -1,116 +1,111 @@
-.container{
-    margin-top:5%;
-    margin-left: 20%;
-    margin-right:20%;
-    margin-bottom:3%;
-    width: 60%;
-    min-width: 300px;
-    position: relative;
-    padding:10px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-    background-color: white ;
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.formarea {
+  /* position:relative; */
+  padding: 10px;
+  box-sizing: border-box;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.formarea label {
+  color: #434647;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  width: 200px;
+}
+.drag {
+  width: 800px;
+  min-height: 250px;
+  color: #2f4f4f;
+  text-align: center;
+  background-color: rgba(0, 225, 255, 0.226);
+  border: solid #2f4f4f 5px;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
-.formarea{
-    /* position:relative; */
-    padding:10px;
-    box-sizing: border-box;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+.drag img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  float: left;
+  margin: 2px 5px;
+  color: #2f4f4f;
+}
+textarea {
+  display: inline-block;
+  padding: 5px;
+}
+.form-field * {
+  vertical-align: middle;
 }
 
-.formarea label{
-    color:#434647;
-    font-size: 18px;
-    font-weight: bold;
-    display:inline-block;
-    width:200px;
+input[type='text'],
+input[type='date'],
+input[type='number'],
+select {
+  border: 2px solid #434647;
+  width: 300px;
+  height: 40px;
+  margin: 5px;
+  margin-top: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+  outline: #434647;
+}
+input[type='file'] {
+  border: none;
+  margin: 5px;
+  margin-top: 20px;
+  height: 30px;
+}
+input[type='file']:focus {
+  outline: none;
+}
+input[type='radio'] {
+  margin: 5px;
+  margin-top: 20px;
+}
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  background: #1c9c95;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  margin: 20px;
+  display: block;
+  float: right;
+  outline: none;
 }
 
-.drag{
-    width: 800px;
-    min-height: 250px;
-    color:#2F4F4F;
-    text-align: center;
-    background-color: rgba(0, 225, 255, 0.226);
-    border: solid #2F4F4F 5px;
-    border-radius: 4px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:10px;
-    margin:10px;
-    box-sizing: border-box;
-    align-items: center;
+input[type='reset']:hover,
+input[type='submit']:hover {
+  transform: scale(1, 1.1);
+  cursor: pointer;
 }
 
-.drag img{
-    width:50px;
-    height:50px;
-    display:block;
-    float:left;
-    margin:2px 5px;
-    color: #2F4F4F;
-}
-textarea{
-     display:inline-block;
-     padding:5px;
-}
-.form-field *{
-    vertical-align: middle;;
-}
-
-input[type="text"],input[type="date"],input[type="number"],select{
-    border:2px solid #434647;
-    width:300px;
-    height:40px;
-    margin:5px;
-    margin-top: 20px;
-    padding:5px;
-    box-sizing: border-box;
-    outline:#434647;
-}
-input[type="file"]{
-    border:none;
-    margin:5px;
-    margin-top: 20px;
-    height:30px;
-}
-input[type="file"]:focus{
-    outline:none;
-}
-input[type="radio"]{
-    margin:5px;
-    margin-top: 20px;
-}
-input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#1c9c95;
-    color:white;
-    padding:10px;
-    font-weight: bold;
-    font-size: 17px;
-    border:none;
-    border-radius: 10px;
-    width:100px;
-    margin:20px;
-    display:block;
-    float:right;
-}
-
-input[type="reset"]:hover,input[type="submit"]:hover{
-    transform: scale(1,1.1);
-    cursor: pointer;
-}
-
-.submit-cancel{
-    display:flex;
-    flex-direction: row;
-    margin:2% 4%;
-    align-items: left;
-    justify-content: center;
+.submit-cancel {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 4%;
+  align-items: left;
+  justify-content: center;
 }
