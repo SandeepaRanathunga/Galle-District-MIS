@@ -20,7 +20,7 @@
         <h2>Project proposals</h2>
     </div>
     <div class="container">
-        <!--- center --->
+        <center>
         <table id="table-style">
             <tr>
                 <th>View Status</th>
@@ -28,26 +28,25 @@
                 <th>Division Name</th>
                 <th>Proposal Description</th>
                 <th>Submitted Date</th>
-                <th colspan=2>Action</th>
+                <th>Action</th>
             </tr>
             <?php
                 foreach($result as $row):
             ?>
             <tr>
-                <td><?php echo $row[5];?></td>
-                <td><?php echo $row[6];?></td>
+                <td><h4 style=<?php echo ($row[5]=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row[5];?></h4></td>
+                <td><h4 style=<?php echo ($row[6]=='pending' ? 'background-color:#FFC107': ($row[6]=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[6];?></h4></td>
                 <td><?php echo $row[0];?></td>
-                <td><?php echo $row[3];?></td>
+                <td style="text-align:left"><?php echo $row[3];?></td>
                 <td><?php echo $row[7];?></td>
 
-                <td><a href="<?php echo 'dis_view_proposal?id='.$row[1];?>">View</a></td>
-                <td><a href="<?php echo 'delete?id='.$row[1];?>">Clear</a></td>
+                <td><a href="<?php echo 'dis_view_proposal?id='.$row[1];?>" class="view_button">View</a></td>
             </tr>
             <?php
                 endforeach;
             ?>     
         </table>
-        <!-- </center> -->
+        </center>
     </div>
     <?php require_once('includes/footer.php');?>
 </body>
