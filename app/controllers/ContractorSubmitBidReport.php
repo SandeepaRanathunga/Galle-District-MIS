@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class ContractorSubmitBidReport extends Controller{
         private $model;
         private $bid_report_name;
@@ -15,7 +16,7 @@
             $this->model=$this->model('AddBidReport');
             $result=$this->fileUploadServer();
             if($result){
-                $this->model->setDetails($_SESSION['user_id'],$this->file_name);
+                $this->model->setDetails($_SESSION['contractor_id'],$this->bid_report_name);
                 $result=$this->model->insertData();
                 if($result){
                      echo "<script>alert('Data uploaded sucessfully!');</script>";
@@ -28,7 +29,7 @@
             }
             else{
                 echo "<script>alert('File upload process failed.Please try again!')</script>";
-                echo "<script>window.location.href='add_proposal';</script>";
+                echo "<script>window.location.href='submit_bid_report';</script>";
             }
         }
         
@@ -53,7 +54,7 @@
                 }
                 else
                     return false;
-              }
+                }
             else{
                 return false;
             }

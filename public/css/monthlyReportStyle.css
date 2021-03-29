@@ -101,3 +101,11 @@ input[type='submit']:hover {
   transform: scale(1, 1.1);
   cursor: pointer;
 }
+
+.submit-cancel {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 4%;
+  align-items: left;
+  justify-content: center;
+}

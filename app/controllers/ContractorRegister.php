@@ -8,7 +8,7 @@ require_once __DIR__ . '/../mailer/MailSender.php';
 
         public function __construct(){
             $this->model=$this->model('ContractorRegister');
-
+            $this->divisions=$this->getdivisionList();
         }
 
         public function contractorRegister(){
@@ -69,7 +69,9 @@ require_once __DIR__ . '/../mailer/MailSender.php';
             }
         }
 
-        
+        public function getDivisionList(){
+            return $this->model->getDivisions();
+        }        
         
 
     }
