@@ -25,11 +25,11 @@
             <form action="" method="POST" id="launch_form">
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="">
+                    <input type="text" name="name" id="" required>
                 </div>
                 <div>
                     <label for="proposal_id">Proposal</label>
-                    <select name="proposal_id" id="">
+                    <select name="proposal_id" id="" required>
                     <option disabled selected value>Select</option>
                         <?php
                             foreach($proposal_list as $proposal):
@@ -42,13 +42,13 @@
                 </div>
                 <div>
                     <label for="estimated_duration">Estimated Duration</label>
-                    <input type="date" name="start_date" >
+                    <input type="date" name="start_date" required>
                     <label for="to" style="width:20px;text-align:center">to</label>
                     <input type="date" name="end_date">
                 </div>
                 <div>
                     <label for="project_id">Contractor</label>
-                    <select name="contractor_id" id=""> 
+                    <select name="contractor_id" id="" required> 
                         <option disabled selected value>Select</option>    
                         <option value="div01c01">Distrcit secretariat</option>
                         <option value="div02c02">Akmeemana</option>

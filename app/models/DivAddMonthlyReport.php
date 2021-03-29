@@ -19,15 +19,16 @@
             $database=new \Database();
             return $database->getConnection();
         }
-        public function setDetails($div_id,$report_no){
-            $this->div_id=$div_id;
-            $this->project_id=$project_id;
-            $this->report_no=$report_no;
-            $this->from_date=$from_date;
-            $this->to_date=$to_date;
+        public function setDetails(){
+            $this->div_id=$this->clearInputs($_SESSION['office_id']);
+            $this->project_id=$this->clearInputs($_POST['project_id']);
+            $this->report_no=$this->clearInputs($_POST['report_no']);
+            $this->from_date=$this->clearInputs($_POST['start_date']);
+            $this->to_date=$this->clearInputs($_POST['end_date']);
+            $this->project_status=$this->clearInputs($_POST['status']);;
             $this->view_status='not-viewd';
             $this->approval_status='pending';
-            $this->project_status='ongoing';
+            
         }
         private function clearInputs($input){
             $input=trim($input);
@@ -37,10 +38,24 @@
         }
         
         public function insertData(){
-            $query="INSERT INTO monthly_report (project_id,report_no,from_date,to_date,view_status,approval_status,project_status) VALUES ('$this->div_id','$this->description','$this->file_name','$this->view_status','$this->approval_status')";
+            $query="INSERT INTO `monthly_report`(`project_id`, `report_no`, `from_date`, `to_date`, `view_status`, `approval_status`, `project_status`) VALUES ('$this->project_id','$this->report_no','$this->from_date','$this->to_date',='$this->view_status','$this->approval_status','$this->project_status')";
             $result=$this->connection->query($query);
-            return $result;
-            
+            if($this->connection->affected_rows > 0)
+                return true;
+            return false;
+        }
+
+        public function  getProjects($div_id){
+            $result_arr=[];
+            $query="SELECT project_id,project_name FROM project WHERE project_status='ongoing' && div_id='$div_id'";
+            $result=$this->connection->query($query);
+            if($result->num_rows > 0){
+                while($row=$result->fetch_assoc()){
+                    array_push($result_arr,$row);
+                }
+                return $result_arr;
+            }
+            return $result_arr;
         }
 
     }
