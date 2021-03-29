@@ -18,6 +18,7 @@
             $this->content=$this->clearInputs($_POST['updateaboutus']);
             
         }
+        
         //to display the content in the textarea 
         public function getExistingContent(){
             $result_array = [] ;
