@@ -11,14 +11,16 @@
         }
 
         private function dbConnect(){
-            $datbase=new \Database();
+            $database=new \Database();
             return $database->getConnection();
         }
 
         public function getData($id){
             $result_arr=[];
             $query="SELECT * FROM contractor_request WHERE id='$id'";
+            echo $query;
             $result=$this->connection->query($query);
+            print_r ($result);
             if($result->num_rows>0){
                 while($row=$result->fetch_assoc()){
                     $result_arr=[$row['id'],$row['view_status'],$row['approval_status'],$row['name'],$row['reg_no'],$row['specialized_field'],$row['office_address'],$row['contact_no'],$row['email'],$row['requested_date'],$row['div_id'],$row['document']];
