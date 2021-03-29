@@ -39,6 +39,7 @@
         public function insertData(){
             $query="INSERT INTO bid_report (contractor_id,bid_report_id,bid_report_name,div_id,view_status,approval_status) VALUES ('$this->contractor_id','$this->bid_report_id','$this->bid_report_name','$this->div_id','$this->view_status','$this->approval_status')";
             $result=$this->connection->query($query);
+            print_r($result);
             return $result;
             
         }

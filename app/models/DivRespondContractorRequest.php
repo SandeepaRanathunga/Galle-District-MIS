@@ -18,7 +18,6 @@
         public function getData($id){
             $result_arr=[];
             $query="SELECT * FROM contractor_request WHERE id='$id'";
-            echo $query;
             $result=$this->connection->query($query);
             print_r ($result);
             if($result->num_rows>0){
@@ -31,7 +30,7 @@
         }
 
         public function approveRequest($id){
-            $query="INSERT INTO contractor (name, reg_no, specialized_field, nic, office_address, contact_no, approval_status, view_status) SELECT (name, reg_no, specialized_field, nic, office_address, contact_no, email, 'approved', 'viewd') FROM contractor_request WHERE id = '$id'";
+            $query="INSERT INTO contractor (name, reg_no, specialized_field, office_address, contact_no, approval_status, view_status) SELECT (name, reg_no, specialized_field, office_address, contact_no, email, 'approved', 'viewd') FROM contractor_request WHERE id = '$id'";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
                 return true;
@@ -46,7 +45,7 @@
                 return true;
             }
             return false;
-        }
+        }+
 
         public function updateViewStatus($id){
             $query="UPDATE contractor_request SET view_status='viewed' WHERE id='$id'";
