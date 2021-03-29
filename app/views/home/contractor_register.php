@@ -47,10 +47,6 @@
                     <input type="text" name="specialized_field" id="specialized_field" required>
                 </div>
                 <div>
-                    <label for="nic">NIC</label>
-                    <input type="text" name="nic" id="nic" minlength="10" maxlength="12" title="Enter 10 digit nic with v and 12 digit nic without v" required>
-                </div>
-                <div>
                     <label for="office_address">Office Address</label>
                     <input type="text" name="office_address" id="office_address" required>
                 </div>
@@ -83,8 +79,7 @@
                 
                 <div class="clearfix" style="display:flex; justify-content:center;margin:5px;">
                     <input type="submit" value="Submit" name="submit" id="submit">
-                    <input type="reset" value="Cancel">
-                    
+                    <input type="reset" value="Cancel">    
                 </div>
                         
             </form>
