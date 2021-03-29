@@ -20,11 +20,11 @@
                 $result=$this->model->insertData();
                 if($result){
                      echo "<script>alert('Data uploaded sucessfully!');</script>";
-                     echo "<script>window.location.href='submit_bid_report';</script>";
+                     echo "<script>window.location.href='submit_bid';</script>";
                 }
                 else{
                     echo "<script>alert('Something went wrong.Please try again!');</script>";
-                    echo "<script>window.location.href='submit_bid_report';</script>";
+                    echo "<script>window.location.href='add_proposal';</script>";
                 }
             }
             else{
