@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session start();
     class DivAddMonthlyReport extends Controller{
         private $model;
         private $file_name;
