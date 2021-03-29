@@ -2,7 +2,7 @@
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
 
-    class DisViewContractorRequest{
+    class DivRespondContractor{
 
         private $connection;
 
@@ -13,10 +13,6 @@
         private function dbConnect(){
             $datbase=new \Database();
             return $database->getConnection();
-        }
-
-        public function setDetails(){
-            $this->
         }
 
         public function getData($id){
@@ -43,6 +39,15 @@
 
         public function rejectRequest($id){
             $query="DELETE FROM contractor_request WHERE id='$id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
+        public function updateViewStatus($id){
+            $query="UPDATE contractor_request SET view_status='viewed' WHERE id='$id'";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
                 return true;

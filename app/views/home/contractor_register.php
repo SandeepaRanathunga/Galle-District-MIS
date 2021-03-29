@@ -77,13 +77,8 @@
                 </div>
                 
                 <div class="clearfix" style="display:flex; justify-content:center;margin:5px;">
-<<<<<<< HEAD
                     <input type="reset" value="Cancel">
                     <input type="submit" value="Submit" name="submit" id="submit">
-=======
-                    <input type="submit" value="Submit" name="submit" id="submit">
-                    <input type="reset" value="Cancel">    
->>>>>>> mvc
                 </div>
                         
             </form>

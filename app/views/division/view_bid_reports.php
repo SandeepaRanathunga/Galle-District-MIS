@@ -19,9 +19,6 @@
         <h2>View bid reports</h2>
     </div>
     <div class="container">
-<<<<<<< HEAD
-        
-=======
     <center>
         <table id="table-style">
             <tr>
@@ -50,7 +47,6 @@
             ?>     
         </table>
         </center>
->>>>>>> mvc
     </div>
     <?php require_once('includes/footer.php');?>
 </body>

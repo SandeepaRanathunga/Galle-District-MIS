@@ -19,21 +19,6 @@
     </div>
     <div class="container">
         <div class="formarea clearfix">
-<<<<<<< HEAD
-            <div class="border">
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="form-field">
-                        <label for="description">Proposal Description</label>
-                        <textarea name="description" id="" cols="40" rows="5" placeholder="Enter a brief descrioption about the project" requierd></textarea>
-                    </div>
-                    <div>
-                        <label for="file">Attach Document</label>
-                        <input type="file" name="file" id="file" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.pdf" required>
-                    </div>
-                    <div class="submit-cancel">
-                        <input type="reset" name="cancel">
-                        <input type="submit" name="submit" value="Submit">
-=======
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-field">
                     <label for="description">Proposal Description</label>
@@ -46,9 +31,7 @@
                 <div class="submit-cancel">
                     <input type="reset" name="cancel">
                     <input type="submit" name="submit" value="Submit">
->>>>>>> mvc
-
-                    </div>
+                </div>
                 </form>
             </div>
         </div>
