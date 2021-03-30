@@ -1,8 +1,10 @@
 <?php
-    if(isset($_GET['name'])){
-        echo $_GET['name'];
-    }
+    //VIEW
+    $content_arr = $this->getContent() ;
+        $content = $content_arr['about_us_info'] ;
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +38,18 @@
                 </div>
             </div>
             <div class="description">
+            <!--getContentrfomTheDatabaseAndShowHere-->
                 <h5>
                     This is the project handelling and evaluation Management Information System of the Galle District Secretariat. There are 19 Divisional Secretariats that belong to the Galle District Secretariat and the projects carried out in these divisions are evaluated using this system. Anyone can see the progress of projects through this system.
                 </h5>
+                <br>
                 <h5>
-                    If you have any inqiries please feel free to contact Mr Saman Jayasekara, the Director of Planning via samanjayasekara@yahoo.com or 091-2244556.
+                    <!-- If you have any inqiries please feel free to contact Mr Saman Jayasekara, the Director of Planning via samanjayasekara@yahoo.com or 091-2244556. -->
+                    <?php 
+                        echo $content ;
+                    ?>
                 </h5>
+
             </div>
         </div>
     </div>

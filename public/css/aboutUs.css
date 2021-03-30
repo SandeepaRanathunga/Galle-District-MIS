@@ -150,7 +150,7 @@ input[type=text],input[type=password]{
     margin-bottom: 30px;
 
 }
-input[type=submit]{
+input[type=submit],input[type=reset]{
     width:auto;
     display: block;
     margin: 10px auto;
@@ -159,8 +159,8 @@ input[type=submit]{
     color:white;
     /*border:2px solid #434647;*/
     border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 15px;
+    /*font-weight: bold;*/
 }
 input[type="reset"]:hover,input[type="submit"]:hover{
     transform: scale(1,1.1);
@@ -184,13 +184,14 @@ input[type="reset"]:hover,input[type="submit"]:hover{
     display: flex;
 }
 .label-text textarea{
-    margin-top: 10px;
-    font-size: 24px;
-    color: #434647;
-    width: 80%;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-right: 10%;
-    line-height: 1.5;
+    /* margin-top: 10px; */
+    font-size: 15px;
+    color: #666666;
+    width: 60%;
+    height: 145px ;
+    font-weight: normal;
+    line-height: 1.0;
+    margin-left:auto ;
+    margin-right:auto ;
 }
 
