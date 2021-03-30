@@ -14,10 +14,12 @@
         public function __construct(){
             $this->connection=$this->dbConnect();
         }
+        
         private function dbConnect(){
             $database=new \Database();
             return $database->getConnection();
         }
+
         public function setDetails($div_id,$file_name){
             $this->div_id=$div_id;
             $this->description=$this->clearInputs($_POST['description']);

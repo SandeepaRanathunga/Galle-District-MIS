@@ -65,7 +65,7 @@
         //get divisons list to the form
         public function getDivisions(){
             $result_arr=[];
-            $query="SELECT * FROM division";
+            $query="SELECT * FROM division ORDER BY div_name ASC";
             $result=$this->connection->query($query);
             while($row=$result->fetch_assoc()){
                 array_push($result_arr,[$row['div_id'],$row['div_name']]);

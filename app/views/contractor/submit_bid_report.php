@@ -29,8 +29,7 @@
                     <label for="report">Add bid report</label>
                     <input type="file" name="report" id="" multiple="multiple" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.pdf">
                 </div>
-                <div>
-
+                <div class = "submit-cancel">
                     <input type="reset" value="Cancel" name="reset">
                     <input type="submit" value="Submit" name="submit">
                 </div>

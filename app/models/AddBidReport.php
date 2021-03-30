@@ -20,7 +20,7 @@
             $database=new \Database();
             return $database->getConnection();
         }
-        public function setDetails($div_id,$bid_report_name){
+        public function setDetails($contractor_id,$bid_report_name){
             $this->contractor_id=$contractor_id;
             $this->bid_report_id=$bid_report_id;
             $this->bid_report_name=$bid_report_name;
@@ -28,12 +28,13 @@
             $this->view_status='not-viewd';
             $this->approval_status='pending';           
         }
-        // private function clearInputs($input){
-        //     $input=trim($input);
-        //     $input=htmlspecialchars($input);
-        //     $input=mysqli_real_escape_string($this->connection,$input);
-        //     return $input;
-        // }
+        
+        private function clearInputs($input){
+            $input=trim($input);
+            $input=htmlspecialchars($input);
+            $input=mysqli_real_escape_string($this->connection,$input);
+            return $input;
+        }
         
         public function insertData(){
             $query="INSERT INTO bid_report (contractor_id,bid_report_id,bid_report_name,div_id,view_status,approval_status) VALUES ('$this->contractor_id','$this->bid_report_id','$this->bid_report_name','$this->div_id','$this->view_status','$this->approval_status')";

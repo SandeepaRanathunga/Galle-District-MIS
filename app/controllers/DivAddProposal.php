@@ -10,7 +10,6 @@
             }
             else
                 $this->view('division/add_project_proposal');
-
         }
 
         private function uploadData(){

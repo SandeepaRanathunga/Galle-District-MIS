@@ -29,19 +29,19 @@
   display: none;
 }
 
-button {
+.evaluation_box button {
   width: 90%;
   outline: none;
 }
-button:hover {
+.evaluation_box button:hover {
   transform: scale(1, 1.2);
 }
 .approve {
-  background: green;
+  background: #28a745;
 }
 
 .reject {
-  background: red;
+  background: #dc3545;
 }
 
 label {

@@ -2,44 +2,34 @@
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
 
-    class ViewProjectProposal{
+    class DivRespondContractor{
 
         private $connection;
 
-        public function __construct(){
+        public function ___construct(){
             $this->connection=$this->dbConnect();
         }
+
         private function dbConnect(){
-            $database=new \Database();
+            $datbase=new \Database();
             return $database->getConnection();
         }
 
-        public function getData($proposal_id){
+        public function getData($id){
             $result_arr=[];
-            $query="SELECT d.div_name,p.* FROM division as d INNER JOIN project_proposal as p ON d.div_id=p.div_id WHERE p.proposal_id='$proposal_id'";
+            $query="SELECT * FROM contractor_request WHERE id='$id'";
             $result=$this->connection->query($query);
             if($result->num_rows>0){
                 while($row=$result->fetch_assoc()){
-                    $result_arr=[$row['div_name'],$row['proposal_id'],$row['div_id'],$row['description'],$row['file_name'],$row['view_status'],$row['approval_status'],$row['submited_date']];
+                    $result_arr=[$row['id'],$row['name'],$row['reg_no'],$row['spcialized_field'],$row['office_address'],$row['contact_no'],$row['email'],$row['document']];
                 }
                 return $result_arr;
             }
             return $result_arr;
-
         }
 
-        public function approveProposal($proposal_id){
-            $query="UPDATE project_proposal SET approval_status='approved' WHERE proposal_id='$proposal_id'";
-            $result=$this->connection->query($query);
-            if($this->connection->affected_rows > 0){
-                return true;
-            }
-            return false;
-
-        }
-
-        public function rejectProposal($proposal_id){
-            $query="UPDATE project_proposal SET approval_status='rejected' WHERE proposal_id='$proposal_id'";
+        public function approveRequest($id){
+            $query="INSERT INTO contractor (name, reg_no, specialized_field, nic, office_address, contact_no, email, approval_status, view_status) SELECT (name, reg_no, specialized_field, nic, office_address, contact_no, email, 'approved', 'viewd') FROM contractor_request WHERE id = '$id'";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
                 return true;
@@ -47,8 +37,17 @@
             return false;
         }
 
-        public function updateViewStatus($proposal_id){
-            $query="UPDATE project_proposal SET view_status='viewed' WHERE proposal_id='$proposal_id'";
+        public function rejectRequest($id){
+            $query="DELETE FROM contractor_request WHERE id='$id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
+        public function updateViewStatus($id){
+            $query="UPDATE contractor_request SET view_status='viewed' WHERE id='$id'";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
                 return true;
@@ -57,4 +56,5 @@
         }
 
     }
+
 ?>
