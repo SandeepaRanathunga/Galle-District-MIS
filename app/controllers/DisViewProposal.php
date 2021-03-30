@@ -1,5 +1,5 @@
 <?php
-    class DisViewProposal extends Controller{
+    class DisViewProposal extends Controller{  
         public $proposal_id;
         private $model;
         private $proposal_details=[];

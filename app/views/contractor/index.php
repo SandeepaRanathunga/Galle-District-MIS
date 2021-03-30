@@ -1,5 +1,5 @@
 <?php
-    // require_once('includes/session.php');
+    require_once('includes/session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,10 +16,10 @@
     <?php require_once('includes/header.php');?>
     <?php require_once('includes/contractorNav.php');?>
         <div class="button-flex-container" >              
-            <a href="con_notifications">
+            <!-- <a href="con_notifications">
                 <div><img src="svg/notifications.svg" alt=""></div>
                 <div>Notifications</div>    
-            </a>
+            </a> -->
             <a href="submit_bid_report">
                 <div><img src="svg/submitBid.svg" alt=""></div>
                 <div>Submit Bid Report</div>

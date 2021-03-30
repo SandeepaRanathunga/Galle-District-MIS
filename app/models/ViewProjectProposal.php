@@ -35,7 +35,6 @@
                 return true;
             }
             return false;
-
         }
 
         public function rejectProposal($proposal_id){
@@ -55,6 +54,5 @@
             }
             return false;
         }
-
     }
 ?>
