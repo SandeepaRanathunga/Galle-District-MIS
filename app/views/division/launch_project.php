@@ -54,8 +54,8 @@
                         <option value="div02c02">Akmeemana</option>
                     </select>
                 </div>
-                <div>
-                    <input type="reset" value="Cancel">
+                <div class="submit-cancel">
+                    <input type="reset" value="Reset">
                     <input type="submit" value="Submit" name="submit" id="submit"> 
                 </div>
             </form>

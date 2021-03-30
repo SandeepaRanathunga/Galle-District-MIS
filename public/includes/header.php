@@ -13,7 +13,7 @@
                 document.getElementById("user").style.display="none";
             </script>
             <div class="logged-user" id="user">
-                <span><?php echo $_SESSION['userName'];?>(<a href="logout" class="logout">Logout</a>)</span>
+                <span><?php echo $_SESSION['userName'];?><a href="logout"><div class="logout"><i class="fas fa-sign-out-alt"></i>   Logout</div></a></span>
             </div>
         <?php
             else:
