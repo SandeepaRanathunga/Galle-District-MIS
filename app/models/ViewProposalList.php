@@ -25,8 +25,6 @@
                 return $result_arr;
             }
             return $result_arr;
-
         }
-
     }
 ?>

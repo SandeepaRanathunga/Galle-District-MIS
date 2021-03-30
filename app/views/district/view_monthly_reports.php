@@ -31,21 +31,21 @@
                 <th>To date</th>
                 <th>Action</th>
             </tr>
-            <?php
+            <!-- <php
                 foreach($result as $row):
             ?>
             <tr>
-                <td><h4 style=<?php echo ($row['view_status']=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row[5];?></h4></td>
-                <td><h4 style=<?php echo ($row['approval_status']=='pending' ? 'background-color:#FFC107': ($row[6]=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[6];?></h4></td>
-                <td><?php echo $row['div_id'];?></td>
-                <td><?php echo $row['project_id'];?></td>
-                <td><?php echo $row['project_name'];?></td>
-                <td><?php echo $row['project_status'];?></td>
-                <td><a href="<?php echo 'dis_view_monthly_report?id='.$row['report_no'];?>" class="view_button">View</a></td>
+                <td><h4 style=<php echo ($row['view_status']=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row[5];?></h4></td>
+                <td><h4 style=<php echo ($row['approval_status']=='pending' ? 'background-color:#FFC107': ($row[6]=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[6];?></h4></td>
+                <td><php echo $row['div_id'];?></td>
+                <td><php echo $row['project_id'];?></td>
+                <td><php echo $row['project_name'];?></td>
+                <td><php echo $row['project_status'];?></td>
+                <td><a href="<php echo 'dis_view_monthly_report?id='.$row['report_no'];?>" class="view_button">View</a></td>
             </tr>
-            <?php
+            <php
                 endforeach;
-            ?>     
+            ?>      -->
         </table>
         </center>
     </div>
