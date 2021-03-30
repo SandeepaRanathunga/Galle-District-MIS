@@ -2,7 +2,7 @@
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
 
-    class ViewProjectProposal{
+    class DisViewMonthlyReport{
         private $connection;
 
         public function __construct(){
@@ -36,8 +36,17 @@
             return false;
         }
 
-        public function rejectProposal($report_id){
+        public function rejectReport($report_id){
             $query="UPDATE monthly_report SET approval_status='rejected' WHERE report_no='$report_id'";
+            $result=$this->connection->query($query);
+            if($this->connection->affected_rows > 0){
+                return true;
+            }
+            return false;
+        }
+
+        public function updateViewStatus($proposal_id){
+            $query="UPDATE monthly_report SET view_status='viewed' WHERE report_id='$report_id'";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
                 return true;
