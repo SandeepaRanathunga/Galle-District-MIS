@@ -1,145 +1,146 @@
 /* for the header */
-header{
-    display:flex;
-    width:100%;
-    padding:5px;
-    background:#F5F5F5;
-    box-sizing: border-box;
-    clear:both;
-    align-items: center;
+header {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  background: #f5f5f5;
+  box-sizing: border-box;
+  clear: both;
+  align-items: center;
 }
-header .branding{
-    flex:0.2;
-    margin:10px 10px;
-    box-sizing: border-box;
-    text-align: center;
+header .branding {
+  flex: 0.2;
+  margin: 10px 10px;
+  box-sizing: border-box;
+  text-align: center;
 }
-.logo{
-    height:100px;
-    width:80px;
+.logo {
+  height: 100px;
+  width: 80px;
 }
-.districtTag{
-    flex:2;
-    font-family: 'Ubuntu';
+.districtTag {
+  flex: 2;
+  font-family: 'Ubuntu';
 }
-.districtTag h2{
-    font-size: 35px;
-    font-weight: bold;
-    color:#141414    ;
+.districtTag h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #141414;
 }
-.districtTag h3{
-    font-size: 25px;
-    font-weight: bold;
-    color:#141414    ;
+.districtTag h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #141414;
 }
-.user{
-    margin:10px;
-    z-index: 1;
-    
+.user {
+  margin: 10px;
+  z-index: 1;
 }
-.user a{
-    color:white;
-    padding:5px;
-    font-size: 35px;
-    background:#141414    ;
-    border-radius: 5px;
+.user a {
+  color: white;
+  padding: 5px;
+  font-size: 35px;
+  background: #141414;
+  border-radius: 5px;
 }
-.user a:hover{
-    color:white;
-    background:#141414    ; 
+.user a:hover {
+  color: white;
+  background: #141414;
 }
 
-@media screen and (max-width:650px){
-    header .branding{
-        margin:10px;
-    }
-    .logo{
-        width:70px;
-        height:90px;
-    }
-    .districtTag h2{
-        font-size:25px;
-    }
-    .districtTag h3{
-        font-size:30px;
-        font-size: 20px;
-    }
-}
-.user h2{
+@media screen and (max-width: 650px) {
+  header .branding {
+    margin: 10px;
+  }
+  .logo {
+    width: 70px;
+    height: 90px;
+  }
+  .districtTag h2 {
+    font-size: 25px;
+  }
+  .districtTag h3 {
     font-size: 30px;
-    font-weight: bold;
-    text-align:center;
-    border:3px solid #141414    ;
-    border-radius:10px;
-    padding:5px;
-    background:#141414    ;
-    color:white;
+    font-size: 20px;
+  }
 }
-.logged-user{
-    font-size: 18px;
-    font-weight: bold;
+.user h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid #141414;
+  border-radius: 10px;
+  padding: 5px;
+  background: #141414;
+  color: white;
 }
-.logged-user .logout{
-    color:red;
-    font-weight:bold;
-    background:none;
-    font-size: 15px;
-    display: inline-block;
+.logged-user {
+  font-size: 18px;
+  font-weight: bold;
 }
-.logged-user .logout:hover{
-    color:red;
-    background:none;
-    transform: scale(1,1.2);
+.logged-user .logout {
+  display: inline-block;
+  margin: 5px;
+  border: 3px solid #808080;
+  outline: none;
+  padding: 5px;
+  color: #808080;
+  font-size: 16px;
+  font-weight: bold;
+}
+.logged-user .logout:hover {
+  color: #db524b;
+  border: 3px solid #db524b;
 }
 
 /******************************************/
 
-header .dropdown{
-    float:right;
-    margin:10px;
-    width:200px;
-    box-sizing: border-box;
+header .dropdown {
+  float: right;
+  margin: 10px;
+  width: 200px;
+  box-sizing: border-box;
 }
-header .greeting h3{
-    float: right ;
-    color: #141414    ;
-    font-size:18px;
+header .greeting h3 {
+  float: right;
+  color: #141414;
+  font-size: 18px;
 }
-.dropdown .dropbtn,.dropdown .loginpage{
-    float:right;
-    display:block;
-    cursor: pointer;
-    color:white;
-    background:#141414    ;
-    padding:15px;
-    font-size: 20px;
-    border-radius: 5px;
-    border:none;
+.dropdown .dropbtn,
+.dropdown .loginpage {
+  float: right;
+  display: block;
+  cursor: pointer;
+  color: white;
+  background: #141414;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
 }
-.dropdown:hover .dropbtn{
-    color:#0E2433    ;
-    background:white;
+.dropdown:hover .dropbtn {
+  color: #0e2433;
+  background: white;
 }
-.loginpage:hover{
-    color:#0E2433    ;
-    background:white; 
+.loginpage:hover {
+  color: #0e2433;
+  background: white;
 }
-.droplist{
-    display: none;
-    position: relative;
-    background-color: #141414    ;
-    min-width:100%;
-    z-index: 1;
+.droplist {
+  display: none;
+  position: relative;
+  background-color: #141414;
+  min-width: 100%;
+  z-index: 1;
 }
-.droplist a{
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size:20px;
+.droplist a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
 }
 
-
-footer h2{
-    font-size: 15px;
+footer h2 {
+  font-size: 15px;
 }

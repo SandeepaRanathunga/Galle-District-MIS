@@ -1,6 +1,6 @@
 <?php
     // require_once('includes/session.php');
-    echo $_SESSION['office_id'];
+    // echo $_SESSION['office_id'];
     $project_list=$this->getProjectlList();
 ?>
 <!DOCTYPE html>
@@ -12,6 +12,7 @@
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/monthlyReportstyle.css">
     <link rel="icon" href="images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <?php include_once('includes/header.php');?>
@@ -43,30 +44,33 @@
                     <label for="report_duration">Report Duration</label>
                     <input type="date" name="start_date">
                     <label for="to" style="width:20px;text-align:center">to</label>
-                    <input type="date" name="end_date">
+                    <input type="date" name="end_date" >
                 </div>
                 <div>
-                    <label for="documents">Attach Documents</label>
-                    <input type="file" name="file[]" id="" multiple="multiple" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.pdf">
-                </div>
-                <div>
-                    <label for="photos">Attach Photos</label>
-                    <input type="file" name="image[]" id="" multiple="multiple" accept="image/*">
+                    <label for="documents">Attach Zip File</label>
+                    <input type="file" name="zip" id="zip" multiple="multiple" accept=".zip" style="display:none">
+                    <div id="files_trigger" class="selector"><p>Select File</p></div>
                 </div>
                 <div>
                     <label for="project_status">Project Status</label>
-                    <input type="radio" name="status" id="ongoing" value="ongoing">
+                    <input type="radio" name="status" id="ongoing" value="0">
                     <label for="ongoing" style="width:70px;text-align:center">Ongoing</label>
-                    <input type="radio" name="status" id="finished" value="finished">
+                    <input type="radio" name="status" id="finished" value="1">
                     <label for="finished" style="width:70px;text-align:center">Finished</label>
                 </div>
                 <div class="submit-cancel">
-                    <input type="reset" value="Cancel" name="reset" onclick="window.location='div_home';">
+                    <input type="reset" value="Reset" name="reset">
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>
         </div>
     </div>
     <?php require_once('includes/footer.php');?>
+    <script>
+        document.getElementById('files_trigger').addEventListener('click', () => {
+            document.getElementById('zip').click();
+        });
+
+    </script>
 </body>
 </html>
