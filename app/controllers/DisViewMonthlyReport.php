@@ -7,13 +7,11 @@
         }
 
         public function __construct(){
-            $this->model=$this->model('DisViewMonthlyReport');
-            $this->setReportId();
-            $this->setReportData();
+            $this->getDetails();
         }
 
         private function getDetails(){
-            $model=$this->model('ViewProposalList');
+            $model=$this->model('DisViewMonthlyReport');
             $this->result=$model->getData();
         }
 

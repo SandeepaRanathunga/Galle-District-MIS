@@ -45,7 +45,7 @@
             return false;
         }
 
-        public function updateViewStatus($proposal_id){
+        public function updateViewStatus($report_id){
             $query="UPDATE monthly_report SET view_status='viewed' WHERE report_id='$report_id'";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
@@ -53,8 +53,5 @@
             }
             return false;
         }
-
     }
-
-
 ?>

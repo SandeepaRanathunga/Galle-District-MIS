@@ -1,5 +1,6 @@
 <?php
     // require_once('includes/session.php');
+    $result=$this->result;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +10,7 @@
     <title>Project Handeling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/userPage.css">
+    <link rel="stylesheet" href="css/tableStyles.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
