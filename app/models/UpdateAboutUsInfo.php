@@ -18,6 +18,12 @@
             $this->content=$this->clearInputs($_POST['updateaboutus']);
             
         }
+        private function clearInputs($input){
+            $input=trim($input);
+            $input=htmlspecialchars($input);
+            $input=mysqli_real_escape_string($this->connection,$input);
+            return $input;
+        }
         
         //to display the content in the textarea 
         public function getExistingContent(){
@@ -31,15 +37,10 @@
             return $result_array ;
         }
 
-        private function clearInputs($input){
-            $input=trim($input);
-            $input=htmlspecialchars($input);
-            $input=mysqli_real_escape_string($this->connection,$input);
-            return $input;
-        }
+        
         
         public function updateInfo(){
-            $query="UPDATE `about_us` SET `about_us_info`='$this->content' WHERE 1";
+            $query="UPDATE about_us SET about_us_info='$this->content' WHERE 1";
             $result=$this->connection->query($query);
             if($conenction->affected_rows > 0){
                 return true;

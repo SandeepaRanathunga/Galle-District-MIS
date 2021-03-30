@@ -38,10 +38,10 @@
                         
                     <div class="update-cancel">
                     <div class="button">
-                        <input type="submit" name="update" value="Update" >
+                        <input type="submit" name="submit" value="Update" onclick="window.location='admin_home'" >
                     </div>   
                     <div class="button"> 
-                        <input type="reset" name="cancel" value="Cancel" onclick="window.location='admin_home';">
+                        <input type="reset" name="reset" value="Cancel" onclick="window.location='admin_home';">
                     </div>
                     </div>
                 </form>
