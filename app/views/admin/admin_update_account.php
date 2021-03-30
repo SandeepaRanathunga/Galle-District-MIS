@@ -1,13 +1,16 @@
 <?php
+        $fetch=$this->getResult();
+        echo $fetch;
     // require_once('includes/session.php');
-    if(isset($this->getResult())){
-        $fetch=$this->gwtResults();
-    }else{
-        $fetch=NULL;
-    }
+    // if(isset($this->getResult())){
+    //     $fetch=$this->getResult();
+    //     echo $fetch;
+    // }else{
+    //     $fetch=NULL;
+    // }
 
-    $name="sandeepa"
-    $sub=substr($name,0,3);
+    // $user_type=$this->$fetch[index]
+    // $sub=substr($user_type,0,3);
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,13 +35,11 @@
     <div class="searchbox">
         <div class="searcharea" >
             <!--Form Box to Enter ID reqiured to update details-->
-
             <form action="" method="POST" id="searchId">
                 <label for="user_id">Enter ID</label>
                 <input type="text"  name="search_user_id" placeholder="Enter ID to search...">
             <!--Submit ID for search-->
-                <input type="submit"  value="Search" name="submit">
-                
+                <input type="submit"  value="Search" name="search">
             </form>
         </div>                     
     </div>
@@ -51,19 +52,19 @@
                 </div>
                 <div>
                     <label for="office_id">Office ID</label>
-                    <input type="text" name="office_id" value="<?php echo $fetch==NULL ? '' : $fetch[1]=='div' ? $fetch[1] : 'District User' ?>" style="<?php echo "display:none";?>" readonly>
+                    <input type="text" name="office_id" value="<?php echo $fetch==NULL ? '' : $fetch[1]=='div' ? $fetch[1] : 'District User' ?>" readonly>
                 </div>
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>">
                 </div>
                 <div>
                     <label for="designation">Designation</label>
-                    <input type="text" name="designation">
+                    <input type="text" name="designation" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>">
                 </div>
                 <div>
                     <label for="nic">NIC</label>
-                    <input type="text" name="nic">
+                    <input type="text" name="nic" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>">
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
