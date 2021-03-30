@@ -6,6 +6,7 @@
 
         private $content; 
         private $connection;
+        private $inputInfo ;
 
         public function __construct(){
             $this->connection=$this->dbConnect();
@@ -14,8 +15,10 @@
             $database=new \Database();
             return $database->getConnection();
         }
-        public function setInfo(){
-            $this->content=$this->clearInputs($_POST['updateaboutus']);
+        public function setInfoToVar(){
+            $this->inputInfo=$this->clearInputs($_POST['updateaboutus']);
+            //return $this->inputInfo;
+            
             
         }
         private function clearInputs($input){
@@ -25,7 +28,7 @@
             return $input;
         }
         
-        //to display the content in the textarea 
+        //Function to display the content in the textarea 
         public function getExistingContent(){
             $result_array = [] ;
             $query="SELECT * FROM `about_us`" ;
@@ -37,20 +40,14 @@
             return $result_array ;
         }
 
-        
-        
+        //Function to update imformation in the databasae
         public function updateInfo(){
-            $query="UPDATE about_us SET about_us_info='$this->content' WHERE 1";
+            $query="UPDATE `about_us` SET `about_us_info`='$this->inputInfo' WHERE 1";
             $result=$this->connection->query($query);
-            if($conenction->affected_rows > 0){
+            if($this->connection->affected_rows>0){
                 return true;
             }
-            else{
-                return false;
-            }
-            
+            return false ;
         }
-        
-
     }
 ?>

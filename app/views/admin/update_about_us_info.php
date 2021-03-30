@@ -2,9 +2,9 @@
     //VIEW
     $content_arr = $this->getContent() ;
     $content = $content_arr['about_us_info'] ;
-    //echo $content ;
     
-    // require_once('includes/session.php');
+    
+    require_once('includes/session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Project Handelling and Evaluation MIS</title>
+    <title>Project Handling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="css/aboutUs.css">
@@ -38,20 +38,18 @@
                         
                     <div class="update-cancel">
                     <div class="button">
-                        <input type="submit" name="submit" value="Update" onclick="window.location='admin_home'" >
+                        <input type="submit" name="submit" value="Update" >
                     </div>   
                     <div class="button"> 
-                        <input type="reset" name="reset" value="Cancel" onclick="window.location='admin_home';">
+                        <input type="reset" name="reset" value="Go Back" onclick="window.location='admin_home'">
                     </div>
                     </div>
                 </form>
             </div>
-            
-
-
-        <?php include 'includes/footer.php';?>
         
         </div>
     </div>
+    
+    <?php include 'includes/footer.php';?>
 </body>
 </html>
