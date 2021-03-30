@@ -22,7 +22,7 @@
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-field">
                     <label for="description">Proposal Description</label>
-                    <textarea name="description" id="" cols="40" rows="5" placeholder="Enter a brief descrioption about the project" requierd></textarea>
+                    <textarea name="description" id="" cols="40" rows="5" placeholder="Enter a brief descrioption about the project" required></textarea>
                 </div>
                 <div>
                     <label for="file">Attach Document</label>

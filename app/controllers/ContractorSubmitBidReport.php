@@ -16,7 +16,7 @@
             $this->model=$this->model('AddBidReport');
             $result=$this->fileUploadServer();
             if($result){
-                $this->model->setDetails($_SESSION['contractor_id'],$this->bid_report_name);
+                $this->model->setDetails($this->bid_report_name);
                 $result=$this->model->insertData();
                 if($result){
                      echo "<script>alert('Data uploaded sucessfully!');</script>";
@@ -50,7 +50,6 @@
                     $upload_path='uploads/bid_report/'.$file_name;
                     $result=move_uploaded_file($temp_file_name,$upload_path);
                     return $result;
-                    
                 }
                 else
                     return false;

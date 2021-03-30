@@ -1,6 +1,14 @@
 <?php
     // require_once('includes/session.php');
-?>
+    if(isset($this->getResult())){
+        $fetch=$this->gwtResults();
+    }else{
+        $fetch=NULL;
+    }
+
+    $name="sandeepa"
+    $sub=substr($name,0,3);
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,19 +47,15 @@
                 <!--Here starts the generated form-->
                 <div>
                     <label for="user_id">User ID</label>
-                    <input type="text" name="user_id">
+                    <input type="text" name="user_id" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>" readonly>
                 </div>
                 <div>
                     <label for="office_id">Office ID</label>
-                    <input type="text" name="office_id">
+                    <input type="text" name="office_id" value="<?php echo $fetch==NULL ? '' : $fetch[1]=='div' ? $fetch[1] : 'District User' ?>" style="<?php echo "display:none";?>" readonly>
                 </div>
                 <div>
                     <label for="name">Name</label>
                     <input type="text" name="name">
-                </div>
-                <div>
-                    <label for="office">Office</label>
-                    <input type="text" name="office">
                 </div>
                 <div>
                     <label for="designation">Designation</label>
@@ -69,14 +73,6 @@
                     <label for="email">E-mail</label>
                     <input type="email" name="email">
                 </div>
-                <!--<div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password">
-                </div>
-                <div>
-                    <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirmpassword">
-                </div>-->
                 
 
                 <div class="submit-cancel">
