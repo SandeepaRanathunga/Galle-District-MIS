@@ -1,8 +1,8 @@
 <?php
-    class DisViewMonthlyReport extends Controller{
+    class DisViewMonthlyReportList extends Controller{
         public $result;
 
-        public function disViewMonthlyReport(){
+        public function disViewMonthlyReportList(){
             $this->view('district/view_monthly_reports');
         }
 

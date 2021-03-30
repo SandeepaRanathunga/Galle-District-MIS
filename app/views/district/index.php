@@ -24,7 +24,7 @@
                 <div><img src="svg/viewProposal.svg" alt=""></div>
                 <div>View Project Proposals</div>
             </a>
-            <a href="dis_view_monthly_report">
+            <a href="dis_view_monthly_reports">
             <div class="bubble" style="<?php if($this->report_count==0 ) echo 'display:none'?>"><?php echo $this->report_count;?></div>
                 <div><img src="svg/viewReport.svg" alt=""></div>
                 <div>View Monthly Reports</div>

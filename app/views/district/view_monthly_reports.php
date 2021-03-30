@@ -41,7 +41,7 @@
                 <td><?php echo $row['project_id'];?></td>
                 <td><?php echo $row['project_name'];?></td>
                 <td><?php echo $row['project_status'];?></td>
-                <td><a href="<?php echo 'dis_view_monthly_report?id='.$row[1];?>" class="view_button">View</a></td>
+                <td><a href="<?php echo 'dis_view_monthly_report?id='.$row['report_no'];?>" class="view_button">View</a></td>
             </tr>
             <?php
                 endforeach;
