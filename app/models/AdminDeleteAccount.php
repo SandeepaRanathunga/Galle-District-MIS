@@ -1,11 +1,22 @@
 <?php
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
-    //About Us Page Shown To The Public
-    class UpdateAboutUsInfo{
- 
-        private $connection;
-        private $inputInfo ;
+    //Remove login permission from a user-account
+    class AdminDeleteAcount{
+
+        private $connection ;
+        private $search ;
+        private $userId ;
+        private $officeId ;
+        private $acName ;
+        private $office ;
+        private $designation ;
+        private $nic ;
+        private $contactNo ;
+        private $email ;
+        //to set to zero to delete
+        private $login_permission ;
+
 
         public function __construct(){
             $this->connection=$this->dbConnect();
@@ -14,18 +25,17 @@
             $database=new \Database();
             return $database->getConnection();
         }
-        public function setInfoToVar(){
-            $this->inputInfo=$this->clearInputs($_POST['updateaboutus']);
-            //return $this->inputInfo;
-            
-            
-        }
-        private function clearInputs($input){
-            $input=trim($input);
-            $input=htmlspecialchars($input);
-            $input=mysqli_real_escape_string($this->connection,$input);
-            return $input;
-        }
+        // public function setInfoToVar(){
+        //     $this->inputInfo=$this->clearInputs($_POST['updateaboutus']);
+        //     //return $this->inputInfo;
+              
+        // }
+        // private function clearInputs($input){
+        //     $input=trim($input);
+        //     $input=htmlspecialchars($input);
+        //     $input=mysqli_real_escape_string($this->connection,$input);
+        //     return $input;
+        // }
         
         //Function to display the content in the textarea 
         public function getExistingContent(){
