@@ -9,7 +9,9 @@
   /* position:relative; */
   padding: 10px;
   box-sizing: border-box;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  padding: 20px 50px;
 }
 .formarea label {
   color: #434647;
@@ -48,6 +50,8 @@
 textarea {
   display: inline-block;
   padding: 5px;
+  border: 2px solid #808080;
+  outline: none;
 }
 .form-field * {
   vertical-align: middle;
@@ -57,14 +61,16 @@ input[type='text'],
 input[type='date'],
 input[type='number'],
 select {
-  border: 2px solid #434647;
+  border: 2px solid #808080;
   width: 300px;
   height: 40px;
   margin: 5px;
   margin-top: 20px;
   padding: 5px;
   box-sizing: border-box;
-  outline: #434647;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
 }
 input[type='file'] {
   border: none;
@@ -79,21 +85,43 @@ input[type='radio'] {
   margin: 5px;
   margin-top: 20px;
 }
-input[type='button'],
 input[type='submit'],
 input[type='reset'] {
-  background: #1c9c95;
-  color: white;
   padding: 10px;
   font-weight: bold;
-  font-size: 17px;
-  border: none;
-  border-radius: 10px;
+  font-size: 15px;
+  border-radius: 3px;
   width: 100px;
-  margin: 20px;
+  margin: 10px;
   display: block;
   float: right;
   outline: none;
+}
+
+input[type='submit'] {
+  background: #3e8acc;
+  color: white;
+}
+
+.selector {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  width: 120px;
+  height: 40px;
+  color: #808080;
+  background: none;
+  padding: 10px 5px;
+  outline: none;
+  border: 3px solid #808080;
+  border-radius: 5px;
+  margin: 20px 5px 5px;
+  cursor: pointer;
+}
+
+.selector p {
+  font-weight: bold;
+  font-size: 13px;
 }
 
 input[type='reset']:hover,
@@ -105,7 +133,5 @@ input[type='submit']:hover {
 .submit-cancel {
   display: flex;
   flex-direction: row;
-  margin: 2% 4%;
-  align-items: left;
-  justify-content: center;
+  justify-content: flex-end;
 }
