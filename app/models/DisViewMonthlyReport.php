@@ -16,7 +16,7 @@
 
         public function getData($report_id){
             $result_arr=[];
-            $query="SELECT p.project_name,m. * FROM projects as p INNER JOIN monthly_report as m on p.project_id=m.project_id WHERE m.report_no='$report_id'";
+            $query="SELECT p.project_name,m.report_no,p.project_id,m.from_date,m.to_date,m.view_status,m.approval_status,p.project_status * FROM projects as p INNER JOIN monthly_report as m on p.project_id=m.project_id WHERE m.report_no='$report_id'";
             $result=$this->connection->query($query);
             if($result->num_rows>0){
                 while($row=$result->fetch_assoc()){

@@ -8,11 +8,10 @@
         public function __construct(){
             $this->getDetails();
         }
+        
         private function getDetails(){
             $model=$this->model('ViewProposalList');
             $this->result=$model->getData();
-
-
         }
     }
 ?>

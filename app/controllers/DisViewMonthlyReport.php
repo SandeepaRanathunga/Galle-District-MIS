@@ -11,9 +11,8 @@
         }
 
         private function getDetails(){
-            $model=$this->model('DisViewMonthlyReport');
+            $model=$this->model('DisViewMonthlyReportList');
             $this->result=$model->getData();
         }
-
     }
 ?>
