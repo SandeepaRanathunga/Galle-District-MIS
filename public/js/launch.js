@@ -14,3 +14,7 @@
 // };
 
 // document.getElementById('submit').addEventListener('click', handleSubmit);
+
+// document.getElementById('browse_files').addEventListener('click', () => {
+//   document.getElementById('browse_f').click();
+// });

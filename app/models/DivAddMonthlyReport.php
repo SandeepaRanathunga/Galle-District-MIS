@@ -37,23 +37,20 @@
             return $input;
         }
         
-        public function insertData(){
-            $query="INSERT INTO `monthly_report`(`project_id`, `report_no`, `from_date`, `to_date`, `view_status`, `approval_status`, `project_status`) VALUES ('$this->project_id','$this->report_no','$this->from_date','$this->to_date','$this->view_status','$this->approval_status','$this->project_status')";
-            $result=$this->connection->query($query);
-            if($this->connection->affected_rows > 0)
-                return true;
-            return false;
-        }
-
-        public function insertFileNames($file_name,$type){
-            $query="INSERT INTO `monthly_report_docs`(`project_id`, `report_no`, `document_name` , `type`) VALUES ('$this->project_id','$this->report_no','$file_name','$type')";
+        public function insertData($file_name){
+            $query="INSERT INTO `monthly_report`(`project_id`, `report_no`, `from_date`, `to_date`, `view_status`, `approval_status`, `file_name`) VALUES ('$this->project_id','$this->report_no','$this->from_date','$this->to_date','$this->view_status','$this->approval_status','$file_name')";
             $result=$this->connection->query($query);
             if($this->connection->affected_rows > 0){
-                return true;
-            return false;
+                $query="UPDATE `project` SET `project_status`='$this->project_status' WHERE `project_id`='$this->project_id'";
+                $result=$this->connection->query($query);
+                if($this->connection->affected_rows > 0){
+                    return true;
+                }
+                return false;
             }
-        }
+            return false;
 
+        }
         public function  getProjects($div_id){
             $result_arr=[];
             $query="SELECT project_id,project_name FROM project WHERE project_status='ongoing' && div_id='$div_id'";

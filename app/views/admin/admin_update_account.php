@@ -1,6 +1,17 @@
 <?php
+        $fetch=$this->getResult();
+        echo $fetch;
     // require_once('includes/session.php');
-?>
+    // if(isset($this->getResult())){
+    //     $fetch=$this->getResult();
+    //     echo $fetch;
+    // }else{
+    //     $fetch=NULL;
+    // }
+
+    // $user_type=$this->$fetch[index]
+    // $sub=substr($user_type,0,3);
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +35,11 @@
     <div class="searchbox">
         <div class="searcharea" >
             <!--Form Box to Enter ID reqiured to update details-->
-
             <form action="" method="POST" id="searchId">
                 <label for="user_id">Enter ID</label>
                 <input type="text"  name="search_user_id" placeholder="Enter ID to search...">
             <!--Submit ID for search-->
-                <input type="submit"  value="Search" name="submit">
-                
+                <input type="submit"  value="Search" name="search">
             </form>
         </div>                     
     </div>
@@ -39,27 +48,23 @@
                 <!--Here starts the generated form-->
                 <div>
                     <label for="user_id">User ID</label>
-                    <input type="text" name="user_id">
+                    <input type="text" name="user_id" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>" readonly>
                 </div>
                 <div>
                     <label for="office_id">Office ID</label>
-                    <input type="text" name="office_id">
+                    <input type="text" name="office_id" value="<?php echo $fetch==NULL ? '' : $fetch[1]=='div' ? $fetch[1] : 'District User' ?>" readonly>
                 </div>
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="name">
-                </div>
-                <div>
-                    <label for="office">Office</label>
-                    <input type="text" name="office">
+                    <input type="text" name="name" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>">
                 </div>
                 <div>
                     <label for="designation">Designation</label>
-                    <input type="text" name="designation">
+                    <input type="text" name="designation" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>">
                 </div>
                 <div>
                     <label for="nic">NIC</label>
-                    <input type="text" name="nic">
+                    <input type="text" name="nic" value="<?php echo $fetch==NULL ? '' : $fetch[0]?>">
                 </div>
                 <div>
                     <label for="contactno">Contact Number</label>
@@ -69,14 +74,6 @@
                     <label for="email">E-mail</label>
                     <input type="email" name="email">
                 </div>
-                <!--<div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password">
-                </div>
-                <div>
-                    <label for="confirmpassword">Re-enter Password</label>
-                    <input type="password" name="confirmpassword">
-                </div>-->
                 
 
                 <div class="submit-cancel">

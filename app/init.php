@@ -51,8 +51,11 @@
     $router->addRoute('div_notifications','DivNotifications','divNotifications');
     //division respond contractors
     $router->addRoute('respond_contractors','DivRespondContractors','divRespondContractors');
+    //division respond contractor request
+    $router->addRoute('respond_contractor_request','DivRespondContractorRequest','divRespondContractorRequest');
     //division view bid reports
     $router->addRoute('view_bid_reports','DivViewBidReports','divViewBidReports');
+ 
     
     /*--------------------district---------------------*/
     $router->addRoute('dis_home','DisHome','disHome');
@@ -65,7 +68,7 @@
     //district notifications
     $router->addRoute('dis_notifications','DisNotifications','disNotifications');
     //district monthly report
-    $router->addRoute('dis_view_monthly_report','DisViewMonthlyReport','disViewMonthlyReport');
+    $router->addRoute('dis_view_monthly_reports','DisViewMonthlyReportList','disViewMonthlyReportList');
     //district project proposals list
     $router->addRoute('dis_view_project_proposal','DisViewProjectProposals','disViewProjectProposals');
     //distirct view single project proposal

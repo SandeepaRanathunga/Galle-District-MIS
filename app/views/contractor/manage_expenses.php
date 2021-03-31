@@ -25,21 +25,7 @@
                     <th>Project ID</th>
                     <th>Daily Expenses</th>
                 </tr>
-                <tr>
-                    <td>05/10/2020</td>
-                    <td>div02HP01</td>
-                    <td>500,000</td>
-                </tr>
-                <tr>
-                    <td>25/09/2020</td>
-                    <td>div02HP01</td>
-                    <td>100,000</td>
-                </tr>
-                <tr>
-                    <td>10/09/2020</td>
-                    <td>div02HP06</td>
-                    <td>100,000</td>
-                </tr>
+
             </table>
         </div>
 
@@ -55,14 +41,7 @@
                     <th>Project ID</th>
                     <th>Total Expenses</th>
                 </tr>
-                <tr>
-                    <td>div02HP01</td>
-                    <td>600,000</td>
-                </tr>
-                <tr>
-                    <td>div02HP06</td>
-                    <td>100,000</td>
-                </tr>
+
             </table>
         </div>
         <center>
