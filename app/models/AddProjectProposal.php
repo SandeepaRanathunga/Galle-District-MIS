@@ -14,15 +14,17 @@
         public function __construct(){
             $this->connection=$this->dbConnect();
         }
+        
         private function dbConnect(){
             $database=new \Database();
             return $database->getConnection();
         }
+
         public function setDetails($div_id,$file_name){
             $this->div_id=$div_id;
             $this->description=$this->clearInputs($_POST['description']);
             $this->file_name=$file_name;
-            $this->view_status='not-viewd';
+            $this->view_status='not-viewed';
             $this->approval_status='pending';
         }
         private function clearInputs($input){

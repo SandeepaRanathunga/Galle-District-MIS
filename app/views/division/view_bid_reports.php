@@ -9,6 +9,7 @@
     <title>Project Handelling and Evaluation MIS</title>
     <?php include 'includes/cssLinks.php';?>
     <link rel="stylesheet" href="css/userPage.css">
+    <link rel="stylesheet" href="css/tableStyles.css">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -18,20 +19,34 @@
         <h2>View bid reports</h2>
     </div>
     <div class="container">
-        <div class="combutton">
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Bid report 01 by Contractor001</h2></div>
-                <div style="width:15%"><button>View</button></div>
-            </div>
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Bid report 02 by Contractor002</h2></div>
-                <div style="width:15%"><button>View</button></div>
-            </div>
-            <div class="flex-container" >
-                <div style="width:75%"><h2 style="font-size:17px"><br>Bid report 03 by Contractor003</h2></div>
-                <div style="width:15%"><button>View</button></div>
-            </div>
-        </div>
+    <center>
+        <table id="table-style">
+            <tr>
+                <th>View Status</th>
+                <th>Approval Status</th>
+                <th>Project ID</th>
+                <th>Project Name</th>
+                <th>Submitted Date</th>
+                <th colspan=2>Action</th>
+            </tr>
+            <?php
+                foreach($result as $row):
+            ?>
+            <tr>
+                <td><?php echo $row[5];?></td>
+                <td><?php echo $row[6];?></td>
+                <td><?php echo $row[0];?></td>
+                <td><?php echo $row[3];?></td>
+                <td><?php echo $row[7];?></td>
+
+                <td><a href="<?php echo 'view_bid_reports?id='.$row[1];?>">View</a></td>
+                <td><a href="<?php echo 'delete?id='.$row[1];?>">Clear</a></td>
+            </tr>
+            <?php
+                endforeach;
+            ?>     
+        </table>
+        </center>
     </div>
     <?php require_once('includes/footer.php');?>
 </body>

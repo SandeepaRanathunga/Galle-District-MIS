@@ -5,28 +5,29 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border-collapse: collapse;
+  text-align: center;
   /* width: 90%;
     max-height: 700px; */
 }
 
 #table-style td,
 #table-style th {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 8px;
 }
 
 #table-style td {
-  background-color: white;
+  /* background-color: white; */
   text-align: center;
 }
 
-#table-style tr:nth-child() {
+#table-style tr:nth-child(even) {
   background-color: white;
 }
 
-/* #table-style tr:hover{
-    background-color: #ddd;
-} */
+#table-style tr:hover {
+  background-color: #ddd;
+}
 
 #table-style th {
   margin-top: 12px;
@@ -35,63 +36,6 @@
   background-color: #0e2433ee;
   color: white;
 }
-/* moved to common.css */
-/* .tag{
-    background:#f2f2f2;
-    overflow:auto;
-    padding:10px;
-    box-sizing: border-box;
-}
-.tag h2{
-    color:#434647;
-    background:white;
-    font-size: 20px;
-    font-weight: bold;
-    padding:20px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    float:left;
-} */
-
-/* input[type="button"],input[type="submit"],input[type="reset"]{
-    background:#434647;
-    color:white;
-    padding:10px;
-    font-weight: bold;
-    border:none;
-    border-radius: 3px;
-    width:100px;
-    margin:20px;
-    display:block;
-    float:right;
-}
-
-.editButton {
-    background:#434647;
-    color:white;
-    padding:5px;
-    font-weight: bold;
-    border:none;
-    border-radius: 2px;
-    width:60px;
-    margin:10px;
-    display:block;
-    float:right;
-}
-
-.editButton:hover{
-    color:#434647;
-    background:white;
-}
-
-input[type="submit"]{
-    margin-right: 70px;
-} */
-
-/* input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover{
-    color:#434647;
-    background:white;
-} */
 
 input[type='button'],
 input[type='submit'],
@@ -125,4 +69,24 @@ input[type='submit']:hover {
   margin-top: 10px;
   align-items: left;
   justify-content: center;
+}
+
+.view_button {
+  display: block;
+  background: #37bc9b;
+  outline: none;
+  color: white;
+  padding: 5px;
+  width: 100px;
+}
+
+.view_button:hover {
+  transform: scale(1, 1.1);
+}
+
+td h4 {
+  padding: 2px;
+  color: white;
+  width: 80px;
+  margin: 1px auto;
 }

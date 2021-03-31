@@ -10,6 +10,12 @@
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
+<noscript>
+	<div id="noJS" title="Alert!" class="noJS">
+		<div class="w-icon"><img src="assets/images/warning120.png" alt="Warning"></div>
+  		<p>Javascript is disabled in you browser! Please enable to continue.&nbsp;&nbsp;</p>
+	</div>
+</noscript>
     <?php include 'includes/header.php';?>
     <?php include 'includes/guestNav.php';?>
     <div class="slideshow-container" >

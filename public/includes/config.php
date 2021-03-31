@@ -2,7 +2,7 @@
     $db_server='localhost';
     $user_name='root';
     $password='';
-    $db_name='mis_db';
+    $db_name='galle_district_mis';
 
     $connection=mysqli_connect($db_server,$user_name,$password,$db_name);
 

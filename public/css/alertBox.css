@@ -38,15 +38,21 @@
 }
 .btns .btn1,
 .btns .btn2 {
-  background: green;
   color: white;
   font-size: 18px;
   border-radius: 5px;
   padding: 10px 13px;
+  margin: 20px 10px;
+  outline: none;
+  border: none;
+  display: inline-block;
+  float: none;
+}
+.btns .btn1 {
+  background: #28a745;
 }
 .btns .btn2 {
-  margin-left: 20px;
-  background: red;
+  background: #dc3545;
 }
 .btns .btn1:hover {
   transition: 0.5s;

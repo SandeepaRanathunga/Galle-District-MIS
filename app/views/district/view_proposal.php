@@ -40,6 +40,7 @@
                 <?php echo $data[7]?>
             </div>
         </div>
+        
         <div class="task_box">
             <div>
                 <a href="uploads/proposal/<?php echo $data[4];?>" download ><img src="svg/download.svg" alt="" class="download_btn"></a>
@@ -78,8 +79,8 @@
         <i class="fas fa-exclamation"></i>
         <h1>Are you sure you want to proceed!</h1>
         <div class="btns">
-            <button class="btn1">Proceed</button>
-            <button class="btn2">Cancel</button>
+            <button class="btn1" id="proceed">Proceed</button>
+            <button class="btn2" id="cancel">Cancel</button>
         </div>
     </div>
     <?php require_once('includes/footer.php');?>

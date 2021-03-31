@@ -8,7 +8,7 @@ require_once __DIR__ . '/../mailer/MailSender.php';
 
         public function __construct(){
             $this->model=$this->model('ContractorRegister');
-
+            $this->divisions=$this->getdivisionList();
         }
 
         public function contractorRegister(){
@@ -26,18 +26,18 @@ require_once __DIR__ . '/../mailer/MailSender.php';
                 $result=$this->model->insertData();
                 if($result){
                     echo "<script>alert('Your registration request sent sucessfully.The administration will let you know once they finished your request review.');</script>";
-                    // echo "<script>window.location.href='contractors';</script>";
+                    echo "<script>window.location.href='';</script>";
                }
                else{
                    echo "<script>alert('Something went wrong.Please try again!');</script>";
-                   echo "<script>window.location.href='contractors';</script>";
+                   echo "<script>window.location.href='';</script>";
                }
             }
            else{
-               echo "<script>alert('File upload process failed.Please try again!')</script>";
-               print_r($_POST);
-               print_r($_FILES);
-            //    echo "<script>window.location.href='contractors';</script>";
+                echo "<script>alert('File upload process failed.Please try again!')</script>";
+                print_r($_POST);
+                print_r($_FILES);
+                echo "<script>window.location.href='';</script>";
             }
             
 
@@ -69,7 +69,9 @@ require_once __DIR__ . '/../mailer/MailSender.php';
             }
         }
 
-        
+        public function getDivisionList(){
+            return $this->model->getDivisions();
+        }        
         
 
     }
