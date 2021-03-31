@@ -37,7 +37,7 @@
         //     return $input;
         // }
         
-        //Function to display the content in the textarea 
+        //Function to display the content in the input fields
         public function getExistingContent(){
             $result_array = [] ;
             $query="SELECT * FROM `about_us`" ;
