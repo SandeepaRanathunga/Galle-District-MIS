@@ -1,4 +1,5 @@
 <?php
+    require_once('includes/session.php');
     //$result=$this->agency;
 ?>
 <!DOCTYPE html>

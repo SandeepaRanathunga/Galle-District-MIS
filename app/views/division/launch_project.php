@@ -1,5 +1,5 @@
 <?php
-    // require_once('includes/session.php');
+    require_once('includes/session.php');
     $proposal_list=$this->getProposalList();
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DivRespondContractorRequest extends Controller{ 
         private $model;
         private $request_details=[];

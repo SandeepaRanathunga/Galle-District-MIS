@@ -1,4 +1,5 @@
 <?php
+    require_once('includes/session.php');
     $data=$this->getRequestData();
 ?>
 <!DOCTYPE html>

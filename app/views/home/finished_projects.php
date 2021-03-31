@@ -1,7 +1,4 @@
 <?php
-    // require_once('includes/session.php');
-?>
-<?php
     $divisions=$this->divisions;
 ?>
 <!DOCTYPE html>

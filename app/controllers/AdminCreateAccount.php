@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../mailer/MailSender.php';
+    session_start();
+    require_once __DIR__ . '/../mailer/MailSender.php';
     class AdminCreateAccount extends Controller{
         private $model;
         public $divisions=[];

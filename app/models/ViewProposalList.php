@@ -24,5 +24,7 @@
                 }
                 return $result_arr;
             }
-            return $result_arr0    }
+            return $result_arr;   
+        }
+    }
 ?>

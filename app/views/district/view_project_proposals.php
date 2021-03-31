@@ -1,5 +1,5 @@
 <?php
-    // require_once('includes/session.php');
+    require_once('includes/session.php');
     $result=$this->result;
 ?>
 <!DOCTYPE html>
