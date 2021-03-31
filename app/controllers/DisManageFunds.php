@@ -1,6 +1,5 @@
-
 <?php
-
+session_start();
 class DisManageFunds extends Controller{
     public $agency_id;
     public $agency_name;

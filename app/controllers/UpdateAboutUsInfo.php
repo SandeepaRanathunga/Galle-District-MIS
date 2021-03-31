@@ -1,5 +1,6 @@
 <?php
     //CONTROLLER
+    session_start();
     class UpdateAboutUsInfo extends Controller{
         private $model; 
         private $content ; 

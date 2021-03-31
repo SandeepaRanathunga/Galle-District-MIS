@@ -6,7 +6,7 @@
 
         private $connection;
 
-        public function ___construct(){
+        public function __construct(){
             $this->connection=$this->dbConnect();
         }
 
@@ -19,7 +19,6 @@
             $result_arr=[];
             $query="SELECT * FROM contractor_request WHERE id='$id'";
             $result=$this->connection->query($query);
-            print_r ($result);
             if($result->num_rows>0){
                 while($row=$result->fetch_assoc()){
                     $result_arr=[$row['id'],$row['view_status'],$row['approval_status'],$row['name'],$row['reg_no'],$row['specialized_field'],$row['office_address'],$row['contact_no'],$row['email'],$row['requested_date'],$row['div_id'],$row['document']];
@@ -45,7 +44,7 @@
                 return true;
             }
             return false;
-        }+
+        }
 
         public function updateViewStatus($id){
             $query="UPDATE contractor_request SET view_status='viewed' WHERE id='$id'";

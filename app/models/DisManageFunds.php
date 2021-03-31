@@ -1,4 +1,4 @@
-<?php
+.0303003030003<?php
     namespace model;
     require_once __DIR__ . '/../database/Database.php';
 

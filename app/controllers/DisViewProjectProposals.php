@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DisViewProjectProposals extends Controller{
         public $result;
         public function disViewProjectProposals(){

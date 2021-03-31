@@ -1,7 +1,4 @@
 <?php
-    // require_once('includes/session.php');
-?>
-<?php
     $div_name=$this->div_name;
 ?>
 <!DOCTYPE html>

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class AdminAboutUs extends Controller{
         private $model ;
         private $content ; //variable to store the content in the info cell

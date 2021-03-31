@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../mailer/MailSender.php';
+    require_once __DIR__ . '/../mailer/MailSender.php';
     class EmailVerify extends Controller{
         private $model;
         private $email;

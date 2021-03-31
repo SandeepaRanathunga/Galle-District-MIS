@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DivRespondContractorRequest extends Controller{ 
         private $model;
         private $request_details=[];
@@ -38,7 +39,6 @@
 
         private function setRequestData(){
             $this->request_details=$this->model->getData($this->id);
-            echo "kkk";
         }
 
         public function getRequestData(){

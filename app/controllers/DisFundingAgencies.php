@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DisFundingAgencies extends Controller{
         private $model;
         public $agencies=[];
