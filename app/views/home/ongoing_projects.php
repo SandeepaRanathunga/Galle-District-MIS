@@ -1,5 +1,5 @@
 <?php
-   require_once('includes/session.php');
+//    require_once('includes/session.php');
    $divisions=$this->divisions;
    $data=[];
    foreach($this->projects_count as $row){
