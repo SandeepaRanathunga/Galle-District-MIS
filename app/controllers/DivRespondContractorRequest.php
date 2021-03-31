@@ -38,7 +38,6 @@
 
         private function setRequestData(){
             $this->request_details=$this->model->getData($this->id);
-            echo "kkk";
         }
 
         public function getRequestData(){

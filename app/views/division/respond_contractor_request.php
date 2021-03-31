@@ -23,10 +23,6 @@
     <div class="container proposal_container">
         <div class="detail_box">
             <div class="content_line">
-                <label for="Divisional Secretariat">Divisional Secretariat : </label>
-                <?php echo $data[10];?>
-            </div>
-            <div class="content_line">
                 <label for="name">Contractor Name: </label>
                 <?php echo $data[3];?>
             </div>

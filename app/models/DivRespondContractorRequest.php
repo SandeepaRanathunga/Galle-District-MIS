@@ -6,7 +6,7 @@
 
         private $connection;
 
-        public function ___construct(){
+        public function __construct(){
             $this->connection=$this->dbConnect();
         }
 
@@ -45,7 +45,7 @@
                 return true;
             }
             return false;
-        }+
+        }
 
         public function updateViewStatus($id){
             $query="UPDATE contractor_request SET view_status='viewed' WHERE id='$id'";

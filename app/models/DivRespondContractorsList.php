@@ -14,9 +14,9 @@
             return $database->getConnection();
         }
 
-        public function getData(){
+        public function getData($div_id){
             $result_arr=[];
-            $query="SELECT * FROM contractor_request ORDER BY id DESC";
+            $query="SELECT * FROM contractor_request WHERE div_id='$div_id' ORDER BY id DESC";
             $result=$this->connection->query($query);
             if($result->num_rows>0){
                 while($row=$result->fetch_assoc()){
