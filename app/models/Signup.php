@@ -18,6 +18,7 @@
         public function __construct(){
             $this->connection=$this->dbConnect();
         }
+        
         //set the data received from input fields
         public function setDetails(){
             $this->user_id=$this->clearInputs($_POST['user_id']);
@@ -31,6 +32,7 @@
             $this->hashed_password=password_hash($this->generateRandomPassword(8),PASSWORD_DEFAULT);
             
         }
+
         //to validate input data
         public function validateData(){
             if(substr($this->user_id,0,5)!=$this->office_id){
