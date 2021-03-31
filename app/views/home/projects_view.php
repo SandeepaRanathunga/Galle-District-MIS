@@ -19,13 +19,16 @@
     <?php include_once('includes/guestNav.php');?>
     <div class="tag">
         <h2>Dummy Project Content</h2>
+        <h6>Project descriptions provide the following details to the applicants: the problem the project will address, 
+            a set of goals for the project, the overall objectives for the project, as well as a project plan that describes the 
+            activities the members will undertake.</h6>
     </div>
     <div class="container">
-        <div class = "album-title" id="title">
+        <!-- <div class = "album-title" id="title">
             <p id="des">Project descriptions provide the following details to the applicants: the problem the project will address, 
             a set of goals for the project, the overall objectives for the project, as well as a project plan that describes the 
             activities the members will undertake.</p>
-        </div>
+        </div> -->
         <div class="image-gallery">
             <div class="column">
                 <img src="public/images/progress.jpg" >

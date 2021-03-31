@@ -19,6 +19,7 @@
     <?php include_once('includes/guestNav.php');?>
     <div class="tag">
         <h2>Ongoing Projects</h2>
+        <h6>Click on any division to view ongoing projects</h6>
     </div>
     <div class="container">
         <div class="links-container">

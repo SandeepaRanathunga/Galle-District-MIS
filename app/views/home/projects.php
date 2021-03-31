@@ -25,9 +25,9 @@
 
 <?php require_once('includes/header.php');?>
 <?php require_once('includes/guestNav.php');?>
-    <div class="tag">
+    <!-- <div class="tag">
         <h2>Projects</h2>
-    </div>
+    </div> -->
     <div class="button-flex-container" >     
         <a href="ongoing_projects">
                 <div><img src="svg/ongoing.svg" alt=""></div>

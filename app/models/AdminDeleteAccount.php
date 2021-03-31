@@ -29,34 +29,34 @@
         //     $this->inputInfo=$this->clearInputs($_POST['updateaboutus']);
         //     //return $this->inputInfo;
               
-        // }
-        // private function clearInputs($input){
-        //     $input=trim($input);
-        //     $input=htmlspecialchars($input);
-        //     $input=mysqli_real_escape_string($this->connection,$input);
-        //     return $input;
-        // }
+        //}
+        private function clearInputs($input){
+            $input=trim($input);
+            $input=htmlspecialchars($input);
+            $input=mysqli_real_escape_string($this->connection,$input);
+            return $input;
+        }
         
-        //Function to display the content in the input fields
-        public function getExistingContent(){
-            $result_array = [] ;
-            $query="SELECT * FROM `about_us`" ;
+        //Function to fetch div data
+        public function fetchDivData($id){
+            $result_arr = [] ;
+            $query = "SELECT account.email,div_user.user_id,div_user.contact_no,div_user.designation,div_user.nic FROM account JOIN div_user ON account.user_id = div_user.user_id WHERE account.user_id = '$id'" ;
             $result=$this->connection->query($query) ;
             if ($result->num_rows>0){
-                $result_array = $result->fetch_assoc() ;
-                return $result_array ;
+                $result_arr = $result->fetch_assoc() ;
+                return $result_arr ;
             }
-            return $result_array ;
         }
-
-        //Function to update imformation in the databasae
-        public function updateInfo(){
-            $query="UPDATE `about_us` SET `about_us_info`='$this->inputInfo' WHERE 1";
+        //fetch data from district users
+        public function fetchDisData($id){
+            $result_arr=[];
+            $query="SELECT account.email,dis_user.user_id,dis_user.name,dis_user.contact_no,dis_user.designation,dis_user.nic FROM account JOIN dis_user ON account.user_id = dis_user.user_id";
             $result=$this->connection->query($query);
-            if($this->connection->affected_rows>0){
-                return true;
-            }
-            return false ;
+            if($result->num_rows>0){
+                //changing row into result_arr here ;
+                $result_arr=$result->fetch_assoc();
+                return $result_arr ;
+            }           
         }
     }
 ?>

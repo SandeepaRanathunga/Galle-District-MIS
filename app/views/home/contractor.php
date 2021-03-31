@@ -34,9 +34,9 @@
                 ALERT! </span>Contractor registrations for the year 2020/21 are now open! Please register via the MIS
             </h3></marquee><h3></h3>
     </div>
-    <div class="tag">
+    <!-- <div class="tag">
         <h2>Contractors</h2>
-    </div>
+    </div> -->
     <div class="button-flex-container" >     
         <a href="contractor_register">
                 <div><img src="svg/registration.svg" alt=""></div>
