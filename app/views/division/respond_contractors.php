@@ -1,7 +1,7 @@
 <?php
     require_once('includes/session.php');
     $result = $this->getResult();
-    //print_r($result);
+    print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">

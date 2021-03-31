@@ -1,5 +1,5 @@
 <?php
-    // require_once('includes/session.php');
+    require_once('includes/session.php');
     $result=$this->result;
 ?>
 <!DOCTYPE html>
@@ -26,22 +26,26 @@
                 <th>View Status</th>
                 <th>Approval Status</th>
                 <th>Division Name</th>
-                <th>Proposal Description</th>
+                <th>Project Name</th>
+                <th>Report Number</th>
                 <th>From date</th>
                 <th>To date</th>
+                <th>Project status</th>
                 <th>Action</th>
             </tr>
             <?php
                 foreach($result as $row):
             ?>
             <tr>
-                <td><h4 style=<?php echo ($row['view_status']=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row[5];?></h4></td>
+                <td><h4 style=<?php echo ($row['view_status']=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row['view_status'];?></h4></td>
                 <td><h4 style=<?php echo ($row['approval_status']=='pending' ? 'background-color:#FFC107': ($row[6]=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[6];?></h4></td>
-                <td><?php echo $row['div_id'];?></td>
-                <td><?php echo $row['project_id'];?></td>
+                <td><?php echo $row['div_name'];?></td>
                 <td><?php echo $row['project_name'];?></td>
+                <td><?php echo $row['report_no'];?></td>
+                <td><?php echo $row['from_date'];?></td>
+                <td><?php echo $row['to_date'];?></td>
                 <td><?php echo $row['project_status'];?></td>
-                <td><a href="<?php echo 'dis_view_monthly_report?id='.$row['report_no'];?>" class="view_button">View</a></td>
+                <td><a href="<php echo 'dis_view_monthly_report?id='.$row['report_no'];?>" class="view_button">View</a></td>
             </tr>
             <?php
                 endforeach;

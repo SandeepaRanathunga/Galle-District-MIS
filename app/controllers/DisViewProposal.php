@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DisViewProposal extends Controller{  
         public $proposal_id;
         private $model;

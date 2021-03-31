@@ -1,5 +1,5 @@
 <?php
-    // require_once('includes/session.php');
+    require_once('includes/session.php');
     $agency_name=$this->agency_name;
 ?>
 <!DOCTYPE html>

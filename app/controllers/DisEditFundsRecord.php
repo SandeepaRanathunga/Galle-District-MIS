@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DisEditFundsRecord extends Controller{
         public $agency;
 

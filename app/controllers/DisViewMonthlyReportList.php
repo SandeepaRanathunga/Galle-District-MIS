@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class DisViewMonthlyReportList extends Controller{
         public $result;
 
