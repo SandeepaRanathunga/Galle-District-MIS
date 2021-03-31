@@ -46,7 +46,7 @@
             <div>
                 <a href="uploads/proposal/<?php echo $data[4];?>" download ><img src="svg/download.svg" alt="" class="download_btn"></a>
             </div>
-            <h4>Click the icon to download the proposal</h4>    
+            <h4>Click the icon to download the proposal.</h4>    
         </div>
         <div class="evaluation_box" style="<?php echo ($data[6]=='pending') ? 'display:flex' : 'display:none' ?>">
             <form action="" method="post" id="approve_form">

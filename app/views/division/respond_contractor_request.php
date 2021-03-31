@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/proposalPage.css">
     <link rel="stylesheet" href="css/alertBox.css">
     <link rel="icon" href="images/logo.png">
-    <title>Document</title>
+    <title>Contractor Request</title>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
@@ -41,27 +41,27 @@
             <div>
                 <a href="uploads/con_reg_copy/<?php echo $data[11];?>" download ><img src="svg/download.svg" alt="" class="download_btn"></a>
             </div>
-            <h4>Click the icon to download the document</h4>    
+            <h4>Click the icon to download the document.</h4>    
         </div>
-        <div class="evaluation_box" style="<?php echo ($data[1]=='pending') ? 'display:flex' : 'display:none' ?>">
+        <div class="evaluation_box" style="<?php echo ($data[2]=='pending') ? 'display:flex' : 'display:none' ?>">
             <form action="" method="post" id="approve_form">
                 <input type="hidden" name="approve" value="approve">
             </form>
             <form action="" method="post" id="reject_form">
                 <input type="hidden" name="reject" value="reject">
             </form>
-            <button name="approve" class="approve">Approve</button>
+            <button name="approve" class="approve">Accept</button>
             <button name="reject" class="reject">Reject</button>
         </div>
-        <div class="status_box" style="<?php echo ($data[1]=='pending') ? 'display:none' : 'display:flex' ?>">
-            <div class="state" style="<?php echo ($data[1]=='approved') ? 'display:flex' : 'display:none' ?>">
+        <div class="status_box" style="<?php echo ($data[2]=='pending') ? 'display:none' : 'display:flex' ?>">
+            <div class="state" style="<?php echo ($data[2]=='approved') ? 'display:flex' : 'display:none' ?>">
                 <img src="images/approved.png" alt="" class="approve_img">
-                <h4>Approved</h4>
-                <div><label for="status">Approved Date : </label>
+                <h4>Accepted</h4>
+                <div><label for="status">Accepted Date : </label>
                     <?php echo "23rd of March 2021 "?>
                 </div>
             </div>
-            <div class="state" style="<?php echo ($data[1]=='rejected') ? 'display:flex' : 'display:none' ?>">
+            <div class="state" style="<?php echo ($data[2]=='rejected') ? 'display:flex' : 'display:none' ?>">
                 <img src="images/rejected.png" alt="" class="approve_img">
                 <h4>Rejected</h4>
                 <div><label for="status">Rejected Date : </label>
