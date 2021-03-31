@@ -73,16 +73,7 @@
         public function getEmails(){
             return $this->model->getEmails();
         }
-
-        public function insertUserDetails(){
-            $query="INSERT INTO account (user_id,email,password,user_type,login_permission) VALUES ('$this->user_id','$this->email','$this->hashed_password','$this->user_type','$this->login_permission')";
-            $result=$this->connection->query($query);
-            if($result){
-                $query="INSERT INTO contractor (user_id,name,reg_no,specialized_field,office_address,div_id,contact_no,) VALUES ('$this->user_id',$this->name','$this->reg_no','$this->specialized_field','$this->office_adddress','$this->div_id','$this->contact_no')";
-                $result=$this->connection->query($query);
-                return $result;
-            }
-        }   
+ 
         
         private function sendCreditions(){
             $name=$this->model->getName();
