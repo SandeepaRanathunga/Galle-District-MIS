@@ -15,7 +15,8 @@
 
 <body>
     <?php require_once('includes/header.php');?>
-    <?php require_once('includes/disNav.php');?>   
+    <?php require_once('includes/disNav.php');?>  
+    <div class="container"> 
         <div class="button-flex-container" >
            
             <a href="dis_view_project_proposal">
@@ -38,6 +39,7 @@
             </a>
             
         </div>     
+    </div>
     
     <!-- The buttons - END-->
     <?php require_once('includes/footer.php');?> 

@@ -39,15 +39,15 @@
             ?>
             <tr>
                 <td><h4 style=<?php echo ($row[0]=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row[0];?></h4></td>
-                <td><h4 style=<?php echo ($row[1]=='pending' ? 'background-color:#FFC107': ($row['approval_status']=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[1];?></h4></td>
+                <td><h4 style=<?php echo ($row[1]=='pending' ? 'background-color:#FFC107': ($row[1]=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[1];?></h4></td>
                 <td><?php echo $row[2];?></td>
                 <td><?php echo $row[3];?></td>
                 <td><?php echo $row[5];?></td>
                 <td><?php echo $row[6];?></td>
                 <td><?php echo $row[4];?></td>
                 <td><?php echo $row[8];?></td>
-                <td><?php echo $row[7];?></td>
-                <td><a href="<?php echo 'dis_view_monthly_report?id='.$row[4];?>" class="view_button">View</a></td>
+                <td><?php echo ($row[7]=='1' ? "Finished" : "Ongoing");?></td>
+                <td><a href="<?php echo 'dis_view_report?id='.$row[4];?>" class="view_button">View</a></td>
             </tr>
             <?php
                 endforeach;

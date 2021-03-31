@@ -1,6 +1,6 @@
 <?php
     require_once('includes/session.php');
-    $data=$this->getProposalData();
+    $data=$this->getReportData();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/proposalPage.css">
     <link rel="stylesheet" href="css/alertBox.css">
     <link rel="icon" href="images/logo.png">
-    <title>Document</title>
+    <title>Monthly Report</title>
 </head>
 <body>
     <?php require_once('includes/header.php');?>
@@ -26,25 +26,33 @@
         <div class="detail_box">
             <div class="content_line">
                 <label for="Divisional Secretariat">Divisional Secretariat : </label>
+                <?php echo $data[9];?>
+            </div>
+            <div class="content_line">
+                <label for="Project Name">Project Name : </label>
                 <?php echo $data[0];?>
             </div>
             <div class="content_line">
-                <label for="Descrtiption">Proposal Description : </label>
-                <?php echo $data[3];?>
+                <label for="Report Number">Report Number : </label>
+                <?php echo $data[1];?>
             </div>
             <div class="content_line"> 
-                <label for="status">Approval Status : </label>
+                <label for="Approval Status">Approval Status : </label>
                 <?php echo $data[6];?>
             </div>
             <div class="content_line"> 
+                <label for="status">Project Status : </label>
+                <?php echo ($data[7]=='1' ? "Finished" : "Ongoing");?>
+            </div>
+            <div class="content_line"> 
                 <label for="status">Submitted Date : </label>
-                <?php echo $data[7]?>
+                <?php echo $data[10]?>
             </div>
         </div>
         
         <div class="task_box">
             <div>
-                <a href="uploads/proposal/<?php echo $data[4];?>" download ><img src="svg/download.svg" alt="" class="download_btn"></a>
+                <a href="uploads/proposal/<?php echo $data[8];?>" download ><img src="svg/download.svg" alt="" class="download_btn"></a>
             </div>
             <h4>Click the icon to download the proposal.</h4>    
         </div>
