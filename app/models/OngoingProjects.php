@@ -23,5 +23,15 @@
             }
             return $result_arr;
         }
+        
+        public function getOngoingProjects(){
+            $result_arr=[];
+            $query="SELECT div_id, count(project_id) AS num FROM project WHERE project_status='0' GROUP BY div_id";
+            $result=$this->connection->query($query);
+            while($row=$result->fetch_assoc()){
+                array_push($result_arr,[$row['div_id'],$row['num']]);
+            }
+            return $result_arr;
+        }
     }
 ?>

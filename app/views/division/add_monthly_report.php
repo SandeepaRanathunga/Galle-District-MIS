@@ -50,6 +50,8 @@
                     <label for="documents">Attach Zip File</label>
                     <input type="file" name="zip" id="zip" multiple="multiple" accept=".zip" style="display:none">
                     <div id="files_trigger" class="selector"><p>Select File</p></div>
+                    <i class="far fa-question-circle info" id="info"></i>
+                    <p class="message" id="message">You should create a folder named <?php echo $_SESSION['office_id']?> including archive it to zip format and it should be same as the folder name.</p>
                 </div>
                 <div>
                     <label for="project_status">Project Status</label>
@@ -70,6 +72,13 @@
         document.getElementById('files_trigger').addEventListener('click', () => {
             document.getElementById('zip').click();
         });
+        document.querySelector('#info').addEventListener('mouseover', () => {
+            document.getElementById('message').style.display='block';
+            setTimeout(() => {
+               document.getElementById('message').style.display="none"; 
+            }, 7000);
+        });
+
 
     </script>
 </body>

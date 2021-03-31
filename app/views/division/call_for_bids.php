@@ -22,7 +22,16 @@
             <form action="" method="POST">
                 <div>
                     <label for="project_name">Project name</label>
-                    <input type="text" name="project_name">
+                    <select name="project_id" id="" required>
+                        <option disabled selected value>Select</option>
+                            <?php
+                                foreach($project_list as $project):
+                            ?>
+                            <option value="<?php echo $project['project_id'];?>"><?php echo $project['project_name'];?></option>
+                            <?php
+                                endforeach; 
+                            ?>
+                    </select>
                 </div>
                 <div>
                     <label for="project_des">Project description</label>

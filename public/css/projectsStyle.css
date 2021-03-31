@@ -30,3 +30,9 @@
 .links-container a:hover {
   transform: scale(1, 1.1);
 }
+
+.chart_container {
+  display: flex;
+  justify-content: center;
+  clear: both;
+}
