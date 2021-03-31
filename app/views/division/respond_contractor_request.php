@@ -28,11 +28,11 @@
             </div>
             <div class="content_line"> 
                 <label for="status">Approval Status : </label>
-                <?php echo $data[1];?>
+                <?php echo $data[2];?>
             </div>
             <div class="content_line"> 
-                <label for="status">Submitted Date : </label>
-                <?php echo $data[2]?>
+                <label for="status">Requested Date : </label>
+                <?php echo $data[9]?>
             </div>
         </div>
         
