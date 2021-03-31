@@ -27,9 +27,10 @@
                 <th>Approval Status</th>
                 <th>Division Name</th>
                 <th>Project Name</th>
-                <th>Report Number</th>
                 <th>From date</th>
                 <th>To date</th>
+                <th>Report Number</th>
+                <th>Submitted date</th>
                 <th>Project status</th>
                 <th>Action</th>
             </tr>
@@ -37,15 +38,16 @@
                 foreach($result as $row):
             ?>
             <tr>
-                <td><h4 style=<?php echo ($row['view_status']=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row['view_status'];?></h4></td>
-                <td><h4 style=<?php echo ($row['approval_status']=='pending' ? 'background-color:#FFC107': ($row[6]=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[6];?></h4></td>
-                <td><?php echo $row['div_name'];?></td>
-                <td><?php echo $row['project_name'];?></td>
-                <td><?php echo $row['report_no'];?></td>
-                <td><?php echo $row['from_date'];?></td>
-                <td><?php echo $row['to_date'];?></td>
-                <td><?php echo $row['project_status'];?></td>
-                <td><a href="<php echo 'dis_view_monthly_report?id='.$row['report_no'];?>" class="view_button">View</a></td>
+                <td><h4 style=<?php echo ($row[0]=='viewed' ? 'background-color:#355f25': 'background-color:#ff1100');?>><?php echo $row[0];?></h4></td>
+                <td><h4 style=<?php echo ($row[1]=='pending' ? 'background-color:#FFC107': ($row['approval_status']=='approved' ? 'background-color:#28A745' : 'background-color:#DC3545'));?>><?php echo $row[1];?></h4></td>
+                <td><?php echo $row[2];?></td>
+                <td><?php echo $row[3];?></td>
+                <td><?php echo $row[5];?></td>
+                <td><?php echo $row[6];?></td>
+                <td><?php echo $row[4];?></td>
+                <td><?php echo $row[8];?></td>
+                <td><?php echo $row[7];?></td>
+                <td><a href="<?php echo 'dis_view_monthly_report?id='.$row[4];?>" class="view_button">View</a></td>
             </tr>
             <?php
                 endforeach;
