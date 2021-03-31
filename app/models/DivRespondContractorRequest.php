@@ -36,11 +36,38 @@
             $this->hashed_password=password_hash($this->generateRandomPassword(8),PASSWORD_DEFAULT); 
         }
 
+        private function clearInputs($input){
+            $input=trim($input);
+            $input=htmlspecialchars($input);
+            $input=mysqli_real_escape_string($this->connection,$input);
+            return $input;
+        }
+
         public function validateData(){
             if(in_array($this->email,$this->getEmails())){
                 return false;
             }
             return true;   
+        }
+
+        private function generateRandomPassword($length) {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+
+        public function getEmails(){
+            $emails=[];
+            $query="SELECT email from account";
+            $result=$this->connection->query($query);
+            while($row=$result->fetch_assoc()){
+                array_push($emails,$row['email']);
+            }
+            return $emails;
         }
 
         public function insertUserDetails(){
@@ -50,7 +77,8 @@
                 $query="INSERT INTO contractor (user_id,name,reg_no,specialized_field,office_address,div_id,contact_no,) VALUES ('$this->user_id',$this->name','$this->reg_no','$this->specialized_field','$this->office_adddress','$this->div_id','$this->contact_no')";
                 $result=$this->connection->query($query);
                 return $result;
-            }
+            }else
+                return false;
         }  
 
         public function getData($id){
