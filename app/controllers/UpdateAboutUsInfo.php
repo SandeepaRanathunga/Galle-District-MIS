@@ -7,12 +7,10 @@
     
         public function __construct(){
             $this->model=$this->model('UpdateAboutUsInfo');
-            
             $this->content=$this->model->getExistingContent();
             
             // echo $result ;
-        
-            
+       
         }
         public function updateAboutUsInfo(){
             if(isset($_POST['submit'])){

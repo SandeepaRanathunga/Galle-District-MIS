@@ -19,18 +19,18 @@
 <body>
     <?php include 'includes/Header.php';?>
     <?php include 'includes/guestNav.php';?>
-    <div class="tag">
+    <!-- <div class="tag">
         <h2>About Us</h2>
-    </div>
+    </div> -->
     <div class="container">
         <div class="button-container">
             <div class="overview">
-                <div>
+                <div style="margin-top:5%;">
                     <img src="svg/vision.svg" alt="">
                     <h2>Our Vision</h2>
                     <div> Providing an excellent Public Service to the people of Galle District.</div>
                 </div>
-                <div>
+                <div style="margin-top:5%;">
                     <img src="svg/mission.svg" alt="">
                     <h2>Our Mission</h2>
                     <div>To ensure an excellent Public Service through sound district level   administrative system with competence human resources.

@@ -17,6 +17,7 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: #f2f2f2;
+    
 }
 
 .container,.button-flex-container{
@@ -25,7 +26,7 @@ body{
     clear:both;
 }
 
-.tag{
+/* .tag{
     background:white;
     overflow:auto;
     margin:10px;
@@ -33,14 +34,31 @@ body{
     padding:2px;
     border-radius: 5px;
     float:left;
+} */
+.tag{
+    position:sticky;
+    top:62px ;
+    background:#dad6d6f5    ;
+    opacity: 0.95;
+    padding:1px 20px;
+    z-index: 1;
+    margin-bottom: 2% ;
 
 }
+.tag h6{
+    color:#0E2433    ;
+    font-size: 12px;
+    margin:10px;
+    text-align: center;
+    font-weight: normal;
+}
+
 .tag h2{
     color:#0E2433    ;
     font-size: 20px;
-    font-weight: bold;
     margin:10px;
     text-align: center;
+    
 }
 input[type=submit],input[type=reset]{
     border:none;

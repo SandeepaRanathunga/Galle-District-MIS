@@ -7,6 +7,8 @@
             $currentPage=$_GET['url'];
         }
     ?>
+        
         <a href="admin_home" <?php if($currentPage=='admin_home') echo "class=active"?>>Dashboard</a>
+
         <a href="javascript:void(0);" class="icon" onclick="addResponsiveness()"><i class="fa fa-bars"></i></a>
 </div>

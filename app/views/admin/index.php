@@ -30,7 +30,7 @@
         </a>
         <a href="delete_accounts">
             <div><img src="svg/deleteuser.svg" alt=""></div>
-            <div>Delete User Accounts</div>
+            <div>Deactivate User Accounts</div>
         </a>
         <a href="update_about_us">
             <div><img src="svg/aboutus.svg" alt=""></div>

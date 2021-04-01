@@ -16,9 +16,7 @@
         }
         public function setInfoToVar(){
             $this->inputInfo=$this->clearInputs($_POST['updateaboutus']);
-            //return $this->inputInfo;
-            
-            
+            //return $this->inputInfo;  
         }
         private function clearInputs($input){
             $input=trim($input);
@@ -27,7 +25,7 @@
             return $input;
         }
         
-        //Function to display the content in the textarea 
+        //Function to return the content into the textarea 
         public function getExistingContent(){
             $result_array = [] ;
             $query="SELECT * FROM `about_us`" ;

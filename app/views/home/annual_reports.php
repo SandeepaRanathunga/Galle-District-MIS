@@ -11,9 +11,9 @@
 <body>
     <?php include_once('includes/header.php');?>
     <?php include_once('includes/guestNav.php');?>
-    <div class="tag">
+    <!-- <div class="tag">
         <h2>Annual Reports</h2>
-    </div>
+    </div> -->
     <div class="container">
         <div class="report-intro">
             <p>In here you can download the annual report for a particular year by clicking on the links given below. The report contains of 
