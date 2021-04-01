@@ -1,11 +1,17 @@
 <?php
-        $fetch=$this->viewDetailsinForm();
-        echo $fetch ;
+        $fetch_arr =$this->viewDetailsinForm();
+        $fetch = $fetch_arr ;
+        // var_dump ($fetch) ;
+        
+
+        //<br /><b>Notice</b>:  Undefined variable: print_arr in <b>C:\xampp\htdocs\Galle-District-MIS\app\views\admin\admin_update_account.php</b> on line <b>57</b><br /><br /><b>Notice</b>:  Trying to access array offset on value of type null in <b>C:\xampp\htdocs\Galle-District-MIS\app\views\admin\admin_update_account.php</b> on line <b>57</b><br />
 
         //$content_arr = $this->getContent() ;
         //$content = $content_arr['about_us_info'] ;
 
-        $print_arr = $this->testView() ;
+        // $print_arr = $this->testView() ;
+
+
         // $print = $print_arr['name'] ;
         // echo $print ;
 
@@ -50,12 +56,12 @@
                 <!--Here starts the generated form-->
                 <div>
                     <label for="user_id">User ID</label>
-                    <input type="text" name="user_id" value="<?php echo $fetch==NULL ? '' : $print_arr['user_id']?>" readonly>
+                    <input type="text" name="user_id" value="<?php echo $fetch==NULL ? '' : $fetch['user_id']?>" readonly>
                 </div>
-                <div>
+                <!-- <div>
                     <label for="office_id">Office ID</label>
-                    <input type="text" name="office_id" value="<?php echo $fetch==NULL ? '' : $fetch['div_id']?>" readonly>
-                </div>
+                    <input type="text" name="office_id" value="<?php echo $fetch==NULL ? '' : "District Swecretariat"?>" readonly>
+                </div> -->
                 <div>
                     <label for="name">Name</label>
                     <input type="text" name="name" value="<?php echo $fetch==NULL ? '' : $fetch['name']?>">
