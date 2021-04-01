@@ -2,8 +2,6 @@
         $fetch_arr =$this->viewDetailsinForm();
         $fetch = $fetch_arr ;
         // var_dump ($fetch) ;
-        
-
         //<br /><b>Notice</b>:  Undefined variable: print_arr in <b>C:\xampp\htdocs\Galle-District-MIS\app\views\admin\admin_update_account.php</b> on line <b>57</b><br /><br /><b>Notice</b>:  Trying to access array offset on value of type null in <b>C:\xampp\htdocs\Galle-District-MIS\app\views\admin\admin_update_account.php</b> on line <b>57</b><br />
 
         //$content_arr = $this->getContent() ;

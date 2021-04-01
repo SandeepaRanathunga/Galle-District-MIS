@@ -5,7 +5,7 @@
         private $result ;
         private $userType ;
         private $searchId ;
-        private $temp ;
+        // private $temp ;
 
         public function __construct(){
             $this->model=$this->model('AdminUpdateAccount');
@@ -44,7 +44,13 @@
             else if(isset($_POST['submit'])){
                 //update table
                 $this->model->setDetails();
-                
+                if($this->model->setDetails()){
+                    echo "<script>alert('Updated Successfully!')</script>";
+                    echo "<script>window.location.href='admin_home';</script>";
+                }else{
+                    echo "<script>alert('Unable to Update!')</script>";
+                }
+
                 //retriev updated data
                 $this->searchId = $_POST['user_id'];
                 $this->userType=$this->model->checkAvailability($this->searchId);

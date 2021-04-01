@@ -32,8 +32,10 @@
                     <div class="label-text">
                             <!-- showing the cell's content in the textarea -->
                             <textarea id="updateaboutus" name="updateaboutus" rows="15" cols="190">
-                            <!-- load the data here  -->
-                            <?php echo $content ?>
+                            
+                            <?php 
+                            //load the data here
+                            echo $content ?>
                             </textarea>
                     </div>
                         

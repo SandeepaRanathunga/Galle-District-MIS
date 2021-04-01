@@ -1,4 +1,8 @@
 <?php
+    ////////////uncomment when controller is fixed
+    // $fetch_arr =$this->viewDetailsinForm();
+    // $fetch = $fetch_arr ;
+
     // require_once('includes/session.php');
 ?>
 <!DOCTYPE html>
@@ -40,10 +44,6 @@
                 <div>
                     <label for="user_id">User ID</label>
                     <input type="text" name="user_id">
-                </div>
-                <div>
-                    <label for="office_id">Office ID</label>
-                    <input type="text" name="office_id">
                 </div>
                 <div>
                     <label for="name">Name</label>

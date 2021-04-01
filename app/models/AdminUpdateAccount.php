@@ -84,6 +84,7 @@
             $this->contact_no=$this->clearInputs($_POST['contactno']);
             $this->email=$this->clearInputs($_POST['email']);
             $this->updateData();
+            return 1;
         }
 
         
